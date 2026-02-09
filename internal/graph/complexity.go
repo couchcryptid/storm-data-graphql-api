@@ -10,7 +10,7 @@ func NewComplexityRoot() ComplexityRoot {
 		Query: struct {
 			StormReports func(childComplexity int, filter model.StormReportFilter) int
 		}{
-			StormReports: func(childComplexity int, filter model.StormReportFilter) int {
+			StormReports: func(childComplexity int, _ model.StormReportFilter) int {
 				return 1 + childComplexity
 			},
 		},
