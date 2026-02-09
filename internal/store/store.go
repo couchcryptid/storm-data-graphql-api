@@ -17,7 +17,8 @@ const columns = `id, type, geo_lat, geo_lon, magnitude, unit,
 	begin_time, end_time, source,
 	location_raw, location_name, location_distance, location_direction,
 	location_state, location_county,
-	comments, severity, source_office, time_bucket, processed_at`
+	comments, severity, source_office, time_bucket, processed_at,
+	formatted_address, place_name, geo_confidence, geo_source`
 
 // Store provides persistence operations for storm reports backed by PostgreSQL.
 type Store struct {
@@ -39,7 +40,7 @@ func (s *Store) InsertStormReport(ctx context.Context, report *model.StormReport
 	defer s.observeQuery("insert", time.Now())
 	_, err := s.pool.Exec(ctx, `
 		INSERT INTO storm_reports (`+columns+`)
-		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20)
+		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24)
 		ON CONFLICT (id) DO NOTHING`,
 		report.ID, report.Type, report.Geo.Lat, report.Geo.Lon,
 		report.Magnitude, report.Unit,
@@ -49,6 +50,8 @@ func (s *Store) InsertStormReport(ctx context.Context, report *model.StormReport
 		report.Location.State, report.Location.County,
 		report.Comments, report.Severity, report.SourceOffice,
 		report.TimeBucket, report.ProcessedAt,
+		report.FormattedAddress, report.PlaceName,
+		report.GeoConfidence, report.GeoSource,
 	)
 	return err
 }
@@ -70,24 +73,14 @@ func buildWhereClause(filter *model.StormReportFilter) ([]string, []any, int) {
 
 	// Time bounds (always present — required by schema)
 	where = append(where, fmt.Sprintf("begin_time >= $%d", idx))
-	args = append(args, filter.BeginTimeAfter)
+	args = append(args, filter.TimeRange.From)
 	idx++
 
 	where = append(where, fmt.Sprintf("begin_time <= $%d", idx))
-	args = append(args, filter.BeginTimeBefore)
+	args = append(args, filter.TimeRange.To)
 	idx++
 
-	// Array filters using ANY()
-	if len(filter.Types) > 0 {
-		where = append(where, fmt.Sprintf("type = ANY($%d)", idx))
-		args = append(args, filter.Types)
-		idx++
-	}
-	if len(filter.Severity) > 0 {
-		where = append(where, fmt.Sprintf("severity = ANY($%d)", idx))
-		args = append(args, filter.Severity)
-		idx++
-	}
+	// Administrative location filters
 	if len(filter.States) > 0 {
 		where = append(where, fmt.Sprintf("location_state = ANY($%d)", idx))
 		args = append(args, filter.States)
@@ -99,40 +92,206 @@ func buildWhereClause(filter *model.StormReportFilter) ([]string, []any, int) {
 		idx++
 	}
 
-	// Minimum magnitude
-	if filter.MinMagnitude != nil {
-		where = append(where, fmt.Sprintf("magnitude >= $%d", idx))
-		args = append(args, *filter.MinMagnitude)
-		idx++
-	}
-
-	// Radius geo filter
-	if filter.NearLat != nil && filter.NearLon != nil && filter.RadiusMiles != nil {
-		lat := *filter.NearLat
-		lon := *filter.NearLon
-		radiusMiles := *filter.RadiusMiles
-
-		// Bounding box pre-filter for index usage
-		latDelta := radiusMiles / 69.0
-		lonDelta := radiusMiles / (69.0 * math.Cos(lat*math.Pi/180.0))
-		where = append(where, fmt.Sprintf(
-			"geo_lat BETWEEN $%d AND $%d AND geo_lon BETWEEN $%d AND $%d", idx, idx+1, idx+2, idx+3))
-		args = append(args, lat-latDelta, lat+latDelta, lon-lonDelta, lon+lonDelta)
-		idx += 4
-
-		// Haversine exact distance
-		where = append(where, fmt.Sprintf(`(
-			3959 * acos(
-				cos(radians($%d)) * cos(radians(geo_lat)) *
-				cos(radians(geo_lon) - radians($%d)) +
-				sin(radians($%d)) * sin(radians(geo_lat))
-			)
-		) <= $%d`, idx, idx+1, idx+2, idx+3))
-		args = append(args, lat, lon, lat, radiusMiles)
-		idx += 4
+	if len(filter.EventTypeFilters) > 0 {
+		// Mode 2: Per-type OR conditions with optional per-type radius
+		clause, newArgs, newIdx := buildEventTypeConditions(filter, args, idx)
+		where = append(where, clause...)
+		args = newArgs
+		idx = newIdx
+	} else {
+		// Mode 1: Simple AND conditions
+		if len(filter.EventTypes) > 0 {
+			where = append(where, fmt.Sprintf("type = ANY($%d)", idx))
+			args = append(args, eventTypeDBValues(filter.EventTypes))
+			idx++
+		}
+		if len(filter.Severity) > 0 {
+			where = append(where, fmt.Sprintf("severity = ANY($%d)", idx))
+			args = append(args, severityDBValues(filter.Severity))
+			idx++
+		}
+		if filter.MinMagnitude != nil {
+			where = append(where, fmt.Sprintf("magnitude >= $%d", idx))
+			args = append(args, *filter.MinMagnitude)
+			idx++
+		}
+		if filter.Near != nil {
+			geoWhere, geoArgs, geoIdx := buildGeoClause(filter.Near.Lat, filter.Near.Lon, filter.Near.RadiusMiles, idx)
+			where = append(where, geoWhere...)
+			args = append(args, geoArgs...)
+			idx = geoIdx
+		}
 	}
 
 	return where, args, idx
+}
+
+// buildEventTypeConditions builds bounding-box and per-type OR clauses for eventTypeFilters.
+// Returns additional WHERE clauses, updated args, and the next parameter index.
+func buildEventTypeConditions(filter *model.StormReportFilter, args []any, idx int) ([]string, []any, int) {
+	var clauses []string
+
+	// Collect per-type conditions: explicit overrides + unoverridden eventTypes
+	type typeCondition struct {
+		eventType   model.EventType
+		severity    []model.Severity
+		minMag      *float64
+		radiusMiles *float64
+	}
+
+	overrideSet := make(map[model.EventType]bool)
+	var conditions []typeCondition
+	for _, etf := range filter.EventTypeFilters {
+		overrideSet[etf.EventType] = true
+		tc := typeCondition{eventType: etf.EventType}
+		if len(etf.Severity) > 0 {
+			tc.severity = etf.Severity
+		} else {
+			tc.severity = filter.Severity
+		}
+		if etf.MinMagnitude != nil {
+			tc.minMag = etf.MinMagnitude
+		} else {
+			tc.minMag = filter.MinMagnitude
+		}
+		if etf.RadiusMiles != nil {
+			tc.radiusMiles = etf.RadiusMiles
+		} else if filter.Near != nil {
+			tc.radiusMiles = filter.Near.RadiusMiles
+		}
+		conditions = append(conditions, tc)
+	}
+
+	// Add eventTypes that don't have an explicit override (inherit global defaults)
+	for _, et := range filter.EventTypes {
+		if !overrideSet[et] {
+			tc := typeCondition{
+				eventType: et,
+				severity:  filter.Severity,
+				minMag:    filter.MinMagnitude,
+			}
+			if filter.Near != nil {
+				tc.radiusMiles = filter.Near.RadiusMiles
+			}
+			conditions = append(conditions, tc)
+		}
+	}
+
+	// Bounding box using the max radius across all conditions (for index usage)
+	if filter.Near != nil {
+		var maxRadius float64
+		for _, tc := range conditions {
+			if tc.radiusMiles != nil && *tc.radiusMiles > maxRadius {
+				maxRadius = *tc.radiusMiles
+			}
+		}
+		if maxRadius > 0 {
+			bbWhere, bbArgs, bbIdx := buildBoundingBox(filter.Near.Lat, filter.Near.Lon, maxRadius, idx)
+			clauses = append(clauses, bbWhere...)
+			args = append(args, bbArgs...)
+			idx = bbIdx
+		}
+	}
+
+	// Per-type OR clauses
+	orParts := make([]string, 0, len(conditions))
+	for _, tc := range conditions {
+		var parts []string
+		parts = append(parts, fmt.Sprintf("type = $%d", idx))
+		args = append(args, tc.eventType.DBValue())
+		idx++
+
+		if len(tc.severity) > 0 {
+			parts = append(parts, fmt.Sprintf("severity = ANY($%d)", idx))
+			args = append(args, severityDBValues(tc.severity))
+			idx++
+		}
+		if tc.minMag != nil {
+			parts = append(parts, fmt.Sprintf("magnitude >= $%d", idx))
+			args = append(args, *tc.minMag)
+			idx++
+		}
+		if filter.Near != nil && tc.radiusMiles != nil {
+			hav := buildHaversine(filter.Near.Lat, filter.Near.Lon, *tc.radiusMiles, idx)
+			parts = append(parts, hav.clause)
+			args = append(args, hav.args...)
+			idx = hav.nextIdx
+		}
+		orParts = append(orParts, "("+strings.Join(parts, " AND ")+")")
+	}
+	clauses = append(clauses, "("+strings.Join(orParts, " OR ")+")")
+
+	return clauses, args, idx
+}
+
+// buildGeoClause builds bounding-box + haversine clauses for a single radius filter.
+func buildGeoClause(lat, lon float64, radiusMiles *float64, idx int) ([]string, []any, int) {
+	if radiusMiles == nil {
+		return nil, nil, idx
+	}
+	bbWhere, bbArgs, bbIdx := buildBoundingBox(lat, lon, *radiusMiles, idx)
+	hav := buildHaversine(lat, lon, *radiusMiles, bbIdx)
+
+	clauses := make([]string, 0, len(bbWhere)+1)
+	clauses = append(clauses, bbWhere...)
+	clauses = append(clauses, hav.clause)
+
+	args := make([]any, 0, len(bbArgs)+len(hav.args))
+	args = append(args, bbArgs...)
+	args = append(args, hav.args...)
+
+	return clauses, args, hav.nextIdx
+}
+
+// buildBoundingBox builds lat/lon bounding box clauses for index pre-filtering.
+func buildBoundingBox(lat, lon, radiusMiles float64, idx int) ([]string, []any, int) {
+	latDelta := radiusMiles / 69.0
+	lonDelta := radiusMiles / (69.0 * math.Cos(lat*math.Pi/180.0))
+	clause := fmt.Sprintf(
+		"geo_lat BETWEEN $%d AND $%d AND geo_lon BETWEEN $%d AND $%d",
+		idx, idx+1, idx+2, idx+3)
+	args := []any{lat - latDelta, lat + latDelta, lon - lonDelta, lon + lonDelta}
+	return []string{clause}, args, idx + 4
+}
+
+type haversineResult struct {
+	clause  string
+	args    []any
+	nextIdx int
+}
+
+// buildHaversine builds a haversine distance clause.
+func buildHaversine(lat, lon, radiusMiles float64, idx int) haversineResult {
+	clause := fmt.Sprintf(`(
+		3959 * acos(
+			cos(radians($%d)) * cos(radians(geo_lat)) *
+			cos(radians(geo_lon) - radians($%d)) +
+			sin(radians($%d)) * sin(radians(geo_lat))
+		)
+	) <= $%d`, idx, idx+1, idx+2, idx+3)
+	return haversineResult{
+		clause:  clause,
+		args:    []any{lat, lon, lat, radiusMiles},
+		nextIdx: idx + 4,
+	}
+}
+
+// eventTypeDBValues converts a slice of EventType enums to their lowercase DB values.
+func eventTypeDBValues(types []model.EventType) []string {
+	vals := make([]string, len(types))
+	for i, t := range types {
+		vals[i] = t.DBValue()
+	}
+	return vals
+}
+
+// severityDBValues converts a slice of Severity enums to their lowercase DB values.
+func severityDBValues(sevs []model.Severity) []string {
+	vals := make([]string, len(sevs))
+	for i, s := range sevs {
+		vals[i] = s.DBValue()
+	}
+	return vals
 }
 
 // sortColumn maps validated SortField enum values to SQL column names.
@@ -142,9 +301,9 @@ func sortColumn(sf model.SortField) string {
 		return "begin_time"
 	case model.SortFieldMagnitude:
 		return "magnitude"
-	case model.SortFieldState:
+	case model.SortFieldLocationState:
 		return "location_state"
-	case model.SortFieldType:
+	case model.SortFieldEventType:
 		return "type"
 	default:
 		return "begin_time"
@@ -208,109 +367,124 @@ func (s *Store) ListStormReports(ctx context.Context, filter *model.StormReportF
 	return reports, totalCount, rows.Err()
 }
 
-// CountByType returns reports grouped by event type.
-func (s *Store) CountByType(ctx context.Context, filter *model.StormReportFilter) ([]*model.TypeGroup, error) {
-	defer s.observeQuery("count_by_type", time.Now())
-	where, args, _ := buildWhereClause(filter)
-
-	whereSQL := buildWhereSQL(where)
-
-	query := `SELECT type, COUNT(*) AS cnt, MAX(magnitude) AS max_mag
-		FROM storm_reports` + whereSQL + `
-		GROUP BY type ORDER BY cnt DESC`
-
-	rows, err := s.pool.Query(ctx, query, args...)
-	if err != nil {
-		return nil, fmt.Errorf("count by type: %w", err)
-	}
-	defer rows.Close()
-
-	var groups []*model.TypeGroup
-	for rows.Next() {
-		var g model.TypeGroup
-		if err := rows.Scan(&g.Type, &g.Count, &g.MaxMagnitude); err != nil {
-			return nil, fmt.Errorf("scan type group: %w", err)
-		}
-		groups = append(groups, &g)
-	}
-	return groups, rows.Err()
+// AggResult holds combined aggregation results from a single CTE query.
+type AggResult struct {
+	ByEventType []*model.EventTypeGroup
+	ByState     []*model.StateGroup
+	ByHour      []*model.TimeGroup
 }
 
-// CountByState returns reports grouped by state and county.
-func (s *Store) CountByState(ctx context.Context, filter *model.StormReportFilter) ([]*model.StateGroup, error) {
-	defer s.observeQuery("count_by_state", time.Now())
-	where, args, _ := buildWhereClause(filter)
+// unitForEventType returns the measurement unit for a given event type.
+func unitForEventType(et string) string {
+	switch et {
+	case "hail":
+		return "in"
+	case "wind":
+		return "mph"
+	case "tornado":
+		return "f_scale"
+	default:
+		return ""
+	}
+}
 
+// Aggregations returns event type, state, and hourly aggregations in a single query.
+func (s *Store) Aggregations(ctx context.Context, filter *model.StormReportFilter) (*AggResult, error) {
+	defer s.observeQuery("aggregations", time.Now())
+	where, args, _ := buildWhereClause(filter)
 	whereSQL := buildWhereSQL(where)
 
-	query := `SELECT location_state, location_county, COUNT(*) AS cnt
-		FROM storm_reports` + whereSQL + `
-		GROUP BY location_state, location_county
-		ORDER BY location_state, cnt DESC`
+	query := `WITH base AS (
+			SELECT type, location_state, location_county,
+				   magnitude, severity, time_bucket
+			FROM storm_reports` + whereSQL + `
+		)
+		SELECT 'type' AS agg, type AS key1, NULL AS key2,
+			   COUNT(*) AS count, MAX(magnitude) AS max_mag, NULL AS max_sev, NULL::timestamptz AS bucket
+		FROM base GROUP BY type
+		UNION ALL
+		SELECT 'state', location_state, location_county,
+			   COUNT(*), NULL, NULL, NULL
+		FROM base GROUP BY location_state, location_county
+		UNION ALL
+		SELECT 'hour', NULL, NULL,
+			   COUNT(*), NULL, NULL, time_bucket
+		FROM base GROUP BY time_bucket`
 
 	rows, err := s.pool.Query(ctx, query, args...)
 	if err != nil {
-		return nil, fmt.Errorf("count by state: %w", err)
+		return nil, fmt.Errorf("aggregations: %w", err)
 	}
 	defer rows.Close()
 
+	result := &AggResult{}
 	stateMap := make(map[string]*model.StateGroup)
 	var stateOrder []string
+
 	for rows.Next() {
-		var state, county string
+		var agg string
+		var key1, key2 *string
 		var count int
-		if err := rows.Scan(&state, &county, &count); err != nil {
-			return nil, fmt.Errorf("scan state group: %w", err)
+		var maxMag *float64
+		var maxSev *string
+		var bucket *time.Time
+
+		if err := rows.Scan(&agg, &key1, &key2, &count, &maxMag, &maxSev, &bucket); err != nil {
+			return nil, fmt.Errorf("scan aggregation row: %w", err)
 		}
-		sg, ok := stateMap[state]
-		if !ok {
-			sg = &model.StateGroup{State: state}
-			stateMap[state] = sg
-			stateOrder = append(stateOrder, state)
+
+		switch agg {
+		case "type":
+			etg := &model.EventTypeGroup{
+				EventType: deref(key1),
+				Count:     count,
+			}
+			if maxMag != nil {
+				etg.MaxMeasurement = &model.Measurement{
+					Magnitude: *maxMag,
+					Unit:      unitForEventType(deref(key1)),
+				}
+			}
+			result.ByEventType = append(result.ByEventType, etg)
+		case "state":
+			state := deref(key1)
+			county := deref(key2)
+			sg, ok := stateMap[state]
+			if !ok {
+				sg = &model.StateGroup{State: state}
+				stateMap[state] = sg
+				stateOrder = append(stateOrder, state)
+			}
+			sg.Count += count
+			sg.Counties = append(sg.Counties, &model.CountyGroup{
+				County: county,
+				Count:  count,
+			})
+		case "hour":
+			if bucket != nil {
+				result.ByHour = append(result.ByHour, &model.TimeGroup{
+					Bucket: *bucket,
+					Count:  count,
+				})
+			}
 		}
-		sg.Count += count
-		sg.Counties = append(sg.Counties, &model.CountyGroup{
-			County: county,
-			Count:  count,
-		})
 	}
 	if err := rows.Err(); err != nil {
 		return nil, err
 	}
 
-	groups := make([]*model.StateGroup, 0, len(stateOrder))
 	for _, st := range stateOrder {
-		groups = append(groups, stateMap[st])
+		result.ByState = append(result.ByState, stateMap[st])
 	}
-	return groups, nil
+
+	return result, nil
 }
 
-// CountByHour returns reports grouped by time_bucket.
-func (s *Store) CountByHour(ctx context.Context, filter *model.StormReportFilter) ([]*model.TimeGroup, error) {
-	defer s.observeQuery("count_by_hour", time.Now())
-	where, args, _ := buildWhereClause(filter)
-
-	whereSQL := buildWhereSQL(where)
-
-	query := `SELECT time_bucket, COUNT(*) AS cnt
-		FROM storm_reports` + whereSQL + `
-		GROUP BY time_bucket ORDER BY time_bucket`
-
-	rows, err := s.pool.Query(ctx, query, args...)
-	if err != nil {
-		return nil, fmt.Errorf("count by hour: %w", err)
+func deref(s *string) string {
+	if s == nil {
+		return ""
 	}
-	defer rows.Close()
-
-	var groups []*model.TimeGroup
-	for rows.Next() {
-		var g model.TimeGroup
-		if err := rows.Scan(&g.Bucket, &g.Count); err != nil {
-			return nil, fmt.Errorf("scan time group: %w", err)
-		}
-		groups = append(groups, &g)
-	}
-	return groups, rows.Err()
+	return *s
 }
 
 // LastUpdated returns the most recent processed_at timestamp.
@@ -339,6 +513,8 @@ func scanStormReport(row scannable) (*model.StormReport, error) {
 		&r.Location.State, &r.Location.County,
 		&r.Comments, &r.Severity, &r.SourceOffice,
 		&r.TimeBucket, &r.ProcessedAt,
+		&r.FormattedAddress, &r.PlaceName,
+		&r.GeoConfidence, &r.GeoSource,
 	)
 	if err == pgx.ErrNoRows {
 		return nil, nil

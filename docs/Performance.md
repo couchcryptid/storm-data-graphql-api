@@ -8,7 +8,7 @@ The service runs two concurrent workloads in a single process:
 
 ```
 Write path:  Kafka topic --> Consumer goroutine --> INSERT --> PostgreSQL
-Read path:   HTTP request --> chi middleware --> gqlgen --> 5 SQL queries --> JSON response
+Read path:   HTTP request --> chi middleware --> gqlgen --> parallel SQL queries (errgroup) --> JSON response
 ```
 
 The Kafka consumer and HTTP server share the same pgx connection pool but otherwise operate independently.
@@ -17,19 +17,18 @@ The Kafka consumer and HTTP server share the same pgx connection pool but otherw
 
 ### Per-Request Cost Breakdown
 
-Each `stormReports` GraphQL query executes **6 sequential database queries** through a single resolver:
+Each `stormReports` GraphQL query supports up to 2 filters. Per filter, the resolver executes **5 database queries in parallel** via `errgroup`:
 
 | Query | Purpose | Typical Latency |
 |---|---|---|
-| `SELECT COUNT(*)` | Total matching rows | 1--10 ms (index scan on `begin_time`) |
-| `SELECT ... ORDER BY ... LIMIT/OFFSET` | Paginated report data (20 columns) | 2--50 ms (depends on result set size and filters) |
+| `SELECT ... ORDER BY ... LIMIT/OFFSET` | Paginated report data (24 columns) + inline `COUNT(*)` | 2--50 ms (depends on result set size and filters) |
 | `GROUP BY type` | Count by event type | 1--5 ms (small cardinality: 3 types) |
 | `GROUP BY location_state, location_county` | Count by state and county | 2--20 ms (varies with geographic spread) |
 | `GROUP BY time_bucket` | Count by hour | 1--10 ms |
-| `SELECT MAX(processed_at)` | Last data update timestamp | 1--5 ms |
-| **Total** | | **~8--100 ms** |
+| `SELECT MAX(processed_at)` | Last data update timestamp (shared across filters) | 1--5 ms |
+| **Total (parallel)** | | **~2--50 ms** per filter |
 
-All six queries share the same dynamically-built `WHERE` clause and run sequentially. Database round-trips dominate end-to-end latency.
+All queries share the same dynamically-built `WHERE` clause. Independent queries run in parallel via `errgroup`, so total latency is bounded by the slowest query rather than the sum. Multiple filters are also executed in parallel.
 
 ### Index Coverage
 
@@ -57,7 +56,7 @@ The server enforces two limits to prevent pathological queries:
 | Protection | Value | Effect |
 |---|---|---|
 | **Depth limit** | 7 levels | Rejects deeply nested queries before execution |
-| **Complexity limit** | 500 points | Rejects queries that would be too expensive |
+| **Complexity limit** | 1100 points | Rejects queries that would be too expensive |
 | **HTTP timeout** | 25 seconds | Aborts any request exceeding the deadline |
 
 ### Complexity Multipliers
@@ -66,13 +65,14 @@ The complexity budget models the cost of list fields:
 
 | Field | Multiplier | Rationale |
 |---|---|---|
-| `reports` | 50x child complexity | Up to 50 items returned per page |
+| `results` | MaxFilters (2) × child complexity | Up to 2 filter results |
+| `reports` | MaxPageSize (20) × child complexity | Up to 20 items returned per page |
 | `byType` | 10x child complexity | ~3 event types, padded |
 | `byState` | 10x child complexity | Up to ~50 states |
 | `byHour` | 10x child complexity | Up to 24 hourly buckets |
 | `counties` (within `byState`) | 5x child complexity | Counties per state |
 
-A typical full query (`reports { id type geo { lat lon } ... } byType { ... } byState { counties { ... } } byHour { ... }`) costs approximately 350--400 complexity points, leaving headroom under the 500-point limit.
+A typical full query with one filter costs approximately 500 complexity points. With two filters requesting all fields (including geocoding), worst-case is ~985 points, leaving headroom under the 1100-point limit.
 
 ## Write Path: Kafka Consumer
 
@@ -149,7 +149,7 @@ The request timeout (25 s) is the effective upper bound for query execution. Wri
 
 | Bottleneck | Impact | Mitigation |
 |---|---|---|
-| Sequential DB queries in resolver | 6 round-trips per request. Latency = sum of all queries. | Parallelize independent queries (CountByType, CountByState, CountByHour, LastUpdated) with goroutines. |
+| pgx pool contention under parallel queries | Multiple queries per filter run concurrently via errgroup. | Ensure pool size accommodates concurrent query load. |
 | Offset pagination at high offsets | Linear scan cost proportional to offset value. | Implement cursor-based (keyset) pagination for large datasets. |
 | pgx pool defaults | Max connections = max(4, numCPU). May limit concurrency under high load. | Explicitly configure pool size via connection string parameters. |
 | No database query timeout | Queries rely on the 25 s HTTP timeout. Runaway queries hold connections. | Add `statement_timeout` to the connection string or per-query context deadline. |

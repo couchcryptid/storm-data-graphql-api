@@ -41,6 +41,7 @@ type Config struct {
 
 type ResolverRoot interface {
 	Query() QueryResolver
+	StormReport() StormReportResolver
 }
 
 type DirectiveRoot struct {
@@ -50,6 +51,12 @@ type ComplexityRoot struct {
 	CountyGroup struct {
 		Count  func(childComplexity int) int
 		County func(childComplexity int) int
+	}
+
+	EventTypeGroup struct {
+		Count          func(childComplexity int) int
+		EventType      func(childComplexity int) int
+		MaxMeasurement func(childComplexity int) int
 	}
 
 	Geo struct {
@@ -66,8 +73,19 @@ type ComplexityRoot struct {
 		State     func(childComplexity int) int
 	}
 
+	Measurement struct {
+		Magnitude func(childComplexity int) int
+		Severity  func(childComplexity int) int
+		Unit      func(childComplexity int) int
+	}
+
 	Query struct {
 		StormReports func(childComplexity int, filter model.StormReportFilter) int
+	}
+
+	QueryMeta struct {
+		DataLagMinutes func(childComplexity int) int
+		LastUpdated    func(childComplexity int) int
 	}
 
 	StateGroup struct {
@@ -76,47 +94,53 @@ type ComplexityRoot struct {
 		State    func(childComplexity int) int
 	}
 
-	StormReport struct {
-		BeginTime    func(childComplexity int) int
-		Comments     func(childComplexity int) int
-		EndTime      func(childComplexity int) int
-		Geo          func(childComplexity int) int
-		ID           func(childComplexity int) int
-		Location     func(childComplexity int) int
-		Magnitude    func(childComplexity int) int
-		ProcessedAt  func(childComplexity int) int
-		Severity     func(childComplexity int) int
-		Source       func(childComplexity int) int
-		SourceOffice func(childComplexity int) int
-		TimeBucket   func(childComplexity int) int
-		Type         func(childComplexity int) int
-		Unit         func(childComplexity int) int
+	StormAggregations struct {
+		ByEventType func(childComplexity int) int
+		ByHour      func(childComplexity int) int
+		ByState     func(childComplexity int) int
+		TotalCount  func(childComplexity int) int
 	}
 
-	StormReportResult struct {
-		ByHour         func(childComplexity int) int
-		ByState        func(childComplexity int) int
-		ByType         func(childComplexity int) int
-		DataLagMinutes func(childComplexity int) int
-		LastUpdated    func(childComplexity int) int
-		Reports        func(childComplexity int) int
-		TotalCount     func(childComplexity int) int
+	StormReport struct {
+		BeginTime        func(childComplexity int) int
+		Comments         func(childComplexity int) int
+		EndTime          func(childComplexity int) int
+		EventType        func(childComplexity int) int
+		FormattedAddress func(childComplexity int) int
+		Geo              func(childComplexity int) int
+		GeoConfidence    func(childComplexity int) int
+		GeoSource        func(childComplexity int) int
+		ID               func(childComplexity int) int
+		Location         func(childComplexity int) int
+		Measurement      func(childComplexity int) int
+		PlaceName        func(childComplexity int) int
+		ProcessedAt      func(childComplexity int) int
+		Source           func(childComplexity int) int
+		SourceOffice     func(childComplexity int) int
+		TimeBucket       func(childComplexity int) int
+	}
+
+	StormReportsResult struct {
+		Aggregations func(childComplexity int) int
+		HasMore      func(childComplexity int) int
+		Meta         func(childComplexity int) int
+		Reports      func(childComplexity int) int
+		TotalCount   func(childComplexity int) int
 	}
 
 	TimeGroup struct {
 		Bucket func(childComplexity int) int
 		Count  func(childComplexity int) int
 	}
-
-	TypeGroup struct {
-		Count        func(childComplexity int) int
-		MaxMagnitude func(childComplexity int) int
-		Type         func(childComplexity int) int
-	}
 }
 
 type QueryResolver interface {
-	StormReports(ctx context.Context, filter model.StormReportFilter) (*model.StormReportResult, error)
+	StormReports(ctx context.Context, filter model.StormReportFilter) (*model.StormReportsResult, error)
+}
+type StormReportResolver interface {
+	EventType(ctx context.Context, obj *model.StormReport) (string, error)
+
+	Measurement(ctx context.Context, obj *model.StormReport) (*model.Measurement, error)
 }
 
 type executableSchema struct {
@@ -150,6 +174,25 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 		}
 
 		return e.complexity.CountyGroup.County(childComplexity), true
+
+	case "EventTypeGroup.count":
+		if e.complexity.EventTypeGroup.Count == nil {
+			break
+		}
+
+		return e.complexity.EventTypeGroup.Count(childComplexity), true
+	case "EventTypeGroup.eventType":
+		if e.complexity.EventTypeGroup.EventType == nil {
+			break
+		}
+
+		return e.complexity.EventTypeGroup.EventType(childComplexity), true
+	case "EventTypeGroup.maxMeasurement":
+		if e.complexity.EventTypeGroup.MaxMeasurement == nil {
+			break
+		}
+
+		return e.complexity.EventTypeGroup.MaxMeasurement(childComplexity), true
 
 	case "Geo.lat":
 		if e.complexity.Geo.Lat == nil {
@@ -201,6 +244,25 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 
 		return e.complexity.Location.State(childComplexity), true
 
+	case "Measurement.magnitude":
+		if e.complexity.Measurement.Magnitude == nil {
+			break
+		}
+
+		return e.complexity.Measurement.Magnitude(childComplexity), true
+	case "Measurement.severity":
+		if e.complexity.Measurement.Severity == nil {
+			break
+		}
+
+		return e.complexity.Measurement.Severity(childComplexity), true
+	case "Measurement.unit":
+		if e.complexity.Measurement.Unit == nil {
+			break
+		}
+
+		return e.complexity.Measurement.Unit(childComplexity), true
+
 	case "Query.stormReports":
 		if e.complexity.Query.StormReports == nil {
 			break
@@ -212,6 +274,19 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 		}
 
 		return e.complexity.Query.StormReports(childComplexity, args["filter"].(model.StormReportFilter)), true
+
+	case "QueryMeta.dataLagMinutes":
+		if e.complexity.QueryMeta.DataLagMinutes == nil {
+			break
+		}
+
+		return e.complexity.QueryMeta.DataLagMinutes(childComplexity), true
+	case "QueryMeta.lastUpdated":
+		if e.complexity.QueryMeta.LastUpdated == nil {
+			break
+		}
+
+		return e.complexity.QueryMeta.LastUpdated(childComplexity), true
 
 	case "StateGroup.count":
 		if e.complexity.StateGroup.Count == nil {
@@ -232,6 +307,31 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 
 		return e.complexity.StateGroup.State(childComplexity), true
 
+	case "StormAggregations.byEventType":
+		if e.complexity.StormAggregations.ByEventType == nil {
+			break
+		}
+
+		return e.complexity.StormAggregations.ByEventType(childComplexity), true
+	case "StormAggregations.byHour":
+		if e.complexity.StormAggregations.ByHour == nil {
+			break
+		}
+
+		return e.complexity.StormAggregations.ByHour(childComplexity), true
+	case "StormAggregations.byState":
+		if e.complexity.StormAggregations.ByState == nil {
+			break
+		}
+
+		return e.complexity.StormAggregations.ByState(childComplexity), true
+	case "StormAggregations.totalCount":
+		if e.complexity.StormAggregations.TotalCount == nil {
+			break
+		}
+
+		return e.complexity.StormAggregations.TotalCount(childComplexity), true
+
 	case "StormReport.beginTime":
 		if e.complexity.StormReport.BeginTime == nil {
 			break
@@ -250,12 +350,36 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 		}
 
 		return e.complexity.StormReport.EndTime(childComplexity), true
+	case "StormReport.eventType":
+		if e.complexity.StormReport.EventType == nil {
+			break
+		}
+
+		return e.complexity.StormReport.EventType(childComplexity), true
+	case "StormReport.formattedAddress":
+		if e.complexity.StormReport.FormattedAddress == nil {
+			break
+		}
+
+		return e.complexity.StormReport.FormattedAddress(childComplexity), true
 	case "StormReport.geo":
 		if e.complexity.StormReport.Geo == nil {
 			break
 		}
 
 		return e.complexity.StormReport.Geo(childComplexity), true
+	case "StormReport.geoConfidence":
+		if e.complexity.StormReport.GeoConfidence == nil {
+			break
+		}
+
+		return e.complexity.StormReport.GeoConfidence(childComplexity), true
+	case "StormReport.geoSource":
+		if e.complexity.StormReport.GeoSource == nil {
+			break
+		}
+
+		return e.complexity.StormReport.GeoSource(childComplexity), true
 	case "StormReport.id":
 		if e.complexity.StormReport.ID == nil {
 			break
@@ -268,24 +392,24 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 		}
 
 		return e.complexity.StormReport.Location(childComplexity), true
-	case "StormReport.magnitude":
-		if e.complexity.StormReport.Magnitude == nil {
+	case "StormReport.measurement":
+		if e.complexity.StormReport.Measurement == nil {
 			break
 		}
 
-		return e.complexity.StormReport.Magnitude(childComplexity), true
+		return e.complexity.StormReport.Measurement(childComplexity), true
+	case "StormReport.placeName":
+		if e.complexity.StormReport.PlaceName == nil {
+			break
+		}
+
+		return e.complexity.StormReport.PlaceName(childComplexity), true
 	case "StormReport.processedAt":
 		if e.complexity.StormReport.ProcessedAt == nil {
 			break
 		}
 
 		return e.complexity.StormReport.ProcessedAt(childComplexity), true
-	case "StormReport.severity":
-		if e.complexity.StormReport.Severity == nil {
-			break
-		}
-
-		return e.complexity.StormReport.Severity(childComplexity), true
 	case "StormReport.source":
 		if e.complexity.StormReport.Source == nil {
 			break
@@ -304,61 +428,37 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 		}
 
 		return e.complexity.StormReport.TimeBucket(childComplexity), true
-	case "StormReport.type":
-		if e.complexity.StormReport.Type == nil {
+
+	case "StormReportsResult.aggregations":
+		if e.complexity.StormReportsResult.Aggregations == nil {
 			break
 		}
 
-		return e.complexity.StormReport.Type(childComplexity), true
-	case "StormReport.unit":
-		if e.complexity.StormReport.Unit == nil {
+		return e.complexity.StormReportsResult.Aggregations(childComplexity), true
+	case "StormReportsResult.hasMore":
+		if e.complexity.StormReportsResult.HasMore == nil {
 			break
 		}
 
-		return e.complexity.StormReport.Unit(childComplexity), true
-
-	case "StormReportResult.byHour":
-		if e.complexity.StormReportResult.ByHour == nil {
+		return e.complexity.StormReportsResult.HasMore(childComplexity), true
+	case "StormReportsResult.meta":
+		if e.complexity.StormReportsResult.Meta == nil {
 			break
 		}
 
-		return e.complexity.StormReportResult.ByHour(childComplexity), true
-	case "StormReportResult.byState":
-		if e.complexity.StormReportResult.ByState == nil {
+		return e.complexity.StormReportsResult.Meta(childComplexity), true
+	case "StormReportsResult.reports":
+		if e.complexity.StormReportsResult.Reports == nil {
 			break
 		}
 
-		return e.complexity.StormReportResult.ByState(childComplexity), true
-	case "StormReportResult.byType":
-		if e.complexity.StormReportResult.ByType == nil {
+		return e.complexity.StormReportsResult.Reports(childComplexity), true
+	case "StormReportsResult.totalCount":
+		if e.complexity.StormReportsResult.TotalCount == nil {
 			break
 		}
 
-		return e.complexity.StormReportResult.ByType(childComplexity), true
-	case "StormReportResult.dataLagMinutes":
-		if e.complexity.StormReportResult.DataLagMinutes == nil {
-			break
-		}
-
-		return e.complexity.StormReportResult.DataLagMinutes(childComplexity), true
-	case "StormReportResult.lastUpdated":
-		if e.complexity.StormReportResult.LastUpdated == nil {
-			break
-		}
-
-		return e.complexity.StormReportResult.LastUpdated(childComplexity), true
-	case "StormReportResult.reports":
-		if e.complexity.StormReportResult.Reports == nil {
-			break
-		}
-
-		return e.complexity.StormReportResult.Reports(childComplexity), true
-	case "StormReportResult.totalCount":
-		if e.complexity.StormReportResult.TotalCount == nil {
-			break
-		}
-
-		return e.complexity.StormReportResult.TotalCount(childComplexity), true
+		return e.complexity.StormReportsResult.TotalCount(childComplexity), true
 
 	case "TimeGroup.bucket":
 		if e.complexity.TimeGroup.Bucket == nil {
@@ -373,25 +473,6 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 
 		return e.complexity.TimeGroup.Count(childComplexity), true
 
-	case "TypeGroup.count":
-		if e.complexity.TypeGroup.Count == nil {
-			break
-		}
-
-		return e.complexity.TypeGroup.Count(childComplexity), true
-	case "TypeGroup.maxMagnitude":
-		if e.complexity.TypeGroup.MaxMagnitude == nil {
-			break
-		}
-
-		return e.complexity.TypeGroup.MaxMagnitude(childComplexity), true
-	case "TypeGroup.type":
-		if e.complexity.TypeGroup.Type == nil {
-			break
-		}
-
-		return e.complexity.TypeGroup.Type(childComplexity), true
-
 	}
 	return 0, false
 }
@@ -400,7 +481,10 @@ func (e *executableSchema) Exec(ctx context.Context) graphql.ResponseHandler {
 	opCtx := graphql.GetOperationContext(ctx)
 	ec := executionContext{opCtx, e, 0, 0, make(chan graphql.DeferredResult)}
 	inputUnmarshalMap := graphql.BuildUnmarshalerMap(
+		ec.unmarshalInputEventTypeFilter,
+		ec.unmarshalInputGeoRadiusFilter,
 		ec.unmarshalInputStormReportFilter,
+		ec.unmarshalInputTimeRange,
 	)
 	first := true
 
@@ -629,6 +713,101 @@ func (ec *executionContext) fieldContext_CountyGroup_count(_ context.Context, fi
 		IsResolver: false,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _EventTypeGroup_eventType(ctx context.Context, field graphql.CollectedField, obj *model.EventTypeGroup) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_EventTypeGroup_eventType,
+		func(ctx context.Context) (any, error) {
+			return obj.EventType, nil
+		},
+		nil,
+		ec.marshalNString2string,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_EventTypeGroup_eventType(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "EventTypeGroup",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _EventTypeGroup_count(ctx context.Context, field graphql.CollectedField, obj *model.EventTypeGroup) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_EventTypeGroup_count,
+		func(ctx context.Context) (any, error) {
+			return obj.Count, nil
+		},
+		nil,
+		ec.marshalNInt2int,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_EventTypeGroup_count(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "EventTypeGroup",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _EventTypeGroup_maxMeasurement(ctx context.Context, field graphql.CollectedField, obj *model.EventTypeGroup) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_EventTypeGroup_maxMeasurement,
+		func(ctx context.Context) (any, error) {
+			return obj.MaxMeasurement, nil
+		},
+		nil,
+		ec.marshalOMeasurement2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement,
+		true,
+		false,
+	)
+}
+
+func (ec *executionContext) fieldContext_EventTypeGroup_maxMeasurement(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "EventTypeGroup",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			switch field.Name {
+			case "magnitude":
+				return ec.fieldContext_Measurement_magnitude(ctx, field)
+			case "unit":
+				return ec.fieldContext_Measurement_unit(ctx, field)
+			case "severity":
+				return ec.fieldContext_Measurement_severity(ctx, field)
+			}
+			return nil, fmt.Errorf("no field named %q was found under type Measurement", field.Name)
 		},
 	}
 	return fc, nil
@@ -866,6 +1045,93 @@ func (ec *executionContext) fieldContext_Location_county(_ context.Context, fiel
 	return fc, nil
 }
 
+func (ec *executionContext) _Measurement_magnitude(ctx context.Context, field graphql.CollectedField, obj *model.Measurement) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_Measurement_magnitude,
+		func(ctx context.Context) (any, error) {
+			return obj.Magnitude, nil
+		},
+		nil,
+		ec.marshalNFloat2float64,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_Measurement_magnitude(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Measurement",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Float does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Measurement_unit(ctx context.Context, field graphql.CollectedField, obj *model.Measurement) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_Measurement_unit,
+		func(ctx context.Context) (any, error) {
+			return obj.Unit, nil
+		},
+		nil,
+		ec.marshalNString2string,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_Measurement_unit(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Measurement",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Measurement_severity(ctx context.Context, field graphql.CollectedField, obj *model.Measurement) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_Measurement_severity,
+		func(ctx context.Context) (any, error) {
+			return obj.Severity, nil
+		},
+		nil,
+		ec.marshalOString2ᚖstring,
+		true,
+		false,
+	)
+}
+
+func (ec *executionContext) fieldContext_Measurement_severity(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Measurement",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
 func (ec *executionContext) _Query_stormReports(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
@@ -877,7 +1143,7 @@ func (ec *executionContext) _Query_stormReports(ctx context.Context, field graph
 			return ec.resolvers.Query().StormReports(ctx, fc.Args["filter"].(model.StormReportFilter))
 		},
 		nil,
-		ec.marshalNStormReportResult2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportResult,
+		ec.marshalNStormReportsResult2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportsResult,
 		true,
 		true,
 	)
@@ -891,22 +1157,18 @@ func (ec *executionContext) fieldContext_Query_stormReports(ctx context.Context,
 		IsResolver: true,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			switch field.Name {
-			case "reports":
-				return ec.fieldContext_StormReportResult_reports(ctx, field)
 			case "totalCount":
-				return ec.fieldContext_StormReportResult_totalCount(ctx, field)
-			case "byType":
-				return ec.fieldContext_StormReportResult_byType(ctx, field)
-			case "byState":
-				return ec.fieldContext_StormReportResult_byState(ctx, field)
-			case "byHour":
-				return ec.fieldContext_StormReportResult_byHour(ctx, field)
-			case "lastUpdated":
-				return ec.fieldContext_StormReportResult_lastUpdated(ctx, field)
-			case "dataLagMinutes":
-				return ec.fieldContext_StormReportResult_dataLagMinutes(ctx, field)
+				return ec.fieldContext_StormReportsResult_totalCount(ctx, field)
+			case "hasMore":
+				return ec.fieldContext_StormReportsResult_hasMore(ctx, field)
+			case "reports":
+				return ec.fieldContext_StormReportsResult_reports(ctx, field)
+			case "aggregations":
+				return ec.fieldContext_StormReportsResult_aggregations(ctx, field)
+			case "meta":
+				return ec.fieldContext_StormReportsResult_meta(ctx, field)
 			}
-			return nil, fmt.Errorf("no field named %q was found under type StormReportResult", field.Name)
+			return nil, fmt.Errorf("no field named %q was found under type StormReportsResult", field.Name)
 		},
 	}
 	defer func() {
@@ -1031,6 +1293,64 @@ func (ec *executionContext) fieldContext_Query___schema(_ context.Context, field
 	return fc, nil
 }
 
+func (ec *executionContext) _QueryMeta_lastUpdated(ctx context.Context, field graphql.CollectedField, obj *model.QueryMeta) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_QueryMeta_lastUpdated,
+		func(ctx context.Context) (any, error) {
+			return obj.LastUpdated, nil
+		},
+		nil,
+		ec.marshalODateTime2ᚖtimeᚐTime,
+		true,
+		false,
+	)
+}
+
+func (ec *executionContext) fieldContext_QueryMeta_lastUpdated(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "QueryMeta",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type DateTime does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _QueryMeta_dataLagMinutes(ctx context.Context, field graphql.CollectedField, obj *model.QueryMeta) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_QueryMeta_dataLagMinutes,
+		func(ctx context.Context) (any, error) {
+			return obj.DataLagMinutes, nil
+		},
+		nil,
+		ec.marshalOInt2ᚖint,
+		true,
+		false,
+	)
+}
+
+func (ec *executionContext) fieldContext_QueryMeta_dataLagMinutes(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "QueryMeta",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
 func (ec *executionContext) _StateGroup_state(ctx context.Context, field graphql.CollectedField, obj *model.StateGroup) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
@@ -1124,6 +1444,144 @@ func (ec *executionContext) fieldContext_StateGroup_counties(_ context.Context, 
 	return fc, nil
 }
 
+func (ec *executionContext) _StormAggregations_totalCount(ctx context.Context, field graphql.CollectedField, obj *model.StormAggregations) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormAggregations_totalCount,
+		func(ctx context.Context) (any, error) {
+			return obj.TotalCount, nil
+		},
+		nil,
+		ec.marshalNInt2int,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormAggregations_totalCount(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormAggregations",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormAggregations_byEventType(ctx context.Context, field graphql.CollectedField, obj *model.StormAggregations) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormAggregations_byEventType,
+		func(ctx context.Context) (any, error) {
+			return obj.ByEventType, nil
+		},
+		nil,
+		ec.marshalNEventTypeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeGroupᚄ,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormAggregations_byEventType(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormAggregations",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			switch field.Name {
+			case "eventType":
+				return ec.fieldContext_EventTypeGroup_eventType(ctx, field)
+			case "count":
+				return ec.fieldContext_EventTypeGroup_count(ctx, field)
+			case "maxMeasurement":
+				return ec.fieldContext_EventTypeGroup_maxMeasurement(ctx, field)
+			}
+			return nil, fmt.Errorf("no field named %q was found under type EventTypeGroup", field.Name)
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormAggregations_byState(ctx context.Context, field graphql.CollectedField, obj *model.StormAggregations) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormAggregations_byState,
+		func(ctx context.Context) (any, error) {
+			return obj.ByState, nil
+		},
+		nil,
+		ec.marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStateGroupᚄ,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormAggregations_byState(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormAggregations",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			switch field.Name {
+			case "state":
+				return ec.fieldContext_StateGroup_state(ctx, field)
+			case "count":
+				return ec.fieldContext_StateGroup_count(ctx, field)
+			case "counties":
+				return ec.fieldContext_StateGroup_counties(ctx, field)
+			}
+			return nil, fmt.Errorf("no field named %q was found under type StateGroup", field.Name)
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormAggregations_byHour(ctx context.Context, field graphql.CollectedField, obj *model.StormAggregations) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormAggregations_byHour,
+		func(ctx context.Context) (any, error) {
+			return obj.ByHour, nil
+		},
+		nil,
+		ec.marshalNTimeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeGroupᚄ,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormAggregations_byHour(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormAggregations",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			switch field.Name {
+			case "bucket":
+				return ec.fieldContext_TimeGroup_bucket(ctx, field)
+			case "count":
+				return ec.fieldContext_TimeGroup_count(ctx, field)
+			}
+			return nil, fmt.Errorf("no field named %q was found under type TimeGroup", field.Name)
+		},
+	}
+	return fc, nil
+}
+
 func (ec *executionContext) _StormReport_id(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
@@ -1153,14 +1611,14 @@ func (ec *executionContext) fieldContext_StormReport_id(_ context.Context, field
 	return fc, nil
 }
 
-func (ec *executionContext) _StormReport_type(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
+func (ec *executionContext) _StormReport_eventType(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
 		ec.OperationContext,
 		field,
-		ec.fieldContext_StormReport_type,
+		ec.fieldContext_StormReport_eventType,
 		func(ctx context.Context) (any, error) {
-			return obj.Type, nil
+			return ec.resolvers.StormReport().EventType(ctx, obj)
 		},
 		nil,
 		ec.marshalNString2string,
@@ -1169,12 +1627,12 @@ func (ec *executionContext) _StormReport_type(ctx context.Context, field graphql
 	)
 }
 
-func (ec *executionContext) fieldContext_StormReport_type(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+func (ec *executionContext) fieldContext_StormReport_eventType(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
 	fc = &graphql.FieldContext{
 		Object:     "StormReport",
 		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
+		IsMethod:   true,
+		IsResolver: true,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			return nil, errors.New("field of type String does not have child fields")
 		},
@@ -1217,88 +1675,38 @@ func (ec *executionContext) fieldContext_StormReport_geo(_ context.Context, fiel
 	return fc, nil
 }
 
-func (ec *executionContext) _StormReport_magnitude(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
+func (ec *executionContext) _StormReport_measurement(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
 		ec.OperationContext,
 		field,
-		ec.fieldContext_StormReport_magnitude,
+		ec.fieldContext_StormReport_measurement,
 		func(ctx context.Context) (any, error) {
-			return obj.Magnitude, nil
+			return ec.resolvers.StormReport().Measurement(ctx, obj)
 		},
 		nil,
-		ec.marshalNFloat2float64,
+		ec.marshalNMeasurement2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement,
 		true,
 		true,
 	)
 }
 
-func (ec *executionContext) fieldContext_StormReport_magnitude(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+func (ec *executionContext) fieldContext_StormReport_measurement(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
 	fc = &graphql.FieldContext{
 		Object:     "StormReport",
 		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
+		IsMethod:   true,
+		IsResolver: true,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type Float does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _StormReport_unit(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_StormReport_unit,
-		func(ctx context.Context) (any, error) {
-			return obj.Unit, nil
-		},
-		nil,
-		ec.marshalNString2string,
-		true,
-		true,
-	)
-}
-
-func (ec *executionContext) fieldContext_StormReport_unit(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "StormReport",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type String does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _StormReport_severity(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_StormReport_severity,
-		func(ctx context.Context) (any, error) {
-			return obj.Severity, nil
-		},
-		nil,
-		ec.marshalOString2ᚖstring,
-		true,
-		false,
-	)
-}
-
-func (ec *executionContext) fieldContext_StormReport_severity(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "StormReport",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type String does not have child fields")
+			switch field.Name {
+			case "magnitude":
+				return ec.fieldContext_Measurement_magnitude(ctx, field)
+			case "unit":
+				return ec.fieldContext_Measurement_unit(ctx, field)
+			case "severity":
+				return ec.fieldContext_Measurement_severity(ctx, field)
+			}
+			return nil, fmt.Errorf("no field named %q was found under type Measurement", field.Name)
 		},
 	}
 	return fc, nil
@@ -1550,12 +1958,186 @@ func (ec *executionContext) fieldContext_StormReport_processedAt(_ context.Conte
 	return fc, nil
 }
 
-func (ec *executionContext) _StormReportResult_reports(ctx context.Context, field graphql.CollectedField, obj *model.StormReportResult) (ret graphql.Marshaler) {
+func (ec *executionContext) _StormReport_formattedAddress(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
 		ec.OperationContext,
 		field,
-		ec.fieldContext_StormReportResult_reports,
+		ec.fieldContext_StormReport_formattedAddress,
+		func(ctx context.Context) (any, error) {
+			return obj.FormattedAddress, nil
+		},
+		nil,
+		ec.marshalNString2string,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormReport_formattedAddress(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormReport",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormReport_placeName(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormReport_placeName,
+		func(ctx context.Context) (any, error) {
+			return obj.PlaceName, nil
+		},
+		nil,
+		ec.marshalNString2string,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormReport_placeName(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormReport",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormReport_geoConfidence(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormReport_geoConfidence,
+		func(ctx context.Context) (any, error) {
+			return obj.GeoConfidence, nil
+		},
+		nil,
+		ec.marshalNFloat2float64,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormReport_geoConfidence(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormReport",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Float does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormReport_geoSource(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormReport_geoSource,
+		func(ctx context.Context) (any, error) {
+			return obj.GeoSource, nil
+		},
+		nil,
+		ec.marshalNString2string,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormReport_geoSource(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormReport",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormReportsResult_totalCount(ctx context.Context, field graphql.CollectedField, obj *model.StormReportsResult) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormReportsResult_totalCount,
+		func(ctx context.Context) (any, error) {
+			return obj.TotalCount, nil
+		},
+		nil,
+		ec.marshalNInt2int,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormReportsResult_totalCount(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormReportsResult",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormReportsResult_hasMore(ctx context.Context, field graphql.CollectedField, obj *model.StormReportsResult) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormReportsResult_hasMore,
+		func(ctx context.Context) (any, error) {
+			return obj.HasMore, nil
+		},
+		nil,
+		ec.marshalNBoolean2bool,
+		true,
+		true,
+	)
+}
+
+func (ec *executionContext) fieldContext_StormReportsResult_hasMore(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "StormReportsResult",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Boolean does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _StormReportsResult_reports(ctx context.Context, field graphql.CollectedField, obj *model.StormReportsResult) (ret graphql.Marshaler) {
+	return graphql.ResolveField(
+		ctx,
+		ec.OperationContext,
+		field,
+		ec.fieldContext_StormReportsResult_reports,
 		func(ctx context.Context) (any, error) {
 			return obj.Reports, nil
 		},
@@ -1566,9 +2148,9 @@ func (ec *executionContext) _StormReportResult_reports(ctx context.Context, fiel
 	)
 }
 
-func (ec *executionContext) fieldContext_StormReportResult_reports(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+func (ec *executionContext) fieldContext_StormReportsResult_reports(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
 	fc = &graphql.FieldContext{
-		Object:     "StormReportResult",
+		Object:     "StormReportsResult",
 		Field:      field,
 		IsMethod:   false,
 		IsResolver: false,
@@ -1576,16 +2158,12 @@ func (ec *executionContext) fieldContext_StormReportResult_reports(_ context.Con
 			switch field.Name {
 			case "id":
 				return ec.fieldContext_StormReport_id(ctx, field)
-			case "type":
-				return ec.fieldContext_StormReport_type(ctx, field)
+			case "eventType":
+				return ec.fieldContext_StormReport_eventType(ctx, field)
 			case "geo":
 				return ec.fieldContext_StormReport_geo(ctx, field)
-			case "magnitude":
-				return ec.fieldContext_StormReport_magnitude(ctx, field)
-			case "unit":
-				return ec.fieldContext_StormReport_unit(ctx, field)
-			case "severity":
-				return ec.fieldContext_StormReport_severity(ctx, field)
+			case "measurement":
+				return ec.fieldContext_StormReport_measurement(ctx, field)
 			case "beginTime":
 				return ec.fieldContext_StormReport_beginTime(ctx, field)
 			case "endTime":
@@ -1602,6 +2180,14 @@ func (ec *executionContext) fieldContext_StormReportResult_reports(_ context.Con
 				return ec.fieldContext_StormReport_timeBucket(ctx, field)
 			case "processedAt":
 				return ec.fieldContext_StormReport_processedAt(ctx, field)
+			case "formattedAddress":
+				return ec.fieldContext_StormReport_formattedAddress(ctx, field)
+			case "placeName":
+				return ec.fieldContext_StormReport_placeName(ctx, field)
+			case "geoConfidence":
+				return ec.fieldContext_StormReport_geoConfidence(ctx, field)
+			case "geoSource":
+				return ec.fieldContext_StormReport_geoSource(ctx, field)
 			}
 			return nil, fmt.Errorf("no field named %q was found under type StormReport", field.Name)
 		},
@@ -1609,197 +2195,75 @@ func (ec *executionContext) fieldContext_StormReportResult_reports(_ context.Con
 	return fc, nil
 }
 
-func (ec *executionContext) _StormReportResult_totalCount(ctx context.Context, field graphql.CollectedField, obj *model.StormReportResult) (ret graphql.Marshaler) {
+func (ec *executionContext) _StormReportsResult_aggregations(ctx context.Context, field graphql.CollectedField, obj *model.StormReportsResult) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
 		ec.OperationContext,
 		field,
-		ec.fieldContext_StormReportResult_totalCount,
+		ec.fieldContext_StormReportsResult_aggregations,
 		func(ctx context.Context) (any, error) {
-			return obj.TotalCount, nil
+			return obj.Aggregations, nil
 		},
 		nil,
-		ec.marshalNInt2int,
+		ec.marshalNStormAggregations2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormAggregations,
 		true,
 		true,
 	)
 }
 
-func (ec *executionContext) fieldContext_StormReportResult_totalCount(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+func (ec *executionContext) fieldContext_StormReportsResult_aggregations(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
 	fc = &graphql.FieldContext{
-		Object:     "StormReportResult",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type Int does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _StormReportResult_byType(ctx context.Context, field graphql.CollectedField, obj *model.StormReportResult) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_StormReportResult_byType,
-		func(ctx context.Context) (any, error) {
-			return obj.ByType, nil
-		},
-		nil,
-		ec.marshalNTypeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTypeGroupᚄ,
-		true,
-		true,
-	)
-}
-
-func (ec *executionContext) fieldContext_StormReportResult_byType(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "StormReportResult",
+		Object:     "StormReportsResult",
 		Field:      field,
 		IsMethod:   false,
 		IsResolver: false,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			switch field.Name {
-			case "type":
-				return ec.fieldContext_TypeGroup_type(ctx, field)
-			case "count":
-				return ec.fieldContext_TypeGroup_count(ctx, field)
-			case "maxMagnitude":
-				return ec.fieldContext_TypeGroup_maxMagnitude(ctx, field)
+			case "totalCount":
+				return ec.fieldContext_StormAggregations_totalCount(ctx, field)
+			case "byEventType":
+				return ec.fieldContext_StormAggregations_byEventType(ctx, field)
+			case "byState":
+				return ec.fieldContext_StormAggregations_byState(ctx, field)
+			case "byHour":
+				return ec.fieldContext_StormAggregations_byHour(ctx, field)
 			}
-			return nil, fmt.Errorf("no field named %q was found under type TypeGroup", field.Name)
+			return nil, fmt.Errorf("no field named %q was found under type StormAggregations", field.Name)
 		},
 	}
 	return fc, nil
 }
 
-func (ec *executionContext) _StormReportResult_byState(ctx context.Context, field graphql.CollectedField, obj *model.StormReportResult) (ret graphql.Marshaler) {
+func (ec *executionContext) _StormReportsResult_meta(ctx context.Context, field graphql.CollectedField, obj *model.StormReportsResult) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
 		ec.OperationContext,
 		field,
-		ec.fieldContext_StormReportResult_byState,
+		ec.fieldContext_StormReportsResult_meta,
 		func(ctx context.Context) (any, error) {
-			return obj.ByState, nil
+			return obj.Meta, nil
 		},
 		nil,
-		ec.marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStateGroupᚄ,
+		ec.marshalNQueryMeta2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐQueryMeta,
 		true,
 		true,
 	)
 }
 
-func (ec *executionContext) fieldContext_StormReportResult_byState(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+func (ec *executionContext) fieldContext_StormReportsResult_meta(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
 	fc = &graphql.FieldContext{
-		Object:     "StormReportResult",
+		Object:     "StormReportsResult",
 		Field:      field,
 		IsMethod:   false,
 		IsResolver: false,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			switch field.Name {
-			case "state":
-				return ec.fieldContext_StateGroup_state(ctx, field)
-			case "count":
-				return ec.fieldContext_StateGroup_count(ctx, field)
-			case "counties":
-				return ec.fieldContext_StateGroup_counties(ctx, field)
+			case "lastUpdated":
+				return ec.fieldContext_QueryMeta_lastUpdated(ctx, field)
+			case "dataLagMinutes":
+				return ec.fieldContext_QueryMeta_dataLagMinutes(ctx, field)
 			}
-			return nil, fmt.Errorf("no field named %q was found under type StateGroup", field.Name)
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _StormReportResult_byHour(ctx context.Context, field graphql.CollectedField, obj *model.StormReportResult) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_StormReportResult_byHour,
-		func(ctx context.Context) (any, error) {
-			return obj.ByHour, nil
-		},
-		nil,
-		ec.marshalNTimeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeGroupᚄ,
-		true,
-		true,
-	)
-}
-
-func (ec *executionContext) fieldContext_StormReportResult_byHour(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "StormReportResult",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			switch field.Name {
-			case "bucket":
-				return ec.fieldContext_TimeGroup_bucket(ctx, field)
-			case "count":
-				return ec.fieldContext_TimeGroup_count(ctx, field)
-			}
-			return nil, fmt.Errorf("no field named %q was found under type TimeGroup", field.Name)
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _StormReportResult_lastUpdated(ctx context.Context, field graphql.CollectedField, obj *model.StormReportResult) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_StormReportResult_lastUpdated,
-		func(ctx context.Context) (any, error) {
-			return obj.LastUpdated, nil
-		},
-		nil,
-		ec.marshalODateTime2ᚖtimeᚐTime,
-		true,
-		false,
-	)
-}
-
-func (ec *executionContext) fieldContext_StormReportResult_lastUpdated(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "StormReportResult",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type DateTime does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _StormReportResult_dataLagMinutes(ctx context.Context, field graphql.CollectedField, obj *model.StormReportResult) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_StormReportResult_dataLagMinutes,
-		func(ctx context.Context) (any, error) {
-			return obj.DataLagMinutes, nil
-		},
-		nil,
-		ec.marshalOInt2ᚖint,
-		true,
-		false,
-	)
-}
-
-func (ec *executionContext) fieldContext_StormReportResult_dataLagMinutes(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "StormReportResult",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type Int does not have child fields")
+			return nil, fmt.Errorf("no field named %q was found under type QueryMeta", field.Name)
 		},
 	}
 	return fc, nil
@@ -1858,93 +2322,6 @@ func (ec *executionContext) fieldContext_TimeGroup_count(_ context.Context, fiel
 		IsResolver: false,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			return nil, errors.New("field of type Int does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _TypeGroup_type(ctx context.Context, field graphql.CollectedField, obj *model.TypeGroup) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_TypeGroup_type,
-		func(ctx context.Context) (any, error) {
-			return obj.Type, nil
-		},
-		nil,
-		ec.marshalNString2string,
-		true,
-		true,
-	)
-}
-
-func (ec *executionContext) fieldContext_TypeGroup_type(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "TypeGroup",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type String does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _TypeGroup_count(ctx context.Context, field graphql.CollectedField, obj *model.TypeGroup) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_TypeGroup_count,
-		func(ctx context.Context) (any, error) {
-			return obj.Count, nil
-		},
-		nil,
-		ec.marshalNInt2int,
-		true,
-		true,
-	)
-}
-
-func (ec *executionContext) fieldContext_TypeGroup_count(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "TypeGroup",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type Int does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _TypeGroup_maxMagnitude(ctx context.Context, field graphql.CollectedField, obj *model.TypeGroup) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_TypeGroup_maxMagnitude,
-		func(ctx context.Context) (any, error) {
-			return obj.MaxMagnitude, nil
-		},
-		nil,
-		ec.marshalOFloat2ᚖfloat64,
-		true,
-		false,
-	)
-}
-
-func (ec *executionContext) fieldContext_TypeGroup_maxMagnitude(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "TypeGroup",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type Float does not have child fields")
 		},
 	}
 	return fc, nil
@@ -3396,44 +3773,30 @@ func (ec *executionContext) fieldContext___Type_isOneOf(_ context.Context, field
 
 // region    **************************** input.gotpl *****************************
 
-func (ec *executionContext) unmarshalInputStormReportFilter(ctx context.Context, obj any) (model.StormReportFilter, error) {
-	var it model.StormReportFilter
+func (ec *executionContext) unmarshalInputEventTypeFilter(ctx context.Context, obj any) (model.EventTypeFilter, error) {
+	var it model.EventTypeFilter
 	asMap := map[string]any{}
 	for k, v := range obj.(map[string]any) {
 		asMap[k] = v
 	}
 
-	fieldsInOrder := [...]string{"beginTimeAfter", "beginTimeBefore", "types", "severity", "minMagnitude", "states", "counties", "nearLat", "nearLon", "radiusMiles", "sortBy", "sortOrder", "limit", "offset"}
+	fieldsInOrder := [...]string{"eventType", "severity", "minMagnitude", "radiusMiles"}
 	for _, k := range fieldsInOrder {
 		v, ok := asMap[k]
 		if !ok {
 			continue
 		}
 		switch k {
-		case "beginTimeAfter":
-			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("beginTimeAfter"))
-			data, err := ec.unmarshalNDateTime2timeᚐTime(ctx, v)
+		case "eventType":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("eventType"))
+			data, err := ec.unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx, v)
 			if err != nil {
 				return it, err
 			}
-			it.BeginTimeAfter = data
-		case "beginTimeBefore":
-			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("beginTimeBefore"))
-			data, err := ec.unmarshalNDateTime2timeᚐTime(ctx, v)
-			if err != nil {
-				return it, err
-			}
-			it.BeginTimeBefore = data
-		case "types":
-			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("types"))
-			data, err := ec.unmarshalOString2ᚕstringᚄ(ctx, v)
-			if err != nil {
-				return it, err
-			}
-			it.Types = data
+			it.EventType = data
 		case "severity":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("severity"))
-			data, err := ec.unmarshalOString2ᚕstringᚄ(ctx, v)
+			data, err := ec.unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3445,6 +3808,88 @@ func (ec *executionContext) unmarshalInputStormReportFilter(ctx context.Context,
 				return it, err
 			}
 			it.MinMagnitude = data
+		case "radiusMiles":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("radiusMiles"))
+			data, err := ec.unmarshalOFloat2ᚖfloat64(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.RadiusMiles = data
+		}
+	}
+
+	return it, nil
+}
+
+func (ec *executionContext) unmarshalInputGeoRadiusFilter(ctx context.Context, obj any) (model.GeoRadiusFilter, error) {
+	var it model.GeoRadiusFilter
+	asMap := map[string]any{}
+	for k, v := range obj.(map[string]any) {
+		asMap[k] = v
+	}
+
+	fieldsInOrder := [...]string{"lat", "lon", "radiusMiles"}
+	for _, k := range fieldsInOrder {
+		v, ok := asMap[k]
+		if !ok {
+			continue
+		}
+		switch k {
+		case "lat":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("lat"))
+			data, err := ec.unmarshalNFloat2float64(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.Lat = data
+		case "lon":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("lon"))
+			data, err := ec.unmarshalNFloat2float64(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.Lon = data
+		case "radiusMiles":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("radiusMiles"))
+			data, err := ec.unmarshalOFloat2ᚖfloat64(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.RadiusMiles = data
+		}
+	}
+
+	return it, nil
+}
+
+func (ec *executionContext) unmarshalInputStormReportFilter(ctx context.Context, obj any) (model.StormReportFilter, error) {
+	var it model.StormReportFilter
+	asMap := map[string]any{}
+	for k, v := range obj.(map[string]any) {
+		asMap[k] = v
+	}
+
+	fieldsInOrder := [...]string{"timeRange", "near", "states", "counties", "eventTypes", "severity", "minMagnitude", "eventTypeFilters", "sortBy", "sortOrder", "limit", "offset"}
+	for _, k := range fieldsInOrder {
+		v, ok := asMap[k]
+		if !ok {
+			continue
+		}
+		switch k {
+		case "timeRange":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("timeRange"))
+			data, err := ec.unmarshalNTimeRange2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeRange(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.TimeRange = data
+		case "near":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("near"))
+			data, err := ec.unmarshalOGeoRadiusFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐGeoRadiusFilter(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.Near = data
 		case "states":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("states"))
 			data, err := ec.unmarshalOString2ᚕstringᚄ(ctx, v)
@@ -3459,27 +3904,34 @@ func (ec *executionContext) unmarshalInputStormReportFilter(ctx context.Context,
 				return it, err
 			}
 			it.Counties = data
-		case "nearLat":
-			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("nearLat"))
+		case "eventTypes":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("eventTypes"))
+			data, err := ec.unmarshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.EventTypes = data
+		case "severity":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("severity"))
+			data, err := ec.unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.Severity = data
+		case "minMagnitude":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("minMagnitude"))
 			data, err := ec.unmarshalOFloat2ᚖfloat64(ctx, v)
 			if err != nil {
 				return it, err
 			}
-			it.NearLat = data
-		case "nearLon":
-			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("nearLon"))
-			data, err := ec.unmarshalOFloat2ᚖfloat64(ctx, v)
+			it.MinMagnitude = data
+		case "eventTypeFilters":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("eventTypeFilters"))
+			data, err := ec.unmarshalOEventTypeFilter2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeFilterᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
-			it.NearLon = data
-		case "radiusMiles":
-			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("radiusMiles"))
-			data, err := ec.unmarshalOFloat2ᚖfloat64(ctx, v)
-			if err != nil {
-				return it, err
-			}
-			it.RadiusMiles = data
+			it.EventTypeFilters = data
 		case "sortBy":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("sortBy"))
 			data, err := ec.unmarshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSortField(ctx, v)
@@ -3508,6 +3960,40 @@ func (ec *executionContext) unmarshalInputStormReportFilter(ctx context.Context,
 				return it, err
 			}
 			it.Offset = data
+		}
+	}
+
+	return it, nil
+}
+
+func (ec *executionContext) unmarshalInputTimeRange(ctx context.Context, obj any) (model.TimeRange, error) {
+	var it model.TimeRange
+	asMap := map[string]any{}
+	for k, v := range obj.(map[string]any) {
+		asMap[k] = v
+	}
+
+	fieldsInOrder := [...]string{"from", "to"}
+	for _, k := range fieldsInOrder {
+		v, ok := asMap[k]
+		if !ok {
+			continue
+		}
+		switch k {
+		case "from":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("from"))
+			data, err := ec.unmarshalNDateTime2timeᚐTime(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.From = data
+		case "to":
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("to"))
+			data, err := ec.unmarshalNDateTime2timeᚐTime(ctx, v)
+			if err != nil {
+				return it, err
+			}
+			it.To = data
 		}
 	}
 
@@ -3543,6 +4029,52 @@ func (ec *executionContext) _CountyGroup(ctx context.Context, sel ast.SelectionS
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
+		default:
+			panic("unknown field " + strconv.Quote(field.Name))
+		}
+	}
+	out.Dispatch(ctx)
+	if out.Invalids > 0 {
+		return graphql.Null
+	}
+
+	atomic.AddInt32(&ec.deferred, int32(len(deferred)))
+
+	for label, dfs := range deferred {
+		ec.processDeferredGroup(graphql.DeferredGroup{
+			Label:    label,
+			Path:     graphql.GetPath(ctx),
+			FieldSet: dfs,
+			Context:  ctx,
+		})
+	}
+
+	return out
+}
+
+var eventTypeGroupImplementors = []string{"EventTypeGroup"}
+
+func (ec *executionContext) _EventTypeGroup(ctx context.Context, sel ast.SelectionSet, obj *model.EventTypeGroup) graphql.Marshaler {
+	fields := graphql.CollectFields(ec.OperationContext, sel, eventTypeGroupImplementors)
+
+	out := graphql.NewFieldSet(fields)
+	deferred := make(map[string]*graphql.FieldSet)
+	for i, field := range fields {
+		switch field.Name {
+		case "__typename":
+			out.Values[i] = graphql.MarshalString("EventTypeGroup")
+		case "eventType":
+			out.Values[i] = ec._EventTypeGroup_eventType(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				out.Invalids++
+			}
+		case "count":
+			out.Values[i] = ec._EventTypeGroup_count(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				out.Invalids++
+			}
+		case "maxMeasurement":
+			out.Values[i] = ec._EventTypeGroup_maxMeasurement(ctx, field, obj)
 		default:
 			panic("unknown field " + strconv.Quote(field.Name))
 		}
@@ -3668,6 +4200,52 @@ func (ec *executionContext) _Location(ctx context.Context, sel ast.SelectionSet,
 	return out
 }
 
+var measurementImplementors = []string{"Measurement"}
+
+func (ec *executionContext) _Measurement(ctx context.Context, sel ast.SelectionSet, obj *model.Measurement) graphql.Marshaler {
+	fields := graphql.CollectFields(ec.OperationContext, sel, measurementImplementors)
+
+	out := graphql.NewFieldSet(fields)
+	deferred := make(map[string]*graphql.FieldSet)
+	for i, field := range fields {
+		switch field.Name {
+		case "__typename":
+			out.Values[i] = graphql.MarshalString("Measurement")
+		case "magnitude":
+			out.Values[i] = ec._Measurement_magnitude(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				out.Invalids++
+			}
+		case "unit":
+			out.Values[i] = ec._Measurement_unit(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				out.Invalids++
+			}
+		case "severity":
+			out.Values[i] = ec._Measurement_severity(ctx, field, obj)
+		default:
+			panic("unknown field " + strconv.Quote(field.Name))
+		}
+	}
+	out.Dispatch(ctx)
+	if out.Invalids > 0 {
+		return graphql.Null
+	}
+
+	atomic.AddInt32(&ec.deferred, int32(len(deferred)))
+
+	for label, dfs := range deferred {
+		ec.processDeferredGroup(graphql.DeferredGroup{
+			Label:    label,
+			Path:     graphql.GetPath(ctx),
+			FieldSet: dfs,
+			Context:  ctx,
+		})
+	}
+
+	return out
+}
+
 var queryImplementors = []string{"Query"}
 
 func (ec *executionContext) _Query(ctx context.Context, sel ast.SelectionSet) graphql.Marshaler {
@@ -3740,6 +4318,44 @@ func (ec *executionContext) _Query(ctx context.Context, sel ast.SelectionSet) gr
 	return out
 }
 
+var queryMetaImplementors = []string{"QueryMeta"}
+
+func (ec *executionContext) _QueryMeta(ctx context.Context, sel ast.SelectionSet, obj *model.QueryMeta) graphql.Marshaler {
+	fields := graphql.CollectFields(ec.OperationContext, sel, queryMetaImplementors)
+
+	out := graphql.NewFieldSet(fields)
+	deferred := make(map[string]*graphql.FieldSet)
+	for i, field := range fields {
+		switch field.Name {
+		case "__typename":
+			out.Values[i] = graphql.MarshalString("QueryMeta")
+		case "lastUpdated":
+			out.Values[i] = ec._QueryMeta_lastUpdated(ctx, field, obj)
+		case "dataLagMinutes":
+			out.Values[i] = ec._QueryMeta_dataLagMinutes(ctx, field, obj)
+		default:
+			panic("unknown field " + strconv.Quote(field.Name))
+		}
+	}
+	out.Dispatch(ctx)
+	if out.Invalids > 0 {
+		return graphql.Null
+	}
+
+	atomic.AddInt32(&ec.deferred, int32(len(deferred)))
+
+	for label, dfs := range deferred {
+		ec.processDeferredGroup(graphql.DeferredGroup{
+			Label:    label,
+			Path:     graphql.GetPath(ctx),
+			FieldSet: dfs,
+			Context:  ctx,
+		})
+	}
+
+	return out
+}
+
 var stateGroupImplementors = []string{"StateGroup"}
 
 func (ec *executionContext) _StateGroup(ctx context.Context, sel ast.SelectionSet, obj *model.StateGroup) graphql.Marshaler {
@@ -3789,81 +4405,34 @@ func (ec *executionContext) _StateGroup(ctx context.Context, sel ast.SelectionSe
 	return out
 }
 
-var stormReportImplementors = []string{"StormReport"}
+var stormAggregationsImplementors = []string{"StormAggregations"}
 
-func (ec *executionContext) _StormReport(ctx context.Context, sel ast.SelectionSet, obj *model.StormReport) graphql.Marshaler {
-	fields := graphql.CollectFields(ec.OperationContext, sel, stormReportImplementors)
+func (ec *executionContext) _StormAggregations(ctx context.Context, sel ast.SelectionSet, obj *model.StormAggregations) graphql.Marshaler {
+	fields := graphql.CollectFields(ec.OperationContext, sel, stormAggregationsImplementors)
 
 	out := graphql.NewFieldSet(fields)
 	deferred := make(map[string]*graphql.FieldSet)
 	for i, field := range fields {
 		switch field.Name {
 		case "__typename":
-			out.Values[i] = graphql.MarshalString("StormReport")
-		case "id":
-			out.Values[i] = ec._StormReport_id(ctx, field, obj)
+			out.Values[i] = graphql.MarshalString("StormAggregations")
+		case "totalCount":
+			out.Values[i] = ec._StormAggregations_totalCount(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
-		case "type":
-			out.Values[i] = ec._StormReport_type(ctx, field, obj)
+		case "byEventType":
+			out.Values[i] = ec._StormAggregations_byEventType(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
-		case "geo":
-			out.Values[i] = ec._StormReport_geo(ctx, field, obj)
+		case "byState":
+			out.Values[i] = ec._StormAggregations_byState(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
-		case "magnitude":
-			out.Values[i] = ec._StormReport_magnitude(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "unit":
-			out.Values[i] = ec._StormReport_unit(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "severity":
-			out.Values[i] = ec._StormReport_severity(ctx, field, obj)
-		case "beginTime":
-			out.Values[i] = ec._StormReport_beginTime(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "endTime":
-			out.Values[i] = ec._StormReport_endTime(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "source":
-			out.Values[i] = ec._StormReport_source(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "sourceOffice":
-			out.Values[i] = ec._StormReport_sourceOffice(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "location":
-			out.Values[i] = ec._StormReport_location(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "comments":
-			out.Values[i] = ec._StormReport_comments(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "timeBucket":
-			out.Values[i] = ec._StormReport_timeBucket(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "processedAt":
-			out.Values[i] = ec._StormReport_processedAt(ctx, field, obj)
+		case "byHour":
+			out.Values[i] = ec._StormAggregations_byHour(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
@@ -3890,46 +4459,218 @@ func (ec *executionContext) _StormReport(ctx context.Context, sel ast.SelectionS
 	return out
 }
 
-var stormReportResultImplementors = []string{"StormReportResult"}
+var stormReportImplementors = []string{"StormReport"}
 
-func (ec *executionContext) _StormReportResult(ctx context.Context, sel ast.SelectionSet, obj *model.StormReportResult) graphql.Marshaler {
-	fields := graphql.CollectFields(ec.OperationContext, sel, stormReportResultImplementors)
+func (ec *executionContext) _StormReport(ctx context.Context, sel ast.SelectionSet, obj *model.StormReport) graphql.Marshaler {
+	fields := graphql.CollectFields(ec.OperationContext, sel, stormReportImplementors)
 
 	out := graphql.NewFieldSet(fields)
 	deferred := make(map[string]*graphql.FieldSet)
 	for i, field := range fields {
 		switch field.Name {
 		case "__typename":
-			out.Values[i] = graphql.MarshalString("StormReportResult")
-		case "reports":
-			out.Values[i] = ec._StormReportResult_reports(ctx, field, obj)
+			out.Values[i] = graphql.MarshalString("StormReport")
+		case "id":
+			out.Values[i] = ec._StormReport_id(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
-				out.Invalids++
+				atomic.AddUint32(&out.Invalids, 1)
 			}
+		case "eventType":
+			field := field
+
+			innerFunc := func(ctx context.Context, fs *graphql.FieldSet) (res graphql.Marshaler) {
+				defer func() {
+					if r := recover(); r != nil {
+						ec.Error(ctx, ec.Recover(ctx, r))
+					}
+				}()
+				res = ec._StormReport_eventType(ctx, field, obj)
+				if res == graphql.Null {
+					atomic.AddUint32(&fs.Invalids, 1)
+				}
+				return res
+			}
+
+			if field.Deferrable != nil {
+				dfs, ok := deferred[field.Deferrable.Label]
+				di := 0
+				if ok {
+					dfs.AddField(field)
+					di = len(dfs.Values) - 1
+				} else {
+					dfs = graphql.NewFieldSet([]graphql.CollectedField{field})
+					deferred[field.Deferrable.Label] = dfs
+				}
+				dfs.Concurrently(di, func(ctx context.Context) graphql.Marshaler {
+					return innerFunc(ctx, dfs)
+				})
+
+				// don't run the out.Concurrently() call below
+				out.Values[i] = graphql.Null
+				continue
+			}
+
+			out.Concurrently(i, func(ctx context.Context) graphql.Marshaler { return innerFunc(ctx, out) })
+		case "geo":
+			out.Values[i] = ec._StormReport_geo(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "measurement":
+			field := field
+
+			innerFunc := func(ctx context.Context, fs *graphql.FieldSet) (res graphql.Marshaler) {
+				defer func() {
+					if r := recover(); r != nil {
+						ec.Error(ctx, ec.Recover(ctx, r))
+					}
+				}()
+				res = ec._StormReport_measurement(ctx, field, obj)
+				if res == graphql.Null {
+					atomic.AddUint32(&fs.Invalids, 1)
+				}
+				return res
+			}
+
+			if field.Deferrable != nil {
+				dfs, ok := deferred[field.Deferrable.Label]
+				di := 0
+				if ok {
+					dfs.AddField(field)
+					di = len(dfs.Values) - 1
+				} else {
+					dfs = graphql.NewFieldSet([]graphql.CollectedField{field})
+					deferred[field.Deferrable.Label] = dfs
+				}
+				dfs.Concurrently(di, func(ctx context.Context) graphql.Marshaler {
+					return innerFunc(ctx, dfs)
+				})
+
+				// don't run the out.Concurrently() call below
+				out.Values[i] = graphql.Null
+				continue
+			}
+
+			out.Concurrently(i, func(ctx context.Context) graphql.Marshaler { return innerFunc(ctx, out) })
+		case "beginTime":
+			out.Values[i] = ec._StormReport_beginTime(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "endTime":
+			out.Values[i] = ec._StormReport_endTime(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "source":
+			out.Values[i] = ec._StormReport_source(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "sourceOffice":
+			out.Values[i] = ec._StormReport_sourceOffice(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "location":
+			out.Values[i] = ec._StormReport_location(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "comments":
+			out.Values[i] = ec._StormReport_comments(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "timeBucket":
+			out.Values[i] = ec._StormReport_timeBucket(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "processedAt":
+			out.Values[i] = ec._StormReport_processedAt(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "formattedAddress":
+			out.Values[i] = ec._StormReport_formattedAddress(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "placeName":
+			out.Values[i] = ec._StormReport_placeName(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "geoConfidence":
+			out.Values[i] = ec._StormReport_geoConfidence(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		case "geoSource":
+			out.Values[i] = ec._StormReport_geoSource(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&out.Invalids, 1)
+			}
+		default:
+			panic("unknown field " + strconv.Quote(field.Name))
+		}
+	}
+	out.Dispatch(ctx)
+	if out.Invalids > 0 {
+		return graphql.Null
+	}
+
+	atomic.AddInt32(&ec.deferred, int32(len(deferred)))
+
+	for label, dfs := range deferred {
+		ec.processDeferredGroup(graphql.DeferredGroup{
+			Label:    label,
+			Path:     graphql.GetPath(ctx),
+			FieldSet: dfs,
+			Context:  ctx,
+		})
+	}
+
+	return out
+}
+
+var stormReportsResultImplementors = []string{"StormReportsResult"}
+
+func (ec *executionContext) _StormReportsResult(ctx context.Context, sel ast.SelectionSet, obj *model.StormReportsResult) graphql.Marshaler {
+	fields := graphql.CollectFields(ec.OperationContext, sel, stormReportsResultImplementors)
+
+	out := graphql.NewFieldSet(fields)
+	deferred := make(map[string]*graphql.FieldSet)
+	for i, field := range fields {
+		switch field.Name {
+		case "__typename":
+			out.Values[i] = graphql.MarshalString("StormReportsResult")
 		case "totalCount":
-			out.Values[i] = ec._StormReportResult_totalCount(ctx, field, obj)
+			out.Values[i] = ec._StormReportsResult_totalCount(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
-		case "byType":
-			out.Values[i] = ec._StormReportResult_byType(ctx, field, obj)
+		case "hasMore":
+			out.Values[i] = ec._StormReportsResult_hasMore(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
-		case "byState":
-			out.Values[i] = ec._StormReportResult_byState(ctx, field, obj)
+		case "reports":
+			out.Values[i] = ec._StormReportsResult_reports(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
-		case "byHour":
-			out.Values[i] = ec._StormReportResult_byHour(ctx, field, obj)
+		case "aggregations":
+			out.Values[i] = ec._StormReportsResult_aggregations(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
-		case "lastUpdated":
-			out.Values[i] = ec._StormReportResult_lastUpdated(ctx, field, obj)
-		case "dataLagMinutes":
-			out.Values[i] = ec._StormReportResult_dataLagMinutes(ctx, field, obj)
+		case "meta":
+			out.Values[i] = ec._StormReportsResult_meta(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				out.Invalids++
+			}
 		default:
 			panic("unknown field " + strconv.Quote(field.Name))
 		}
@@ -3974,52 +4715,6 @@ func (ec *executionContext) _TimeGroup(ctx context.Context, sel ast.SelectionSet
 			if out.Values[i] == graphql.Null {
 				out.Invalids++
 			}
-		default:
-			panic("unknown field " + strconv.Quote(field.Name))
-		}
-	}
-	out.Dispatch(ctx)
-	if out.Invalids > 0 {
-		return graphql.Null
-	}
-
-	atomic.AddInt32(&ec.deferred, int32(len(deferred)))
-
-	for label, dfs := range deferred {
-		ec.processDeferredGroup(graphql.DeferredGroup{
-			Label:    label,
-			Path:     graphql.GetPath(ctx),
-			FieldSet: dfs,
-			Context:  ctx,
-		})
-	}
-
-	return out
-}
-
-var typeGroupImplementors = []string{"TypeGroup"}
-
-func (ec *executionContext) _TypeGroup(ctx context.Context, sel ast.SelectionSet, obj *model.TypeGroup) graphql.Marshaler {
-	fields := graphql.CollectFields(ec.OperationContext, sel, typeGroupImplementors)
-
-	out := graphql.NewFieldSet(fields)
-	deferred := make(map[string]*graphql.FieldSet)
-	for i, field := range fields {
-		switch field.Name {
-		case "__typename":
-			out.Values[i] = graphql.MarshalString("TypeGroup")
-		case "type":
-			out.Values[i] = ec._TypeGroup_type(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "count":
-			out.Values[i] = ec._TypeGroup_count(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				out.Invalids++
-			}
-		case "maxMagnitude":
-			out.Values[i] = ec._TypeGroup_maxMagnitude(ctx, field, obj)
 		default:
 			panic("unknown field " + strconv.Quote(field.Name))
 		}
@@ -4464,6 +5159,75 @@ func (ec *executionContext) marshalNDateTime2timeᚐTime(ctx context.Context, se
 	return res
 }
 
+func (ec *executionContext) unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx context.Context, v any) (model.EventType, error) {
+	var res model.EventType
+	err := res.UnmarshalGQL(v)
+	return res, graphql.ErrorOnPath(ctx, err)
+}
+
+func (ec *executionContext) marshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx context.Context, sel ast.SelectionSet, v model.EventType) graphql.Marshaler {
+	return v
+}
+
+func (ec *executionContext) unmarshalNEventTypeFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeFilter(ctx context.Context, v any) (*model.EventTypeFilter, error) {
+	res, err := ec.unmarshalInputEventTypeFilter(ctx, v)
+	return &res, graphql.ErrorOnPath(ctx, err)
+}
+
+func (ec *executionContext) marshalNEventTypeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.EventTypeGroup) graphql.Marshaler {
+	ret := make(graphql.Array, len(v))
+	var wg sync.WaitGroup
+	isLen1 := len(v) == 1
+	if !isLen1 {
+		wg.Add(len(v))
+	}
+	for i := range v {
+		i := i
+		fc := &graphql.FieldContext{
+			Index:  &i,
+			Result: &v[i],
+		}
+		ctx := graphql.WithFieldContext(ctx, fc)
+		f := func(i int) {
+			defer func() {
+				if r := recover(); r != nil {
+					ec.Error(ctx, ec.Recover(ctx, r))
+					ret = nil
+				}
+			}()
+			if !isLen1 {
+				defer wg.Done()
+			}
+			ret[i] = ec.marshalNEventTypeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeGroup(ctx, sel, v[i])
+		}
+		if isLen1 {
+			f(i)
+		} else {
+			go f(i)
+		}
+
+	}
+	wg.Wait()
+
+	for _, e := range ret {
+		if e == graphql.Null {
+			return graphql.Null
+		}
+	}
+
+	return ret
+}
+
+func (ec *executionContext) marshalNEventTypeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeGroup(ctx context.Context, sel ast.SelectionSet, v *model.EventTypeGroup) graphql.Marshaler {
+	if v == nil {
+		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
+			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
+		}
+		return graphql.Null
+	}
+	return ec._EventTypeGroup(ctx, sel, v)
+}
+
 func (ec *executionContext) unmarshalNFloat2float64(ctx context.Context, v any) (float64, error) {
 	res, err := graphql.UnmarshalFloatContext(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
@@ -4520,6 +5284,40 @@ func (ec *executionContext) marshalNLocation2githubᚗcomᚋcouchcryptidᚋstorm
 	return ec._Location(ctx, sel, &v)
 }
 
+func (ec *executionContext) marshalNMeasurement2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement(ctx context.Context, sel ast.SelectionSet, v model.Measurement) graphql.Marshaler {
+	return ec._Measurement(ctx, sel, &v)
+}
+
+func (ec *executionContext) marshalNMeasurement2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement(ctx context.Context, sel ast.SelectionSet, v *model.Measurement) graphql.Marshaler {
+	if v == nil {
+		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
+			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
+		}
+		return graphql.Null
+	}
+	return ec._Measurement(ctx, sel, v)
+}
+
+func (ec *executionContext) marshalNQueryMeta2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐQueryMeta(ctx context.Context, sel ast.SelectionSet, v *model.QueryMeta) graphql.Marshaler {
+	if v == nil {
+		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
+			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
+		}
+		return graphql.Null
+	}
+	return ec._QueryMeta(ctx, sel, v)
+}
+
+func (ec *executionContext) unmarshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverity(ctx context.Context, v any) (model.Severity, error) {
+	var res model.Severity
+	err := res.UnmarshalGQL(v)
+	return res, graphql.ErrorOnPath(ctx, err)
+}
+
+func (ec *executionContext) marshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverity(ctx context.Context, sel ast.SelectionSet, v model.Severity) graphql.Marshaler {
+	return v
+}
+
 func (ec *executionContext) marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStateGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.StateGroup) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
@@ -4572,6 +5370,16 @@ func (ec *executionContext) marshalNStateGroup2ᚖgithubᚗcomᚋcouchcryptidᚋ
 		return graphql.Null
 	}
 	return ec._StateGroup(ctx, sel, v)
+}
+
+func (ec *executionContext) marshalNStormAggregations2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormAggregations(ctx context.Context, sel ast.SelectionSet, v *model.StormAggregations) graphql.Marshaler {
+	if v == nil {
+		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
+			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
+		}
+		return graphql.Null
+	}
+	return ec._StormAggregations(ctx, sel, v)
 }
 
 func (ec *executionContext) marshalNStormReport2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.StormReport) graphql.Marshaler {
@@ -4633,18 +5441,18 @@ func (ec *executionContext) unmarshalNStormReportFilter2githubᚗcomᚋcouchcryp
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNStormReportResult2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportResult(ctx context.Context, sel ast.SelectionSet, v model.StormReportResult) graphql.Marshaler {
-	return ec._StormReportResult(ctx, sel, &v)
+func (ec *executionContext) marshalNStormReportsResult2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportsResult(ctx context.Context, sel ast.SelectionSet, v model.StormReportsResult) graphql.Marshaler {
+	return ec._StormReportsResult(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNStormReportResult2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportResult(ctx context.Context, sel ast.SelectionSet, v *model.StormReportResult) graphql.Marshaler {
+func (ec *executionContext) marshalNStormReportsResult2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportsResult(ctx context.Context, sel ast.SelectionSet, v *model.StormReportsResult) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
 		}
 		return graphql.Null
 	}
-	return ec._StormReportResult(ctx, sel, v)
+	return ec._StormReportsResult(ctx, sel, v)
 }
 
 func (ec *executionContext) unmarshalNString2string(ctx context.Context, v any) (string, error) {
@@ -4717,58 +5525,9 @@ func (ec *executionContext) marshalNTimeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋs
 	return ec._TimeGroup(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNTypeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTypeGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.TypeGroup) graphql.Marshaler {
-	ret := make(graphql.Array, len(v))
-	var wg sync.WaitGroup
-	isLen1 := len(v) == 1
-	if !isLen1 {
-		wg.Add(len(v))
-	}
-	for i := range v {
-		i := i
-		fc := &graphql.FieldContext{
-			Index:  &i,
-			Result: &v[i],
-		}
-		ctx := graphql.WithFieldContext(ctx, fc)
-		f := func(i int) {
-			defer func() {
-				if r := recover(); r != nil {
-					ec.Error(ctx, ec.Recover(ctx, r))
-					ret = nil
-				}
-			}()
-			if !isLen1 {
-				defer wg.Done()
-			}
-			ret[i] = ec.marshalNTypeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTypeGroup(ctx, sel, v[i])
-		}
-		if isLen1 {
-			f(i)
-		} else {
-			go f(i)
-		}
-
-	}
-	wg.Wait()
-
-	for _, e := range ret {
-		if e == graphql.Null {
-			return graphql.Null
-		}
-	}
-
-	return ret
-}
-
-func (ec *executionContext) marshalNTypeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTypeGroup(ctx context.Context, sel ast.SelectionSet, v *model.TypeGroup) graphql.Marshaler {
-	if v == nil {
-		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
-			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
-		}
-		return graphql.Null
-	}
-	return ec._TypeGroup(ctx, sel, v)
+func (ec *executionContext) unmarshalNTimeRange2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeRange(ctx context.Context, v any) (model.TimeRange, error) {
+	res, err := ec.unmarshalInputTimeRange(ctx, v)
+	return res, graphql.ErrorOnPath(ctx, err)
 }
 
 func (ec *executionContext) marshalN__Directive2githubᚗcomᚋ99designsᚋgqlgenᚋgraphqlᚋintrospectionᚐDirective(ctx context.Context, sel ast.SelectionSet, v introspection.Directive) graphql.Marshaler {
@@ -5072,6 +5831,89 @@ func (ec *executionContext) marshalODateTime2ᚖtimeᚐTime(ctx context.Context,
 	return res
 }
 
+func (ec *executionContext) unmarshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx context.Context, v any) ([]model.EventType, error) {
+	if v == nil {
+		return nil, nil
+	}
+	var vSlice []any
+	vSlice = graphql.CoerceList(v)
+	var err error
+	res := make([]model.EventType, len(vSlice))
+	for i := range vSlice {
+		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
+		res[i], err = ec.unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx, vSlice[i])
+		if err != nil {
+			return nil, err
+		}
+	}
+	return res, nil
+}
+
+func (ec *executionContext) marshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx context.Context, sel ast.SelectionSet, v []model.EventType) graphql.Marshaler {
+	if v == nil {
+		return graphql.Null
+	}
+	ret := make(graphql.Array, len(v))
+	var wg sync.WaitGroup
+	isLen1 := len(v) == 1
+	if !isLen1 {
+		wg.Add(len(v))
+	}
+	for i := range v {
+		i := i
+		fc := &graphql.FieldContext{
+			Index:  &i,
+			Result: &v[i],
+		}
+		ctx := graphql.WithFieldContext(ctx, fc)
+		f := func(i int) {
+			defer func() {
+				if r := recover(); r != nil {
+					ec.Error(ctx, ec.Recover(ctx, r))
+					ret = nil
+				}
+			}()
+			if !isLen1 {
+				defer wg.Done()
+			}
+			ret[i] = ec.marshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx, sel, v[i])
+		}
+		if isLen1 {
+			f(i)
+		} else {
+			go f(i)
+		}
+
+	}
+	wg.Wait()
+
+	for _, e := range ret {
+		if e == graphql.Null {
+			return graphql.Null
+		}
+	}
+
+	return ret
+}
+
+func (ec *executionContext) unmarshalOEventTypeFilter2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeFilterᚄ(ctx context.Context, v any) ([]*model.EventTypeFilter, error) {
+	if v == nil {
+		return nil, nil
+	}
+	var vSlice []any
+	vSlice = graphql.CoerceList(v)
+	var err error
+	res := make([]*model.EventTypeFilter, len(vSlice))
+	for i := range vSlice {
+		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
+		res[i], err = ec.unmarshalNEventTypeFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeFilter(ctx, vSlice[i])
+		if err != nil {
+			return nil, err
+		}
+	}
+	return res, nil
+}
+
 func (ec *executionContext) unmarshalOFloat2ᚖfloat64(ctx context.Context, v any) (*float64, error) {
 	if v == nil {
 		return nil, nil
@@ -5087,6 +5929,14 @@ func (ec *executionContext) marshalOFloat2ᚖfloat64(ctx context.Context, sel as
 	_ = sel
 	res := graphql.MarshalFloatContext(*v)
 	return graphql.WrapContextMarshaler(ctx, res)
+}
+
+func (ec *executionContext) unmarshalOGeoRadiusFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐGeoRadiusFilter(ctx context.Context, v any) (*model.GeoRadiusFilter, error) {
+	if v == nil {
+		return nil, nil
+	}
+	res, err := ec.unmarshalInputGeoRadiusFilter(ctx, v)
+	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
 func (ec *executionContext) unmarshalOInt2ᚖint(ctx context.Context, v any) (*int, error) {
@@ -5105,6 +5955,78 @@ func (ec *executionContext) marshalOInt2ᚖint(ctx context.Context, sel ast.Sele
 	_ = ctx
 	res := graphql.MarshalInt(*v)
 	return res
+}
+
+func (ec *executionContext) marshalOMeasurement2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement(ctx context.Context, sel ast.SelectionSet, v *model.Measurement) graphql.Marshaler {
+	if v == nil {
+		return graphql.Null
+	}
+	return ec._Measurement(ctx, sel, v)
+}
+
+func (ec *executionContext) unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx context.Context, v any) ([]model.Severity, error) {
+	if v == nil {
+		return nil, nil
+	}
+	var vSlice []any
+	vSlice = graphql.CoerceList(v)
+	var err error
+	res := make([]model.Severity, len(vSlice))
+	for i := range vSlice {
+		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
+		res[i], err = ec.unmarshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverity(ctx, vSlice[i])
+		if err != nil {
+			return nil, err
+		}
+	}
+	return res, nil
+}
+
+func (ec *executionContext) marshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx context.Context, sel ast.SelectionSet, v []model.Severity) graphql.Marshaler {
+	if v == nil {
+		return graphql.Null
+	}
+	ret := make(graphql.Array, len(v))
+	var wg sync.WaitGroup
+	isLen1 := len(v) == 1
+	if !isLen1 {
+		wg.Add(len(v))
+	}
+	for i := range v {
+		i := i
+		fc := &graphql.FieldContext{
+			Index:  &i,
+			Result: &v[i],
+		}
+		ctx := graphql.WithFieldContext(ctx, fc)
+		f := func(i int) {
+			defer func() {
+				if r := recover(); r != nil {
+					ec.Error(ctx, ec.Recover(ctx, r))
+					ret = nil
+				}
+			}()
+			if !isLen1 {
+				defer wg.Done()
+			}
+			ret[i] = ec.marshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverity(ctx, sel, v[i])
+		}
+		if isLen1 {
+			f(i)
+		} else {
+			go f(i)
+		}
+
+	}
+	wg.Wait()
+
+	for _, e := range ret {
+		if e == graphql.Null {
+			return graphql.Null
+		}
+	}
+
+	return ret
 }
 
 func (ec *executionContext) unmarshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSortField(ctx context.Context, v any) (*model.SortField, error) {

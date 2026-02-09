@@ -6,48 +6,64 @@ The GraphQL API is served at `/query`. A GraphQL Playground is available at `/` 
 
 ### stormReports
 
-Fetch storm reports with filtering, sorting, pagination, and aggregations. The filter is required and must include time bounds.
+Fetch storm reports with filtering, sorting, pagination, and aggregations. Accepts a single filter with required time bounds.
 
 ```graphql
 query {
   stormReports(filter: {
-    beginTimeAfter: "2024-04-26T00:00:00Z"
-    beginTimeBefore: "2024-04-27T00:00:00Z"
-    types: ["hail"]
+    timeRange: { from: "2024-04-26T00:00:00Z", to: "2024-04-27T00:00:00Z" }
+    eventTypes: [HAIL]
     states: ["TX"]
   }) {
     totalCount
+    hasMore
     reports {
       id
-      type
-      magnitude
+      eventType
+      measurement { magnitude unit severity }
       geo { lat lon }
       location { name state county }
       beginTime
-      severity
+      formattedAddress
+      geoSource
     }
-    byType { type count maxMagnitude }
-    byState { state count counties { county count } }
-    byHour { bucket count }
-    lastUpdated
-    dataLagMinutes
+    aggregations {
+      byEventType { eventType count maxMeasurement { magnitude unit } }
+      byState { state count counties { county count } }
+      byHour { bucket count }
+    }
+    meta { lastUpdated dataLagMinutes }
   }
 }
 ```
 
 ## Types
 
-### StormReportResult
+### StormReportsResult
 
-The result envelope returned by `stormReports`.
+The top-level result returned by `stormReports`.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `reports` | `[StormReport!]!` | Matching reports (respects sorting and pagination) |
 | `totalCount` | `Int!` | Total matching reports (ignores `limit`/`offset`) |
-| `byType` | `[TypeGroup!]!` | Report counts grouped by event type |
+| `hasMore` | `Boolean!` | Whether more results exist beyond the current page |
+| `reports` | `[StormReport!]!` | Matching reports (respects sorting and pagination) |
+| `aggregations` | `StormAggregations!` | Aggregated statistics for the matching reports |
+| `meta` | `QueryMeta!` | Metadata about data freshness |
+
+### StormAggregations
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `totalCount` | `Int!` | Total matching reports |
+| `byEventType` | `[EventTypeGroup!]!` | Report counts grouped by event type |
 | `byState` | `[StateGroup!]!` | Report counts grouped by state and county |
 | `byHour` | `[TimeGroup!]!` | Report counts grouped by time bucket |
+
+### QueryMeta
+
+| Field | Type | Description |
+|-------|------|-------------|
 | `lastUpdated` | `DateTime` | Most recent `processedAt` timestamp in the database |
 | `dataLagMinutes` | `Int` | Minutes since `lastUpdated` |
 
@@ -55,20 +71,30 @@ The result envelope returned by `stormReports`.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `id` | `ID!` | Unique identifier (e.g., `hail-1`, `tornado-3`) |
-| `type` | `String!` | Event type: `hail`, `tornado`, or `wind` |
+| `id` | `ID!` | Unique identifier (deterministic SHA-256 hash) |
+| `eventType` | `String!` | Event type: `hail`, `tornado`, or `wind` |
 | `geo` | `Geo!` | Geographic coordinates |
-| `magnitude` | `Float!` | Event magnitude (interpretation depends on `unit`) |
-| `unit` | `String!` | Magnitude unit: `in` (hail inches), `mph` (wind speed), `f_scale` (tornado) |
+| `measurement` | `Measurement!` | Magnitude, unit, and severity |
 | `beginTime` | `DateTime!` | Event start time (RFC 3339) |
 | `endTime` | `DateTime!` | Event end time (RFC 3339) |
 | `source` | `String!` | Data source identifier |
+| `sourceOffice` | `String!` | NWS office code (e.g., `FWD`, `OAX`, `TSA`) |
 | `location` | `Location!` | Location details |
 | `comments` | `String!` | Free-text description of the event |
-| `severity` | `String` | Severity level (nullable; e.g., `moderate`, `severe`) |
-| `sourceOffice` | `String!` | NWS office code (e.g., `FWD`, `OAX`, `TSA`) |
 | `timeBucket` | `DateTime!` | Hourly time bucket for aggregation |
 | `processedAt` | `DateTime!` | When the record was processed |
+| `formattedAddress` | `String!` | Geocoded street address (empty if geocoding disabled) |
+| `placeName` | `String!` | Geocoded place name (empty if geocoding disabled) |
+| `geoConfidence` | `Float!` | Geocoding confidence score (0 if geocoding disabled) |
+| `geoSource` | `String!` | Geocoding source (empty if geocoding disabled) |
+
+### Measurement
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `magnitude` | `Float!` | Event magnitude (interpretation depends on `unit`) |
+| `unit` | `String!` | Magnitude unit: `in` (hail inches), `mph` (wind speed), `f_scale` (tornado) |
+| `severity` | `String` | Severity level (nullable; e.g., `moderate`, `severe`) |
 
 ### Geo
 
@@ -90,14 +116,13 @@ The result envelope returned by `stormReports`.
 
 ### Aggregation Types
 
-#### TypeGroup
+#### EventTypeGroup
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `type` | `String!` | Event type |
+| `eventType` | `String!` | Event type |
 | `count` | `Int!` | Number of reports |
-| `maxMagnitude` | `Float` | Highest magnitude in this group |
-| `reports` | `[StormReport!]!` | Reports in this group |
+| `maxMeasurement` | `Measurement` | Highest magnitude measurement in this group |
 
 #### StateGroup
 
@@ -113,7 +138,6 @@ The result envelope returned by `stormReports`.
 |-------|------|-------------|
 | `county` | `String!` | County name |
 | `count` | `Int!` | Number of reports |
-| `reports` | `[StormReport!]!` | Reports in this county |
 
 #### TimeGroup
 
@@ -121,48 +145,84 @@ The result envelope returned by `stormReports`.
 |-------|------|-------------|
 | `bucket` | `DateTime!` | Hourly time bucket |
 | `count` | `Int!` | Number of reports |
-| `reports` | `[StormReport!]!` | Reports in this bucket |
+
+## Enums
+
+### EventType
+
+`HAIL`, `WIND`, `TORNADO`
+
+### Severity
+
+`MINOR`, `MODERATE`, `SEVERE`, `EXTREME`
+
+### SortField
+
+`BEGIN_TIME`, `MAGNITUDE`, `LOCATION_STATE`, `EVENT_TYPE`
+
+### SortOrder
+
+`ASC`, `DESC` (default: `DESC`)
 
 ## Filter Options
-
-All filter fields except time bounds are optional. When multiple fields are provided, they are combined with AND logic.
 
 ### StormReportFilter
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `beginTimeAfter` | `DateTime!` | Events starting at or after this time (required) |
-| `beginTimeBefore` | `DateTime!` | Events starting at or before this time (required) |
-| `types` | `[String!]` | Match any of the listed event types |
-| `severity` | `[String!]` | Match any of the listed severity levels |
-| `minMagnitude` | `Float` | Minimum magnitude threshold |
+| `timeRange` | `TimeRange!` | Time bounds (required) |
+| `near` | `GeoRadiusFilter` | Center point and radius for geographic search |
 | `states` | `[String!]` | Match any of the listed state codes |
 | `counties` | `[String!]` | Match any of the listed county names |
-| `nearLat` | `Float` | Center latitude for radius search |
-| `nearLon` | `Float` | Center longitude for radius search |
-| `radiusMiles` | `Float` | Search radius in miles (requires `nearLat` + `nearLon`) |
-| `sortBy` | `SortField` | Sort field: `BEGIN_TIME`, `MAGNITUDE`, `STATE`, `TYPE` |
-| `sortOrder` | `SortOrder` | Sort direction: `ASC`, `DESC` (default: `DESC`) |
-| `limit` | `Int` | Maximum number of reports to return |
+| `eventTypes` | `[EventType!]` | Global event type filter (enum values) |
+| `severity` | `[Severity!]` | Global severity filter (enum values) |
+| `minMagnitude` | `Float` | Global minimum magnitude threshold |
+| `eventTypeFilters` | `[EventTypeFilter!]` | Per-type overrides (max 3, see below) |
+| `sortBy` | `SortField` | Sort field |
+| `sortOrder` | `SortOrder` | Sort direction (default: `DESC`) |
+| `limit` | `Int` | Maximum reports to return (max 20, default 20) |
 | `offset` | `Int` | Number of reports to skip (for pagination) |
 
-### Geographic Radius Search
+### TimeRange
 
-All three geo fields (`nearLat`, `nearLon`, `radiusMiles`) must be provided together. The query uses the Haversine formula for accurate great-circle distance calculations.
+| Field | Type | Description |
+|-------|------|-------------|
+| `from` | `DateTime!` | Events starting at or after this time |
+| `to` | `DateTime!` | Events starting before this time (`to` must be after `from`) |
+
+### GeoRadiusFilter
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `lat` | `Float!` | Center latitude |
+| `lon` | `Float!` | Center longitude |
+| `radiusMiles` | `Float` | Search radius in miles (default: 20, max: 200) |
+
+### EventTypeFilter
+
+Per-type override that takes precedence over global filter fields for a specific event type. At most 3, no duplicate event types.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `eventType` | `EventType!` | Which event type this override applies to |
+| `severity` | `[Severity!]` | Override severity filter for this type |
+| `minMagnitude` | `Float` | Override minimum magnitude for this type |
+| `radiusMiles` | `Float` | Override search radius for this type (max: 200) |
+
+## Example Queries
+
+### Geographic Radius Search
 
 ```graphql
 query {
   stormReports(filter: {
-    beginTimeAfter: "2024-04-26T00:00:00Z"
-    beginTimeBefore: "2024-04-27T00:00:00Z"
-    nearLat: 32.75
-    nearLon: -97.15
-    radiusMiles: 20.0
+    timeRange: { from: "2024-04-26T00:00:00Z", to: "2024-04-27T00:00:00Z" }
+    near: { lat: 32.75, lon: -97.15, radiusMiles: 20.0 }
   }) {
     totalCount
     reports {
       id
-      type
+      eventType
       geo { lat lon }
       location { name state }
     }
@@ -175,46 +235,49 @@ query {
 ```graphql
 query {
   stormReports(filter: {
-    beginTimeAfter: "2024-04-26T00:00:00Z"
-    beginTimeBefore: "2024-04-27T00:00:00Z"
-    types: ["hail"]
+    timeRange: { from: "2024-04-26T00:00:00Z", to: "2024-04-27T00:00:00Z" }
+    eventTypes: [HAIL]
     sortBy: MAGNITUDE
     sortOrder: DESC
     limit: 10
     offset: 0
   }) {
     totalCount
+    hasMore
     reports {
       id
-      magnitude
-      unit
+      measurement { magnitude unit }
       location { name county state }
     }
   }
 }
 ```
 
-### Combined Filters
+### Per-Type Overrides
+
+Search for hail within 50 miles and tornadoes within 100 miles simultaneously:
 
 ```graphql
 query {
   stormReports(filter: {
-    beginTimeAfter: "2024-04-26T15:00:00Z"
-    beginTimeBefore: "2024-04-26T20:00:00Z"
-    types: ["hail"]
-    states: ["TX"]
-    severity: ["severe", "moderate"]
-    minMagnitude: 1.0
+    timeRange: { from: "2024-04-26T15:00:00Z", to: "2024-04-26T20:00:00Z" }
+    near: { lat: 32.75, lon: -97.15 }
+    eventTypeFilters: [
+      { eventType: HAIL, severity: [SEVERE, MODERATE], minMagnitude: 1.0, radiusMiles: 50.0 }
+      { eventType: TORNADO, radiusMiles: 100.0 }
+    ]
   }) {
     totalCount
     reports {
       id
-      magnitude
-      unit
+      eventType
+      measurement { magnitude unit severity }
       location { name county }
       comments
     }
-    byType { type count maxMagnitude }
+    aggregations {
+      byEventType { eventType count maxMeasurement { magnitude unit } }
+    }
   }
 }
 ```

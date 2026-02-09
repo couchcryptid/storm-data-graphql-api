@@ -11,6 +11,9 @@ All configuration is via environment variables. Every variable has a default sui
 | `KAFKA_BROKERS` | `localhost:29092` | Kafka broker address |
 | `KAFKA_TOPIC` | `transformed-weather-data` | Kafka topic to consume |
 | `KAFKA_GROUP_ID` | `storm-data-graphql-api` | Kafka consumer group ID |
+| `LOG_LEVEL` | `info` | Log level: `debug`, `info`, `warn`, `error` |
+| `LOG_FORMAT` | `json` | Log format: `json` or `text` |
+| `SHUTDOWN_TIMEOUT` | `10s` | Graceful shutdown deadline (Go duration) |
 
 ## Docker Compose Environment Files
 

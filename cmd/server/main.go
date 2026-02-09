@@ -88,7 +88,7 @@ func main() {
 		Resolvers:  &graph.Resolver{Store: s},
 		Complexity: graph.NewComplexityRoot(),
 	}))
-	srv.Use(extension.FixedComplexityLimit(500))
+	srv.Use(extension.FixedComplexityLimit(600))
 	srv.Use(graph.DepthLimit{MaxDepth: 7})
 
 	r := chi.NewRouter()
@@ -96,6 +96,7 @@ func main() {
 	r.Use(middleware.Recoverer)
 	r.Use(cors.AllowAll().Handler)
 	r.Use(observability.MetricsMiddleware(metrics))
+	r.Use(graph.ConcurrencyLimit(2))
 	r.Handle("/", playground.Handler("Storm Data API", "/query"))
 	r.Handle("/query", srv)
 	r.Get("/healthz", observability.LivenessHandler())

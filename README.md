@@ -36,21 +36,25 @@ make run          # Start server (runs migrations automatically)
 ```graphql
 {
   stormReports(filter: {
-    beginTimeAfter: "2024-04-26T00:00:00Z"
-    beginTimeBefore: "2024-04-27T00:00:00Z"
-    types: ["hail"]
+    timeRange: { from: "2024-04-26T00:00:00Z", to: "2024-04-27T00:00:00Z" }
+    eventTypes: [HAIL]
     states: ["TX"]
   }) {
     totalCount
+    hasMore
     reports {
       id
-      magnitude
+      eventType
+      measurement { magnitude unit }
       geo { lat lon }
       location { name county state }
       comments
       beginTime
     }
-    byType { type count maxMagnitude }
+    aggregations {
+      byEventType { eventType count maxMeasurement { magnitude unit } }
+    }
+    meta { lastUpdated dataLagMinutes }
   }
 }
 ```

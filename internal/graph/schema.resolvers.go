@@ -7,57 +7,94 @@ package graph
 
 import (
 	"context"
-	"math"
-	"time"
 
 	"github.com/couchcryptid/storm-data-graphql-api/internal/model"
+	"golang.org/x/sync/errgroup"
 )
 
 // StormReports is the resolver for the stormReports field.
-func (r *queryResolver) StormReports(ctx context.Context, filter model.StormReportFilter) (*model.StormReportResult, error) {
-	reports, totalCount, err := r.Store.ListStormReports(ctx, &filter)
-	if err != nil {
+func (r *queryResolver) StormReports(ctx context.Context, filter model.StormReportFilter) (*model.StormReportsResult, error) {
+	if err := ValidateFilter(&filter); err != nil {
 		return nil, err
 	}
 
-	byType, err := r.Store.CountByType(ctx, &filter)
-	if err != nil {
+	result := &model.StormReportsResult{
+		Aggregations: &model.StormAggregations{},
+		Meta:         &model.QueryMeta{},
+	}
+
+	g, gCtx := errgroup.WithContext(ctx)
+	fields := collectFields(ctx)
+
+	// Reports + count
+	g.Go(func() error {
+		reports, count, err := r.Store.ListStormReports(gCtx, &filter)
+		if err != nil {
+			return err
+		}
+		result.Reports = reports
+		result.TotalCount = count
+		result.Aggregations.TotalCount = count
+		offset := 0
+		if filter.Offset != nil {
+			offset = *filter.Offset
+		}
+		result.HasMore = offset+len(reports) < count
+		return nil
+	})
+
+	// Aggregations (if requested)
+	if fields["aggregations"] {
+		g.Go(func() error {
+			agg, err := r.Store.Aggregations(gCtx, &filter)
+			if err != nil {
+				return err
+			}
+			if fields["aggregations.byEventType"] {
+				result.Aggregations.ByEventType = agg.ByEventType
+			}
+			if fields["aggregations.byState"] {
+				result.Aggregations.ByState = agg.ByState
+			}
+			if fields["aggregations.byHour"] {
+				result.Aggregations.ByHour = agg.ByHour
+			}
+			return nil
+		})
+	}
+
+	// Meta (if requested)
+	if fields["meta"] {
+		g.Go(func() error {
+			return applyMeta(gCtx, r.Store, result.Meta)
+		})
+	}
+
+	if err := g.Wait(); err != nil {
 		return nil, err
 	}
+	return result, nil
+}
 
-	byState, err := r.Store.CountByState(ctx, &filter)
-	if err != nil {
-		return nil, err
-	}
+// EventType is the resolver for the eventType field.
+func (r *stormReportResolver) EventType(ctx context.Context, obj *model.StormReport) (string, error) {
+	return obj.Type, nil
+}
 
-	byHour, err := r.Store.CountByHour(ctx, &filter)
-	if err != nil {
-		return nil, err
-	}
-
-	lastUpdated, err := r.Store.LastUpdated(ctx)
-	if err != nil {
-		return nil, err
-	}
-
-	var dataLagMinutes *int
-	if lastUpdated != nil {
-		lag := int(math.Round(time.Since(*lastUpdated).Minutes()))
-		dataLagMinutes = &lag
-	}
-
-	return &model.StormReportResult{
-		Reports:        reports,
-		TotalCount:     totalCount,
-		ByType:         byType,
-		ByState:        byState,
-		ByHour:         byHour,
-		LastUpdated:    lastUpdated,
-		DataLagMinutes: dataLagMinutes,
+// Measurement is the resolver for the measurement field.
+func (r *stormReportResolver) Measurement(ctx context.Context, obj *model.StormReport) (*model.Measurement, error) {
+	return &model.Measurement{
+		Magnitude: obj.Magnitude,
+		Unit:      obj.Unit,
+		Severity:  obj.Severity,
 	}, nil
 }
 
 // Query returns QueryResolver implementation.
 func (r *Resolver) Query() QueryResolver { return &queryResolver{r} }
 
+// StormReport returns StormReportResolver implementation.
+func (r *Resolver) StormReport() StormReportResolver { return &stormReportResolver{r} }
+
 type queryResolver struct{ *Resolver }
+type stormReportResolver struct{ *Resolver }

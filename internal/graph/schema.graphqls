@@ -1,57 +1,74 @@
 scalar DateTime
 
 type Query {
-  stormReports(filter: StormReportFilter!): StormReportResult!
+  stormReports(filter: StormReportFilter!): StormReportsResult!
 }
 
-# ─── Filters ────────────────────────────────────────────────
+# ─── Enums ──────────────────────────────────────────────────
+
+enum EventType { HAIL WIND TORNADO }
+enum Severity { MINOR MODERATE SEVERE EXTREME }
+enum SortField { BEGIN_TIME MAGNITUDE LOCATION_STATE EVENT_TYPE }
+enum SortOrder { ASC DESC }
+
+# ─── Filter inputs ──────────────────────────────────────────
+
+input TimeRange {
+  from: DateTime!
+  to: DateTime!
+}
+
+input GeoRadiusFilter {
+  lat: Float!
+  lon: Float!
+  radiusMiles: Float
+}
+
+input EventTypeFilter {
+  eventType: EventType!
+  severity: [Severity!]
+  minMagnitude: Float
+  radiusMiles: Float
+}
 
 input StormReportFilter {
-  # Time (required)
-  beginTimeAfter: DateTime!
-  beginTimeBefore: DateTime!
-
-  # Event
-  types: [String!]
-  severity: [String!]
-  minMagnitude: Float
-
-  # Location - administrative
+  timeRange: TimeRange!
+  near: GeoRadiusFilter
   states: [String!]
   counties: [String!]
 
-  # Location - radius
-  nearLat: Float
-  nearLon: Float
-  radiusMiles: Float
+  # Global defaults — apply to any type not overridden
+  eventTypes: [EventType!]
+  severity: [Severity!]
+  minMagnitude: Float
 
-  # Sorting & pagination
+  # Per-type overrides (max 3)
+  eventTypeFilters: [EventTypeFilter!]
+
   sortBy: SortField
   sortOrder: SortOrder
   limit: Int
   offset: Int
 }
 
-enum SortField {
-  BEGIN_TIME
-  MAGNITUDE
-  STATE
-  TYPE
-}
+# ─── Result types ───────────────────────────────────────────
 
-enum SortOrder {
-  ASC
-  DESC
-}
-
-# ─── Result envelope ────────────────────────────────────────
-
-type StormReportResult {
-  reports: [StormReport!]!
+type StormReportsResult {
   totalCount: Int!
-  byType: [TypeGroup!]!
+  hasMore: Boolean!
+  reports: [StormReport!]!
+  aggregations: StormAggregations!
+  meta: QueryMeta!
+}
+
+type StormAggregations {
+  totalCount: Int!
+  byEventType: [EventTypeGroup!]!
   byState: [StateGroup!]!
   byHour: [TimeGroup!]!
+}
+
+type QueryMeta {
   lastUpdated: DateTime
   dataLagMinutes: Int
 }
@@ -60,11 +77,9 @@ type StormReportResult {
 
 type StormReport {
   id: ID!
-  type: String!
+  eventType: String!
   geo: Geo!
-  magnitude: Float!
-  unit: String!
-  severity: String
+  measurement: Measurement!
   beginTime: DateTime!
   endTime: DateTime!
   source: String!
@@ -73,6 +88,16 @@ type StormReport {
   comments: String!
   timeBucket: DateTime!
   processedAt: DateTime!
+  formattedAddress: String!
+  placeName: String!
+  geoConfidence: Float!
+  geoSource: String!
+}
+
+type Measurement {
+  magnitude: Float!
+  unit: String!
+  severity: String
 }
 
 type Geo {
@@ -91,10 +116,10 @@ type Location {
 
 # ─── Aggregation types ──────────────────────────────────────
 
-type TypeGroup {
-  type: String!
+type EventTypeGroup {
+  eventType: String!
   count: Int!
-  maxMagnitude: Float
+  maxMeasurement: Measurement
 }
 
 type StateGroup {

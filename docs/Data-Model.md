@@ -39,7 +39,11 @@ Each Kafka message on the `transformed-weather-data` topic is a single JSON obje
   "severity": "moderate",
   "source_office": "SJT",
   "time_bucket": "2024-04-26T15:00:00Z",
-  "processed_at": "2024-04-26T22:00:00Z"
+  "processed_at": "2024-04-26T22:00:00Z",
+  "formatted_address": "",
+  "place_name": "",
+  "geo_confidence": 0,
+  "geo_source": ""
 }
 ```
 
@@ -77,6 +81,10 @@ Nested JSON fields are flattened in PostgreSQL:
 | `location.direction` | `location_direction` |
 | `location.state` | `location_state` |
 | `location.county` | `location_county` |
+| `formatted_address` | `formatted_address` |
+| `place_name` | `place_name` |
+| `geo_confidence` | `geo_confidence` |
+| `geo_source` | `geo_source` |
 | _(all other fields)_ | _(same name, snake_case)_ |
 
 ## Mock Data Summary

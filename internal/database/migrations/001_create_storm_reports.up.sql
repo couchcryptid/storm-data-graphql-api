@@ -19,6 +19,10 @@ CREATE TABLE IF NOT EXISTS storm_reports (
     source_office   TEXT NOT NULL,
     time_bucket     TIMESTAMPTZ NOT NULL,
     processed_at    TIMESTAMPTZ NOT NULL,
+    formatted_address TEXT NOT NULL DEFAULT '',
+    place_name      TEXT NOT NULL DEFAULT '',
+    geo_confidence  DOUBLE PRECISION NOT NULL DEFAULT 0,
+    geo_source      TEXT NOT NULL DEFAULT '',
     created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 

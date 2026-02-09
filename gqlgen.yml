@@ -17,24 +17,49 @@ resolver:
 models:
   StormReport:
     model: github.com/couchcryptid/storm-data-graphql-api/internal/model.StormReport
+    fields:
+      measurement:
+        resolver: true
+      eventType:
+        resolver: true
   Geo:
     model: github.com/couchcryptid/storm-data-graphql-api/internal/model.Geo
   Location:
     model: github.com/couchcryptid/storm-data-graphql-api/internal/model.Location
+  Measurement:
+    model: github.com/couchcryptid/storm-data-graphql-api/internal/model.Measurement
   StormReportFilter:
     model: github.com/couchcryptid/storm-data-graphql-api/internal/model.StormReportFilter
+  TimeRange:
+    model: github.com/couchcryptid/storm-data-graphql-api/internal/model.TimeRange
+  GeoRadiusFilter:
+    model: github.com/couchcryptid/storm-data-graphql-api/internal/model.GeoRadiusFilter
+  EventTypeFilter:
+    model: github.com/couchcryptid/storm-data-graphql-api/internal/model.EventTypeFilter
+  EventType:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.EventType
+  Severity:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.Severity
   SortField:
     model:
       - github.com/couchcryptid/storm-data-graphql-api/internal/model.SortField
   SortOrder:
     model:
       - github.com/couchcryptid/storm-data-graphql-api/internal/model.SortOrder
-  StormReportResult:
+  StormReportsResult:
     model:
-      - github.com/couchcryptid/storm-data-graphql-api/internal/model.StormReportResult
-  TypeGroup:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.StormReportsResult
+  StormAggregations:
     model:
-      - github.com/couchcryptid/storm-data-graphql-api/internal/model.TypeGroup
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.StormAggregations
+  QueryMeta:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.QueryMeta
+  EventTypeGroup:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.EventTypeGroup
   StateGroup:
     model:
       - github.com/couchcryptid/storm-data-graphql-api/internal/model.StateGroup

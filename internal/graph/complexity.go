@@ -3,8 +3,7 @@ package graph
 import "github.com/couchcryptid/storm-data-graphql-api/internal/model"
 
 // NewComplexityRoot returns complexity estimators for expensive fields.
-// List fields use a multiplier so that requesting large result sets
-// costs proportionally more against the overall complexity budget.
+// Budget: 600 (worst-case ~537 per recommendations doc).
 func NewComplexityRoot() ComplexityRoot {
 	return ComplexityRoot{
 		Query: struct {
@@ -15,20 +14,25 @@ func NewComplexityRoot() ComplexityRoot {
 			},
 		},
 
-		StormReportResult: struct {
-			ByHour         func(childComplexity int) int
-			ByState        func(childComplexity int) int
-			ByType         func(childComplexity int) int
-			DataLagMinutes func(childComplexity int) int
-			LastUpdated    func(childComplexity int) int
-			Reports        func(childComplexity int) int
-			TotalCount     func(childComplexity int) int
+		StormReportsResult: struct {
+			Aggregations func(childComplexity int) int
+			HasMore      func(childComplexity int) int
+			Meta         func(childComplexity int) int
+			Reports      func(childComplexity int) int
+			TotalCount   func(childComplexity int) int
 		}{
-			// reports list: assume up to 50 items returned
 			Reports: func(childComplexity int) int {
-				return 50 * childComplexity
+				return MaxPageSize * childComplexity
 			},
-			ByType: func(childComplexity int) int {
+		},
+
+		StormAggregations: struct {
+			ByEventType func(childComplexity int) int
+			ByHour      func(childComplexity int) int
+			ByState     func(childComplexity int) int
+			TotalCount  func(childComplexity int) int
+		}{
+			ByEventType: func(childComplexity int) int {
 				return 10 * childComplexity
 			},
 			ByState: func(childComplexity int) int {

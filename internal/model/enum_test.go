@@ -10,8 +10,8 @@ func TestSortFieldIsValid(t *testing.T) {
 	valid := []model.SortField{
 		model.SortFieldBeginTime,
 		model.SortFieldMagnitude,
-		model.SortFieldState,
-		model.SortFieldType,
+		model.SortFieldLocationState,
+		model.SortFieldEventType,
 	}
 	for _, sf := range valid {
 		if !sf.IsValid() {
@@ -34,8 +34,8 @@ func TestSortFieldString(t *testing.T) {
 	}{
 		{model.SortFieldBeginTime, "BEGIN_TIME"},
 		{model.SortFieldMagnitude, "MAGNITUDE"},
-		{model.SortFieldState, "STATE"},
-		{model.SortFieldType, "TYPE"},
+		{model.SortFieldLocationState, "LOCATION_STATE"},
+		{model.SortFieldEventType, "EVENT_TYPE"},
 	}
 	for _, tt := range tests {
 		if got := tt.field.String(); got != tt.want {

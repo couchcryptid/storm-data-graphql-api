@@ -24,22 +24,23 @@ func startGraphQLServer(t *testing.T, s *store.Store) *httptest.Server {
 		Resolvers:  &graph.Resolver{Store: s},
 		Complexity: graph.NewComplexityRoot(),
 	}))
-	srv.Use(extension.FixedComplexityLimit(500))
+	srv.Use(extension.FixedComplexityLimit(600))
 	srv.Use(graph.DepthLimit{MaxDepth: 7})
 	return httptest.NewServer(srv)
 }
 
-// assertTypeMaxMagnitude finds the given type in groups and asserts its max magnitude.
-func assertTypeMaxMagnitude(t *testing.T, groups []*model.TypeGroup, typ string, expected float64) {
+// assertEventTypeMaxMeasurement finds the given type in groups and asserts its max measurement.
+func assertEventTypeMaxMeasurement(t *testing.T, groups []*model.EventTypeGroup, eventType string, expectedMag float64, expectedUnit string) {
 	t.Helper()
 	for _, g := range groups {
-		if g.Type == typ {
-			require.NotNil(t, g.MaxMagnitude)
-			assert.Equal(t, expected, *g.MaxMagnitude)
+		if g.EventType == eventType {
+			require.NotNil(t, g.MaxMeasurement)
+			assert.Equal(t, expectedMag, g.MaxMeasurement.Magnitude)
+			assert.Equal(t, expectedUnit, g.MaxMeasurement.Unit)
 			return
 		}
 	}
-	t.Fatalf("type %s not found in groups", typ)
+	t.Fatalf("eventType %s not found in groups", eventType)
 }
 
 // assertStateCountyTotals finds the given state in groups and asserts its county counts sum correctly.
