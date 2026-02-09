@@ -1,0 +1,49 @@
+schema:
+  - internal/graph/*.graphqls
+
+exec:
+  filename: internal/graph/generated.go
+  package: graph
+
+model:
+  filename: internal/graph/models_gen.go
+  package: graph
+
+resolver:
+  layout: follow-schema
+  dir: internal/graph
+  package: graph
+
+models:
+  StormReport:
+    model: github.com/couchcryptid/storm-data-graphql-api/internal/model.StormReport
+  Geo:
+    model: github.com/couchcryptid/storm-data-graphql-api/internal/model.Geo
+  Location:
+    model: github.com/couchcryptid/storm-data-graphql-api/internal/model.Location
+  StormReportFilter:
+    model: github.com/couchcryptid/storm-data-graphql-api/internal/model.StormReportFilter
+  SortField:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.SortField
+  SortOrder:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.SortOrder
+  StormReportResult:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.StormReportResult
+  TypeGroup:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.TypeGroup
+  StateGroup:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.StateGroup
+  CountyGroup:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.CountyGroup
+  TimeGroup:
+    model:
+      - github.com/couchcryptid/storm-data-graphql-api/internal/model.TimeGroup
+  DateTime:
+    model:
+      - github.com/99designs/gqlgen/graphql.Time

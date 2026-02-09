@@ -1,0 +1,47 @@
+version: "2"
+linters:
+  enable:
+    - bodyclose
+    - errname
+    - exhaustive
+    - gocritic
+    - gosec
+    - misspell
+    - noctx
+    - prealloc
+    - revive
+    - sqlclosecheck
+    - unconvert
+    - unparam
+  settings:
+    gocritic:
+      disabled-checks:
+        - hugeParam
+        - unnamedResult
+        - httpNoBody
+      enabled-tags:
+        - diagnostic
+        - style
+        - performance
+    revive:
+      rules:
+        - name: var-naming
+        - name: blank-imports
+        - name: context-as-argument
+        - name: error-return
+        - name: error-strings
+        - name: error-naming
+        - name: exported
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

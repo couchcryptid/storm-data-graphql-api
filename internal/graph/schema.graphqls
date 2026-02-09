@@ -1,0 +1,114 @@
+scalar DateTime
+
+type Query {
+  stormReports(filter: StormReportFilter!): StormReportResult!
+}
+
+# ─── Filters ────────────────────────────────────────────────
+
+input StormReportFilter {
+  # Time (required)
+  beginTimeAfter: DateTime!
+  beginTimeBefore: DateTime!
+
+  # Event
+  types: [String!]
+  severity: [String!]
+  minMagnitude: Float
+
+  # Location - administrative
+  states: [String!]
+  counties: [String!]
+
+  # Location - radius
+  nearLat: Float
+  nearLon: Float
+  radiusMiles: Float
+
+  # Sorting & pagination
+  sortBy: SortField
+  sortOrder: SortOrder
+  limit: Int
+  offset: Int
+}
+
+enum SortField {
+  BEGIN_TIME
+  MAGNITUDE
+  STATE
+  TYPE
+}
+
+enum SortOrder {
+  ASC
+  DESC
+}
+
+# ─── Result envelope ────────────────────────────────────────
+
+type StormReportResult {
+  reports: [StormReport!]!
+  totalCount: Int!
+  byType: [TypeGroup!]!
+  byState: [StateGroup!]!
+  byHour: [TimeGroup!]!
+  lastUpdated: DateTime
+  dataLagMinutes: Int
+}
+
+# ─── Core types ─────────────────────────────────────────────
+
+type StormReport {
+  id: ID!
+  type: String!
+  geo: Geo!
+  magnitude: Float!
+  unit: String!
+  severity: String
+  beginTime: DateTime!
+  endTime: DateTime!
+  source: String!
+  sourceOffice: String!
+  location: Location!
+  comments: String!
+  timeBucket: DateTime!
+  processedAt: DateTime!
+}
+
+type Geo {
+  lat: Float!
+  lon: Float!
+}
+
+type Location {
+  raw: String!
+  name: String!
+  distance: Float
+  direction: String
+  state: String!
+  county: String!
+}
+
+# ─── Aggregation types ──────────────────────────────────────
+
+type TypeGroup {
+  type: String!
+  count: Int!
+  maxMagnitude: Float
+}
+
+type StateGroup {
+  state: String!
+  count: Int!
+  counties: [CountyGroup!]!
+}
+
+type CountyGroup {
+  county: String!
+  count: Int!
+}
+
+type TimeGroup {
+  bucket: DateTime!
+  count: Int!
+}

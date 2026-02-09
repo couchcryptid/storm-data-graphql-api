@@ -1,0 +1,9 @@
+bin/
+tmp/
+.env
+*.exe
+*.test
+*.out
+.DS_Store
+.codegraph/
+CLAUDE.md

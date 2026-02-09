@@ -1,0 +1,52 @@
+# .pre-commit-config.yaml
+repos:
+  # General hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: check-added-large-files
+
+  # Go formatting & imports
+  - repo: https://github.com/tekwizely/pre-commit-golang
+    rev: v1.0.0-rc.4
+    hooks:
+      - id: go-fmt
+      - id: go-imports
+      - id: go-vet-mod
+      - id: go-build-mod
+
+  # golangci-lint (meta-linter — runs most Go linters in one pass)
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v2.8.0
+    hooks:
+      - id: golangci-lint
+        args: ["--timeout=5m"]
+
+  # Secret detection
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0
+    hooks:
+      - id: gitleaks
+
+  # GraphQL schema linting
+  - repo: local
+    hooks:
+      - id: graphql-schema-lint
+        name: graphql-schema-linting
+        entry: npx graphql-schema-linter
+        language: node
+        files: '\.graphql$'
+        additional_dependencies: ["graphql-schema-linter@3.0.1"]
+
+  # YAML/JSON schema files often used for config
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.38.0
+    hooks:
+      - id: yamllint
+        args: ["-d", "relaxed"]

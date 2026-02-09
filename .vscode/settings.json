@@ -1,0 +1,6 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "couchcryptid",
+    "projectKey": "couchcryptid_storm-data-graphql-api"
+  }
+}

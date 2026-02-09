@@ -1,0 +1,62 @@
+# Configuration
+
+All configuration is via environment variables. Every variable has a default suitable for local development with the Docker Compose stack.
+
+## Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT` | `8080` | HTTP server port |
+| `DATABASE_URL` | `postgres://storm:storm@localhost:5432/stormdata?sslmode=disable` | PostgreSQL connection string |
+| `KAFKA_BROKERS` | `localhost:29092` | Kafka broker address |
+| `KAFKA_TOPIC` | `transformed-weather-data` | Kafka topic to consume |
+| `KAFKA_GROUP_ID` | `storm-data-graphql-api` | Kafka consumer group ID |
+
+## Docker Compose Environment Files
+
+The Compose stack uses per-service env files to keep credentials out of `compose.yml`:
+
+| File | Service | Contents |
+|------|---------|----------|
+| `.env.postgres` | `postgres` | `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB` |
+| `.env.kafka` | `kafka` | KRaft configuration variables |
+
+These files are referenced via `env_file:` in `compose.yml`.
+
+## Local Development
+
+No `.env` file is needed for local development. The defaults connect to the Docker Compose services:
+
+```bash
+make docker-up   # Start Postgres + Kafka
+make run         # Start server with defaults
+```
+
+## Custom Configuration
+
+Override any variable as needed:
+
+```bash
+PORT=3000 DATABASE_URL=postgres://user:pass@db:5432/mydb make run
+```
+
+## Operational Endpoints
+
+These endpoints are always available and do not require configuration:
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /healthz` | Liveness probe — always returns 200 |
+| `GET /readyz` | Readiness probe — returns 200 if Postgres is reachable, 503 otherwise |
+| `GET /metrics` | Prometheus scrape endpoint (all `storm_data_api_*` metrics) |
+
+## Docker
+
+When running the server in Docker, pass environment variables to configure external service connections:
+
+```bash
+docker run -e DATABASE_URL=postgres://user:pass@host:5432/db \
+           -e KAFKA_BROKERS=kafka:9092 \
+           -p 8080:8080 \
+           storm-data-graphql-api
+```

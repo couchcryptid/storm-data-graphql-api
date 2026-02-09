@@ -1,0 +1,84 @@
+name: Publish Wiki
+
+on:
+  workflow_run:
+    workflows: [ci]
+    types:
+      - completed
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-docs:
+    name: Check for doc changes
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    outputs:
+      docs_changed: ${{ steps.filter.outputs.docs_changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check for docs changes
+        id: filter
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "docs_changed=true" >> "$GITHUB_OUTPUT"
+          elif git diff --name-only HEAD~1 HEAD | grep -q '^docs/'; then
+            echo "docs_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "docs_changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  publish-wiki:
+    name: Publish Wiki to GitHub
+    runs-on: ubuntu-latest
+    needs: check-docs
+    if: needs.check-docs.outputs.docs_changed == 'true'
+    env:
+      WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+    steps:
+      - name: Validate token
+        run: |
+          if [ -z "$WIKI_TOKEN" ]; then
+            echo "::error::WIKI_TOKEN secret is required. GITHUB_TOKEN cannot push to wiki repos."
+            exit 1
+          fi
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Clone wiki repository
+        run: |
+          if ! git clone "https://x-access-token:${WIKI_TOKEN}@github.com/${{ github.repository }}.wiki.git" wiki 2>/dev/null; then
+            echo "Wiki repo not found, initializing fresh"
+            mkdir -p wiki && cd wiki && git init -b master
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+          fi
+
+      - name: Sync wiki files
+        run: |
+          cd wiki
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Remove existing pages so deleted files don't persist
+          find . -maxdepth 1 -name '*.md' -not -name '.git' -delete
+          cp ../docs/*.md .
+
+      - name: Commit and push wiki changes
+        run: |
+          cd wiki
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: sync wiki from repository"
+            git remote remove origin 2>/dev/null || true
+            git remote add origin "https://x-access-token:${WIKI_TOKEN}@github.com/${{ github.repository }}.wiki.git"
+            BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "master")
+            git push -u origin "HEAD:refs/heads/${BRANCH}"
+          fi
