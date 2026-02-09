@@ -2,8 +2,9 @@
 
 - [[Home]]
 - [[Architecture]]
+- [[Configuration]]
+- [[Deployment]]
+- [[Development]]
 - [[Data Model]]
 - [[API Reference]]
-- [[Configuration]]
 - [[Performance]]
-- [[Testing]]

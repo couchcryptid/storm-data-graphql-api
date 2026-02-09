@@ -1,6 +1,15 @@
 # Storm Data GraphQL API
 
-Go service that consumes storm weather reports from a Kafka topic, persists them to PostgreSQL, and serves them through a GraphQL API.
+A Go service that consumes transformed storm weather reports from a Kafka topic, persists them to PostgreSQL, and serves them through a GraphQL API. Built for the HailTrace platform.
+
+## How It Works
+
+The service runs two concurrent loops:
+
+1. **Consume** -- Reads enriched storm events from a Kafka topic and persists them to PostgreSQL
+2. **Serve** -- Exposes a GraphQL API for querying storm reports with filtering, pagination, and aggregation
+
+Supported event types: **hail**, **wind**, and **tornado**.
 
 ```
 Kafka (transformed-weather-data) --> Consumer --> Store --> PostgreSQL
@@ -10,18 +19,19 @@ Kafka (transformed-weather-data) --> Consumer --> Store --> PostgreSQL
 
 ## Quick Start
 
-```bash
-make docker-up    # Start Postgres + Kafka
-make run          # Start server (runs migrations automatically)
-open http://localhost:8080   # GraphQL Playground
-```
+### Prerequisites
 
-## Prerequisites
-
-- Go 1.25.6+
+- Go 1.25+
 - Docker and Docker Compose
 
-## Example Query
+### Run locally with Docker Compose
+
+```sh
+make docker-up    # Start Postgres + Kafka
+make run          # Start server (runs migrations automatically)
+```
+
+### Example Query
 
 ```graphql
 {
@@ -45,46 +55,82 @@ open http://localhost:8080   # GraphQL Playground
 }
 ```
 
-## Make Targets
-
-| Target | Description |
-|--------|-------------|
-| `make docker-up` | Start Postgres + Kafka |
-| `make docker-down` | Stop and remove containers + volumes |
-| `make run` | Run server locally |
-| `make build` | Compile binary to `bin/server` |
-| `make generate` | Regenerate gqlgen GraphQL code |
-| `make test` | Run all tests |
-| `make test-unit` | Run unit tests only |
-| `make test-integration` | Run integration tests (requires Docker) |
-| `make lint` | Run golangci-lint |
-
-## Operational Endpoints
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /healthz` | Liveness probe (always 200) |
-| `GET /readyz` | Readiness probe (pings Postgres) |
-| `GET /metrics` | Prometheus metrics |
-
 ## Configuration
 
-All via environment variables with local dev defaults:
+All configuration is via environment variables with local dev defaults:
 
-| Variable | Default |
-|----------|---------|
-| `PORT` | `8080` |
-| `DATABASE_URL` | `postgres://storm:storm@localhost:5432/stormdata?sslmode=disable` |
-| `KAFKA_BROKERS` | `localhost:29092` |
-| `KAFKA_TOPIC` | `transformed-weather-data` |
-| `KAFKA_GROUP_ID` | `storm-data-graphql-api` |
+| Variable           | Default                                                          | Description                                    |
+| ------------------ | ---------------------------------------------------------------- | ---------------------------------------------- |
+| `PORT`             | `8080`                                                           | HTTP server port                               |
+| `DATABASE_URL`     | `postgres://storm:storm@localhost:5432/stormdata?sslmode=disable` | PostgreSQL connection string                  |
+| `KAFKA_BROKERS`    | `localhost:29092`                                                | Comma-separated list of Kafka broker addresses |
+| `KAFKA_TOPIC`      | `transformed-weather-data`                                       | Topic to consume enriched events from          |
+| `KAFKA_GROUP_ID`   | `storm-data-graphql-api`                                         | Consumer group ID                              |
+| `LOG_LEVEL`        | `info`                                                           | Log level: `debug`, `info`, `warn`, `error`    |
+| `LOG_FORMAT`       | `json`                                                           | Log format: `json` or `text`                   |
+| `SHUTDOWN_TIMEOUT` | `10s`                                                            | Graceful shutdown deadline                     |
+
+## HTTP Endpoints
+
+| Endpoint       | Description                                                     |
+| -------------- | --------------------------------------------------------------- |
+| `GET /healthz` | Liveness probe -- always returns `200`                          |
+| `GET /readyz`  | Readiness probe -- returns `200` when Postgres is reachable, `503` otherwise |
+| `GET /metrics` | Prometheus metrics                                              |
+| `POST /query`  | GraphQL endpoint                                                |
+
+## Prometheus Metrics
+
+| Metric                                | Type      | Labels                       | Description                                |
+| ------------------------------------- | --------- | ---------------------------- | ------------------------------------------ |
+| `api_http_requests_total`             | Counter   | `method`, `path`, `status`   | Total HTTP requests processed              |
+| `api_http_request_duration_seconds`   | Histogram | `method`, `path`             | HTTP request duration                      |
+| `api_kafka_messages_consumed_total`   | Counter   | `topic`                      | Total Kafka messages consumed              |
+| `api_kafka_consumer_errors_total`     | Counter   | `topic`, `error_type`        | Total Kafka consumer errors                |
+| `api_kafka_consumer_running`          | Gauge     | `topic`                      | `1` when the Kafka consumer is running     |
+| `api_db_query_duration_seconds`       | Histogram | `operation`                  | Database query duration                    |
+| `api_db_pool_connections`             | Gauge     | `state`                      | Database connection pool statistics        |
+
+## Development
+
+```
+make build            # Compile binary to bin/server
+make run              # Run server locally
+make generate         # Regenerate gqlgen GraphQL code
+make test             # Run all tests
+make test-unit        # Run unit tests only
+make test-integration # Run integration tests (Docker required)
+make lint             # Run golangci-lint
+make docker-up        # Start Postgres + Kafka
+make docker-down      # Stop and remove containers + volumes
+```
+
+Integration tests require Docker because they use Postgres and Kafka containers.
+
+## Project Structure
+
+```
+cmd/server/                 Entry point
+internal/
+  config/                   Environment-based configuration
+  database/                 PostgreSQL connection, migrations (embedded via go:embed)
+  graph/                    gqlgen GraphQL schema, resolvers, and generated code
+  integration/              Integration tests (require Docker)
+  kafka/                    Kafka consumer
+  model/                    Domain types
+  observability/            Structured logging and Prometheus metrics
+  store/                    PostgreSQL query layer
+data/mock/                  Sample storm report JSON for testing
+```
 
 ## Documentation
 
-See the [Wiki](../../wiki) for detailed documentation:
+See the [project wiki](../../wiki) for detailed documentation:
 
-- [Architecture](../../wiki/Architecture) — project structure, layer responsibilities, database schema
-- [Data Model](../../wiki/Data-Model) — Kafka message shape, event types, field mapping
-- [API Reference](../../wiki/API-Reference) — GraphQL types, queries, filter options
-- [Configuration](../../wiki/Configuration) — environment variables
-- [Testing](../../wiki/Testing) — unit and integration test details
+- [Architecture](../../wiki/Architecture) -- Project structure, layer responsibilities, database schema
+- [Configuration](../../wiki/Configuration) -- Environment variables
+- [Deployment](../../wiki/Deployment) -- Docker Compose setup and production considerations
+- [Development](../../wiki/Development) -- Build, test, lint, CI, and project conventions
+- [Data Model](../../wiki/Data-Model) -- Kafka message shape, event types, field mapping
+- [API Reference](../../wiki/API-Reference) -- GraphQL types, queries, filter options
+- [Performance](../../wiki/Performance) -- Query performance, scaling, and bottleneck analysis
