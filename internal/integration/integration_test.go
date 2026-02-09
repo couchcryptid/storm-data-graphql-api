@@ -164,13 +164,7 @@ func TestStoreAggregations(t *testing.T) {
 		assert.Equal(t, 10, counts["hail"])
 		assert.Equal(t, 10, counts["tornado"])
 		assert.Equal(t, 10, counts["wind"])
-
-		for _, g := range groups {
-			if g.Type == "hail" {
-				require.NotNil(t, g.MaxMagnitude)
-				assert.Equal(t, 1.75, *g.MaxMagnitude)
-			}
-		}
+		assertTypeMaxMagnitude(t, groups, "hail", 1.75)
 	})
 
 	t.Run("CountByState", func(t *testing.T) {
@@ -182,17 +176,7 @@ func TestStoreAggregations(t *testing.T) {
 		}
 		assert.NotZero(t, stateCount["TX"])
 		assert.NotZero(t, stateCount["NE"])
-
-		for _, g := range groups {
-			if g.State == "TX" {
-				assert.NotEmpty(t, g.Counties, "TX should have counties")
-				countyTotal := 0
-				for _, c := range g.Counties {
-					countyTotal += c.Count
-				}
-				assert.Equal(t, g.Count, countyTotal, "TX county sum should equal state count")
-			}
-		}
+		assertStateCountyTotals(t, groups, "TX")
 	})
 
 	t.Run("CountByHour", func(t *testing.T) {
