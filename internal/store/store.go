@@ -126,21 +126,18 @@ func buildWhereClause(filter *model.StormReportFilter) ([]string, []any, int) {
 	return where, args, idx
 }
 
-// buildEventTypeConditions builds bounding-box and per-type OR clauses for eventTypeFilters.
-// Returns additional WHERE clauses, updated args, and the next parameter index.
-func buildEventTypeConditions(filter *model.StormReportFilter, args []any, idx int) ([]string, []any, int) {
-	var clauses []string
+type typeCondition struct {
+	eventType   model.EventType
+	severity    []model.Severity
+	minMag      *float64
+	radiusMiles *float64
+}
 
-	// Collect per-type conditions: explicit overrides + unoverridden eventTypes
-	type typeCondition struct {
-		eventType   model.EventType
-		severity    []model.Severity
-		minMag      *float64
-		radiusMiles *float64
-	}
-
+// collectTypeConditions merges explicit per-type overrides with unoverridden eventTypes.
+func collectTypeConditions(filter *model.StormReportFilter) []typeCondition {
 	overrideSet := make(map[model.EventType]bool)
-	var conditions []typeCondition
+	conditions := make([]typeCondition, 0, len(filter.EventTypeFilters)+len(filter.EventTypes))
+
 	for _, etf := range filter.EventTypeFilters {
 		overrideSet[etf.EventType] = true
 		tc := typeCondition{eventType: etf.EventType}
@@ -162,7 +159,6 @@ func buildEventTypeConditions(filter *model.StormReportFilter, args []any, idx i
 		conditions = append(conditions, tc)
 	}
 
-	// Add eventTypes that don't have an explicit override (inherit global defaults)
 	for _, et := range filter.EventTypes {
 		if !overrideSet[et] {
 			tc := typeCondition{
@@ -176,6 +172,15 @@ func buildEventTypeConditions(filter *model.StormReportFilter, args []any, idx i
 			conditions = append(conditions, tc)
 		}
 	}
+
+	return conditions
+}
+
+// buildEventTypeConditions builds bounding-box and per-type OR clauses for eventTypeFilters.
+// Returns additional WHERE clauses, updated args, and the next parameter index.
+func buildEventTypeConditions(filter *model.StormReportFilter, args []any, idx int) ([]string, []any, int) {
+	conditions := collectTypeConditions(filter)
+	var clauses []string
 
 	// Bounding box using the max radius across all conditions (for index usage)
 	if filter.Near != nil {

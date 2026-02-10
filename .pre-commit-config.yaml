@@ -44,9 +44,12 @@ repos:
         files: '\.graphql$'
         additional_dependencies: ["graphql-schema-linter@3.0.1"]
 
-  # YAML/JSON schema files often used for config
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.38.0
     hooks:
       - id: yamllint
-        args: ["-d", "relaxed"]
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.47.0
+    hooks:
+      - id: markdownlint

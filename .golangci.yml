@@ -5,6 +5,7 @@ linters:
     - errname
     - exhaustive
     - gocritic
+    - gocyclo
     - gosec
     - misspell
     - noctx
@@ -23,6 +24,8 @@ linters:
         - diagnostic
         - style
         - performance
+    gocyclo:
+      min-complexity: 15
     revive:
       rules:
         - name: var-naming
@@ -34,14 +37,24 @@ linters:
         - name: exported
   exclusions:
     generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
     paths:
+      - vendor
       - third_party$
       - builtin$
       - examples$
 formatters:
+  enable:
+    - gofmt
+    - goimports
   exclusions:
     generated: lax
     paths:
+      - vendor
       - third_party$
       - builtin$
       - examples$

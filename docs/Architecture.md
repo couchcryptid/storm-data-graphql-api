@@ -45,6 +45,7 @@ The `ListStormReports` method builds dynamic WHERE clauses from the filter struc
 Schema-first GraphQL layer using gqlgen. The schema is defined in `schema.graphqls`, and resolvers are thin — they delegate directly to the store layer with no business logic.
 
 To regenerate after schema changes:
+
 ```bash
 make generate
 ```
@@ -58,6 +59,7 @@ Consumes from the `transformed-weather-data` topic using `segmentio/kafka-go`. U
 Prometheus metrics, HTTP middleware, and health endpoints. `NewMetrics()` registers all application metrics (HTTP, Kafka, database) with the default Prometheus registry. `NewTestMetrics()` uses a throwaway registry for test isolation. The Chi middleware records request duration and count using route patterns (not raw paths) to prevent label cardinality explosion.
 
 Endpoints:
+
 - `GET /healthz` — liveness probe (always 200)
 - `GET /readyz` — readiness probe (pings the database pool)
 - `GET /metrics` — Prometheus scrape endpoint
