@@ -1,143 +1,264 @@
 scalar DateTime
 
 type Query {
+  """Query storm reports with filtering, sorting, pagination, and aggregations."""
   stormReports(filter: StormReportFilter!): StormReportsResult!
 }
 
 # ─── Enums ──────────────────────────────────────────────────
 
+"""Type of severe weather event reported by the NWS."""
 enum EventType { HAIL WIND TORNADO }
+
+"""
+Severity classification derived from event magnitude.
+
+Thresholds vary by event type:
+- Hail: MINOR <0.75in, MODERATE <1.5in, SEVERE <2.5in, EXTREME >=2.5in
+- Wind: MINOR <50mph, MODERATE <74mph, SEVERE <96mph, EXTREME >=96mph
+- Tornado: MINOR EF0-1, MODERATE EF2, SEVERE EF3-4, EXTREME EF5
+"""
 enum Severity { MINOR MODERATE SEVERE EXTREME }
+
+"""Available sort fields for storm report queries."""
 enum SortField { BEGIN_TIME MAGNITUDE LOCATION_STATE EVENT_TYPE }
+
+"""Sort direction."""
 enum SortOrder { ASC DESC }
 
 # ─── Filter inputs ──────────────────────────────────────────
 
+"""Time window for filtering storm reports. Both bounds are inclusive."""
 input TimeRange {
+  """Start of the time window (inclusive)."""
   from: DateTime!
+  """End of the time window (inclusive). Must be after `from`."""
   to: DateTime!
 }
 
+"""
+Geographic radius filter using haversine distance.
+Results are pre-filtered with a bounding box for index efficiency, then refined
+with the haversine formula for precise great-circle distance.
+"""
 input GeoRadiusFilter {
+  """Center point latitude in decimal degrees."""
   lat: Float!
+  """Center point longitude in decimal degrees."""
   lon: Float!
+  """Search radius in miles. Defaults to 20, maximum 200."""
   radiusMiles: Float
 }
 
+"""
+Per-event-type filter override. Allows different criteria for each event type
+within a single query (e.g. severe hail within 20 miles OR any tornado within
+50 miles). Overrides the global severity, minMagnitude, and radiusMiles for the
+specified event type. Maximum 3 per query, no duplicate event types.
+"""
 input EventTypeFilter {
+  """Event type to apply these overrides to."""
   eventType: EventType!
+  """Severity filter for this type. Falls back to global severity if omitted."""
   severity: [Severity!]
+  """Minimum magnitude for this type. Falls back to global minMagnitude if omitted."""
   minMagnitude: Float
+  """Radius override for this type (miles). Falls back to near.radiusMiles if omitted. Maximum 200."""
   radiusMiles: Float
 }
 
+"""
+Primary filter input for querying storm reports.
+
+Supports two filtering modes:
+1. **Simple (AND)**: Use eventTypes, severity, minMagnitude, and near for global filters.
+2. **Per-type (OR)**: Use eventTypeFilters to apply different criteria per event type,
+   with unoverridden types falling back to global defaults.
+
+These modes are mutually exclusive: if eventTypeFilters is provided, the per-type
+OR logic is used; otherwise, simple AND logic applies.
+"""
 input StormReportFilter {
+  """Required time window."""
   timeRange: TimeRange!
+  """Geographic radius filter. Requires radiusMiles to activate distance filtering."""
   near: GeoRadiusFilter
+  """Filter by US state abbreviations (e.g. ["TX", "OK"])."""
   states: [String!]
+  """Filter by county names."""
   counties: [String!]
 
-  # Global defaults — apply to any type not overridden
+  """Global event type filter. Applied as AND with other global filters."""
   eventTypes: [EventType!]
+  """Global severity filter. Applied as AND with other global filters."""
   severity: [Severity!]
+  """Global minimum magnitude threshold (units vary: inches for hail, mph for wind, EF-scale for tornado)."""
   minMagnitude: Float
 
-  # Per-type overrides (max 3)
+  """Per-type filter overrides. Maximum 3. Activates per-type OR filtering mode."""
   eventTypeFilters: [EventTypeFilter!]
 
+  """Sort field. Defaults to BEGIN_TIME."""
   sortBy: SortField
+  """Sort direction. Defaults to DESC."""
   sortOrder: SortOrder
+  """Page size. Defaults to 20, maximum 20."""
   limit: Int
+  """Number of results to skip for pagination."""
   offset: Int
 }
 
 # ─── Result types ───────────────────────────────────────────
 
+"""Paginated storm report results with aggregations and metadata."""
 type StormReportsResult {
+  """Total number of reports matching the filter (before pagination)."""
   totalCount: Int!
+  """True if there are more results beyond the current page."""
   hasMore: Boolean!
+  """Paginated list of storm reports."""
   reports: [StormReport!]!
+  """Aggregations computed over all matching reports (not just the current page)."""
   aggregations: StormAggregations!
+  """Query metadata including data freshness information."""
   meta: QueryMeta!
 }
 
+"""Aggregations computed over the filtered result set."""
 type StormAggregations {
+  """Total count across all aggregation groups."""
   totalCount: Int!
+  """Report counts and max magnitude grouped by event type."""
   byEventType: [EventTypeGroup!]!
+  """Report counts grouped by state, with county breakdowns."""
   byState: [StateGroup!]!
+  """Report counts grouped by hourly time bucket."""
   byHour: [TimeGroup!]!
 }
 
+"""Data freshness metadata."""
 type QueryMeta {
+  """Timestamp of the most recently processed report."""
   lastUpdated: DateTime
+  """Minutes since the most recent report was processed. Null if no data exists."""
   dataLagMinutes: Int
 }
 
 # ─── Core types ─────────────────────────────────────────────
 
+"""A single severe weather event reported by the National Weather Service."""
 type StormReport {
+  """Deterministic SHA-256 hash of type, state, coordinates, and time."""
   id: ID!
+  """Event type: hail, wind, or tornado."""
   eventType: String!
+  """Geographic coordinates of the report."""
   geo: Geo!
+  """Measurement data including magnitude, unit, and derived severity."""
   measurement: Measurement!
+  """When the event began (UTC)."""
   beginTime: DateTime!
+  """When the event ended (UTC)."""
   endTime: DateTime!
+  """Data source identifier."""
   source: String!
+  """NWS Weather Forecast Office code (e.g. OUN, FWD, SJT)."""
   sourceOffice: String!
+  """Parsed location information."""
   location: Location!
+  """Free-text NWS remarks about the event."""
   comments: String!
+  """Begin time truncated to the hour (UTC). Used for hourly aggregations."""
   timeBucket: DateTime!
+  """When the ETL pipeline processed this event (UTC)."""
   processedAt: DateTime!
+  """Geocoding enrichment results. Fields are empty when geocoding is disabled."""
   geocoding: Geocoding!
 }
 
+"""Measurement data for a storm event. Units vary by event type."""
 type Measurement {
+  """Numeric magnitude: inches (hail), mph (wind), or EF-scale 0-5 (tornado)."""
   magnitude: Float!
+  """Unit of measurement: "in", "mph", or "f_scale"."""
   unit: String!
+  """Severity classification: minor, moderate, severe, or extreme. Null when magnitude is 0 or unknown."""
   severity: String
 }
 
+"""WGS-84 geographic coordinates."""
 type Geo {
+  """Latitude in decimal degrees."""
   lat: Float!
+  """Longitude in decimal degrees."""
   lon: Float!
 }
 
+"""Geocoding enrichment results from the optional Mapbox integration."""
 type Geocoding {
+  """Full address from geocoding (e.g. "Chappel, San Saba County, Texas")."""
   formattedAddress: String!
+  """Short place name from geocoding."""
   placeName: String!
+  """Geocoding confidence score (0-1). Higher is more confident."""
   confidence: Float!
+  """Geocoding method: "forward", "reverse", "original", "failed", or empty."""
   source: String!
 }
 
+"""
+Parsed NWS location. The raw format is "<distance> <compass> <place>"
+(e.g. "8 ESE Chappel" = 8 miles East-Southeast of Chappel).
+"""
 type Location {
+  """Original NWS location string before parsing."""
   raw: String!
+  """Parsed place name."""
   name: String!
+  """Distance in miles from the named place. Null if report is at the location."""
   distance: Float
+  """Compass direction from the named place (e.g. ESE, NNW). Null if report is at the location."""
   direction: String
+  """US state abbreviation."""
   state: String!
+  """County name."""
   county: String!
 }
 
 # ─── Aggregation types ──────────────────────────────────────
 
+"""Storm report counts grouped by event type."""
 type EventTypeGroup {
+  """Event type (hail, wind, tornado)."""
   eventType: String!
+  """Number of reports of this type."""
   count: Int!
+  """Highest magnitude measurement for this type. Null if no reports."""
   maxMeasurement: Measurement
 }
 
+"""Storm report counts grouped by US state."""
 type StateGroup {
+  """US state abbreviation."""
   state: String!
+  """Total report count for this state."""
   count: Int!
+  """Breakdown by county within this state."""
   counties: [CountyGroup!]!
 }
 
+"""Storm report counts within a county."""
 type CountyGroup {
+  """County name."""
   county: String!
+  """Number of reports in this county."""
   count: Int!
 }
 
+"""Storm report counts within a one-hour time bucket."""
 type TimeGroup {
+  """Hour bucket start time (UTC)."""
   bucket: DateTime!
+  """Number of reports in this hour."""
   count: Int!
 }

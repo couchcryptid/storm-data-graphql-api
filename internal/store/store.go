@@ -134,6 +134,10 @@ type typeCondition struct {
 }
 
 // collectTypeConditions merges explicit per-type overrides with unoverridden eventTypes.
+// For example, given eventTypes=[HAIL, WIND], severity=[SEVERE], and
+// eventTypeFilters=[{eventType: HAIL, severity: [MODERATE]}], this returns:
+//   - HAIL with severity=[MODERATE] (overridden)
+//   - WIND with severity=[SEVERE] (global default, not overridden)
 func collectTypeConditions(filter *model.StormReportFilter) []typeCondition {
 	overrideSet := make(map[model.EventType]bool)
 	conditions := make([]typeCondition, 0, len(filter.EventTypeFilters)+len(filter.EventTypes))
@@ -248,7 +252,12 @@ func buildGeoClause(lat, lon float64, radiusMiles *float64, idx int) ([]string, 
 	return clauses, args, hav.nextIdx
 }
 
-// buildBoundingBox builds lat/lon bounding box clauses for index pre-filtering.
+// buildBoundingBox builds lat/lon bounding box clauses for index pre-filtering
+// before applying the precise haversine distance calculation. Uses approximate
+// degrees-per-mile conversions: ~69 miles/degree latitude (constant globally),
+// ~69*cos(lat) miles/degree longitude (varies by latitude). The coarse bounding
+// box leverages the (geo_lat, geo_lon) B-tree index to quickly eliminate rows
+// outside the search area before the expensive haversine runs on the remainder.
 func buildBoundingBox(lat, lon, radiusMiles float64, idx int) ([]string, []any, int) {
 	latDelta := radiusMiles / 69.0
 	lonDelta := radiusMiles / (69.0 * math.Cos(lat*math.Pi/180.0))
@@ -265,7 +274,8 @@ type haversineResult struct {
 	nextIdx int
 }
 
-// buildHaversine builds a haversine distance clause.
+// buildHaversine builds a haversine great-circle distance clause.
+// 3959 is the Earth's mean radius in miles.
 func buildHaversine(lat, lon, radiusMiles float64, idx int) haversineResult {
 	clause := fmt.Sprintf(`(
 		3959 * acos(
@@ -394,6 +404,9 @@ func unitForEventType(et string) string {
 }
 
 // Aggregations returns event type, state, and hourly aggregations in a single query.
+// Uses a CTE with UNION ALL to compute all three aggregation types in one database
+// round-trip. The "agg" discriminator column routes each row to the appropriate
+// result slice during scanning.
 func (s *Store) Aggregations(ctx context.Context, filter *model.StormReportFilter) (*AggResult, error) {
 	defer s.observeQuery("aggregations", time.Now())
 	where, args, _ := buildWhereClause(filter)

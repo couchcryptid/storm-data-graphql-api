@@ -3,7 +3,14 @@ package graph
 import "github.com/couchcryptid/storm-data-graphql-api/internal/model"
 
 // NewComplexityRoot returns complexity estimators for expensive fields.
-// Budget: 600 (worst-case ~537 per recommendations doc).
+// gqlgen computes total query complexity bottom-up and rejects queries exceeding
+// the budget (600). Multipliers estimate the maximum number of child items each
+// field can return:
+//   - Reports: up to MaxPageSize (20) items per query
+//   - ByEventType/ByState/ByHour: up to 10 groups each
+//   - Counties: up to 5 per state
+//
+// Worst-case cost: 1 + 20*(1+1+1+1+1+1+1+1+1+1+1) + 10*(1+1+1) + 10*(1+5*1) + 10*(1+1) + 1 + 1 ≈ 537.
 func NewComplexityRoot() ComplexityRoot {
 	return ComplexityRoot{
 		Query: struct {
