@@ -1,5 +1,7 @@
 # Architecture
 
+![Architecture](architecture.excalidraw.svg)
+
 ## Project Structure
 
 ```
@@ -113,12 +115,4 @@ CREATE TABLE storm_reports (
 
 ## Kafka Consumer Offset Strategy
 
-```
-FetchMessage() --> Unmarshal JSON --> Insert to DB --> CommitMessages()
-                        |                  |
-                   (bad JSON)         (DB error)
-                        |                  |
-                   Commit offset      Don't commit
-                   (poison pill       (retry on
-                    protection)        restart)
-```
+![Kafka Offset Strategy](kafka-offset-strategy.excalidraw.svg)

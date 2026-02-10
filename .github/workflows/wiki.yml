@@ -72,9 +72,11 @@ jobs:
           cd wiki
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Remove existing pages so deleted files don't persist
+          # Remove existing pages and assets so deleted files don't persist
           find . -maxdepth 1 -name '*.md' -not -name '.git' -delete
+          find . -maxdepth 1 -name '*.svg' -not -name '.git' -delete
           cp ../docs/*.md .
+          cp ../docs/*.svg . 2>/dev/null || true
 
       - name: Commit and push wiki changes
         run: |

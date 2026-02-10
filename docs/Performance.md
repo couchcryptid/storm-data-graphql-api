@@ -4,6 +4,8 @@ This page describes the theoretical performance characteristics of the Storm Dat
 
 ## Architecture Overview
 
+![Concurrent Workloads](concurrent-workloads.excalidraw.svg)
+
 The service runs two concurrent workloads in a single process:
 
 ```
@@ -14,6 +16,8 @@ Read path:   HTTP request --> chi middleware --> gqlgen --> parallel SQL queries
 The Kafka consumer and HTTP server share the same pgx connection pool but otherwise operate independently.
 
 ## Read Path: Query Performance
+
+![Read Path Parallel Queries](read-path-parallel-queries.excalidraw.svg)
 
 ### Per-Request Cost Breakdown
 

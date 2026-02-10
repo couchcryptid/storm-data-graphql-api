@@ -1,4 +1,4 @@
-# Storm Data GraphQL API
+# Storm Data API
 
 A Go service that consumes transformed storm weather reports from a Kafka topic, persists them to PostgreSQL, and serves them through a GraphQL API. Part of the storm data pipeline.
 
