@@ -34,9 +34,12 @@ func (d DepthLimit) Validate(graphql.ExecutableSchema) error {
 // InterceptOperation implements graphql.OperationInterceptor.
 func (d DepthLimit) InterceptOperation(ctx context.Context, next graphql.OperationHandler) graphql.ResponseHandler {
 	oc := graphql.GetOperationContext(ctx)
+	// Skip depth check for introspection queries
+	if isIntrospectionQuery(oc.Operation.SelectionSet) {
+		return next(ctx)
+	}
 	depth := queryDepth(oc.Operation.SelectionSet)
 	if depth > d.MaxDepth {
-		graphql.AddErrorf(ctx, "query depth %d exceeds maximum allowed depth of %d", depth, d.MaxDepth)
 		return func(ctx context.Context) *graphql.Response {
 			return graphql.ErrorResponse(ctx, "query depth %d exceeds maximum allowed depth of %d", depth, d.MaxDepth)
 		}
@@ -67,4 +70,18 @@ func queryDepth(selSet ast.SelectionSet) int {
 		}
 	}
 	return 1 + maxChild
+}
+
+// isIntrospectionQuery checks if the query is an introspection query.
+// Introspection queries access schema metadata via fields starting with "__".
+func isIntrospectionQuery(selSet ast.SelectionSet) bool {
+	for _, sel := range selSet {
+		if field, ok := sel.(*ast.Field); ok {
+			// Check if field name starts with "__" (introspection fields)
+			if len(field.Name) >= 2 && field.Name[0] == '_' && field.Name[1] == '_' {
+				return true
+			}
+		}
+	}
+	return false
 }

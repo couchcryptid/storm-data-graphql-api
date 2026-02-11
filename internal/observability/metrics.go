@@ -24,6 +24,8 @@ type Metrics struct {
 	KafkaMessagesConsumed *prometheus.CounterVec
 	KafkaConsumerErrors   *prometheus.CounterVec
 	KafkaConsumerRunning  *prometheus.GaugeVec
+	KafkaBatchSize        *prometheus.HistogramVec
+	KafkaBatchDuration    *prometheus.HistogramVec
 
 	// Database
 	DBQueryDuration   *prometheus.HistogramVec
@@ -73,6 +75,20 @@ func newMetrics(factory promauto.Factory) *Metrics {
 			Name:      "kafka_consumer_running",
 			Help:      "Whether the Kafka consumer is running (1) or stopped (0).",
 		}, []string{"topic"}),
+
+		KafkaBatchSize: factory.NewHistogramVec(prometheus.HistogramOpts{
+			Namespace: namespace,
+			Name:      "kafka_batch_size",
+			Help:      "Number of messages in each consumed batch.",
+			Buckets:   []float64{1, 5, 10, 25, 50, 100, 250, 500},
+		}, []string{"topic"}),
+
+		KafkaBatchDuration: factory.NewHistogramVec(prometheus.HistogramOpts{
+			Namespace: namespace,
+			Name:      "kafka_batch_duration_seconds",
+			Help:      "Duration of batch operations.",
+			Buckets:   []float64{0.01, 0.05, 0.1, 0.25, 0.5, 1, 2.5, 5},
+		}, []string{"topic", "operation"}),
 
 		DBQueryDuration: factory.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: namespace,

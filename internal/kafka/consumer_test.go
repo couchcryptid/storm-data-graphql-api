@@ -62,9 +62,11 @@ func (m *mockReader) Close() error {
 }
 
 type mockStore struct {
-	mu        sync.Mutex
-	inserted  []*model.StormReport
-	insertErr error
+	mu             sync.Mutex
+	inserted       []*model.StormReport
+	insertErr      error
+	batchInserted  []*model.StormReport
+	batchInsertErr error
 }
 
 func (m *mockStore) InsertStormReport(_ context.Context, report *model.StormReport) error {

@@ -89,7 +89,7 @@ func startKafka(ctx context.Context, t *testing.T) (string, *tcKafka.KafkaContai
 
 func loadMockReports(t *testing.T) []model.StormReport {
 	t.Helper()
-	data, err := os.ReadFile("../../data/mock/storm_reports_240526_transformed.json")
+	data, err := os.ReadFile("../../data/mock/storm_reports_240426_transformed.json")
 	require.NoError(t, err, "read mock data")
 	var reports []model.StormReport
 	require.NoError(t, json.Unmarshal(data, &reports), "unmarshal mock data")
@@ -119,16 +119,16 @@ func TestStoreInsertAndQuery(t *testing.T) {
 	// List all
 	all, totalCount, err := s.ListStormReports(ctx, wideFilter())
 	require.NoError(t, err)
-	assert.Len(t, all, 30)
-	assert.Equal(t, 30, totalCount)
+	assert.Len(t, all, 20) // default page size
+	assert.Equal(t, 271, totalCount)
 
 	// Filter by event type
 	f := wideFilter()
 	f.EventTypes = []model.EventType{model.EventTypeHail}
 	hailReports, hailCount, err := s.ListStormReports(ctx, f)
 	require.NoError(t, err)
-	assert.Len(t, hailReports, 10)
-	assert.Equal(t, 10, hailCount)
+	assert.Len(t, hailReports, 20) // default page size
+	assert.Equal(t, 79, hailCount)
 
 	// Filter by state
 	f = wideFilter()
@@ -169,10 +169,10 @@ func TestStoreAggregations(t *testing.T) {
 		for _, g := range agg.ByEventType {
 			typeMap[g.EventType] = g.Count
 		}
-		assert.Equal(t, 10, typeMap["hail"])
-		assert.Equal(t, 10, typeMap["tornado"])
-		assert.Equal(t, 10, typeMap["wind"])
-		assertEventTypeMaxMeasurement(t, agg.ByEventType, "hail", 1.75, "in")
+		assert.Equal(t, 79, typeMap["hail"])
+		assert.Equal(t, 149, typeMap["tornado"])
+		assert.Equal(t, 43, typeMap["wind"])
+		assertEventTypeMaxMeasurement(t, agg.ByEventType, "hail", 3.0, "in")
 
 		// ByState
 		require.NotEmpty(t, agg.ByState)
@@ -191,7 +191,7 @@ func TestStoreAggregations(t *testing.T) {
 			hourTotal += g.Count
 			assert.False(t, g.Bucket.IsZero(), "bucket should not be zero")
 		}
-		assert.Equal(t, 30, hourTotal)
+		assert.Equal(t, 271, hourTotal)
 	})
 
 	t.Run("LastUpdated", func(t *testing.T) {
@@ -208,7 +208,7 @@ func TestStoreAggregations(t *testing.T) {
 		require.NoError(t, err)
 		require.Len(t, agg.ByEventType, 1)
 		assert.Equal(t, "hail", agg.ByEventType[0].EventType)
-		assert.Equal(t, 10, agg.ByEventType[0].Count)
+		assert.Equal(t, 79, agg.ByEventType[0].Count)
 	})
 }
 
@@ -221,7 +221,7 @@ func TestStoreFilters(t *testing.T) {
 		f.Severity = []model.Severity{model.SeveritySevere}
 		reports, count, err := s.ListStormReports(ctx, f)
 		require.NoError(t, err)
-		assert.Equal(t, 4, count)
+		assert.Equal(t, 26, count)
 		for _, r := range reports {
 			require.NotNil(t, r.Measurement.Severity, testReportMsg, r.ID)
 			assert.Equal(t, "severe", *r.Measurement.Severity, testReportMsg, r.ID)
@@ -233,7 +233,7 @@ func TestStoreFilters(t *testing.T) {
 		f.Severity = []model.Severity{model.SeveritySevere, model.SeverityModerate}
 		_, count, err := s.ListStormReports(ctx, f)
 		require.NoError(t, err)
-		assert.Equal(t, 13, count)
+		assert.Equal(t, 81, count)
 	})
 
 	t.Run("counties filter", func(t *testing.T) {
@@ -253,7 +253,7 @@ func TestStoreFilters(t *testing.T) {
 		f.MinMagnitude = &min
 		reports, count, err := s.ListStormReports(ctx, f)
 		require.NoError(t, err)
-		assert.Equal(t, 6, count)
+		assert.Equal(t, 29, count)
 		for _, r := range reports {
 			assert.GreaterOrEqual(t, r.Measurement.Magnitude, 1.75, testReportMsg, r.ID)
 		}
@@ -266,7 +266,7 @@ func TestStoreFilters(t *testing.T) {
 		f.Severity = []model.Severity{model.SeveritySevere}
 		reports, count, err := s.ListStormReports(ctx, f)
 		require.NoError(t, err)
-		assert.Equal(t, 2, count)
+		assert.Equal(t, 3, count)
 		for _, r := range reports {
 			assert.Equal(t, "hail", r.Type, testReportMsg, r.ID)
 			assert.Equal(t, "TX", r.Location.State, testReportMsg, r.ID)
@@ -289,7 +289,7 @@ func TestStoreFilters(t *testing.T) {
 		f.EventTypes = []model.EventType{model.EventTypeHail, model.EventTypeTornado}
 		_, count, err := s.ListStormReports(ctx, f)
 		require.NoError(t, err)
-		assert.Equal(t, 20, count)
+		assert.Equal(t, 228, count)
 	})
 }
 
@@ -347,7 +347,7 @@ func TestStoreSortingAndPagination(t *testing.T) {
 		reports, totalCount, err := s.ListStormReports(ctx, f)
 		require.NoError(t, err)
 		assert.Len(t, reports, 5)
-		assert.Equal(t, 30, totalCount, "totalCount should ignore limit")
+		assert.Equal(t, 271, totalCount, "totalCount should ignore limit")
 	})
 
 	t.Run("pagination offset", func(t *testing.T) {
@@ -378,7 +378,7 @@ func TestStoreSortingAndPagination(t *testing.T) {
 		reports, totalCount, err := s.ListStormReports(ctx, f)
 		require.NoError(t, err)
 		assert.Empty(t, reports)
-		assert.Equal(t, 30, totalCount, "totalCount should still be 30")
+		assert.Equal(t, 271, totalCount, "totalCount should still be 271")
 	})
 }
 
@@ -435,18 +435,18 @@ func TestGraphQLAggregations(t *testing.T) {
 	require.Empty(t, result.Errors)
 
 	sr := result.Data.StormReports
-	assert.Equal(t, 30, sr.TotalCount)
+	assert.Equal(t, 271, sr.TotalCount)
 
 	agg := sr.Aggregations
-	assert.Equal(t, 30, agg.TotalCount)
+	assert.Equal(t, 271, agg.TotalCount)
 	assert.Len(t, agg.ByEventType, 3)
 	typeMap := map[string]int{}
 	for _, g := range agg.ByEventType {
 		typeMap[g.EventType] = g.Count
 	}
-	assert.Equal(t, 10, typeMap["hail"])
-	assert.Equal(t, 10, typeMap["tornado"])
-	assert.Equal(t, 10, typeMap["wind"])
+	assert.Equal(t, 79, typeMap["hail"])
+	assert.Equal(t, 149, typeMap["tornado"])
+	assert.Equal(t, 43, typeMap["wind"])
 
 	assert.NotEmpty(t, agg.ByState)
 	for _, sg := range agg.ByState {
@@ -458,7 +458,7 @@ func TestGraphQLAggregations(t *testing.T) {
 	for _, g := range agg.ByHour {
 		hourTotal += g.Count
 	}
-	assert.Equal(t, 30, hourTotal)
+	assert.Equal(t, 271, hourTotal)
 
 	assert.NotNil(t, sr.Meta.LastUpdated)
 	assert.NotNil(t, sr.Meta.DataLagMinutes)
@@ -529,8 +529,8 @@ func TestKafkaConsumerIntegration(t *testing.T) {
 	// Verify all records in database
 	all, totalCount, err := s.ListStormReports(ctx, wideFilter())
 	require.NoError(t, err)
-	assert.Len(t, all, 30)
-	assert.Equal(t, 30, totalCount)
+	assert.Len(t, all, 20) // default page size
+	assert.Equal(t, 271, totalCount)
 }
 
 func TestGraphQLEndpoint(t *testing.T) {
@@ -577,7 +577,7 @@ func TestGraphQLEndpoint(t *testing.T) {
 	}
 	require.NoError(t, json.NewDecoder(resp.Body).Decode(&result))
 	assert.Len(t, result.Data.StormReports.Reports, 20)
-	assert.Equal(t, 30, result.Data.StormReports.TotalCount)
+	assert.Equal(t, 271, result.Data.StormReports.TotalCount)
 
 	// Query with event type filter (hail only)
 	body = `{"query":"{ stormReports(filter: { timeRange: { from: \"2020-01-01T00:00:00Z\", to: \"2030-01-01T00:00:00Z\" }, eventTypes: [HAIL] }) { reports { id eventType } totalCount } }"}`
@@ -597,8 +597,8 @@ func TestGraphQLEndpoint(t *testing.T) {
 		} `json:"data"`
 	}
 	require.NoError(t, json.NewDecoder(resp2.Body).Decode(&filtered))
-	assert.Len(t, filtered.Data.StormReports.Reports, 10)
-	assert.Equal(t, 10, filtered.Data.StormReports.TotalCount)
+	assert.Len(t, filtered.Data.StormReports.Reports, 20) // default page size
+	assert.Equal(t, 79, filtered.Data.StormReports.TotalCount)
 }
 
 func TestGraphQLDepthExceeded(t *testing.T) {

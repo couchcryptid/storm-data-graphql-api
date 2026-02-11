@@ -56,6 +56,45 @@ func (s *Store) InsertStormReport(ctx context.Context, report *model.StormReport
 	return err
 }
 
+const insertSQL = `INSERT INTO storm_reports (` + columns + `)
+	VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24)
+	ON CONFLICT (id) DO NOTHING`
+
+// InsertStormReports batch-inserts multiple storm reports using pgx.Batch.
+func (s *Store) InsertStormReports(ctx context.Context, reports []*model.StormReport) error {
+	if len(reports) == 0 {
+		return nil
+	}
+	defer s.observeQuery("batch_insert", time.Now())
+
+	batch := &pgx.Batch{}
+	for _, r := range reports {
+		batch.Queue(insertSQL,
+			r.ID, r.Type, r.Geo.Lat, r.Geo.Lon,
+			r.Measurement.Magnitude, r.Measurement.Unit,
+			r.BeginTime, r.EndTime, r.Source,
+			r.Location.Raw, r.Location.Name,
+			r.Location.Distance, r.Location.Direction,
+			r.Location.State, r.Location.County,
+			r.Comments, r.Measurement.Severity, r.SourceOffice,
+			r.TimeBucket, r.ProcessedAt,
+			r.Geocoding.FormattedAddress, r.Geocoding.PlaceName,
+			r.Geocoding.Confidence, r.Geocoding.Source,
+		)
+	}
+
+	br := s.pool.SendBatch(ctx, batch)
+	defer br.Close()
+
+	for range reports {
+		if _, err := br.Exec(); err != nil {
+			return fmt.Errorf("batch insert: %w", err)
+		}
+	}
+
+	return nil
+}
+
 // buildWhereSQL joins the clauses into a WHERE fragment (empty string if no clauses).
 func buildWhereSQL(clauses []string) string {
 	if len(clauses) == 0 {

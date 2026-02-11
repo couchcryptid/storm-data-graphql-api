@@ -1,0 +1,7588 @@
+[
+  {
+    "id": "hail-3ea3338515bae6ff",
+    "type": "hail",
+    "geo": {
+      "lat": 31.02,
+      "lon": -98.44
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T15:10:00Z",
+    "end_time": "2024-04-26T15:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "8 ESE Chappel",
+      "name": "Chappel",
+      "distance": 8,
+      "direction": "ESE",
+      "state": "TX",
+      "county": "San Saba"
+    },
+    "comments": "1.25 inch hail reported at Colorado Bend State Park. (SJT)",
+    "source_office": "SJT",
+    "time_bucket": "2024-04-26T15:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-521c22d1d07107cd",
+    "type": "hail",
+    "geo": {
+      "lat": 32.5,
+      "lon": -97.29
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:03:00Z",
+    "end_time": "2024-04-26T17:03:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SE Burleson",
+      "name": "Burleson",
+      "distance": 3,
+      "direction": "SE",
+      "state": "TX",
+      "county": "Johnson"
+    },
+    "comments": "Quarter hail reported. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-3ccb1dacfc3b36be",
+    "type": "hail",
+    "geo": {
+      "lat": 42.39,
+      "lon": -95.87
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:04:00Z",
+    "end_time": "2024-04-26T17:04:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Anthon",
+      "name": "Anthon",
+      "state": "IA",
+      "county": "Woodbury"
+    },
+    "comments": "Report via social media. (FSD)",
+    "source_office": "FSD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-3d0d3d67ca899413",
+    "type": "hail",
+    "geo": {
+      "lat": 32.63,
+      "lon": -97.21
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:09:00Z",
+    "end_time": "2024-04-26T17:09:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SE Kennedale",
+      "name": "Kennedale",
+      "distance": 2,
+      "direction": "SE",
+      "state": "TX",
+      "county": "Tarrant"
+    },
+    "comments": "Report from mPING: Quarter (1.00 in.). (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-e4dbf0223cbb70e4",
+    "type": "hail",
+    "geo": {
+      "lat": 32.77,
+      "lon": -97.31
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T17:10:00Z",
+    "end_time": "2024-04-26T17:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NE Kennedale",
+      "name": "Kennedale",
+      "distance": 2,
+      "direction": "NE",
+      "state": "TX",
+      "county": "Tarrant"
+    },
+    "comments": "Golf ball hail reported at Little Rd and I20 in SE Fort Worth. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-1224cb584f833e3a",
+    "type": "hail",
+    "geo": {
+      "lat": 41.02,
+      "lon": -98.91
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T17:10:00Z",
+    "end_time": "2024-04-26T17:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Ravenna",
+      "name": "Ravenna",
+      "state": "NE",
+      "county": "Buffalo"
+    },
+    "comments": "Also reports of dime to half-dollar size hail in Ravenna. (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-713bd6e470b500f1",
+    "type": "hail",
+    "geo": {
+      "lat": 32.69,
+      "lon": -97.13
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:11:00Z",
+    "end_time": "2024-04-26T17:11:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Arlington",
+      "name": "Arlington",
+      "state": "TX",
+      "county": "Tarrant"
+    },
+    "comments": "Quarter hail reported in Arlington. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-4f6a9986f06c2822",
+    "type": "hail",
+    "geo": {
+      "lat": 32.71,
+      "lon": -97.11
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T17:19:00Z",
+    "end_time": "2024-04-26T17:19:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NE Arlington",
+      "name": "Arlington",
+      "distance": 2,
+      "direction": "NE",
+      "state": "TX",
+      "county": "Tarrant"
+    },
+    "comments": "Report from mPING: Golf Ball (1.75 in.). (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-6b4681cefe849d87",
+    "type": "hail",
+    "geo": {
+      "lat": 41.06,
+      "lon": -98.91
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:25:00Z",
+    "end_time": "2024-04-26T17:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 N Ravenna",
+      "name": "Ravenna",
+      "distance": 2,
+      "direction": "N",
+      "state": "NE",
+      "county": "Sherman"
+    },
+    "comments": "Started to cover the ground with quarter to half-dollar size hail. (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-9c4fed0990781dce",
+    "type": "hail",
+    "geo": {
+      "lat": 42.63,
+      "lon": -95.75
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:30:00Z",
+    "end_time": "2024-04-26T17:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 NNW Washta",
+      "name": "Washta",
+      "distance": 4,
+      "direction": "NNW",
+      "state": "IA",
+      "county": "Cherokee"
+    },
+    "comments": "Quarter to Half Dollar sized hail reported by the Cherokee County EM. Time matched up to Radar. (FSD)",
+    "source_office": "FSD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-9e0e79aa763e4bdf",
+    "type": "hail",
+    "geo": {
+      "lat": 42.81,
+      "lon": -95.71
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:47:00Z",
+    "end_time": "2024-04-26T17:47:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Cleghorn",
+      "name": "Cleghorn",
+      "state": "IA",
+      "county": "Cherokee"
+    },
+    "comments": "Report and photo via social media. (FSD)",
+    "source_office": "FSD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-4eb88e309e22d583",
+    "type": "hail",
+    "geo": {
+      "lat": 33.18,
+      "lon": -95.23
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:54:00Z",
+    "end_time": "2024-04-26T17:54:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NW Mount Vernon",
+      "name": "Mount Vernon",
+      "distance": 1,
+      "direction": "NW",
+      "state": "TX",
+      "county": "Franklin"
+    },
+    "comments": "Corrects previous hail report from 1 NW Mount Vernon. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-5fd3706bd4c6e419",
+    "type": "hail",
+    "geo": {
+      "lat": 42.91,
+      "lon": -95.73
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T17:55:00Z",
+    "end_time": "2024-04-26T17:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 SSW Paullina",
+      "name": "Paullina",
+      "distance": 5,
+      "direction": "SSW",
+      "state": "IA",
+      "county": "O'Brien"
+    },
+    "comments": "Quarter sized hail and heavy rain. (FSD)",
+    "source_office": "FSD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-d63f0c8199f7ef25",
+    "type": "hail",
+    "geo": {
+      "lat": 40.31,
+      "lon": -97.18
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T18:30:00Z",
+    "end_time": "2024-04-26T18:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 S Western",
+      "name": "Western",
+      "distance": 6,
+      "direction": "S",
+      "state": "NE",
+      "county": "Jefferson"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-dd0c2b09fec1a0ec",
+    "type": "hail",
+    "geo": {
+      "lat": 41.54,
+      "lon": -98.26
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T19:15:00Z",
+    "end_time": "2024-04-26T19:15:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 WSW Cedar Rapids",
+      "name": "Cedar Rapids",
+      "distance": 6,
+      "direction": "WSW",
+      "state": "NE",
+      "county": "Boone"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-86ff9524884a5262",
+    "type": "hail",
+    "geo": {
+      "lat": 40.74,
+      "lon": -96.85
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T19:24:00Z",
+    "end_time": "2024-04-26T19:24:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Denton",
+      "name": "Denton",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "Report of hail ranging from half an inch to an inch in Denton... NE. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-fafc58319c66a97f",
+    "type": "hail",
+    "geo": {
+      "lat": 40.73,
+      "lon": -96.84
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T19:27:00Z",
+    "end_time": "2024-04-26T19:27:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SE Denton",
+      "name": "Denton",
+      "distance": 1,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "ground covered with hail. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-765310f1f3d15838",
+    "type": "hail",
+    "geo": {
+      "lat": 41.08,
+      "lon": -97.2
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T19:35:00Z",
+    "end_time": "2024-04-26T19:35:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Ulysses",
+      "name": "Ulysses",
+      "state": "NE",
+      "county": "Butler"
+    },
+    "comments": "Butler County Emergency Manager reported golf ball sized hail in downtown Ulysses. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-c1e3c33a3842c96c",
+    "type": "hail",
+    "geo": {
+      "lat": 40.86,
+      "lon": -96.74
+    },
+    "measurement": {
+      "magnitude": 1.5,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T19:41:00Z",
+    "end_time": "2024-04-26T19:41:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 NW Lincoln",
+      "name": "Lincoln",
+      "distance": 4,
+      "direction": "NW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-3221e2a552cebe89",
+    "type": "hail",
+    "geo": {
+      "lat": 40.87,
+      "lon": -96.73
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T19:48:00Z",
+    "end_time": "2024-04-26T19:48:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NNW Lincoln",
+      "name": "Lincoln",
+      "distance": 5,
+      "direction": "NNW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-a2ff6defd8189ac2",
+    "type": "hail",
+    "geo": {
+      "lat": 40.87,
+      "lon": -96.74
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T19:48:00Z",
+    "end_time": "2024-04-26T19:48:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NW Lincoln",
+      "name": "Lincoln",
+      "distance": 5,
+      "direction": "NW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "Report from mPING: Golf Ball (1.75 in.). (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-ae8eb745bd30c0af",
+    "type": "hail",
+    "geo": {
+      "lat": 40.85,
+      "lon": -96.79
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T19:49:00Z",
+    "end_time": "2024-04-26T19:49:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 SE Malcolm",
+      "name": "Malcolm",
+      "distance": 6,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-d7ac98385006d6f7",
+    "type": "hail",
+    "geo": {
+      "lat": 37.5,
+      "lon": -96.26
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T19:51:00Z",
+    "end_time": "2024-04-26T19:51:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 N Howard",
+      "name": "Howard",
+      "distance": 2,
+      "direction": "N",
+      "state": "KS",
+      "county": "Elk"
+    },
+    "comments": "(ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-2a536e75bc3144e2",
+    "type": "hail",
+    "geo": {
+      "lat": 40.99,
+      "lon": -96.6
+    },
+    "measurement": {
+      "magnitude": 2.5,
+      "unit": "in",
+      "severity": "extreme"
+    },
+    "begin_time": "2024-04-26T19:54:00Z",
+    "end_time": "2024-04-26T19:54:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 E Davey",
+      "name": "Davey",
+      "distance": 3,
+      "direction": "E",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "delayed report time estimated by radar. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-79352929b3f21633",
+    "type": "hail",
+    "geo": {
+      "lat": 37.64,
+      "lon": -96.25
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T20:01:00Z",
+    "end_time": "2024-04-26T20:01:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NW Severy",
+      "name": "Severy",
+      "distance": 2,
+      "direction": "NW",
+      "state": "KS",
+      "county": "Greenwood"
+    },
+    "comments": "(ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-6d5e84843e32222b",
+    "type": "hail",
+    "geo": {
+      "lat": 41.05,
+      "lon": -96.59
+    },
+    "measurement": {
+      "magnitude": 2.75,
+      "unit": "in",
+      "severity": "extreme"
+    },
+    "begin_time": "2024-04-26T20:02:00Z",
+    "end_time": "2024-04-26T20:02:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 ESE Ceresco",
+      "name": "Ceresco",
+      "distance": 3,
+      "direction": "ESE",
+      "state": "NE",
+      "county": "Saunders"
+    },
+    "comments": "Corrects previous hail report from 3 ESE Ceresco. Corrects previous hail report from 3 ESE Ceresco for wrong date. Delayed report from 4/26. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-bbe24e5db613db9d",
+    "type": "hail",
+    "geo": {
+      "lat": 37.36,
+      "lon": -96.38
+    },
+    "measurement": {
+      "magnitude": 1.5,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T20:03:00Z",
+    "end_time": "2024-04-26T20:03:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 W Moline",
+      "name": "Moline",
+      "distance": 4,
+      "direction": "W",
+      "state": "KS",
+      "county": "Elk"
+    },
+    "comments": "(ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-1d6360b090ba816b",
+    "type": "hail",
+    "geo": {
+      "lat": 41.5,
+      "lon": -97.73
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T20:05:00Z",
+    "end_time": "2024-04-26T20:05:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 N Genoa",
+      "name": "Genoa",
+      "distance": 4,
+      "direction": "N",
+      "state": "NE",
+      "county": "Nance"
+    },
+    "comments": "Report on Facebook of Quarter sized hail north of Genoa. (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-b373d8bee6c1217a",
+    "type": "hail",
+    "geo": {
+      "lat": 37.64,
+      "lon": -96.07
+    },
+    "measurement": {
+      "magnitude": 1.5,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T20:12:00Z",
+    "end_time": "2024-04-26T20:12:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NW Fall River",
+      "name": "Fall River",
+      "distance": 3,
+      "direction": "NW",
+      "state": "KS",
+      "county": "Greenwood"
+    },
+    "comments": "(ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-13fa6467a7977851",
+    "type": "hail",
+    "geo": {
+      "lat": 44.07,
+      "lon": -97.29
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T20:31:00Z",
+    "end_time": "2024-04-26T20:31:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 SW Ramona",
+      "name": "Ramona",
+      "distance": 5,
+      "direction": "SW",
+      "state": "SD",
+      "county": "Lake"
+    },
+    "comments": "Mostly pea to dime sized hail... but a few as big as a quarter. No damage to anything... since crops are not up yet. (FSD)",
+    "source_office": "FSD",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-4a7f6ede4613dc32",
+    "type": "hail",
+    "geo": {
+      "lat": 41.32,
+      "lon": -96.37
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T20:33:00Z",
+    "end_time": "2024-04-26T20:33:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 WNW Valley",
+      "name": "Valley",
+      "distance": 1,
+      "direction": "WNW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-44890902f9c6e2b5",
+    "type": "hail",
+    "geo": {
+      "lat": 37.57,
+      "lon": -95.96
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T20:41:00Z",
+    "end_time": "2024-04-26T20:41:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 W New Albany",
+      "name": "New Albany",
+      "distance": 1,
+      "direction": "W",
+      "state": "KS",
+      "county": "Elk"
+    },
+    "comments": "May have had a wall cloud initially. (ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-9a2b340da4cf25c1",
+    "type": "hail",
+    "geo": {
+      "lat": 37.57,
+      "lon": -95.95
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:00:00Z",
+    "end_time": "2024-04-26T21:00:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 W New Albany",
+      "name": "New Albany",
+      "distance": 1,
+      "direction": "W",
+      "state": "KS",
+      "county": "Wilson"
+    },
+    "comments": "(ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-78c3b9fa6f82e39e",
+    "type": "hail",
+    "geo": {
+      "lat": 41.55,
+      "lon": -96.14
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:08:00Z",
+    "end_time": "2024-04-26T21:08:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Blair",
+      "name": "Blair",
+      "state": "NE",
+      "county": "Washington"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-2f5ec143c61a2c2f",
+    "type": "hail",
+    "geo": {
+      "lat": 39.84,
+      "lon": -96.18
+    },
+    "measurement": {
+      "magnitude": 1.5,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:10:00Z",
+    "end_time": "2024-04-26T21:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Baileyville",
+      "name": "Baileyville",
+      "state": "KS",
+      "county": "Nemaha"
+    },
+    "comments": "(TOP)",
+    "source_office": "TOP",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-549903b31c0b1b87",
+    "type": "hail",
+    "geo": {
+      "lat": 39.84,
+      "lon": -96.13
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:11:00Z",
+    "end_time": "2024-04-26T21:11:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 E Baileyville",
+      "name": "Baileyville",
+      "distance": 3,
+      "direction": "E",
+      "state": "KS",
+      "county": "Nemaha"
+    },
+    "comments": "Emergency Manager reported golf ball size hail. (TOP)",
+    "source_office": "TOP",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-035eb897b9e0343c",
+    "type": "hail",
+    "geo": {
+      "lat": 36.14,
+      "lon": -96.3
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:12:00Z",
+    "end_time": "2024-04-26T21:12:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 E Mannford",
+      "name": "Mannford",
+      "distance": 3,
+      "direction": "E",
+      "state": "OK",
+      "county": "Tulsa"
+    },
+    "comments": "pic from news media... time estimated via radar. (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-fed4031ab00b430b",
+    "type": "hail",
+    "geo": {
+      "lat": 41.55,
+      "lon": -96.14
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:12:00Z",
+    "end_time": "2024-04-26T21:12:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Blair",
+      "name": "Blair",
+      "state": "NE",
+      "county": "Washington"
+    },
+    "comments": "Report from mPING: Golf Ball (1.75 in.). (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-a2ee7d29f178c175",
+    "type": "hail",
+    "geo": {
+      "lat": 41.32,
+      "lon": -96.37
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:25:00Z",
+    "end_time": "2024-04-26T21:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 WNW Valley",
+      "name": "Valley",
+      "distance": 1,
+      "direction": "WNW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-ca73ee5f54086492",
+    "type": "hail",
+    "geo": {
+      "lat": 41.4,
+      "lon": -96.3
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:26:00Z",
+    "end_time": "2024-04-26T21:26:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 W Washington",
+      "name": "Washington",
+      "distance": 5,
+      "direction": "W",
+      "state": "NE",
+      "county": "Washington"
+    },
+    "comments": "Report from mPING: Quarter (1.00 in.). (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-3bb8a45b184cf29f",
+    "type": "hail",
+    "geo": {
+      "lat": 36.36,
+      "lon": -96
+    },
+    "measurement": {
+      "magnitude": 1.5,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:28:00Z",
+    "end_time": "2024-04-26T21:28:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 S Skiatook",
+      "name": "Skiatook",
+      "distance": 1,
+      "direction": "S",
+      "state": "OK",
+      "county": "Tulsa"
+    },
+    "comments": "pic larger than quarter shown on air...time estimated from radar. (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-5ec1a433f3317451",
+    "type": "hail",
+    "geo": {
+      "lat": 36.37,
+      "lon": -95.99
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:30:00Z",
+    "end_time": "2024-04-26T21:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 E Skiatook",
+      "name": "Skiatook",
+      "distance": 1,
+      "direction": "E",
+      "state": "OK",
+      "county": "Tulsa"
+    },
+    "comments": "Hail slightly larger than a quarter shown on air. (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-07ba880559b46f5e",
+    "type": "hail",
+    "geo": {
+      "lat": 41.18,
+      "lon": -96.07
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:30:00Z",
+    "end_time": "2024-04-26T21:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 WSW La Vista",
+      "name": "La Vista",
+      "distance": 2,
+      "direction": "WSW",
+      "state": "NE",
+      "county": "Sarpy"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-8c5ddee2243b70e0",
+    "type": "hail",
+    "geo": {
+      "lat": 36.41,
+      "lon": -95.93
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:32:00Z",
+    "end_time": "2024-04-26T21:32:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SW Vera",
+      "name": "Vera",
+      "distance": 4,
+      "direction": "SW",
+      "state": "OK",
+      "county": "Tulsa"
+    },
+    "comments": "Report from mPING: Quarter (1.00 in.). (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-04b8732c9579d289",
+    "type": "hail",
+    "geo": {
+      "lat": 41.13,
+      "lon": -96.06
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:40:00Z",
+    "end_time": "2024-04-26T21:40:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SSW Papillion",
+      "name": "Papillion",
+      "distance": 2,
+      "direction": "SSW",
+      "state": "NE",
+      "county": "Sarpy"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-80dbc5364d6d4f3b",
+    "type": "hail",
+    "geo": {
+      "lat": 41.21,
+      "lon": -96.05
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:40:00Z",
+    "end_time": "2024-04-26T21:40:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 WNW Ralston",
+      "name": "Ralston",
+      "distance": 1,
+      "direction": "WNW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-15aafda154d9fdcd",
+    "type": "hail",
+    "geo": {
+      "lat": 41.09,
+      "lon": -96.07
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:42:00Z",
+    "end_time": "2024-04-26T21:42:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NE Cedar Creek",
+      "name": "Cedar Creek",
+      "distance": 3,
+      "direction": "NE",
+      "state": "NE",
+      "county": "Sarpy"
+    },
+    "comments": "Report from mPING: Golf Ball (1.75 in.). (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-821e9f0d869ce233",
+    "type": "hail",
+    "geo": {
+      "lat": 41.15,
+      "lon": -96.08
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:43:00Z",
+    "end_time": "2024-04-26T21:43:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 W Papillion",
+      "name": "Papillion",
+      "distance": 2,
+      "direction": "W",
+      "state": "NE",
+      "county": "Sarpy"
+    },
+    "comments": "Report from mPING: Golf Ball (1.75 in.). (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-7fb3dced0ad106ab",
+    "type": "hail",
+    "geo": {
+      "lat": 41.15,
+      "lon": -96.04
+    },
+    "measurement": {
+      "magnitude": 2,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:45:00Z",
+    "end_time": "2024-04-26T21:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Papillion",
+      "name": "Papillion",
+      "state": "NE",
+      "county": "Sarpy"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-31c17689ff6028ee",
+    "type": "hail",
+    "geo": {
+      "lat": 41.55,
+      "lon": -96.19
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:46:00Z",
+    "end_time": "2024-04-26T21:46:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 W Blair",
+      "name": "Blair",
+      "distance": 3,
+      "direction": "W",
+      "state": "NE",
+      "county": "Washington"
+    },
+    "comments": "Report from mPING: Quarter (1.00 in.). (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-eeda6f836a0a600a",
+    "type": "hail",
+    "geo": {
+      "lat": 41.14,
+      "lon": -96.06
+    },
+    "measurement": {
+      "magnitude": 1.5,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:47:00Z",
+    "end_time": "2024-04-26T21:47:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SW Papillion",
+      "name": "Papillion",
+      "distance": 1,
+      "direction": "SW",
+      "state": "NE",
+      "county": "Sarpy"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-4f0b8d88c1af4df1",
+    "type": "hail",
+    "geo": {
+      "lat": 31.1,
+      "lon": -98.51
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:51:00Z",
+    "end_time": "2024-04-26T21:51:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NE Chappel",
+      "name": "Chappel",
+      "distance": 5,
+      "direction": "NE",
+      "state": "TX",
+      "county": "San Saba"
+    },
+    "comments": "Quarter size hail in Bend. Time estimated by radar. (SJT)",
+    "source_office": "SJT",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-b8ee2cf6ac3b4c28",
+    "type": "hail",
+    "geo": {
+      "lat": 32.56,
+      "lon": -95.87
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:55:00Z",
+    "end_time": "2024-04-26T21:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NNW Canton",
+      "name": "Canton",
+      "distance": 1,
+      "direction": "NNW",
+      "state": "TX",
+      "county": "Van Zandt"
+    },
+    "comments": "Quarter sized hail near SH 64 at FM 859. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-892f953e9f85d468",
+    "type": "hail",
+    "geo": {
+      "lat": 41.28,
+      "lon": -96
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:55:00Z",
+    "end_time": "2024-04-26T21:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NNE Omaha",
+      "name": "Omaha",
+      "distance": 1,
+      "direction": "NNE",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-94c6086b968c4126",
+    "type": "hail",
+    "geo": {
+      "lat": 41.29,
+      "lon": -95.91
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:55:00Z",
+    "end_time": "2024-04-26T21:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Carter Lake",
+      "name": "Carter Lake",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-50a3b7c4179262cc",
+    "type": "hail",
+    "geo": {
+      "lat": 41.3,
+      "lon": -95.93
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:55:00Z",
+    "end_time": "2024-04-26T21:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NE Omaha",
+      "name": "Omaha",
+      "distance": 5,
+      "direction": "NE",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-1afaa0bcddb4f177",
+    "type": "hail",
+    "geo": {
+      "lat": 41.3,
+      "lon": -95.94
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:55:00Z",
+    "end_time": "2024-04-26T21:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NW Carter Lake",
+      "name": "Carter Lake",
+      "distance": 1,
+      "direction": "NW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-710976d5b019cf54",
+    "type": "hail",
+    "geo": {
+      "lat": 41.16,
+      "lon": -96.02
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T21:56:00Z",
+    "end_time": "2024-04-26T21:56:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 ENE Papillion",
+      "name": "Papillion",
+      "distance": 1,
+      "direction": "ENE",
+      "state": "NE",
+      "county": "Sarpy"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-a1270c212b44c281",
+    "type": "hail",
+    "geo": {
+      "lat": 40.34,
+      "lon": -95.67
+    },
+    "measurement": {
+      "magnitude": 2.75,
+      "unit": "in",
+      "severity": "extreme"
+    },
+    "begin_time": "2024-04-26T22:02:00Z",
+    "end_time": "2024-04-26T22:02:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Nemaha",
+      "name": "Nemaha",
+      "state": "NE",
+      "county": "Nemaha"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-b3b480f71a861910",
+    "type": "hail",
+    "geo": {
+      "lat": 37.85,
+      "lon": -95.15
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T22:17:00Z",
+    "end_time": "2024-04-26T22:17:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 N Elsmore",
+      "name": "Elsmore",
+      "distance": 4,
+      "direction": "N",
+      "state": "KS",
+      "county": "Allen"
+    },
+    "comments": "(ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-0c471c5e0b466eb5",
+    "type": "hail",
+    "geo": {
+      "lat": 36.46,
+      "lon": -95.62
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T22:20:00Z",
+    "end_time": "2024-04-26T22:20:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "10 N Claremore",
+      "name": "Claremore",
+      "distance": 10,
+      "direction": "N",
+      "state": "OK",
+      "county": "Rogers"
+    },
+    "comments": "pic from social media... time estimated from radar. (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-e40de425e05b2e36",
+    "type": "hail",
+    "geo": {
+      "lat": 37.9,
+      "lon": -94.98
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T22:30:00Z",
+    "end_time": "2024-04-26T22:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 N Uniontown",
+      "name": "Uniontown",
+      "distance": 4,
+      "direction": "N",
+      "state": "KS",
+      "county": "Bourbon"
+    },
+    "comments": "(SGF)",
+    "source_office": "SGF",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-24f6cd1801499ae4",
+    "type": "hail",
+    "geo": {
+      "lat": 40.29,
+      "lon": -95.48
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T22:30:00Z",
+    "end_time": "2024-04-26T22:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NNW Corning",
+      "name": "Corning",
+      "distance": 3,
+      "direction": "NNW",
+      "state": "MO",
+      "county": "Atchison"
+    },
+    "comments": "Social media report of quarter size hail. Time estimated from radar. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-2951a776a5c6872a",
+    "type": "hail",
+    "geo": {
+      "lat": 40.26,
+      "lon": -95.37
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T22:38:00Z",
+    "end_time": "2024-04-26T22:38:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 ENE Corning",
+      "name": "Corning",
+      "distance": 5,
+      "direction": "ENE",
+      "state": "MO",
+      "county": "Holt"
+    },
+    "comments": "EM reported quarter-sized hail at Hwy 59 and Holt County line. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-c15a6114e66f0f3c",
+    "type": "hail",
+    "geo": {
+      "lat": 36.55,
+      "lon": -95.43
+    },
+    "measurement": {
+      "magnitude": 1.5,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T22:40:00Z",
+    "end_time": "2024-04-26T22:40:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 N Chelsea",
+      "name": "Chelsea",
+      "distance": 1,
+      "direction": "N",
+      "state": "OK",
+      "county": "Rogers"
+    },
+    "comments": "relayed via media...time estimated from radar. (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-19141136d186a1e6",
+    "type": "hail",
+    "geo": {
+      "lat": 38.09,
+      "lon": -94.58
+    },
+    "measurement": {
+      "magnitude": 1.5,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T23:03:00Z",
+    "end_time": "2024-04-26T23:03:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Hume",
+      "name": "Hume",
+      "state": "MO",
+      "county": "Bates"
+    },
+    "comments": "Photo of approximately ping pong ball size hail in Hume relayed to NWS employee. Time estimated from radar. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-39a9619026728ec7",
+    "type": "hail",
+    "geo": {
+      "lat": 40.72,
+      "lon": -95.02
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T23:08:00Z",
+    "end_time": "2024-04-26T23:08:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SE Clarinda",
+      "name": "Clarinda",
+      "distance": 1,
+      "direction": "SE",
+      "state": "IA",
+      "county": "Page"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-524749769a30279f",
+    "type": "hail",
+    "geo": {
+      "lat": 38.01,
+      "lon": -94.72
+    },
+    "measurement": {
+      "magnitude": 1.25,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T23:12:00Z",
+    "end_time": "2024-04-26T23:12:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Fulton",
+      "name": "Fulton",
+      "state": "KS",
+      "county": "Bourbon"
+    },
+    "comments": "(SGF)",
+    "source_office": "SGF",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-de2303e018f8c962",
+    "type": "hail",
+    "geo": {
+      "lat": 40.8,
+      "lon": -94.91
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T23:16:00Z",
+    "end_time": "2024-04-26T23:16:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 N New Market",
+      "name": "New Market",
+      "distance": 5,
+      "direction": "N",
+      "state": "IA",
+      "county": "Taylor"
+    },
+    "comments": "Delayed report. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-14906225e9ba0a60",
+    "type": "hail",
+    "geo": {
+      "lat": 40.53,
+      "lon": -94.54
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T00:12:00Z",
+    "end_time": "2024-04-26T00:12:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 ENE Sheridan",
+      "name": "Sheridan",
+      "distance": 4,
+      "direction": "ENE",
+      "state": "MO",
+      "county": "Worth"
+    },
+    "comments": "Photo relayed of golf ball size hail in Worth County. Time and location estimated from radar. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-3f9b61dfe5c515ed",
+    "type": "hail",
+    "geo": {
+      "lat": 40.64,
+      "lon": -94.36
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T00:28:00Z",
+    "end_time": "2024-04-26T00:28:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SSW Delphos",
+      "name": "Delphos",
+      "distance": 2,
+      "direction": "SSW",
+      "state": "IA",
+      "county": "Ringgold"
+    },
+    "comments": "(DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-7301cf8bafea3297",
+    "type": "hail",
+    "geo": {
+      "lat": 39.52,
+      "lon": -105.04
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T00:44:00Z",
+    "end_time": "2024-04-26T00:44:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SSE Chatfield Reservo",
+      "name": "Chatfield Reservo",
+      "distance": 3,
+      "direction": "SSE",
+      "state": "CO",
+      "county": "Douglas"
+    },
+    "comments": "(BOU)",
+    "source_office": "BOU",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-252f950336ee9ab0",
+    "type": "hail",
+    "geo": {
+      "lat": 40.71,
+      "lon": -94.24
+    },
+    "measurement": {
+      "magnitude": 3,
+      "unit": "in",
+      "severity": "extreme"
+    },
+    "begin_time": "2024-04-26T00:45:00Z",
+    "end_time": "2024-04-26T00:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Mount Ayr",
+      "name": "Mount Ayr",
+      "state": "IA",
+      "county": "Ringgold"
+    },
+    "comments": "Corrects previous hail report from Mount Ayr. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-018221db3b582454",
+    "type": "hail",
+    "geo": {
+      "lat": 39.56,
+      "lon": -104.98
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T01:03:00Z",
+    "end_time": "2024-04-26T01:03:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 WNW Highlands Ranch",
+      "name": "Highlands Ranch",
+      "distance": 1,
+      "direction": "WNW",
+      "state": "CO",
+      "county": "Douglas"
+    },
+    "comments": "(BOU)",
+    "source_office": "BOU",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-e75ec26974e1e5c2",
+    "type": "hail",
+    "geo": {
+      "lat": 40.71,
+      "lon": -94.24
+    },
+    "measurement": {
+      "magnitude": 3,
+      "unit": "in",
+      "severity": "extreme"
+    },
+    "begin_time": "2024-04-26T01:03:00Z",
+    "end_time": "2024-04-26T01:03:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Mount Ayr",
+      "name": "Mount Ayr",
+      "state": "IA",
+      "county": "Ringgold"
+    },
+    "comments": "(DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-99477d07b8b94082",
+    "type": "hail",
+    "geo": {
+      "lat": 33.06,
+      "lon": -95.01
+    },
+    "measurement": {
+      "magnitude": 1.75,
+      "unit": "in",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T01:24:00Z",
+    "end_time": "2024-04-26T01:24:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NNE Rocky Mound",
+      "name": "Rocky Mound",
+      "distance": 3,
+      "direction": "NNE",
+      "state": "TX",
+      "county": "Camp"
+    },
+    "comments": "Golfball sized hail reported near the dam of Lake Bob Sandlin. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-59542c7ab5b4d023",
+    "type": "hail",
+    "geo": {
+      "lat": 33.15,
+      "lon": -94.97
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T01:30:00Z",
+    "end_time": "2024-04-26T01:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SSE Mount Pleasant",
+      "name": "Mount Pleasant",
+      "distance": 1,
+      "direction": "SSE",
+      "state": "TX",
+      "county": "Titus"
+    },
+    "comments": "(SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-8d7d464c2240aecf",
+    "type": "hail",
+    "geo": {
+      "lat": 41.5,
+      "lon": -93.78
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T01:36:00Z",
+    "end_time": "2024-04-26T01:36:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NW Cumming",
+      "name": "Cumming",
+      "distance": 2,
+      "direction": "NW",
+      "state": "IA",
+      "county": "Warren"
+    },
+    "comments": "Report from mPING: Quarter (1.00 in.). (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "hail-f66f4099efde8e42",
+    "type": "hail",
+    "geo": {
+      "lat": 33.49,
+      "lon": -94.52
+    },
+    "measurement": {
+      "magnitude": 1,
+      "unit": "in",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T02:33:00Z",
+    "end_time": "2024-04-26T02:33:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 ESE De Kalb",
+      "name": "De Kalb",
+      "distance": 6,
+      "direction": "ESE",
+      "state": "TX",
+      "county": "Bowie"
+    },
+    "comments": "One inch hail was reported in the Malta community. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T02:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-f9660be21acb20e2",
+    "type": "tornado",
+    "geo": {
+      "lat": 34.96,
+      "lon": -95.77
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T12:23:00Z",
+    "end_time": "2024-04-26T12:23:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 N Mcalester",
+      "name": "Mcalester",
+      "distance": 2,
+      "direction": "N",
+      "state": "OK",
+      "county": "Pittsburg"
+    },
+    "comments": "This tornado moved across the northwest side of McAlester... damaging the roofs of homes... uprooting trees... and snapping power poles. The damage survey was conducted (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T12:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-673dd46b47a373c2",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.02,
+      "lon": -98.87
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:16:00Z",
+    "end_time": "2024-04-26T17:16:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 ESE Ravenna",
+      "name": "Ravenna",
+      "distance": 2,
+      "direction": "ESE",
+      "state": "NE",
+      "county": "Buffalo"
+    },
+    "comments": "This tornado touched down at 1216 PM CDT 2 miles east southeast of Ravenna... and lifted at 1231 PM CDT 3 miles north of Ravenna. The rating was EF1... with an estimate (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-1599952fbe8f847d",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.63,
+      "lon": -97.26
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:23:00Z",
+    "end_time": "2024-04-26T17:23:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 SSW Gholson",
+      "name": "Gholson",
+      "distance": 6,
+      "direction": "SSW",
+      "state": "TX",
+      "county": "McLennan"
+    },
+    "comments": "A brief EF-0 tornado occurred along Wisdom Ct west of Waco. Fences were damaged and large tree limbs were broken. Maximum estimated winds were 80 mph. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-37f0442bd70b4bad",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.63,
+      "lon": -97.25
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:26:00Z",
+    "end_time": "2024-04-26T17:26:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 S Gholson",
+      "name": "Gholson",
+      "distance": 6,
+      "direction": "S",
+      "state": "TX",
+      "county": "McLennan"
+    },
+    "comments": "A second tornado from the same supercell occurred west of Waco damaging neighborhoods on either side of Wortham Bend Road near China Spring Rd. Damage in these neighbor (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-42cfbdf37032c48f",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.64,
+      "lon": -97.25
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:26:00Z",
+    "end_time": "2024-04-26T17:26:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 S Gholson",
+      "name": "Gholson",
+      "distance": 5,
+      "direction": "S",
+      "state": "TX",
+      "county": "McLennan"
+    },
+    "comments": "Tornado pictures and damage reports from the China Springs area. Time estimated. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-fd862a32b1b92811",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.06,
+      "lon": -98.9
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:28:00Z",
+    "end_time": "2024-04-26T17:28:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NNE Ravenna",
+      "name": "Ravenna",
+      "distance": 2,
+      "direction": "NNE",
+      "state": "NE",
+      "county": "Sherman"
+    },
+    "comments": "Location approximate. May be adjusted. Estimated on the ground for 4 to 5 minutes. Video confirmed. (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-93f77c5347441612",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.1,
+      "lon": -98.83
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:32:00Z",
+    "end_time": "2024-04-26T17:32:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 S Rockville",
+      "name": "Rockville",
+      "distance": 2,
+      "direction": "S",
+      "state": "NE",
+      "county": "Sherman"
+    },
+    "comments": "This tornado touched down at 1232 PM CDT 2 miles south of Rockville... and lifted at 1248 PM CDT 4 miles north northeast of Rockville. The rating was EF1... with an est (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-6a7645a81498aad5",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.11,
+      "lon": -98.82
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:38:00Z",
+    "end_time": "2024-04-26T17:38:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Rockville",
+      "name": "Rockville",
+      "state": "NE",
+      "county": "Sherman"
+    },
+    "comments": "Tornado confirmed with some damage report. Will update pending damage survey. (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-ba49d48dd9ffb87d",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.76,
+      "lon": -97.07
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:48:00Z",
+    "end_time": "2024-04-26T17:48:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SSE West",
+      "name": "West",
+      "distance": 3,
+      "direction": "SSE",
+      "state": "TX",
+      "county": "McLennan"
+    },
+    "comments": "A brief... EF-0 tornado damaged trees west of Heritage Pkwy and south of Easy Rd northwest of Tours. Maximum estimated winds were 75 mph. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-faf592a96e0738fe",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.78,
+      "lon": -97.05
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:48:00Z",
+    "end_time": "2024-04-26T17:48:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SE West",
+      "name": "West",
+      "distance": 3,
+      "direction": "SE",
+      "state": "TX",
+      "county": "McLennan"
+    },
+    "comments": "Another tornado developed north of Tours... just west of Berger Road. This tornado initially damaged trees and a shed... but strengthened as it crossed Czech Hall Road. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-575bb29be3a3606a",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.18,
+      "lon": -98.65
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:52:00Z",
+    "end_time": "2024-04-26T17:52:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SSW Farwell",
+      "name": "Farwell",
+      "distance": 3,
+      "direction": "SSW",
+      "state": "NE",
+      "county": "Howard"
+    },
+    "comments": "This tornado touched down at 1252 PM CDT 3 miles SSW of Farwell... and lifted at 1258 PM CDT just outside the south side of Farwell. The rating was EF0... with an estim (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-c51ef44ed76cb7c6",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.8,
+      "lon": -97.02
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:53:00Z",
+    "end_time": "2024-04-26T17:53:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 E West",
+      "name": "West",
+      "distance": 4,
+      "direction": "E",
+      "state": "TX",
+      "county": "McLennan"
+    },
+    "comments": "Tornado pictures and reports from north of Tours to Penelope. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-fee2166467134da0",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.2,
+      "lon": -98.62
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:58:00Z",
+    "end_time": "2024-04-26T17:58:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SSE Farwell",
+      "name": "Farwell",
+      "distance": 1,
+      "direction": "SSE",
+      "state": "NE",
+      "county": "Howard"
+    },
+    "comments": "This tornado touched down at 1258 PM CDT 1 mile south southeast of Farwell... and lifted at 121 PM CDT 3 miles north of Elba. This was the strongest tornado of the day (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-5303559b4d3180f5",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.21,
+      "lon": -98.63
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T17:58:00Z",
+    "end_time": "2024-04-26T17:58:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 S Farwell",
+      "name": "Farwell",
+      "distance": 1,
+      "direction": "S",
+      "state": "NE",
+      "county": "Howard"
+    },
+    "comments": "Reported by fireman. Moving north/northeast at the time. (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T17:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-e410d116898f29e1",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.83,
+      "lon": -96.97
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T18:06:00Z",
+    "end_time": "2024-04-26T18:06:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SW Penelope",
+      "name": "Penelope",
+      "distance": 3,
+      "direction": "SW",
+      "state": "TX",
+      "county": "Hill"
+    },
+    "comments": "The same supercell produced another brief... EF-1 tornado... based on eye witness accounts... on either side of FM 339 southwest of Penelope. The tornado formed in the (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-3116a52fa479d325",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.3,
+      "lon": -98.58
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T18:14:00Z",
+    "end_time": "2024-04-26T18:14:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NNW Elba",
+      "name": "Elba",
+      "distance": 1,
+      "direction": "NNW",
+      "state": "NE",
+      "county": "Howard"
+    },
+    "comments": "Emergency management reported power poles down near Highway 11 and Odell Road. (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-18702e3d2a92479a",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.31,
+      "lon": -98.58
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T18:14:00Z",
+    "end_time": "2024-04-26T18:14:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NNW Elba",
+      "name": "Elba",
+      "distance": 2,
+      "direction": "NNW",
+      "state": "NE",
+      "county": "Howard"
+    },
+    "comments": "Several reports of confirmed tornado west and north of Elba. Time and location approximate pending damage survey. (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-47b70b4d7038c015",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.95,
+      "lon": -96.8
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T18:30:00Z",
+    "end_time": "2024-04-26T18:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 ENE Malone",
+      "name": "Malone",
+      "distance": 6,
+      "direction": "ENE",
+      "state": "TX",
+      "county": "Navarro"
+    },
+    "comments": "A tornado formed just northwest of Navarro Mills Lake... just east of the Navarro/Hill County line. Damage near this initiation point was confined to split tree trunks (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a70c4e26d72ec303",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.34,
+      "lon": -98.51
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T18:32:00Z",
+    "end_time": "2024-04-26T18:32:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NE Elba",
+      "name": "Elba",
+      "distance": 5,
+      "direction": "NE",
+      "state": "NE",
+      "county": "Howard"
+    },
+    "comments": "This tornado touched down at 132 PM CDT 5 miles northeast of Elba... and lifted at 154 PM CDT 3 miles north of Wolbach. The rating was EF2... with an estimated peak win (GID)",
+    "source_office": "GID",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-7e382d89836cf060",
+    "type": "tornado",
+    "geo": {
+      "lat": 32,
+      "lon": -96.75
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T18:37:00Z",
+    "end_time": "2024-04-26T18:37:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 SSE Frost",
+      "name": "Frost",
+      "distance": 7,
+      "direction": "SSE",
+      "state": "TX",
+      "county": "Navarro"
+    },
+    "comments": "Tornado reported near FM 477 near Brushie Prairie in western Navarro Co. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-383351e7ace45312",
+    "type": "tornado",
+    "geo": {
+      "lat": 32.08,
+      "lon": -96.67
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T18:48:00Z",
+    "end_time": "2024-04-26T18:48:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SW Barry",
+      "name": "Barry",
+      "distance": 2,
+      "direction": "SW",
+      "state": "TX",
+      "county": "Navarro"
+    },
+    "comments": "A tornado formed approximately 2 miles southwest of Barry in open country... based on storm spotter video and eyewitness reports. This tornado moved north and northeast (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-b86b42981a8dc223",
+    "type": "tornado",
+    "geo": {
+      "lat": 31.88,
+      "lon": -97.09
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T18:49:00Z",
+    "end_time": "2024-04-26T18:49:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 W Abbott",
+      "name": "Abbott",
+      "distance": 1,
+      "direction": "W",
+      "state": "TX",
+      "county": "Hill"
+    },
+    "comments": "An EF-1 tornado occurred near Abbott... first developing on the west side of I-35W and CR 2341 where trees were damaged and uprooted. A semi-tractor trailer was rolled (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T18:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-3266d2ddfc636955",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.1,
+      "lon": -97.1
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:00:00Z",
+    "end_time": "2024-04-26T19:00:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 WNW Dwight",
+      "name": "Dwight",
+      "distance": 4,
+      "direction": "WNW",
+      "state": "NE",
+      "county": "Butler"
+    },
+    "comments": "Center pivot overturned... tree and outbuilding damage... road signs torn down. Delayed report. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-21de48cfc47a7eaa",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.54,
+      "lon": -98.29
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:04:00Z",
+    "end_time": "2024-04-26T19:04:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 SSW Primrose",
+      "name": "Primrose",
+      "distance": 6,
+      "direction": "SSW",
+      "state": "NE",
+      "county": "Boone"
+    },
+    "comments": "A EF-2 tornado started in Greeley County and crossed into Boone County south of Primrose along Highway 56. It travelled north-northeast over 27.5 miles... doing its mos (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-fc1aab4af2a05ba9",
+    "type": "tornado",
+    "geo": {
+      "lat": 32.23,
+      "lon": -96.55
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:19:00Z",
+    "end_time": "2024-04-26T19:19:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 WSW Rice",
+      "name": "Rice",
+      "distance": 3,
+      "direction": "WSW",
+      "state": "TX",
+      "county": "Navarro"
+    },
+    "comments": "A citizen captured a video of a brief tornado which formed west of Rice... Texas. The tornado transited mainly bottomland/wetland areas of Cummins Creek... resulting in (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-802f4d8aa2c66a65",
+    "type": "tornado",
+    "geo": {
+      "lat": 32.07,
+      "lon": -96.83
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:30:00Z",
+    "end_time": "2024-04-26T19:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 WSW Frost",
+      "name": "Frost",
+      "distance": 1,
+      "direction": "WSW",
+      "state": "TX",
+      "county": "Navarro"
+    },
+    "comments": "A brief EF-0 tornado occurred west of Frost in far northwestern Navarro County. A grain elevator was impacted and partially collapsed along State Highway 22 west of Fro (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-cc8f39d528988186",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.88,
+      "lon": -96.75
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:43:00Z",
+    "end_time": "2024-04-26T19:43:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NW Lincoln",
+      "name": "Lincoln",
+      "distance": 5,
+      "direction": "NW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "Brief tornado touchdown near the Kawasaki Plant. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-e9034f5858d939f1",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.87,
+      "lon": -96.64
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:50:00Z",
+    "end_time": "2024-04-26T19:50:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NNE Lincoln",
+      "name": "Lincoln",
+      "distance": 5,
+      "direction": "NNE",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-7a2e15025d400007",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.88,
+      "lon": -96.59
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:51:00Z",
+    "end_time": "2024-04-26T19:51:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SW Waverly",
+      "name": "Waverly",
+      "distance": 4,
+      "direction": "SW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "Building collapse. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-69ba3a3fc14fceb8",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.05,
+      "lon": -97.11
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:51:00Z",
+    "end_time": "2024-04-26T19:51:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 NW Bee",
+      "name": "Bee",
+      "distance": 4,
+      "direction": "NW",
+      "state": "NE",
+      "county": "Butler"
+    },
+    "comments": "An EF-1 tornado began near the intersection of Highway 15 and Ashland Road moving north-northeast as a broad multiple-vortex tornado. It snapped trees and a road sign a (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-f0d30fb5d118bf5b",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.85,
+      "lon": -96.61
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:52:00Z",
+    "end_time": "2024-04-26T19:52:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 ENE Lincoln",
+      "name": "Lincoln",
+      "distance": 5,
+      "direction": "ENE",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "*** 3 INJ *** This EF3 tornado touched down on the northeast side of Lincoln near the intersection of Havelock Ave and 84th street causing damage to a business and a la (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-ecf6922ac744fb1d",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.93,
+      "lon": -96.55
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:53:00Z",
+    "end_time": "2024-04-26T19:53:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NW Waverly",
+      "name": "Waverly",
+      "distance": 1,
+      "direction": "NW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "House damaged. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-f14058cd56a5b840",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.08,
+      "lon": -97.11
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:54:00Z",
+    "end_time": "2024-04-26T19:54:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 W Dwight",
+      "name": "Dwight",
+      "distance": 5,
+      "direction": "W",
+      "state": "NE",
+      "county": "Butler"
+    },
+    "comments": "Relayed from emergency management. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-84d6bb1ce199c938",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.72,
+      "lon": -98.2
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:55:00Z",
+    "end_time": "2024-04-26T19:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 NNE Primrose",
+      "name": "Primrose",
+      "distance": 7,
+      "direction": "NNE",
+      "state": "NE",
+      "county": "Boone"
+    },
+    "comments": "4 pivots overturned. 2 hog confinements destroyed. Delay report. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-9a73fd2febe2de27",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.89,
+      "lon": -96.59
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:57:00Z",
+    "end_time": "2024-04-26T19:57:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SW Waverly",
+      "name": "Waverly",
+      "distance": 4,
+      "direction": "SW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "Train derailment Hwy 6. Additional train derailment Hwy 6 and I-480. Semi-rolled over. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-687e3cfb900406fc",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.93,
+      "lon": -96.57
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T19:59:00Z",
+    "end_time": "2024-04-26T19:59:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 WNW Waverly",
+      "name": "Waverly",
+      "distance": 2,
+      "direction": "WNW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-01ad262afb27f045",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.13,
+      "lon": -97.13
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:00:00Z",
+    "end_time": "2024-04-26T20:00:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SSE Garrison",
+      "name": "Garrison",
+      "distance": 4,
+      "direction": "SSE",
+      "state": "NE",
+      "county": "Butler"
+    },
+    "comments": "Social media photo of confirmed tornado 9 miles south of David City... Nebraska. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-682da9b50af00ca1",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.96,
+      "lon": -96.56
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:03:00Z",
+    "end_time": "2024-04-26T20:03:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NNW Waverly",
+      "name": "Waverly",
+      "distance": 3,
+      "direction": "NNW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "An EF-0 tornado tracked mainly through open fields... with time and location identified by a storm chaser video. The damage survey team did find evidence of some minor (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a59ccf0dc0a40023",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.21,
+      "lon": -97.06
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:05:00Z",
+    "end_time": "2024-04-26T20:05:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 WNW Brainard",
+      "name": "Brainard",
+      "distance": 4,
+      "direction": "WNW",
+      "state": "NE",
+      "county": "Butler"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-50253bf13baf8cb3",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.16,
+      "lon": -97.07
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:06:00Z",
+    "end_time": "2024-04-26T20:06:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 WSW Brainard",
+      "name": "Brainard",
+      "distance": 4,
+      "direction": "WSW",
+      "state": "NE",
+      "county": "Butler"
+    },
+    "comments": "Trained spotters confirmed an EF-Unknown tornado with video and photos lasting approximately 1 minute over open fields. Due to no damage indicators hit... we have to ra (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-31c9877e69f91621",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.58,
+      "lon": -97.89
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:06:00Z",
+    "end_time": "2024-04-26T20:06:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 WNW Saint Edward",
+      "name": "Saint Edward",
+      "distance": 2,
+      "direction": "WNW",
+      "state": "NE",
+      "county": "Boone"
+    },
+    "comments": "Small rope tornado. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-fca4078c14fed2be",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.17,
+      "lon": -97.06
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:07:00Z",
+    "end_time": "2024-04-26T20:07:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 WSW Brainard",
+      "name": "Brainard",
+      "distance": 3,
+      "direction": "WSW",
+      "state": "NE",
+      "county": "Butler"
+    },
+    "comments": "Trained spotter reported a tornado just southwest of Brainard... Nebraska. Tornado has since lifted but there are two additional funnel clouds currently. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-66e9306c03b493e6",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.03,
+      "lon": -96.48
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:12:00Z",
+    "end_time": "2024-04-26T20:12:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 SSW Memphis",
+      "name": "Memphis",
+      "distance": 5,
+      "direction": "SSW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "An EF-1 tornado tracked through mainly open fields... snapping tree trucks. There was one farmstead that had a barn that was badly damaged and minor damage to a home. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-41b6dde63afa81f4",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.01,
+      "lon": -96.48
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:15:00Z",
+    "end_time": "2024-04-26T20:15:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 NNW Greenwood",
+      "name": "Greenwood",
+      "distance": 4,
+      "direction": "NNW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "EM relayed report from 911 call center of confirmed tornado to the west of Ashland... Nebraska. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-2ffa63a7f3422202",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.19,
+      "lon": -96.34
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:25:00Z",
+    "end_time": "2024-04-26T20:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 SE Yutan",
+      "name": "Yutan",
+      "distance": 5,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Saunders"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-b90cf3555af7da96",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.63,
+      "lon": -97.69
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:29:00Z",
+    "end_time": "2024-04-26T20:29:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 S Lindsay",
+      "name": "Lindsay",
+      "distance": 5,
+      "direction": "S",
+      "state": "NE",
+      "county": "Platte"
+    },
+    "comments": "Emergency manager reported a tornado on the ground 4 to 5 miles south of Lindsay. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-4bf5a80fd26612d1",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.19,
+      "lon": -96.32
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:30:00Z",
+    "end_time": "2024-04-26T20:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 SE Yutan",
+      "name": "Yutan",
+      "distance": 5,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "The EF3 tornado developed about one quarter mile west of the West Q Road and 255th St intersection in Western Douglas county where trees were knocked down and a farmste (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-3e5f7ce2f5b37914",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.2,
+      "lon": -96.31
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:30:00Z",
+    "end_time": "2024-04-26T20:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 ESE Yutan",
+      "name": "Yutan",
+      "distance": 5,
+      "direction": "ESE",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-66f3b81df21fdff6",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.22,
+      "lon": -96.31
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:36:00Z",
+    "end_time": "2024-04-26T20:36:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 ESE Yutan",
+      "name": "Yutan",
+      "distance": 5,
+      "direction": "ESE",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-ee946d929b7dd851",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.26,
+      "lon": -96.28
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:37:00Z",
+    "end_time": "2024-04-26T20:37:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 S Waterloo",
+      "name": "Waterloo",
+      "distance": 2,
+      "direction": "S",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "Vehicle and building damage. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-c043e4ccbf2ce50c",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.29,
+      "lon": -96.23
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:39:00Z",
+    "end_time": "2024-04-26T20:39:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 N Elkhorn",
+      "name": "Elkhorn",
+      "distance": 1,
+      "direction": "N",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "House with severe roof damage. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-d6392fcdf8f28e1e",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.23,
+      "lon": -96.3
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:40:00Z",
+    "end_time": "2024-04-26T20:40:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SSW Waterloo",
+      "name": "Waterloo",
+      "distance": 4,
+      "direction": "SSW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "240th and Dodge. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-cca8d88275f5b57d",
+    "type": "tornado",
+    "geo": {
+      "lat": 37.74,
+      "lon": -95.89
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:42:00Z",
+    "end_time": "2024-04-26T20:42:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 N Coyville",
+      "name": "Coyville",
+      "distance": 4,
+      "direction": "N",
+      "state": "KS",
+      "county": "Woodson"
+    },
+    "comments": "storm chaser report. (ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a88b907e50796c62",
+    "type": "tornado",
+    "geo": {
+      "lat": 37.53,
+      "lon": -95.94
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:43:00Z",
+    "end_time": "2024-04-26T20:43:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 S New Albany",
+      "name": "New Albany",
+      "distance": 3,
+      "direction": "S",
+      "state": "KS",
+      "county": "Wilson"
+    },
+    "comments": "Video confirmation of a tornado. (ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-2c202ac4169070ce",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.29,
+      "lon": -96.26
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:45:00Z",
+    "end_time": "2024-04-26T20:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NW Elkhorn",
+      "name": "Elkhorn",
+      "distance": 1,
+      "direction": "NW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "Very large tornado moving into western Elkhorn. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-7af324cb792c3950",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.29,
+      "lon": -96.24
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:47:00Z",
+    "end_time": "2024-04-26T20:47:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NNW Elkhorn",
+      "name": "Elkhorn",
+      "distance": 1,
+      "direction": "NNW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "Very large tornado moving through western Elkhorn. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-4ac4dfaab66addc1",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.75,
+      "lon": -97.87
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:47:00Z",
+    "end_time": "2024-04-26T20:47:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 W Newman Grove",
+      "name": "Newman Grove",
+      "distance": 5,
+      "direction": "W",
+      "state": "NE",
+      "county": "Boone"
+    },
+    "comments": "Emergency Manager reported confirmed large tornado 4 to 5 miles west of Newman Grove. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-f97effe0bdccc729",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.75,
+      "lon": -97.91
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:47:00Z",
+    "end_time": "2024-04-26T20:47:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 NE Albion",
+      "name": "Albion",
+      "distance": 7,
+      "direction": "NE",
+      "state": "NE",
+      "county": "Boone"
+    },
+    "comments": "EM reported the tornado and there is video evidence from a storm chaser. No damage was found and so this tornado was rated an EF Unknown. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-44b94c09c6023678",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.32,
+      "lon": -96.23
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:49:00Z",
+    "end_time": "2024-04-26T20:49:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 N Elkhorn",
+      "name": "Elkhorn",
+      "distance": 3,
+      "direction": "N",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "Very large tornado near 204th and Ida. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-8aaaf956f2437ad9",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.75,
+      "lon": -97.86
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:50:00Z",
+    "end_time": "2024-04-26T20:50:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 W Newman Grove",
+      "name": "Newman Grove",
+      "distance": 4,
+      "direction": "W",
+      "state": "NE",
+      "county": "Boone"
+    },
+    "comments": "Tornado moving east. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-ac85dfa0ebedb823",
+    "type": "tornado",
+    "geo": {
+      "lat": 37.82,
+      "lon": -95.77
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:52:00Z",
+    "end_time": "2024-04-26T20:52:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SSW Yates Center",
+      "name": "Yates Center",
+      "distance": 4,
+      "direction": "SSW",
+      "state": "KS",
+      "county": "Woodson"
+    },
+    "comments": "(ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-45d1ee49869cc9a0",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.32,
+      "lon": -96.23
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:52:00Z",
+    "end_time": "2024-04-26T20:52:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 N Elkhorn",
+      "name": "Elkhorn",
+      "distance": 3,
+      "direction": "N",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "Very large tornado near Flanagan Lake. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-dc1625857ee5905f",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.35,
+      "lon": -96.2
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:55:00Z",
+    "end_time": "2024-04-26T20:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 WSW Bennington",
+      "name": "Bennington",
+      "distance": 2,
+      "direction": "WSW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "Major structural damage to at least 10 homes. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a65581e02314b7da",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.39,
+      "lon": -96.17
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T20:59:00Z",
+    "end_time": "2024-04-26T20:59:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NNW Bennington",
+      "name": "Bennington",
+      "distance": 2,
+      "direction": "NNW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T20:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-e39ecd3acc3f1661",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.36,
+      "lon": -96.18
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:00:00Z",
+    "end_time": "2024-04-26T21:00:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 WSW Bennington",
+      "name": "Bennington",
+      "distance": 2,
+      "direction": "WSW",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "Multiple homes destroyed. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-3afff23c658d268f",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.46,
+      "lon": -96.18
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:05:00Z",
+    "end_time": "2024-04-26T21:05:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SE Kennard",
+      "name": "Kennard",
+      "distance": 2,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Washington"
+    },
+    "comments": "Homes damaged. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-883544b972cea3d1",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.6,
+      "lon": -97.36
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:07:00Z",
+    "end_time": "2024-04-26T21:07:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 S Creston",
+      "name": "Creston",
+      "distance": 7,
+      "direction": "S",
+      "state": "NE",
+      "county": "Platte"
+    },
+    "comments": "An EF1 tornado touched down northwest of 370th St and 175th Ave. It tracked north-northeast... flipping a center-pivot irrigation system... snapping trees... blowing wi (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-82bc87fd6bd82eb9",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.47,
+      "lon": -96.13
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:08:00Z",
+    "end_time": "2024-04-26T21:08:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 E Kennard",
+      "name": "Kennard",
+      "distance": 4,
+      "direction": "E",
+      "state": "NE",
+      "county": "Washington"
+    },
+    "comments": "Destroyed homes. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-54f6703584e99afa",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.49,
+      "lon": -96.11
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:10:00Z",
+    "end_time": "2024-04-26T21:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SSE Blair",
+      "name": "Blair",
+      "distance": 4,
+      "direction": "SSE",
+      "state": "NE",
+      "county": "Washington"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a4259f7bc845a9e9",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.7,
+      "lon": -97.36
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:16:00Z",
+    "end_time": "2024-04-26T21:16:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SSE Creston",
+      "name": "Creston",
+      "distance": 1,
+      "direction": "SSE",
+      "state": "NE",
+      "county": "Platte"
+    },
+    "comments": "Tornado on the ground south on 18th ave. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-f1abac99060e2f41",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.51,
+      "lon": -96.07
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:18:00Z",
+    "end_time": "2024-04-26T21:18:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SE Blair",
+      "name": "Blair",
+      "distance": 4,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Washington"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-734cafb02b35fd08",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.67,
+      "lon": -97.31
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:18:00Z",
+    "end_time": "2024-04-26T21:18:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SE Creston",
+      "name": "Creston",
+      "distance": 4,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Platte"
+    },
+    "comments": "Building and tree damage to an abandoned farmstead. Delayed report. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-27f126fcb4b00e67",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.55,
+      "lon": -96.04
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:20:00Z",
+    "end_time": "2024-04-26T21:20:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 SSW Modale",
+      "name": "Modale",
+      "distance": 5,
+      "direction": "SSW",
+      "state": "IA",
+      "county": "Harrison"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-30b204dbc50db929",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.69,
+      "lon": -97.33
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:23:00Z",
+    "end_time": "2024-04-26T21:23:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SE Creston",
+      "name": "Creston",
+      "distance": 2,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Platte"
+    },
+    "comments": "Multiple vortex tornado. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-47030a114ff9efc7",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.62,
+      "lon": -96.01
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:35:00Z",
+    "end_time": "2024-04-26T21:35:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Modale",
+      "name": "Modale",
+      "state": "IA",
+      "county": "Harrison"
+    },
+    "comments": "Tornado near Modale looks like it roped out. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-1c22baac5721d419",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.04,
+      "lon": -95.8
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:52:00Z",
+    "end_time": "2024-04-26T21:52:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 N Pacific Junction",
+      "name": "Pacific Junction",
+      "distance": 1,
+      "direction": "N",
+      "state": "IA",
+      "county": "Mills"
+    },
+    "comments": "An EF1 tornado damage path began approximately 1 mile north of Pacific Junction... where the tornado was also reported by a trained spotter. The tornado crossed Highway (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-64749efd923c8f6c",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.75,
+      "lon": -95.91
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:52:00Z",
+    "end_time": "2024-04-26T21:52:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NNW Magnolia",
+      "name": "Magnolia",
+      "distance": 5,
+      "direction": "NNW",
+      "state": "IA",
+      "county": "Harrison"
+    },
+    "comments": "An EF-1 tornado touched down south of 174th Trl tracking north-northeast snapping power poles... trees... and doing damage to several agricultural out-buildings. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-12eb677e37431aad",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.27,
+      "lon": -95.93
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:56:00Z",
+    "end_time": "2024-04-26T21:56:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 E Omaha",
+      "name": "Omaha",
+      "distance": 4,
+      "direction": "E",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-bba74c40e1a074f6",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.04,
+      "lon": -95.82
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:57:00Z",
+    "end_time": "2024-04-26T21:57:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NNW Pacific Junction",
+      "name": "Pacific Junction",
+      "distance": 2,
+      "direction": "NNW",
+      "state": "IA",
+      "county": "Mills"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-0ff62e2716750bed",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.3,
+      "lon": -95.88
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:58:00Z",
+    "end_time": "2024-04-26T21:58:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 ENE Omaha",
+      "name": "Omaha",
+      "distance": 7,
+      "direction": "ENE",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "This EF3 tornado developed just east of the Eppley Airfield runway system... about one-quarter mile west of the Amelia Earhart Plaza and Lindbergh Plaza intersection. T (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-da0218223915e1e6",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.8,
+      "lon": -95.89
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T21:59:00Z",
+    "end_time": "2024-04-26T21:59:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SE Pisgah",
+      "name": "Pisgah",
+      "distance": 3,
+      "direction": "SE",
+      "state": "IA",
+      "county": "Harrison"
+    },
+    "comments": "Based on eyewitness observation of two simultaneous tornadoes passing east and west of a farmstead... with 5NNW Magnolia being the western tornado observed. Little dama (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-b8f7f951d48c5d69",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.3,
+      "lon": -95.87
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:01:00Z",
+    "end_time": "2024-04-26T22:01:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 ENE Carter Lake",
+      "name": "Carter Lake",
+      "distance": 3,
+      "direction": "ENE",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-afbf47cde6269362",
+    "type": "tornado",
+    "geo": {
+      "lat": 37.79,
+      "lon": -95.3
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:02:00Z",
+    "end_time": "2024-04-26T22:02:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "8 E Humboldt",
+      "name": "Humboldt",
+      "distance": 8,
+      "direction": "E",
+      "state": "KS",
+      "county": "Allen"
+    },
+    "comments": "Storm chaser video showed brief tornado. (ICT)",
+    "source_office": "ICT",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-0e4278308f64625d",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.87,
+      "lon": -95.91
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:05:00Z",
+    "end_time": "2024-04-26T22:05:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NNE Pisgah",
+      "name": "Pisgah",
+      "distance": 3,
+      "direction": "NNE",
+      "state": "IA",
+      "county": "Monona"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-cdb370fac8b9efcd",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.36,
+      "lon": -95.86
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:07:00Z",
+    "end_time": "2024-04-26T22:07:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 S Crescent",
+      "name": "Crescent",
+      "distance": 1,
+      "direction": "S",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-0e96254e2c52d3e3",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.19,
+      "lon": -95.73
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:08:00Z",
+    "end_time": "2024-04-26T22:08:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 WSW Treynor",
+      "name": "Treynor",
+      "distance": 7,
+      "direction": "WSW",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "This EF3 tornado damage path began near Aspen Road... just west of 240th Street. The tornado tracked toward the north northeast... snapping trees and electrical poles a (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-03535b9a8338b20f",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.17,
+      "lon": -95.75
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:09:00Z",
+    "end_time": "2024-04-26T22:09:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 SE Council Bluffs",
+      "name": "Council Bluffs",
+      "distance": 7,
+      "direction": "SE",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-4e5f58b7e0b1470f",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.11,
+      "lon": -95.73
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:10:00Z",
+    "end_time": "2024-04-26T22:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 N Salem",
+      "name": "Salem",
+      "distance": 2,
+      "direction": "N",
+      "state": "NE",
+      "county": "Richardson"
+    },
+    "comments": "DELAYED REPORT. Emergency Management reported a tornado on the ground 2 miles north of Salem... Nebraska. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-6ad168f5b901dae0",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.12,
+      "lon": -95.72
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:10:00Z",
+    "end_time": "2024-04-26T22:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SSW Verdon",
+      "name": "Verdon",
+      "distance": 2,
+      "direction": "SSW",
+      "state": "NE",
+      "county": "Richardson"
+    },
+    "comments": "Emergency Manager reported a tornado and no damage was found. This tornado is rated an EF Unknown. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-0030d2b6007ac713",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.23,
+      "lon": -95.73
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:13:00Z",
+    "end_time": "2024-04-26T22:13:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 W Treynor",
+      "name": "Treynor",
+      "distance": 6,
+      "direction": "W",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-be6f116d8267ba96",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.19,
+      "lon": -95.7
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:14:00Z",
+    "end_time": "2024-04-26T22:14:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 WSW Treynor",
+      "name": "Treynor",
+      "distance": 6,
+      "direction": "WSW",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-dec45a7e581681c5",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.99,
+      "lon": -97.37
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:16:00Z",
+    "end_time": "2024-04-26T22:16:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SE Norfolk",
+      "name": "Norfolk",
+      "distance": 4,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Madison"
+    },
+    "comments": "This brief EF1 tornado touched down near Grandview Road and East Sherwood Rood... causing tree damage at a farmstead. The tornado moved northeast... damaging large tree (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-d63e70c4ac4e4877",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.96,
+      "lon": -95.81
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:17:00Z",
+    "end_time": "2024-04-26T22:17:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SW Soldier",
+      "name": "Soldier",
+      "distance": 2,
+      "direction": "SW",
+      "state": "IA",
+      "county": "Monona"
+    },
+    "comments": "A short-lived tornado developed in an agricultural field and moved generally northeast across fields and pastureland... damaging outbuildings of farmsteads near the int (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-c9ce7b727d2e3bc5",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.48,
+      "lon": -95.75
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:20:00Z",
+    "end_time": "2024-04-26T22:20:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 WNW Neola",
+      "name": "Neola",
+      "distance": 7,
+      "direction": "WNW",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-ffcfa875678f67ca",
+    "type": "tornado",
+    "geo": {
+      "lat": 42,
+      "lon": -97.37
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:20:00Z",
+    "end_time": "2024-04-26T22:20:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SE Norfolk",
+      "name": "Norfolk",
+      "distance": 3,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Stanton"
+    },
+    "comments": "Possible tornado. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-52b53613ec79f1d1",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.97,
+      "lon": -95.81
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:23:00Z",
+    "end_time": "2024-04-26T22:23:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 WSW Soldier",
+      "name": "Soldier",
+      "distance": 2,
+      "direction": "WSW",
+      "state": "IA",
+      "county": "Monona"
+    },
+    "comments": "An EF1 tornado developed near the intersection of 260th and 270th Streets. It produced damage to outbuildings at a farmstead near the intersection... and tossed some fi (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-cadf7358ef6bc9c5",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.33,
+      "lon": -95.62
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:25:00Z",
+    "end_time": "2024-04-26T22:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 E Mcclelland",
+      "name": "Mcclelland",
+      "distance": 3,
+      "direction": "E",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "*** 1 FATAL... 3 INJ *** An EF3 tornado developed approximately 3 miles east of McClelland... and developed prior to the dissipation of the tornado that tracked near Tr (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a2f49d05b70381f0",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.36,
+      "lon": -95.65
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:28:00Z",
+    "end_time": "2024-04-26T22:28:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SE Underwood",
+      "name": "Underwood",
+      "distance": 3,
+      "direction": "SE",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-e56a046bc751b81e",
+    "type": "tornado",
+    "geo": {
+      "lat": 37.89,
+      "lon": -94.96
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:29:00Z",
+    "end_time": "2024-04-26T22:29:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NNE Uniontown",
+      "name": "Uniontown",
+      "distance": 3,
+      "direction": "NNE",
+      "state": "KS",
+      "county": "Bourbon"
+    },
+    "comments": "A weak EF-0 tornado occurred... with a path length of 3.12 miles and a width of 75 yards. Maximum wind speeds of 85 mph led to siding damage on a home... five outbuildi (SGF)",
+    "source_office": "SGF",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-72fb5b942c181448",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.37,
+      "lon": -95.65
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:33:00Z",
+    "end_time": "2024-04-26T22:33:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SE Underwood",
+      "name": "Underwood",
+      "distance": 2,
+      "direction": "SE",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-e2498dbde5a84d69",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.43,
+      "lon": -95.57
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:40:00Z",
+    "end_time": "2024-04-26T22:40:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 ESE Neola",
+      "name": "Neola",
+      "distance": 3,
+      "direction": "ESE",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-0e3697e13cb7473d",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.47,
+      "lon": -95.54
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:41:00Z",
+    "end_time": "2024-04-26T22:41:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Minden",
+      "name": "Minden",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "Very large tornado. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-5d77831781b2d2eb",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.62,
+      "lon": -95.73
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:41:00Z",
+    "end_time": "2024-04-26T22:41:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 ESE Logan",
+      "name": "Logan",
+      "distance": 4,
+      "direction": "ESE",
+      "state": "IA",
+      "county": "Harrison"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-75c43d1160d6a9b9",
+    "type": "tornado",
+    "geo": {
+      "lat": 37.88,
+      "lon": -94.82
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:45:00Z",
+    "end_time": "2024-04-26T22:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 S Devon",
+      "name": "Devon",
+      "distance": 3,
+      "direction": "S",
+      "state": "KS",
+      "county": "Bourbon"
+    },
+    "comments": "Spotter indicated brief touchdown. (SGF)",
+    "source_office": "SGF",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-f393e0893b892b9b",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.03,
+      "lon": -95.44
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:45:00Z",
+    "end_time": "2024-04-26T22:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SSW Rulo",
+      "name": "Rulo",
+      "distance": 1,
+      "direction": "SSW",
+      "state": "NE",
+      "county": "Richardson"
+    },
+    "comments": "DELAYED REPORT. Emergency Manager relayed report of a tornado near Rulo over NAWAS. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-b296f2c8711e96dc",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.48,
+      "lon": -95.52
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:45:00Z",
+    "end_time": "2024-04-26T22:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NE Minden",
+      "name": "Minden",
+      "distance": 1,
+      "direction": "NE",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "Large tornado destroying homes. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-350839dc74ce0b1b",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.48,
+      "lon": -95.5
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:47:00Z",
+    "end_time": "2024-04-26T22:47:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 ENE Minden",
+      "name": "Minden",
+      "distance": 2,
+      "direction": "ENE",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "Very large multi vortex tornado. At least 1/3 mile wide. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-095a8beb541695e6",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.51,
+      "lon": -95.48
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:49:00Z",
+    "end_time": "2024-04-26T22:49:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 W Shelby",
+      "name": "Shelby",
+      "distance": 1,
+      "direction": "W",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "Multiple houses damaged. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-3cf874e58997b79c",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.5,
+      "lon": -95.48
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:50:00Z",
+    "end_time": "2024-04-26T22:50:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 WSW Shelby",
+      "name": "Shelby",
+      "distance": 1,
+      "direction": "WSW",
+      "state": "IA",
+      "county": "Pottawattamie"
+    },
+    "comments": "Very large tornado crossing Interstate 80. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-914eba55a6650fc1",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.56,
+      "lon": -95.45
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:57:00Z",
+    "end_time": "2024-04-26T22:57:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 S Tennant",
+      "name": "Tennant",
+      "distance": 3,
+      "direction": "S",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "Multiple destroyed outbuildings and a home that lost a roof. Time estimated from radar. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-3866db17767ee67d",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.59,
+      "lon": -95.44
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T22:59:00Z",
+    "end_time": "2024-04-26T22:59:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Tennant",
+      "name": "Tennant",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-4288c1700b3b150d",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.65,
+      "lon": -95.37
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:05:00Z",
+    "end_time": "2024-04-26T23:05:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 W Harlan",
+      "name": "Harlan",
+      "distance": 2,
+      "direction": "W",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "Significant damage between Portsmith and Harlan. Destroyed home... cars flipped. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-9fbf0d1e6d53c0f4",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.65,
+      "lon": -95.38
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:05:00Z",
+    "end_time": "2024-04-26T23:05:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 W Harlan",
+      "name": "Harlan",
+      "distance": 3,
+      "direction": "W",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "Multi vortex tornado. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a51a2359487ec0f1",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.65,
+      "lon": -95.37
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:06:00Z",
+    "end_time": "2024-04-26T23:06:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 W Harlan",
+      "name": "Harlan",
+      "distance": 2,
+      "direction": "W",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "Home destroyed. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-50445c68318a26aa",
+    "type": "tornado",
+    "geo": {
+      "lat": 37.99,
+      "lon": -94.51
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:07:00Z",
+    "end_time": "2024-04-26T23:07:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 ENE Stotesbury",
+      "name": "Stotesbury",
+      "distance": 3,
+      "direction": "ENE",
+      "state": "MO",
+      "county": "Vernon"
+    },
+    "comments": "An EF-1 tornado occurred... with a path length of 3.4 miles and a width of 95 yards. Maximum wind speeds of 95 mph destroyed two outbuildings... and caused a number of (SGF)",
+    "source_office": "SGF",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-c73d38ee0270eb27",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.25,
+      "lon": -95.08
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:14:00Z",
+    "end_time": "2024-04-26T23:14:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 SW Skidmore",
+      "name": "Skidmore",
+      "distance": 2,
+      "direction": "SW",
+      "state": "MO",
+      "county": "Holt"
+    },
+    "comments": "Fire dept. reported weak tornado. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-0294dafdb66afb8e",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.72,
+      "lon": -95.35
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:17:00Z",
+    "end_time": "2024-04-26T23:17:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 E Westphalia",
+      "name": "Westphalia",
+      "distance": 2,
+      "direction": "E",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-f038136ffdcffad1",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.86,
+      "lon": -95.26
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:28:00Z",
+    "end_time": "2024-04-26T23:28:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 ENE Defiance",
+      "name": "Defiance",
+      "distance": 5,
+      "direction": "ENE",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "An EF2 tornado damage track begins near the V\u0026W Petersen Wildlife Management Area... and moved almost due north from that point... tracking just to the west of Manilla. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-0c28ab6dadfbf8aa",
+    "type": "tornado",
+    "geo": {
+      "lat": 38.12,
+      "lon": -94.22
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:36:00Z",
+    "end_time": "2024-04-26T23:36:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "8 ENE Rich Hill",
+      "name": "Rich Hill",
+      "distance": 8,
+      "direction": "ENE",
+      "state": "MO",
+      "county": "Bates"
+    },
+    "comments": "Fire department reported a tornado east of Rich Hill. Time and location estimated from radar. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-7bca0ff030b94159",
+    "type": "tornado",
+    "geo": {
+      "lat": 38.17,
+      "lon": -94.09
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:42:00Z",
+    "end_time": "2024-04-26T23:42:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 N Rockville",
+      "name": "Rockville",
+      "distance": 7,
+      "direction": "N",
+      "state": "MO",
+      "county": "Bates"
+    },
+    "comments": "NWS Damage Survey confirmed a brief EF-0 tornado southwest of Appleton City... MO the evening of the 26th of April... 2024. Minor damage to trees along the path. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-5d282e2bdbd7ed9f",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.82,
+      "lon": -95.34
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:51:00Z",
+    "end_time": "2024-04-26T23:51:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 S Defiance",
+      "name": "Defiance",
+      "distance": 1,
+      "direction": "S",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "Delayed report. Video of tornado producing damage. One outbuilding destroyed. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-778b033a98b2a588",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.83,
+      "lon": -95.33
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:51:00Z",
+    "end_time": "2024-04-26T23:51:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NNE Defiance",
+      "name": "Defiance",
+      "distance": 1,
+      "direction": "NNE",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "A second round of storms moved across Shelby and Crawford counties. An EF1 tornado developed just a few blocks outside of Defiance... near the track that the first torn (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-1455b3c39119cffb",
+    "type": "tornado",
+    "geo": {
+      "lat": 38.18,
+      "lon": -94.06
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:53:00Z",
+    "end_time": "2024-04-26T23:53:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 SW Montrose",
+      "name": "Montrose",
+      "distance": 7,
+      "direction": "SW",
+      "state": "MO",
+      "county": "Bates"
+    },
+    "comments": "Damage to a structure near Appleton City Lake. Time estimated from radar. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-5d58ee763773f9cc",
+    "type": "tornado",
+    "geo": {
+      "lat": 38.19,
+      "lon": -94.06
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:53:00Z",
+    "end_time": "2024-04-26T23:53:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 SW Montrose",
+      "name": "Montrose",
+      "distance": 6,
+      "direction": "SW",
+      "state": "MO",
+      "county": "Bates"
+    },
+    "comments": "Downed trees blocking Highway 52 west of Appleton City near the St. Clair County line. Time estimated from radar. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-5fe86b27f238eb5e",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.84,
+      "lon": -95.33
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:55:00Z",
+    "end_time": "2024-04-26T23:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NE Defiance",
+      "name": "Defiance",
+      "distance": 1,
+      "direction": "NE",
+      "state": "IA",
+      "county": "Shelby"
+    },
+    "comments": "DELAYED REPORT. Media relayed photo of tornado approximately 1 mile northeast of Defiance... Iowa. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-5c13ca0434261055",
+    "type": "tornado",
+    "geo": {
+      "lat": 38.19,
+      "lon": -94.05
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:56:00Z",
+    "end_time": "2024-04-26T23:56:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 W Appleton City",
+      "name": "Appleton City",
+      "distance": 1,
+      "direction": "W",
+      "state": "MO",
+      "county": "St. Clair"
+    },
+    "comments": "An NWS storm survey determined that a tornado briefly touched down Friday evening on Highway 52 at the Bates and St Clair county line... downing trees and power lines. (SGF)",
+    "source_office": "SGF",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-ec8d8217221d39f0",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.89,
+      "lon": -95.27
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T23:58:00Z",
+    "end_time": "2024-04-26T23:58:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 W Manilla",
+      "name": "Manilla",
+      "distance": 2,
+      "direction": "W",
+      "state": "IA",
+      "county": "Crawford"
+    },
+    "comments": "Storm chaser shared a picture of a tornado just west of Manilla. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-0ae2a3e66aa6c63d",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.05,
+      "lon": -94.4
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:04:00Z",
+    "end_time": "2024-04-26T00:04:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 WSW Creston",
+      "name": "Creston",
+      "distance": 2,
+      "direction": "WSW",
+      "state": "IA",
+      "county": "Union"
+    },
+    "comments": "Tornado on the ground... heading northeast. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-7c42682052515219",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.06,
+      "lon": -94.36
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:09:00Z",
+    "end_time": "2024-04-26T00:09:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Creston",
+      "name": "Creston",
+      "state": "IA",
+      "county": "Union"
+    },
+    "comments": "Tornado with debris near the hospital in Creston. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-ef0827f30652a7c3",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.91,
+      "lon": -94.52
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:10:00Z",
+    "end_time": "2024-04-26T00:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NE Lenox",
+      "name": "Lenox",
+      "distance": 3,
+      "direction": "NE",
+      "state": "IA",
+      "county": "Adams"
+    },
+    "comments": "near 205th and Highway 25. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-7c2840d7c98b254f",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.13,
+      "lon": -94.29
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:15:00Z",
+    "end_time": "2024-04-26T00:15:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "6 NE Creston",
+      "name": "Creston",
+      "distance": 6,
+      "direction": "NE",
+      "state": "IA",
+      "county": "Union"
+    },
+    "comments": "Tornado reported to the southwest of Macksburg. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a4cd398725e88ac9",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.56,
+      "lon": -94.43
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:23:00Z",
+    "end_time": "2024-04-26T00:23:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 N Grant City",
+      "name": "Grant City",
+      "distance": 5,
+      "direction": "N",
+      "state": "MO",
+      "county": "Worth"
+    },
+    "comments": "Tornado developed near Highway E west of U.S. Highway 169... causing minor damage to a residence. Tornado tracked northeastward into Iowa. Time estimated from radar. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-a47239d2d857ac5f",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.05,
+      "lon": -94.27
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:25:00Z",
+    "end_time": "2024-04-26T00:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 WNW Afton",
+      "name": "Afton",
+      "distance": 4,
+      "direction": "WNW",
+      "state": "IA",
+      "county": "Union"
+    },
+    "comments": "Power poles with debris on US Highway 34 between Creston and Afton. Highway is closed. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-517493aaf5267002",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.06,
+      "lon": -94.27
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:28:00Z",
+    "end_time": "2024-04-26T00:28:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 WNW Afton",
+      "name": "Afton",
+      "distance": 4,
+      "direction": "WNW",
+      "state": "IA",
+      "county": "Union"
+    },
+    "comments": "Trained spotter reported tornado on the ground east of Creston. Time and location estimated from radar. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-73a5263831cc4888",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.05,
+      "lon": -94.22
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:31:00Z",
+    "end_time": "2024-04-26T00:31:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NW Afton",
+      "name": "Afton",
+      "distance": 2,
+      "direction": "NW",
+      "state": "IA",
+      "county": "Union"
+    },
+    "comments": "(DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-6d71b3095d57dcf8",
+    "type": "tornado",
+    "geo": {
+      "lat": 38.35,
+      "lon": -93.72
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:34:00Z",
+    "end_time": "2024-04-26T00:34:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 ESE Clinton",
+      "name": "Clinton",
+      "distance": 4,
+      "direction": "ESE",
+      "state": "MO",
+      "county": "Henry"
+    },
+    "comments": "NWS Damage Survey confirms a very brief EF-0 tornado southeast of Clinton... MO. Damage to two outbuildings. (EAX)",
+    "source_office": "EAX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-1fd0e32bb1c46885",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.71,
+      "lon": -94.21
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:47:00Z",
+    "end_time": "2024-04-26T00:47:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 E Mount Ayr",
+      "name": "Mount Ayr",
+      "distance": 1,
+      "direction": "E",
+      "state": "IA",
+      "county": "Ringgold"
+    },
+    "comments": "Delayed report. Report of tornado between Mt Ayr and Kellerton. Exact location estimated from radar. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-242f824b5226ab70",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.03,
+      "lon": -94.23
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:54:00Z",
+    "end_time": "2024-04-26T00:54:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 W Afton",
+      "name": "Afton",
+      "distance": 2,
+      "direction": "W",
+      "state": "IA",
+      "county": "Union"
+    },
+    "comments": "Large tornado near Afton moving northeast. Debris field reported with damage. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-d000bd9f3845553c",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.24,
+      "lon": -94.02
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T00:58:00Z",
+    "end_time": "2024-04-26T00:58:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 W East Peru",
+      "name": "East Peru",
+      "distance": 5,
+      "direction": "W",
+      "state": "IA",
+      "county": "Madison"
+    },
+    "comments": "Tornado near Word of Life Church. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-03e042958671d0b3",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.37,
+      "lon": -93.85
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T01:15:00Z",
+    "end_time": "2024-04-26T01:15:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NE Patterson",
+      "name": "Patterson",
+      "distance": 2,
+      "direction": "NE",
+      "state": "IA",
+      "county": "Madison"
+    },
+    "comments": "Delayed report. Video submitted via social media. Briefly touched down and lifted west of Martensdale. Location estimated from radar. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-80abe929326d6215",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.32,
+      "lon": -93.88
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T01:18:00Z",
+    "end_time": "2024-04-26T01:18:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 S Patterson",
+      "name": "Patterson",
+      "distance": 2,
+      "direction": "S",
+      "state": "IA",
+      "county": "Madison"
+    },
+    "comments": "Reported to the south of Patterson. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-8e5b5189698879bc",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.48,
+      "lon": -93.84
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T01:19:00Z",
+    "end_time": "2024-04-26T01:19:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 W Cumming",
+      "name": "Cumming",
+      "distance": 4,
+      "direction": "W",
+      "state": "IA",
+      "county": "Madison"
+    },
+    "comments": "Tornadic debris signature noted on radar. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-12fe021daaedfe6a",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.97,
+      "lon": -93.8
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T01:29:00Z",
+    "end_time": "2024-04-26T01:29:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 S Osceola",
+      "name": "Osceola",
+      "distance": 4,
+      "direction": "S",
+      "state": "IA",
+      "county": "Clarke"
+    },
+    "comments": "Corrects previous tornado report from 4 S Osceola. Time estimated. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-93b7efb55216f8ad",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.03,
+      "lon": -93.77
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T01:36:00Z",
+    "end_time": "2024-04-26T01:36:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Osceola",
+      "name": "Osceola",
+      "state": "IA",
+      "county": "Clarke"
+    },
+    "comments": "Damage reported near Osceola. Trees and power lines down. Time estimated from radar. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-8a82eb8e5cf063d4",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.63,
+      "lon": -93.56
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T01:54:00Z",
+    "end_time": "2024-04-26T01:54:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 NW Pleasant Hill",
+      "name": "Pleasant Hill",
+      "distance": 4,
+      "direction": "NW",
+      "state": "IA",
+      "county": "Polk"
+    },
+    "comments": "Structure damage to a home with possible injury. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-e697a92157e3977e",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.55,
+      "lon": -93.57
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T01:56:00Z",
+    "end_time": "2024-04-26T01:56:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 SE Des Moines",
+      "name": "Des Moines",
+      "distance": 3,
+      "direction": "SE",
+      "state": "IA",
+      "county": "Polk"
+    },
+    "comments": "Reported by General Public. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-01cc8355392c2dfb",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.59,
+      "lon": -93.51
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T01:59:00Z",
+    "end_time": "2024-04-26T01:59:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Pleasant Hill",
+      "name": "Pleasant Hill",
+      "state": "IA",
+      "county": "Polk"
+    },
+    "comments": "Power flashes reported near Pleasant Hill. TDS also noted on radar. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-40c7512ee39cebb5",
+    "type": "tornado",
+    "geo": {
+      "lat": 41.52,
+      "lon": -93.1
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T02:41:00Z",
+    "end_time": "2024-04-26T02:41:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Monroe",
+      "name": "Monroe",
+      "state": "IA",
+      "county": "Jasper"
+    },
+    "comments": "*** 1 INJ *** Reports of damage in Monroe. Time estimated from radar. Update for injury. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T02:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "tornado-75bf5adb3071a91b",
+    "type": "tornado",
+    "geo": {
+      "lat": 40.97,
+      "lon": -93.8
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "f_scale"
+    },
+    "begin_time": "2024-04-26T04:03:00Z",
+    "end_time": "2024-04-26T04:03:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 S Osceola",
+      "name": "Osceola",
+      "distance": 4,
+      "direction": "S",
+      "state": "IA",
+      "county": "Clarke"
+    },
+    "comments": "(DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T04:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-3164ea813de8381f",
+    "type": "wind",
+    "geo": {
+      "lat": 34.94,
+      "lon": -95.77
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T12:45:00Z",
+    "end_time": "2024-04-26T12:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Mcalester",
+      "name": "Mcalester",
+      "state": "OK",
+      "county": "Pittsburg"
+    },
+    "comments": "Large trees and power lines down. (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T12:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-7f1a5e156b120a96",
+    "type": "wind",
+    "geo": {
+      "lat": 34.94,
+      "lon": -95.59
+    },
+    "measurement": {
+      "magnitude": 65,
+      "unit": "mph",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T12:51:00Z",
+    "end_time": "2024-04-26T12:51:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 N Dow",
+      "name": "Dow",
+      "distance": 4,
+      "direction": "N",
+      "state": "OK",
+      "county": "Pittsburg"
+    },
+    "comments": "(TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T12:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-317834feea887400",
+    "type": "wind",
+    "geo": {
+      "lat": 36.06,
+      "lon": -115.06
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T19:35:00Z",
+    "end_time": "2024-04-26T19:35:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 NE Green Valley",
+      "name": "Green Valley",
+      "distance": 2,
+      "direction": "NE",
+      "state": "NV",
+      "county": "Clark"
+    },
+    "comments": "Powerline knocked down due to high winds as showers and thunderstorms moved through the Las Vegas Valley. (VEF)",
+    "source_office": "VEF",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-f46b0b554d27ef96",
+    "type": "wind",
+    "geo": {
+      "lat": 40.88,
+      "lon": -96.59
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T19:55:00Z",
+    "end_time": "2024-04-26T19:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SW Waverly",
+      "name": "Waverly",
+      "distance": 4,
+      "direction": "SW",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "Building collapsed with people inside. Potential gas leak. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-df38fbc531070872",
+    "type": "wind",
+    "geo": {
+      "lat": 40.92,
+      "lon": -96.52
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T19:55:00Z",
+    "end_time": "2024-04-26T19:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NE Waverly",
+      "name": "Waverly",
+      "distance": 1,
+      "direction": "NE",
+      "state": "NE",
+      "county": "Lancaster"
+    },
+    "comments": "Numerous reports of damage near Waverly... including trains blown off tracks... semis overturned. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T19:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-4bca6668c1057d20",
+    "type": "wind",
+    "geo": {
+      "lat": 32.49,
+      "lon": -96.25
+    },
+    "measurement": {
+      "magnitude": 75,
+      "unit": "mph",
+      "severity": "severe"
+    },
+    "begin_time": "2024-04-26T21:20:00Z",
+    "end_time": "2024-04-26T21:20:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 NNW Kemp",
+      "name": "Kemp",
+      "distance": 4,
+      "direction": "NNW",
+      "state": "TX",
+      "county": "Kaufman"
+    },
+    "comments": "Gust measured by home weather station. Damage to trees on property. Chicken coop blown away. Time estimated from radar. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-d52cdac5d12824a4",
+    "type": "wind",
+    "geo": {
+      "lat": 32.49,
+      "lon": -96.21
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T21:25:00Z",
+    "end_time": "2024-04-26T21:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 NNE Kemp",
+      "name": "Kemp",
+      "distance": 4,
+      "direction": "NNE",
+      "state": "TX",
+      "county": "Kaufman"
+    },
+    "comments": "Reports of several trees down near Becker... including one that fell on a house. A construction light was also blown over. Time estimated from radar. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-f9e9b9593ab135b8",
+    "type": "wind",
+    "geo": {
+      "lat": 32.93,
+      "lon": -95.58
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T21:45:00Z",
+    "end_time": "2024-04-26T21:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Yantis",
+      "name": "Yantis",
+      "state": "TX",
+      "county": "Wood"
+    },
+    "comments": "Trees down on multiple county roads in and around the Yantis community. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-a9401be0f9cade02",
+    "type": "wind",
+    "geo": {
+      "lat": 32.56,
+      "lon": -95.87
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T21:51:00Z",
+    "end_time": "2024-04-26T21:51:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NNW Canton",
+      "name": "Canton",
+      "distance": 1,
+      "direction": "NNW",
+      "state": "TX",
+      "county": "Van Zandt"
+    },
+    "comments": "Tree down with approximately a 12 inch trunk near SH 64 and FM 859. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T21:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-429d320706403468",
+    "type": "wind",
+    "geo": {
+      "lat": 41.3,
+      "lon": -95.89
+    },
+    "measurement": {
+      "magnitude": 61,
+      "unit": "mph",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T22:04:00Z",
+    "end_time": "2024-04-26T22:04:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "7 ENE Omaha",
+      "name": "Omaha",
+      "distance": 7,
+      "direction": "ENE",
+      "state": "NE",
+      "county": "Douglas"
+    },
+    "comments": "Delayed report. ASOS at Eppley Airfield. Measured wind gust as tornado moved very nearby. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-24bdb1d2cb0c24c5",
+    "type": "wind",
+    "geo": {
+      "lat": 33,
+      "lon": -95.27
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:05:00Z",
+    "end_time": "2024-04-26T22:05:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NNE Winnsboro",
+      "name": "Winnsboro",
+      "distance": 3,
+      "direction": "NNE",
+      "state": "TX",
+      "county": "Franklin"
+    },
+    "comments": "Power poles downed across the southern part of Franklin County... Texas. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-3af1441af0da7ceb",
+    "type": "wind",
+    "geo": {
+      "lat": 33.02,
+      "lon": -95.27
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:05:00Z",
+    "end_time": "2024-04-26T22:05:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NNE Winnsboro",
+      "name": "Winnsboro",
+      "distance": 5,
+      "direction": "NNE",
+      "state": "TX",
+      "county": "Franklin"
+    },
+    "comments": "Trees downed on two structures between Mount Vernon and Winnsboro. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-20684d6690f53e89",
+    "type": "wind",
+    "geo": {
+      "lat": 40.08,
+      "lon": -95.59
+    },
+    "measurement": {
+      "magnitude": 58,
+      "unit": "mph",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T22:18:00Z",
+    "end_time": "2024-04-26T22:18:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NNE Falls City",
+      "name": "Falls City",
+      "distance": 1,
+      "direction": "NNE",
+      "state": "NE",
+      "county": "Richardson"
+    },
+    "comments": "(OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-88f3732c8e9c0166",
+    "type": "wind",
+    "geo": {
+      "lat": 42,
+      "lon": -97.36
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:20:00Z",
+    "end_time": "2024-04-26T22:20:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "4 SE Norfolk",
+      "name": "Norfolk",
+      "distance": 4,
+      "direction": "SE",
+      "state": "NE",
+      "county": "Stanton"
+    },
+    "comments": "delayed report Roof taken off athletic training center. (OAX)",
+    "source_office": "OAX",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-6d47b11306f263bd",
+    "type": "wind",
+    "geo": {
+      "lat": 32.48,
+      "lon": -96.35
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:22:00Z",
+    "end_time": "2024-04-26T22:22:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Grays Prairie",
+      "name": "Grays Prairie",
+      "state": "TX",
+      "county": "Kaufman"
+    },
+    "comments": "Trees down on CR 4079. (FWD)",
+    "source_office": "FWD",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-443400b21be63293",
+    "type": "wind",
+    "geo": {
+      "lat": 33,
+      "lon": -94.96
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:25:00Z",
+    "end_time": "2024-04-26T22:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Pittsburg",
+      "name": "Pittsburg",
+      "state": "TX",
+      "county": "Camp"
+    },
+    "comments": "Extensive trees and powerlines downed across the entire county. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-8aa498270ba14108",
+    "type": "wind",
+    "geo": {
+      "lat": 33.16,
+      "lon": -94.98
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:26:00Z",
+    "end_time": "2024-04-26T22:26:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Mount Pleasant",
+      "name": "Mount Pleasant",
+      "state": "TX",
+      "county": "Titus"
+    },
+    "comments": "Numerous trees and powerlines downed in and around the Mount Pleasant area. Three vehicles were impacted by falling trees with rescues ongoing attm. Worst damage was re (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-5fb86038fa899821",
+    "type": "wind",
+    "geo": {
+      "lat": 33.1,
+      "lon": -94.97
+    },
+    "measurement": {
+      "magnitude": 63,
+      "unit": "mph",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T22:30:00Z",
+    "end_time": "2024-04-26T22:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 S Mount Pleasant",
+      "name": "Mount Pleasant",
+      "distance": 5,
+      "direction": "S",
+      "state": "TX",
+      "county": "Titus"
+    },
+    "comments": "Measured AWOS wind gust at the Mount Pleasant Airport. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-fb34e557bcf3261a",
+    "type": "wind",
+    "geo": {
+      "lat": 34.17,
+      "lon": -93.63
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:30:00Z",
+    "end_time": "2024-04-26T22:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 NW Pike City",
+      "name": "Pike City",
+      "distance": 5,
+      "direction": "NW",
+      "state": "AR",
+      "county": "Pike"
+    },
+    "comments": "A few trees were blown down in this area. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-19eb7d9f991649f2",
+    "type": "wind",
+    "geo": {
+      "lat": 33.12,
+      "lon": -94.7
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:40:00Z",
+    "end_time": "2024-04-26T22:40:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "5 SSE Omaha",
+      "name": "Omaha",
+      "distance": 5,
+      "direction": "SSE",
+      "state": "TX",
+      "county": "Morris"
+    },
+    "comments": "Numerous trees down in and around the Rocky Branch community. Traffic stuck on highways because of all the downed trees across roadways. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-a794570a92d80587",
+    "type": "wind",
+    "geo": {
+      "lat": 33.67,
+      "lon": -93.59
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T22:50:00Z",
+    "end_time": "2024-04-26T22:50:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Hope",
+      "name": "Hope",
+      "state": "AR",
+      "county": "Hempstead"
+    },
+    "comments": "Trees and power lines down. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T22:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-3bc40d79e528ad41",
+    "type": "wind",
+    "geo": {
+      "lat": 37.96,
+      "lon": -94.66
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T23:01:00Z",
+    "end_time": "2024-04-26T23:01:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 NE Hammond",
+      "name": "Hammond",
+      "distance": 3,
+      "direction": "NE",
+      "state": "KS",
+      "county": "Bourbon"
+    },
+    "comments": "Large trees down. (SGF)",
+    "source_office": "SGF",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-cea349f1354e6979",
+    "type": "wind",
+    "geo": {
+      "lat": 33.33,
+      "lon": -94.35
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T23:10:00Z",
+    "end_time": "2024-04-26T23:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Maud",
+      "name": "Maud",
+      "state": "TX",
+      "county": "Bowie"
+    },
+    "comments": "Several trees downed in and around the city of Maud... Texas. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-ddf657ab870bd336",
+    "type": "wind",
+    "geo": {
+      "lat": 33,
+      "lon": -94.63
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T23:20:00Z",
+    "end_time": "2024-04-26T23:20:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Hughes Springs",
+      "name": "Hughes Springs",
+      "state": "TX",
+      "county": "Cass"
+    },
+    "comments": "Trees and power lines down. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-ed040cccb2875752",
+    "type": "wind",
+    "geo": {
+      "lat": 33.42,
+      "lon": -94.11
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T23:30:00Z",
+    "end_time": "2024-04-26T23:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Wake Village",
+      "name": "Wake Village",
+      "state": "TX",
+      "county": "Bowie"
+    },
+    "comments": "Trees and powerlines reported down on the Bowie County side of Texarkana. (SHV)",
+    "source_office": "SHV",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-8686c2221c7200b9",
+    "type": "wind",
+    "geo": {
+      "lat": 34.38,
+      "lon": -92.82
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T23:49:00Z",
+    "end_time": "2024-04-26T23:49:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Malvern",
+      "name": "Malvern",
+      "state": "AR",
+      "county": "Hot Spring"
+    },
+    "comments": "Large tree blown on top of a car causing considerable damage to the vehicle. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T23:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-492885b75fe2412f",
+    "type": "wind",
+    "geo": {
+      "lat": 34.57,
+      "lon": -92.58
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:00:00Z",
+    "end_time": "2024-04-26T00:00:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Benton",
+      "name": "Benton",
+      "state": "AR",
+      "county": "Saline"
+    },
+    "comments": "Large tree and numerous powerlines are down on Highway 35 South. A tree was also on fire. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-5260091a579e6097",
+    "type": "wind",
+    "geo": {
+      "lat": 34.84,
+      "lon": -112.48
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:00:00Z",
+    "end_time": "2024-04-26T00:00:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "3 S Paulden",
+      "name": "Paulden",
+      "distance": 3,
+      "direction": "S",
+      "state": "AZ",
+      "county": "Yavapai"
+    },
+    "comments": "Wind from 315 degrees measured at 57 mph. Damage estimate $75...000+ Some rain. (FGZ)",
+    "source_office": "FGZ",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-0db5af65dec07651",
+    "type": "wind",
+    "geo": {
+      "lat": 34.67,
+      "lon": -92.36
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:18:00Z",
+    "end_time": "2024-04-26T00:18:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Allendale Manor",
+      "name": "Allendale Manor",
+      "state": "AR",
+      "county": "Pulaski"
+    },
+    "comments": "1-inch tree limbs broken; Shingles blown off. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-222312e93d202409",
+    "type": "wind",
+    "geo": {
+      "lat": 34.77,
+      "lon": -92.34
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:25:00Z",
+    "end_time": "2024-04-26T00:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SW The Heights",
+      "name": "The Heights",
+      "distance": 1,
+      "direction": "SW",
+      "state": "AR",
+      "county": "Pulaski"
+    },
+    "comments": "A tree was blown over at this location. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-7c782eda2273b91d",
+    "type": "wind",
+    "geo": {
+      "lat": 34.9,
+      "lon": -92.23
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:25:00Z",
+    "end_time": "2024-04-26T00:25:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Gibson",
+      "name": "Gibson",
+      "state": "AR",
+      "county": "Pulaski"
+    },
+    "comments": "Large tree limbs down in Gibson. Winds estimated to be 60 mph. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-bf171341b736b18b",
+    "type": "wind",
+    "geo": {
+      "lat": 34.84,
+      "lon": -92.21
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:28:00Z",
+    "end_time": "2024-04-26T00:28:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Autumnbrook",
+      "name": "Autumnbrook",
+      "state": "AR",
+      "county": "Pulaski"
+    },
+    "comments": "Large tree blown over and resting on a powerline. Numerous people without power. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-093a9192fa88f7ad",
+    "type": "wind",
+    "geo": {
+      "lat": 35.09,
+      "lon": -92.21
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:30:00Z",
+    "end_time": "2024-04-26T00:30:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Vilonia",
+      "name": "Vilonia",
+      "state": "AR",
+      "county": "Faulkner"
+    },
+    "comments": "Trees reported blown down in Vilonia. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-2f1a47d299ad8dce",
+    "type": "wind",
+    "geo": {
+      "lat": 34.97,
+      "lon": -92.02
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:45:00Z",
+    "end_time": "2024-04-26T00:45:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Cabot",
+      "name": "Cabot",
+      "state": "AR",
+      "county": "Lonoke"
+    },
+    "comments": "Trees reported down in the Magness Creek area of Cabot. Numerous power outages reported as well. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-8656400b6c439b9e",
+    "type": "wind",
+    "geo": {
+      "lat": 35.01,
+      "lon": -91.98
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:48:00Z",
+    "end_time": "2024-04-26T00:48:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 N Austin",
+      "name": "Austin",
+      "distance": 1,
+      "direction": "N",
+      "state": "AR",
+      "county": "Lonoke"
+    },
+    "comments": "Hardwood fence blown over. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-308d1b2eb26f8606",
+    "type": "wind",
+    "geo": {
+      "lat": 36.74,
+      "lon": -94.85
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:49:00Z",
+    "end_time": "2024-04-26T00:49:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 SSW Fairland",
+      "name": "Fairland",
+      "distance": 1,
+      "direction": "SSW",
+      "state": "OK",
+      "county": "Ottawa"
+    },
+    "comments": "Numerous large tree limbs down. Time estimated by radar. (TSA)",
+    "source_office": "TSA",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-62125625b81c1ca2",
+    "type": "wind",
+    "geo": {
+      "lat": 35.08,
+      "lon": -91.89
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T00:55:00Z",
+    "end_time": "2024-04-26T00:55:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Beebe",
+      "name": "Beebe",
+      "state": "AR",
+      "county": "White"
+    },
+    "comments": "Trees down on houses... powerlines blown over and billboards damaged in town. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T00:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-6a569a7d36367cb8",
+    "type": "wind",
+    "geo": {
+      "lat": 34.08,
+      "lon": -112.14
+    },
+    "measurement": {
+      "magnitude": 60,
+      "unit": "mph",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T01:00:00Z",
+    "end_time": "2024-04-26T01:00:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 N Black Canyon City",
+      "name": "Black Canyon City",
+      "distance": 1,
+      "direction": "N",
+      "state": "AZ",
+      "county": "Yavapai"
+    },
+    "comments": "Trained spotted estimated a 60 mph wind gust in Black Canyon City. Damage reported to digital weather station. Time estimated from radar. (FGZ)",
+    "source_office": "FGZ",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-6a569a7d36367cb8",
+    "type": "wind",
+    "geo": {
+      "lat": 34.08,
+      "lon": -112.14
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T01:00:00Z",
+    "end_time": "2024-04-26T01:00:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "1 NNW Black Canyon City",
+      "name": "Black Canyon City",
+      "distance": 1,
+      "direction": "NNW",
+      "state": "AZ",
+      "county": "Yavapai"
+    },
+    "comments": "Large tree limbs and branches broken in Black Canyon City. Time estimated from radar. (FGZ)",
+    "source_office": "FGZ",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-16b0fc800e83e370",
+    "type": "wind",
+    "geo": {
+      "lat": 35.25,
+      "lon": -91.73
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T01:10:00Z",
+    "end_time": "2024-04-26T01:10:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Searcy",
+      "name": "Searcy",
+      "state": "AR",
+      "county": "White"
+    },
+    "comments": "Numerous large trees down in Searcy... powerlines also reported down along with fence damage. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-9bd3914c1fd82274",
+    "type": "wind",
+    "geo": {
+      "lat": 41.16,
+      "lon": -94.06
+    },
+    "measurement": {
+      "magnitude": 73,
+      "unit": "mph",
+      "severity": "moderate"
+    },
+    "begin_time": "2024-04-26T01:15:00Z",
+    "end_time": "2024-04-26T01:15:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "2 N Lorimor",
+      "name": "Lorimor",
+      "distance": 2,
+      "direction": "N",
+      "state": "IA",
+      "county": "Union"
+    },
+    "comments": "Time estimated from radar. Measured by personal weather station. (DMX)",
+    "source_office": "DMX",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-9cf319a392c83116",
+    "type": "wind",
+    "geo": {
+      "lat": 35.29,
+      "lon": -91.36
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T01:38:00Z",
+    "end_time": "2024-04-26T01:38:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Augusta",
+      "name": "Augusta",
+      "state": "AR",
+      "county": "Woodruff"
+    },
+    "comments": "Multiple large tree branches were blown across Highway 64. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  },
+  {
+    "id": "wind-9d8d5d683be8faf0",
+    "type": "wind",
+    "geo": {
+      "lat": 35.45,
+      "lon": -91.23
+    },
+    "measurement": {
+      "magnitude": 0,
+      "unit": "mph"
+    },
+    "begin_time": "2024-04-26T01:52:00Z",
+    "end_time": "2024-04-26T01:52:00Z",
+    "source": "spc",
+    "location": {
+      "raw": "Weldon",
+      "name": "Weldon",
+      "state": "AR",
+      "county": "Jackson"
+    },
+    "comments": "Numerous trees and powerlines down in Weldon. Power is also out. (LZK)",
+    "source_office": "LZK",
+    "time_bucket": "2024-04-26T01:00:00Z",
+    "geocoding": {},
+    "processed_at": "2024-04-27T06:00:00Z"
+  }
+]

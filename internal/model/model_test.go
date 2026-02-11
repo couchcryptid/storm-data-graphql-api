@@ -10,7 +10,7 @@ import (
 
 func loadMockData(t *testing.T) []model.StormReport {
 	t.Helper()
-	data, err := os.ReadFile("../../data/mock/storm_reports_240526_transformed.json")
+	data, err := os.ReadFile("../../data/mock/storm_reports_240426_transformed.json")
 	if err != nil {
 		t.Fatalf("read mock data: %v", err)
 	}
@@ -23,8 +23,8 @@ func loadMockData(t *testing.T) []model.StormReport {
 
 func TestLoadMockData(t *testing.T) {
 	reports := loadMockData(t)
-	if len(reports) != 30 {
-		t.Fatalf("expected 30 reports, got %d", len(reports))
+	if len(reports) != 271 {
+		t.Fatalf("expected 271 reports, got %d", len(reports))
 	}
 }
 
@@ -36,14 +36,14 @@ func TestMockDataTypes(t *testing.T) {
 		counts[r.Type]++
 	}
 
-	if counts["hail"] != 10 {
-		t.Errorf("expected 10 hail reports, got %d", counts["hail"])
+	if counts["hail"] != 79 {
+		t.Errorf("expected 79 hail reports, got %d", counts["hail"])
 	}
-	if counts["tornado"] != 10 {
-		t.Errorf("expected 10 tornado reports, got %d", counts["tornado"])
+	if counts["tornado"] != 149 {
+		t.Errorf("expected 149 tornado reports, got %d", counts["tornado"])
 	}
-	if counts["wind"] != 10 {
-		t.Errorf("expected 10 wind reports, got %d", counts["wind"])
+	if counts["wind"] != 43 {
+		t.Errorf("expected 43 wind reports, got %d", counts["wind"])
 	}
 }
 
@@ -99,16 +99,17 @@ func TestMockDataOptionalFields(t *testing.T) {
 func TestMockDataHailReport(t *testing.T) {
 	reports := loadMockData(t)
 
+	// Find the 1.25" San Saba hail report (8 ESE Chappel, TX).
 	var first model.StormReport
 	for _, r := range reports {
-		if r.ID == "hail-1" {
+		if r.Type == "hail" && r.Measurement.Magnitude == 1.25 && r.Location.County == "San Saba" {
 			first = r
 			break
 		}
 	}
 
 	if first.ID == "" {
-		t.Fatal("hail-1 not found")
+		t.Fatal("San Saba 1.25in hail report not found")
 	}
 	if first.Type != "hail" {
 		t.Errorf("expected type hail, got %s", first.Type)

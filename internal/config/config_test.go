@@ -20,6 +20,8 @@ func TestLoad_Defaults(t *testing.T) {
 	assert.Equal(t, "info", cfg.LogLevel)
 	assert.Equal(t, "json", cfg.LogFormat)
 	assert.Equal(t, 10*time.Second, cfg.ShutdownTimeout)
+	assert.Equal(t, 50, cfg.BatchSize)
+	assert.Equal(t, 500*time.Millisecond, cfg.BatchFlushInterval)
 }
 
 func TestLoad_CustomEnv(t *testing.T) {
@@ -31,6 +33,8 @@ func TestLoad_CustomEnv(t *testing.T) {
 	t.Setenv("LOG_LEVEL", "debug")
 	t.Setenv("LOG_FORMAT", "text")
 	t.Setenv("SHUTDOWN_TIMEOUT", "30s")
+	t.Setenv("BATCH_SIZE", "100")
+	t.Setenv("BATCH_FLUSH_INTERVAL", "1s")
 
 	cfg, err := Load()
 	require.NoError(t, err)
@@ -43,6 +47,8 @@ func TestLoad_CustomEnv(t *testing.T) {
 	assert.Equal(t, "debug", cfg.LogLevel)
 	assert.Equal(t, "text", cfg.LogFormat)
 	assert.Equal(t, 30*time.Second, cfg.ShutdownTimeout)
+	assert.Equal(t, 100, cfg.BatchSize)
+	assert.Equal(t, 1*time.Second, cfg.BatchFlushInterval)
 }
 
 func TestLoad_InvalidShutdownTimeout(t *testing.T) {
@@ -57,6 +63,20 @@ func TestLoad_NegativeShutdownTimeout(t *testing.T) {
 	_, err := Load()
 	assert.Error(t, err)
 	assert.Contains(t, err.Error(), "SHUTDOWN_TIMEOUT")
+}
+
+func TestLoad_InvalidBatchSize(t *testing.T) {
+	t.Setenv("BATCH_SIZE", "0")
+	_, err := Load()
+	assert.Error(t, err)
+	assert.Contains(t, err.Error(), "BATCH_SIZE")
+}
+
+func TestLoad_InvalidBatchFlushInterval(t *testing.T) {
+	t.Setenv("BATCH_FLUSH_INTERVAL", "bad")
+	_, err := Load()
+	assert.Error(t, err)
+	assert.Contains(t, err.Error(), "BATCH_FLUSH_INTERVAL")
 }
 
 func TestParseBrokers(t *testing.T) {

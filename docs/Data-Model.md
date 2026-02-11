@@ -8,7 +8,7 @@ The authoritative data model is defined by:
 2. **Database migration**: `internal/database/migrations/001_create_storm_reports.up.sql` — defines the PostgreSQL schema
 3. **System Data Model**: The [storm-data-system Data Model](https://github.com/couchcryptid/storm-data-system/wiki/Data-Model) wiki page documents the full pipeline data model
 
-The mock data file (`data/mock/storm_reports_240526_transformed.json`) provides test fixtures in this shape.
+The mock data file (`data/mock/storm_reports_240426_transformed.json`) provides test fixtures in this shape.
 
 ## Message Shape
 

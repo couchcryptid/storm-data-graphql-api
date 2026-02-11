@@ -27,7 +27,7 @@ internal/
     middleware.go               Chi HTTP metrics middleware
     health.go                   Liveness and readiness HTTP handlers
 data/mock/
-  storm_reports_240526_transformed.json   Mock data (source of truth for message shape)
+  storm_reports_240426_transformed.json   Mock data (source of truth for message shape)
 ```
 
 ## Layer Responsibilities

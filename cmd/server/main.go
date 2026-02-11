@@ -71,7 +71,11 @@ func main() {
 	}()
 
 	// Kafka consumer
-	consumer := kafka.NewConsumer(cfg.KafkaBrokers, cfg.KafkaTopic, cfg.KafkaGroupID, s, metrics, logger)
+	consumer := kafka.NewBatchConsumer(
+		cfg.KafkaBrokers, cfg.KafkaTopic, cfg.KafkaGroupID,
+		cfg.BatchSize, cfg.BatchFlushInterval,
+		s, metrics, logger,
+	)
 	defer func() {
 		if err := consumer.Close(); err != nil {
 			logger.Error("kafka consumer close", "error", err)

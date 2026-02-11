@@ -21,6 +21,7 @@ type MessageReader interface {
 // StoreInserter abstracts the store dependency for testability.
 type StoreInserter interface {
 	InsertStormReport(ctx context.Context, report *model.StormReport) error
+	InsertStormReports(ctx context.Context, reports []*model.StormReport) error
 }
 
 // Consumer reads storm reports from a Kafka topic and persists them to the store.
@@ -35,11 +36,12 @@ type Consumer struct {
 // NewConsumer creates a consumer that reads from the given topic and inserts into the store.
 func NewConsumer(brokers []string, topic, groupID string, s StoreInserter, m *observability.Metrics, logger *slog.Logger) *Consumer {
 	reader := kafkago.NewReader(kafkago.ReaderConfig{
-		Brokers:  brokers,
-		Topic:    topic,
-		GroupID:  groupID,
-		MinBytes: 1,
-		MaxBytes: 10e6, // 10 MB
+		Brokers:     brokers,
+		Topic:       topic,
+		GroupID:     groupID,
+		StartOffset: kafkago.FirstOffset,
+		MinBytes:    1,
+		MaxBytes:    10e6, // 10 MB
 	})
 	return &Consumer{
 		reader:  reader,
