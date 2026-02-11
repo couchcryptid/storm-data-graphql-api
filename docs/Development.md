@@ -46,7 +46,7 @@ Runs unit tests with the race detector enabled (`-race -count=1`). Unit tests va
 | ---- | ---------------- |
 | `TestLoadMockData` | Mock JSON deserializes into 30 `StormReport` structs |
 | `TestMockDataTypes` | 10 hail, 10 tornado, 10 wind reports |
-| `TestMockDataFields` | All required fields are populated (ID, coordinates, state, begin_time, source_office) |
+| `TestMockDataFields` | All required fields are populated (ID, coordinates, state, event_time, source_office) |
 | `TestMockDataOptionalFields` | Optional fields (`severity`, `distance`) are present on some but not all records |
 | `TestMockDataHailReport` | Specific field values for `hail-1` match expected data |
 | `TestSortFieldIsValid` | `SortField` enum validates known values and rejects invalid/lowercase strings |

@@ -27,9 +27,7 @@ Each Kafka message on the `transformed-weather-data` topic is a single JSON obje
     "unit": "in",
     "severity": "moderate"
   },
-  "begin_time": "2026-01-01T15:10:00Z",
-  "end_time": "2026-01-01T15:10:00Z",
-  "source": "spc",
+  "event_time": "2026-01-01T15:10:00Z",
   "location": {
     "raw": "8 ESE Chappel",
     "name": "Chappel",

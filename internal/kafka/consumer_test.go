@@ -93,7 +93,6 @@ func validReport() model.StormReport {
 		ID:          "abc123",
 		EventType:   "hail",
 		Measurement: model.Measurement{Magnitude: 1.75, Unit: "in"},
-		Source:      "trained_spotter",
 		Location: model.Location{
 			Raw:    "2 NW Springfield",
 			Name:   "Springfield",
@@ -101,8 +100,7 @@ func validReport() model.StormReport {
 			County: "Sangamon",
 		},
 		Geo:         model.Geo{Lat: 39.8, Lon: -89.6},
-		BeginTime:   time.Date(2025, 6, 15, 18, 30, 0, 0, time.UTC),
-		EndTime:     time.Date(2025, 6, 15, 18, 45, 0, 0, time.UTC),
+		EventTime:   time.Date(2025, 6, 15, 18, 30, 0, 0, time.UTC),
 		Comments:    "quarter size hail",
 		TimeBucket:  time.Date(2025, 6, 15, 18, 0, 0, 0, time.UTC),
 		ProcessedAt: time.Date(2025, 6, 15, 19, 0, 0, 0, time.UTC),

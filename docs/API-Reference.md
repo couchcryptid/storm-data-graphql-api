@@ -23,7 +23,7 @@ query {
       measurement { magnitude unit severity }
       geo { lat lon }
       location { name state county }
-      beginTime
+      eventTime
       geocoding { formattedAddress placeName confidence source }
     }
     aggregations {
@@ -74,9 +74,7 @@ The top-level result returned by `stormReports`.
 | `eventType` | `String!` | Event type: `hail`, `tornado`, or `wind` |
 | `geo` | `Geo!` | Geographic coordinates |
 | `measurement` | `Measurement!` | Magnitude, unit, and severity |
-| `beginTime` | `DateTime!` | Event start time (RFC 3339) |
-| `endTime` | `DateTime!` | Event end time (RFC 3339) |
-| `source` | `String!` | Data source identifier |
+| `eventTime` | `DateTime!` | When the event occurred (RFC 3339) |
 | `sourceOffice` | `String!` | NWS office code (e.g., `FWD`, `OAX`, `TSA`) |
 | `location` | `Location!` | Location details |
 | `comments` | `String!` | Free-text description of the event |
@@ -163,7 +161,7 @@ The top-level result returned by `stormReports`.
 
 ### SortField
 
-`BEGIN_TIME`, `MAGNITUDE`, `LOCATION_STATE`, `EVENT_TYPE`
+`EVENT_TIME`, `MAGNITUDE`, `LOCATION_STATE`, `EVENT_TYPE`
 
 ### SortOrder
 

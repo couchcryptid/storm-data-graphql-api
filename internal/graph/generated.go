@@ -109,9 +109,8 @@ type ComplexityRoot struct {
 	}
 
 	StormReport struct {
-		BeginTime    func(childComplexity int) int
 		Comments     func(childComplexity int) int
-		EndTime      func(childComplexity int) int
+		EventTime    func(childComplexity int) int
 		EventType    func(childComplexity int) int
 		Geo          func(childComplexity int) int
 		Geocoding    func(childComplexity int) int
@@ -119,7 +118,6 @@ type ComplexityRoot struct {
 		Location     func(childComplexity int) int
 		Measurement  func(childComplexity int) int
 		ProcessedAt  func(childComplexity int) int
-		Source       func(childComplexity int) int
 		SourceOffice func(childComplexity int) int
 		TimeBucket   func(childComplexity int) int
 	}
@@ -359,24 +357,18 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 
 		return e.complexity.StormAggregations.TotalCount(childComplexity), true
 
-	case "StormReport.beginTime":
-		if e.complexity.StormReport.BeginTime == nil {
-			break
-		}
-
-		return e.complexity.StormReport.BeginTime(childComplexity), true
 	case "StormReport.comments":
 		if e.complexity.StormReport.Comments == nil {
 			break
 		}
 
 		return e.complexity.StormReport.Comments(childComplexity), true
-	case "StormReport.endTime":
-		if e.complexity.StormReport.EndTime == nil {
+	case "StormReport.eventTime":
+		if e.complexity.StormReport.EventTime == nil {
 			break
 		}
 
-		return e.complexity.StormReport.EndTime(childComplexity), true
+		return e.complexity.StormReport.EventTime(childComplexity), true
 	case "StormReport.eventType":
 		if e.complexity.StormReport.EventType == nil {
 			break
@@ -419,12 +411,6 @@ func (e *executableSchema) Complexity(ctx context.Context, typeName, field strin
 		}
 
 		return e.complexity.StormReport.ProcessedAt(childComplexity), true
-	case "StormReport.source":
-		if e.complexity.StormReport.Source == nil {
-			break
-		}
-
-		return e.complexity.StormReport.Source(childComplexity), true
 	case "StormReport.sourceOffice":
 		if e.complexity.StormReport.SourceOffice == nil {
 			break
@@ -1837,14 +1823,14 @@ func (ec *executionContext) fieldContext_StormReport_measurement(_ context.Conte
 	return fc, nil
 }
 
-func (ec *executionContext) _StormReport_beginTime(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
+func (ec *executionContext) _StormReport_eventTime(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
 	return graphql.ResolveField(
 		ctx,
 		ec.OperationContext,
 		field,
-		ec.fieldContext_StormReport_beginTime,
+		ec.fieldContext_StormReport_eventTime,
 		func(ctx context.Context) (any, error) {
-			return obj.BeginTime, nil
+			return obj.EventTime, nil
 		},
 		nil,
 		ec.marshalNDateTime2timeᚐTime,
@@ -1853,7 +1839,7 @@ func (ec *executionContext) _StormReport_beginTime(ctx context.Context, field gr
 	)
 }
 
-func (ec *executionContext) fieldContext_StormReport_beginTime(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+func (ec *executionContext) fieldContext_StormReport_eventTime(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
 	fc = &graphql.FieldContext{
 		Object:     "StormReport",
 		Field:      field,
@@ -1861,64 +1847,6 @@ func (ec *executionContext) fieldContext_StormReport_beginTime(_ context.Context
 		IsResolver: false,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			return nil, errors.New("field of type DateTime does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _StormReport_endTime(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_StormReport_endTime,
-		func(ctx context.Context) (any, error) {
-			return obj.EndTime, nil
-		},
-		nil,
-		ec.marshalNDateTime2timeᚐTime,
-		true,
-		true,
-	)
-}
-
-func (ec *executionContext) fieldContext_StormReport_endTime(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "StormReport",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type DateTime does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _StormReport_source(ctx context.Context, field graphql.CollectedField, obj *model.StormReport) (ret graphql.Marshaler) {
-	return graphql.ResolveField(
-		ctx,
-		ec.OperationContext,
-		field,
-		ec.fieldContext_StormReport_source,
-		func(ctx context.Context) (any, error) {
-			return obj.Source, nil
-		},
-		nil,
-		ec.marshalNString2string,
-		true,
-		true,
-	)
-}
-
-func (ec *executionContext) fieldContext_StormReport_source(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "StormReport",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type String does not have child fields")
 		},
 	}
 	return fc, nil
@@ -2212,12 +2140,8 @@ func (ec *executionContext) fieldContext_StormReportsResult_reports(_ context.Co
 				return ec.fieldContext_StormReport_geo(ctx, field)
 			case "measurement":
 				return ec.fieldContext_StormReport_measurement(ctx, field)
-			case "beginTime":
-				return ec.fieldContext_StormReport_beginTime(ctx, field)
-			case "endTime":
-				return ec.fieldContext_StormReport_endTime(ctx, field)
-			case "source":
-				return ec.fieldContext_StormReport_source(ctx, field)
+			case "eventTime":
+				return ec.fieldContext_StormReport_eventTime(ctx, field)
 			case "sourceOffice":
 				return ec.fieldContext_StormReport_sourceOffice(ctx, field)
 			case "location":
@@ -4617,18 +4541,8 @@ func (ec *executionContext) _StormReport(ctx context.Context, sel ast.SelectionS
 			if out.Values[i] == graphql.Null {
 				atomic.AddUint32(&out.Invalids, 1)
 			}
-		case "beginTime":
-			out.Values[i] = ec._StormReport_beginTime(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				atomic.AddUint32(&out.Invalids, 1)
-			}
-		case "endTime":
-			out.Values[i] = ec._StormReport_endTime(ctx, field, obj)
-			if out.Values[i] == graphql.Null {
-				atomic.AddUint32(&out.Invalids, 1)
-			}
-		case "source":
-			out.Values[i] = ec._StormReport_source(ctx, field, obj)
+		case "eventTime":
+			out.Values[i] = ec._StormReport_eventTime(ctx, field, obj)
 			if out.Values[i] == graphql.Null {
 				atomic.AddUint32(&out.Invalids, 1)
 			}

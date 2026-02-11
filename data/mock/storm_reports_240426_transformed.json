@@ -11,9 +11,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T15:10:00Z",
-    "end_time": "2024-04-26T15:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T15:10:00Z",
     "location": {
       "raw": "8 ESE Chappel",
       "name": "Chappel",
@@ -40,9 +38,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:03:00Z",
-    "end_time": "2024-04-26T17:03:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:03:00Z",
     "location": {
       "raw": "3 SE Burleson",
       "name": "Burleson",
@@ -69,9 +65,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:04:00Z",
-    "end_time": "2024-04-26T17:04:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:04:00Z",
     "location": {
       "raw": "Anthon",
       "name": "Anthon",
@@ -96,9 +90,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:09:00Z",
-    "end_time": "2024-04-26T17:09:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:09:00Z",
     "location": {
       "raw": "2 SE Kennedale",
       "name": "Kennedale",
@@ -125,9 +117,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T17:10:00Z",
-    "end_time": "2024-04-26T17:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:10:00Z",
     "location": {
       "raw": "2 NE Kennedale",
       "name": "Kennedale",
@@ -154,9 +144,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T17:10:00Z",
-    "end_time": "2024-04-26T17:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:10:00Z",
     "location": {
       "raw": "Ravenna",
       "name": "Ravenna",
@@ -181,9 +169,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:11:00Z",
-    "end_time": "2024-04-26T17:11:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:11:00Z",
     "location": {
       "raw": "Arlington",
       "name": "Arlington",
@@ -208,9 +194,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T17:19:00Z",
-    "end_time": "2024-04-26T17:19:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:19:00Z",
     "location": {
       "raw": "2 NE Arlington",
       "name": "Arlington",
@@ -237,9 +221,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:25:00Z",
-    "end_time": "2024-04-26T17:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:25:00Z",
     "location": {
       "raw": "2 N Ravenna",
       "name": "Ravenna",
@@ -266,9 +248,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:30:00Z",
-    "end_time": "2024-04-26T17:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:30:00Z",
     "location": {
       "raw": "4 NNW Washta",
       "name": "Washta",
@@ -295,9 +275,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:47:00Z",
-    "end_time": "2024-04-26T17:47:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:47:00Z",
     "location": {
       "raw": "Cleghorn",
       "name": "Cleghorn",
@@ -322,9 +300,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:54:00Z",
-    "end_time": "2024-04-26T17:54:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:54:00Z",
     "location": {
       "raw": "1 NW Mount Vernon",
       "name": "Mount Vernon",
@@ -351,9 +327,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T17:55:00Z",
-    "end_time": "2024-04-26T17:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:55:00Z",
     "location": {
       "raw": "5 SSW Paullina",
       "name": "Paullina",
@@ -380,9 +354,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T18:30:00Z",
-    "end_time": "2024-04-26T18:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:30:00Z",
     "location": {
       "raw": "6 S Western",
       "name": "Western",
@@ -409,9 +381,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T19:15:00Z",
-    "end_time": "2024-04-26T19:15:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:15:00Z",
     "location": {
       "raw": "6 WSW Cedar Rapids",
       "name": "Cedar Rapids",
@@ -438,9 +408,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T19:24:00Z",
-    "end_time": "2024-04-26T19:24:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:24:00Z",
     "location": {
       "raw": "Denton",
       "name": "Denton",
@@ -465,9 +433,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T19:27:00Z",
-    "end_time": "2024-04-26T19:27:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:27:00Z",
     "location": {
       "raw": "1 SE Denton",
       "name": "Denton",
@@ -494,9 +460,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T19:35:00Z",
-    "end_time": "2024-04-26T19:35:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:35:00Z",
     "location": {
       "raw": "Ulysses",
       "name": "Ulysses",
@@ -521,9 +485,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T19:41:00Z",
-    "end_time": "2024-04-26T19:41:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:41:00Z",
     "location": {
       "raw": "4 NW Lincoln",
       "name": "Lincoln",
@@ -550,9 +512,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T19:48:00Z",
-    "end_time": "2024-04-26T19:48:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:48:00Z",
     "location": {
       "raw": "5 NNW Lincoln",
       "name": "Lincoln",
@@ -579,9 +539,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T19:48:00Z",
-    "end_time": "2024-04-26T19:48:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:48:00Z",
     "location": {
       "raw": "5 NW Lincoln",
       "name": "Lincoln",
@@ -608,9 +566,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T19:49:00Z",
-    "end_time": "2024-04-26T19:49:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:49:00Z",
     "location": {
       "raw": "6 SE Malcolm",
       "name": "Malcolm",
@@ -637,9 +593,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T19:51:00Z",
-    "end_time": "2024-04-26T19:51:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:51:00Z",
     "location": {
       "raw": "2 N Howard",
       "name": "Howard",
@@ -666,9 +620,7 @@
       "unit": "in",
       "severity": "extreme"
     },
-    "begin_time": "2024-04-26T19:54:00Z",
-    "end_time": "2024-04-26T19:54:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:54:00Z",
     "location": {
       "raw": "3 E Davey",
       "name": "Davey",
@@ -695,9 +647,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T20:01:00Z",
-    "end_time": "2024-04-26T20:01:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:01:00Z",
     "location": {
       "raw": "2 NW Severy",
       "name": "Severy",
@@ -724,9 +674,7 @@
       "unit": "in",
       "severity": "extreme"
     },
-    "begin_time": "2024-04-26T20:02:00Z",
-    "end_time": "2024-04-26T20:02:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:02:00Z",
     "location": {
       "raw": "3 ESE Ceresco",
       "name": "Ceresco",
@@ -753,9 +701,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T20:03:00Z",
-    "end_time": "2024-04-26T20:03:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:03:00Z",
     "location": {
       "raw": "4 W Moline",
       "name": "Moline",
@@ -782,9 +728,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T20:05:00Z",
-    "end_time": "2024-04-26T20:05:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:05:00Z",
     "location": {
       "raw": "4 N Genoa",
       "name": "Genoa",
@@ -811,9 +755,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T20:12:00Z",
-    "end_time": "2024-04-26T20:12:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:12:00Z",
     "location": {
       "raw": "3 NW Fall River",
       "name": "Fall River",
@@ -840,9 +782,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T20:31:00Z",
-    "end_time": "2024-04-26T20:31:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:31:00Z",
     "location": {
       "raw": "5 SW Ramona",
       "name": "Ramona",
@@ -869,9 +809,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T20:33:00Z",
-    "end_time": "2024-04-26T20:33:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:33:00Z",
     "location": {
       "raw": "1 WNW Valley",
       "name": "Valley",
@@ -898,9 +836,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T20:41:00Z",
-    "end_time": "2024-04-26T20:41:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:41:00Z",
     "location": {
       "raw": "1 W New Albany",
       "name": "New Albany",
@@ -927,9 +863,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:00:00Z",
-    "end_time": "2024-04-26T21:00:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:00:00Z",
     "location": {
       "raw": "1 W New Albany",
       "name": "New Albany",
@@ -956,9 +890,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:08:00Z",
-    "end_time": "2024-04-26T21:08:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:08:00Z",
     "location": {
       "raw": "Blair",
       "name": "Blair",
@@ -983,9 +915,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:10:00Z",
-    "end_time": "2024-04-26T21:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:10:00Z",
     "location": {
       "raw": "Baileyville",
       "name": "Baileyville",
@@ -1010,9 +940,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:11:00Z",
-    "end_time": "2024-04-26T21:11:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:11:00Z",
     "location": {
       "raw": "3 E Baileyville",
       "name": "Baileyville",
@@ -1039,9 +967,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:12:00Z",
-    "end_time": "2024-04-26T21:12:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:12:00Z",
     "location": {
       "raw": "3 E Mannford",
       "name": "Mannford",
@@ -1068,9 +994,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:12:00Z",
-    "end_time": "2024-04-26T21:12:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:12:00Z",
     "location": {
       "raw": "Blair",
       "name": "Blair",
@@ -1095,9 +1019,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:25:00Z",
-    "end_time": "2024-04-26T21:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:25:00Z",
     "location": {
       "raw": "1 WNW Valley",
       "name": "Valley",
@@ -1124,9 +1046,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:26:00Z",
-    "end_time": "2024-04-26T21:26:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:26:00Z",
     "location": {
       "raw": "5 W Washington",
       "name": "Washington",
@@ -1153,9 +1073,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:28:00Z",
-    "end_time": "2024-04-26T21:28:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:28:00Z",
     "location": {
       "raw": "1 S Skiatook",
       "name": "Skiatook",
@@ -1182,9 +1100,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:30:00Z",
-    "end_time": "2024-04-26T21:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:30:00Z",
     "location": {
       "raw": "1 E Skiatook",
       "name": "Skiatook",
@@ -1211,9 +1127,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:30:00Z",
-    "end_time": "2024-04-26T21:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:30:00Z",
     "location": {
       "raw": "2 WSW La Vista",
       "name": "La Vista",
@@ -1240,9 +1154,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:32:00Z",
-    "end_time": "2024-04-26T21:32:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:32:00Z",
     "location": {
       "raw": "4 SW Vera",
       "name": "Vera",
@@ -1269,9 +1181,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:40:00Z",
-    "end_time": "2024-04-26T21:40:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:40:00Z",
     "location": {
       "raw": "2 SSW Papillion",
       "name": "Papillion",
@@ -1298,9 +1208,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:40:00Z",
-    "end_time": "2024-04-26T21:40:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:40:00Z",
     "location": {
       "raw": "1 WNW Ralston",
       "name": "Ralston",
@@ -1327,9 +1235,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:42:00Z",
-    "end_time": "2024-04-26T21:42:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:42:00Z",
     "location": {
       "raw": "3 NE Cedar Creek",
       "name": "Cedar Creek",
@@ -1356,9 +1262,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:43:00Z",
-    "end_time": "2024-04-26T21:43:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:43:00Z",
     "location": {
       "raw": "2 W Papillion",
       "name": "Papillion",
@@ -1385,9 +1289,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:45:00Z",
-    "end_time": "2024-04-26T21:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:45:00Z",
     "location": {
       "raw": "Papillion",
       "name": "Papillion",
@@ -1412,9 +1314,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:46:00Z",
-    "end_time": "2024-04-26T21:46:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:46:00Z",
     "location": {
       "raw": "3 W Blair",
       "name": "Blair",
@@ -1441,9 +1341,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:47:00Z",
-    "end_time": "2024-04-26T21:47:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:47:00Z",
     "location": {
       "raw": "1 SW Papillion",
       "name": "Papillion",
@@ -1470,9 +1368,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:51:00Z",
-    "end_time": "2024-04-26T21:51:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:51:00Z",
     "location": {
       "raw": "5 NE Chappel",
       "name": "Chappel",
@@ -1499,9 +1395,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:55:00Z",
-    "end_time": "2024-04-26T21:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:55:00Z",
     "location": {
       "raw": "1 NNW Canton",
       "name": "Canton",
@@ -1528,9 +1422,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:55:00Z",
-    "end_time": "2024-04-26T21:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:55:00Z",
     "location": {
       "raw": "1 NNE Omaha",
       "name": "Omaha",
@@ -1557,9 +1449,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:55:00Z",
-    "end_time": "2024-04-26T21:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:55:00Z",
     "location": {
       "raw": "Carter Lake",
       "name": "Carter Lake",
@@ -1584,9 +1474,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:55:00Z",
-    "end_time": "2024-04-26T21:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:55:00Z",
     "location": {
       "raw": "5 NE Omaha",
       "name": "Omaha",
@@ -1613,9 +1501,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:55:00Z",
-    "end_time": "2024-04-26T21:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:55:00Z",
     "location": {
       "raw": "1 NW Carter Lake",
       "name": "Carter Lake",
@@ -1642,9 +1528,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T21:56:00Z",
-    "end_time": "2024-04-26T21:56:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:56:00Z",
     "location": {
       "raw": "1 ENE Papillion",
       "name": "Papillion",
@@ -1671,9 +1555,7 @@
       "unit": "in",
       "severity": "extreme"
     },
-    "begin_time": "2024-04-26T22:02:00Z",
-    "end_time": "2024-04-26T22:02:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:02:00Z",
     "location": {
       "raw": "Nemaha",
       "name": "Nemaha",
@@ -1698,9 +1580,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T22:17:00Z",
-    "end_time": "2024-04-26T22:17:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:17:00Z",
     "location": {
       "raw": "4 N Elsmore",
       "name": "Elsmore",
@@ -1727,9 +1607,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T22:20:00Z",
-    "end_time": "2024-04-26T22:20:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:20:00Z",
     "location": {
       "raw": "10 N Claremore",
       "name": "Claremore",
@@ -1756,9 +1634,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T22:30:00Z",
-    "end_time": "2024-04-26T22:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:30:00Z",
     "location": {
       "raw": "4 N Uniontown",
       "name": "Uniontown",
@@ -1785,9 +1661,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T22:30:00Z",
-    "end_time": "2024-04-26T22:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:30:00Z",
     "location": {
       "raw": "3 NNW Corning",
       "name": "Corning",
@@ -1814,9 +1688,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T22:38:00Z",
-    "end_time": "2024-04-26T22:38:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:38:00Z",
     "location": {
       "raw": "5 ENE Corning",
       "name": "Corning",
@@ -1843,9 +1715,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T22:40:00Z",
-    "end_time": "2024-04-26T22:40:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:40:00Z",
     "location": {
       "raw": "1 N Chelsea",
       "name": "Chelsea",
@@ -1872,9 +1742,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T23:03:00Z",
-    "end_time": "2024-04-26T23:03:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:03:00Z",
     "location": {
       "raw": "Hume",
       "name": "Hume",
@@ -1899,9 +1767,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T23:08:00Z",
-    "end_time": "2024-04-26T23:08:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:08:00Z",
     "location": {
       "raw": "1 SE Clarinda",
       "name": "Clarinda",
@@ -1928,9 +1794,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T23:12:00Z",
-    "end_time": "2024-04-26T23:12:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:12:00Z",
     "location": {
       "raw": "Fulton",
       "name": "Fulton",
@@ -1955,9 +1819,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T23:16:00Z",
-    "end_time": "2024-04-26T23:16:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:16:00Z",
     "location": {
       "raw": "5 N New Market",
       "name": "New Market",
@@ -1984,9 +1846,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T00:12:00Z",
-    "end_time": "2024-04-26T00:12:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:12:00Z",
     "location": {
       "raw": "4 ENE Sheridan",
       "name": "Sheridan",
@@ -2013,9 +1873,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T00:28:00Z",
-    "end_time": "2024-04-26T00:28:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:28:00Z",
     "location": {
       "raw": "2 SSW Delphos",
       "name": "Delphos",
@@ -2042,9 +1900,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T00:44:00Z",
-    "end_time": "2024-04-26T00:44:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:44:00Z",
     "location": {
       "raw": "3 SSE Chatfield Reservo",
       "name": "Chatfield Reservo",
@@ -2071,9 +1927,7 @@
       "unit": "in",
       "severity": "extreme"
     },
-    "begin_time": "2024-04-26T00:45:00Z",
-    "end_time": "2024-04-26T00:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:45:00Z",
     "location": {
       "raw": "Mount Ayr",
       "name": "Mount Ayr",
@@ -2098,9 +1952,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T01:03:00Z",
-    "end_time": "2024-04-26T01:03:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:03:00Z",
     "location": {
       "raw": "1 WNW Highlands Ranch",
       "name": "Highlands Ranch",
@@ -2127,9 +1979,7 @@
       "unit": "in",
       "severity": "extreme"
     },
-    "begin_time": "2024-04-26T01:03:00Z",
-    "end_time": "2024-04-26T01:03:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:03:00Z",
     "location": {
       "raw": "Mount Ayr",
       "name": "Mount Ayr",
@@ -2154,9 +2004,7 @@
       "unit": "in",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T01:24:00Z",
-    "end_time": "2024-04-26T01:24:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:24:00Z",
     "location": {
       "raw": "3 NNE Rocky Mound",
       "name": "Rocky Mound",
@@ -2183,9 +2031,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T01:30:00Z",
-    "end_time": "2024-04-26T01:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:30:00Z",
     "location": {
       "raw": "1 SSE Mount Pleasant",
       "name": "Mount Pleasant",
@@ -2212,9 +2058,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T01:36:00Z",
-    "end_time": "2024-04-26T01:36:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:36:00Z",
     "location": {
       "raw": "2 NW Cumming",
       "name": "Cumming",
@@ -2241,9 +2085,7 @@
       "unit": "in",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T02:33:00Z",
-    "end_time": "2024-04-26T02:33:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T02:33:00Z",
     "location": {
       "raw": "6 ESE De Kalb",
       "name": "De Kalb",
@@ -2269,9 +2111,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T12:23:00Z",
-    "end_time": "2024-04-26T12:23:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T12:23:00Z",
     "location": {
       "raw": "2 N Mcalester",
       "name": "Mcalester",
@@ -2297,9 +2137,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:16:00Z",
-    "end_time": "2024-04-26T17:16:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:16:00Z",
     "location": {
       "raw": "2 ESE Ravenna",
       "name": "Ravenna",
@@ -2325,9 +2163,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:23:00Z",
-    "end_time": "2024-04-26T17:23:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:23:00Z",
     "location": {
       "raw": "6 SSW Gholson",
       "name": "Gholson",
@@ -2353,9 +2189,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:26:00Z",
-    "end_time": "2024-04-26T17:26:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:26:00Z",
     "location": {
       "raw": "6 S Gholson",
       "name": "Gholson",
@@ -2381,9 +2215,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:26:00Z",
-    "end_time": "2024-04-26T17:26:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:26:00Z",
     "location": {
       "raw": "5 S Gholson",
       "name": "Gholson",
@@ -2409,9 +2241,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:28:00Z",
-    "end_time": "2024-04-26T17:28:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:28:00Z",
     "location": {
       "raw": "2 NNE Ravenna",
       "name": "Ravenna",
@@ -2437,9 +2267,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:32:00Z",
-    "end_time": "2024-04-26T17:32:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:32:00Z",
     "location": {
       "raw": "2 S Rockville",
       "name": "Rockville",
@@ -2465,9 +2293,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:38:00Z",
-    "end_time": "2024-04-26T17:38:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:38:00Z",
     "location": {
       "raw": "Rockville",
       "name": "Rockville",
@@ -2491,9 +2317,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:48:00Z",
-    "end_time": "2024-04-26T17:48:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:48:00Z",
     "location": {
       "raw": "3 SSE West",
       "name": "West",
@@ -2519,9 +2343,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:48:00Z",
-    "end_time": "2024-04-26T17:48:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:48:00Z",
     "location": {
       "raw": "3 SE West",
       "name": "West",
@@ -2547,9 +2369,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:52:00Z",
-    "end_time": "2024-04-26T17:52:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:52:00Z",
     "location": {
       "raw": "3 SSW Farwell",
       "name": "Farwell",
@@ -2575,9 +2395,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:53:00Z",
-    "end_time": "2024-04-26T17:53:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:53:00Z",
     "location": {
       "raw": "4 E West",
       "name": "West",
@@ -2603,9 +2421,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:58:00Z",
-    "end_time": "2024-04-26T17:58:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:58:00Z",
     "location": {
       "raw": "1 SSE Farwell",
       "name": "Farwell",
@@ -2631,9 +2447,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T17:58:00Z",
-    "end_time": "2024-04-26T17:58:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T17:58:00Z",
     "location": {
       "raw": "1 S Farwell",
       "name": "Farwell",
@@ -2659,9 +2473,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T18:06:00Z",
-    "end_time": "2024-04-26T18:06:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:06:00Z",
     "location": {
       "raw": "3 SW Penelope",
       "name": "Penelope",
@@ -2687,9 +2499,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T18:14:00Z",
-    "end_time": "2024-04-26T18:14:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:14:00Z",
     "location": {
       "raw": "1 NNW Elba",
       "name": "Elba",
@@ -2715,9 +2525,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T18:14:00Z",
-    "end_time": "2024-04-26T18:14:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:14:00Z",
     "location": {
       "raw": "2 NNW Elba",
       "name": "Elba",
@@ -2743,9 +2551,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T18:30:00Z",
-    "end_time": "2024-04-26T18:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:30:00Z",
     "location": {
       "raw": "6 ENE Malone",
       "name": "Malone",
@@ -2771,9 +2577,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T18:32:00Z",
-    "end_time": "2024-04-26T18:32:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:32:00Z",
     "location": {
       "raw": "5 NE Elba",
       "name": "Elba",
@@ -2799,9 +2603,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T18:37:00Z",
-    "end_time": "2024-04-26T18:37:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:37:00Z",
     "location": {
       "raw": "7 SSE Frost",
       "name": "Frost",
@@ -2827,9 +2629,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T18:48:00Z",
-    "end_time": "2024-04-26T18:48:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:48:00Z",
     "location": {
       "raw": "2 SW Barry",
       "name": "Barry",
@@ -2855,9 +2655,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T18:49:00Z",
-    "end_time": "2024-04-26T18:49:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T18:49:00Z",
     "location": {
       "raw": "1 W Abbott",
       "name": "Abbott",
@@ -2883,9 +2681,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:00:00Z",
-    "end_time": "2024-04-26T19:00:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:00:00Z",
     "location": {
       "raw": "4 WNW Dwight",
       "name": "Dwight",
@@ -2911,9 +2707,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:04:00Z",
-    "end_time": "2024-04-26T19:04:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:04:00Z",
     "location": {
       "raw": "6 SSW Primrose",
       "name": "Primrose",
@@ -2939,9 +2733,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:19:00Z",
-    "end_time": "2024-04-26T19:19:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:19:00Z",
     "location": {
       "raw": "3 WSW Rice",
       "name": "Rice",
@@ -2967,9 +2759,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:30:00Z",
-    "end_time": "2024-04-26T19:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:30:00Z",
     "location": {
       "raw": "1 WSW Frost",
       "name": "Frost",
@@ -2995,9 +2785,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:43:00Z",
-    "end_time": "2024-04-26T19:43:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:43:00Z",
     "location": {
       "raw": "5 NW Lincoln",
       "name": "Lincoln",
@@ -3023,9 +2811,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:50:00Z",
-    "end_time": "2024-04-26T19:50:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:50:00Z",
     "location": {
       "raw": "5 NNE Lincoln",
       "name": "Lincoln",
@@ -3051,9 +2837,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:51:00Z",
-    "end_time": "2024-04-26T19:51:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:51:00Z",
     "location": {
       "raw": "4 SW Waverly",
       "name": "Waverly",
@@ -3079,9 +2863,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:51:00Z",
-    "end_time": "2024-04-26T19:51:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:51:00Z",
     "location": {
       "raw": "4 NW Bee",
       "name": "Bee",
@@ -3107,9 +2889,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:52:00Z",
-    "end_time": "2024-04-26T19:52:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:52:00Z",
     "location": {
       "raw": "5 ENE Lincoln",
       "name": "Lincoln",
@@ -3135,9 +2915,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:53:00Z",
-    "end_time": "2024-04-26T19:53:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:53:00Z",
     "location": {
       "raw": "1 NW Waverly",
       "name": "Waverly",
@@ -3163,9 +2941,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:54:00Z",
-    "end_time": "2024-04-26T19:54:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:54:00Z",
     "location": {
       "raw": "5 W Dwight",
       "name": "Dwight",
@@ -3191,9 +2967,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:55:00Z",
-    "end_time": "2024-04-26T19:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:55:00Z",
     "location": {
       "raw": "7 NNE Primrose",
       "name": "Primrose",
@@ -3219,9 +2993,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:57:00Z",
-    "end_time": "2024-04-26T19:57:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:57:00Z",
     "location": {
       "raw": "4 SW Waverly",
       "name": "Waverly",
@@ -3247,9 +3019,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T19:59:00Z",
-    "end_time": "2024-04-26T19:59:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:59:00Z",
     "location": {
       "raw": "2 WNW Waverly",
       "name": "Waverly",
@@ -3275,9 +3045,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:00:00Z",
-    "end_time": "2024-04-26T20:00:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:00:00Z",
     "location": {
       "raw": "4 SSE Garrison",
       "name": "Garrison",
@@ -3303,9 +3071,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:03:00Z",
-    "end_time": "2024-04-26T20:03:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:03:00Z",
     "location": {
       "raw": "3 NNW Waverly",
       "name": "Waverly",
@@ -3331,9 +3097,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:05:00Z",
-    "end_time": "2024-04-26T20:05:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:05:00Z",
     "location": {
       "raw": "4 WNW Brainard",
       "name": "Brainard",
@@ -3359,9 +3123,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:06:00Z",
-    "end_time": "2024-04-26T20:06:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:06:00Z",
     "location": {
       "raw": "4 WSW Brainard",
       "name": "Brainard",
@@ -3387,9 +3149,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:06:00Z",
-    "end_time": "2024-04-26T20:06:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:06:00Z",
     "location": {
       "raw": "2 WNW Saint Edward",
       "name": "Saint Edward",
@@ -3415,9 +3175,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:07:00Z",
-    "end_time": "2024-04-26T20:07:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:07:00Z",
     "location": {
       "raw": "3 WSW Brainard",
       "name": "Brainard",
@@ -3443,9 +3201,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:12:00Z",
-    "end_time": "2024-04-26T20:12:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:12:00Z",
     "location": {
       "raw": "5 SSW Memphis",
       "name": "Memphis",
@@ -3471,9 +3227,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:15:00Z",
-    "end_time": "2024-04-26T20:15:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:15:00Z",
     "location": {
       "raw": "4 NNW Greenwood",
       "name": "Greenwood",
@@ -3499,9 +3253,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:25:00Z",
-    "end_time": "2024-04-26T20:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:25:00Z",
     "location": {
       "raw": "5 SE Yutan",
       "name": "Yutan",
@@ -3527,9 +3279,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:29:00Z",
-    "end_time": "2024-04-26T20:29:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:29:00Z",
     "location": {
       "raw": "5 S Lindsay",
       "name": "Lindsay",
@@ -3555,9 +3305,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:30:00Z",
-    "end_time": "2024-04-26T20:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:30:00Z",
     "location": {
       "raw": "5 SE Yutan",
       "name": "Yutan",
@@ -3583,9 +3331,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:30:00Z",
-    "end_time": "2024-04-26T20:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:30:00Z",
     "location": {
       "raw": "5 ESE Yutan",
       "name": "Yutan",
@@ -3611,9 +3357,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:36:00Z",
-    "end_time": "2024-04-26T20:36:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:36:00Z",
     "location": {
       "raw": "5 ESE Yutan",
       "name": "Yutan",
@@ -3639,9 +3383,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:37:00Z",
-    "end_time": "2024-04-26T20:37:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:37:00Z",
     "location": {
       "raw": "2 S Waterloo",
       "name": "Waterloo",
@@ -3667,9 +3409,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:39:00Z",
-    "end_time": "2024-04-26T20:39:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:39:00Z",
     "location": {
       "raw": "1 N Elkhorn",
       "name": "Elkhorn",
@@ -3695,9 +3435,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:40:00Z",
-    "end_time": "2024-04-26T20:40:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:40:00Z",
     "location": {
       "raw": "4 SSW Waterloo",
       "name": "Waterloo",
@@ -3723,9 +3461,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:42:00Z",
-    "end_time": "2024-04-26T20:42:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:42:00Z",
     "location": {
       "raw": "4 N Coyville",
       "name": "Coyville",
@@ -3751,9 +3487,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:43:00Z",
-    "end_time": "2024-04-26T20:43:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:43:00Z",
     "location": {
       "raw": "3 S New Albany",
       "name": "New Albany",
@@ -3779,9 +3513,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:45:00Z",
-    "end_time": "2024-04-26T20:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:45:00Z",
     "location": {
       "raw": "1 NW Elkhorn",
       "name": "Elkhorn",
@@ -3807,9 +3539,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:47:00Z",
-    "end_time": "2024-04-26T20:47:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:47:00Z",
     "location": {
       "raw": "1 NNW Elkhorn",
       "name": "Elkhorn",
@@ -3835,9 +3565,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:47:00Z",
-    "end_time": "2024-04-26T20:47:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:47:00Z",
     "location": {
       "raw": "5 W Newman Grove",
       "name": "Newman Grove",
@@ -3863,9 +3591,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:47:00Z",
-    "end_time": "2024-04-26T20:47:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:47:00Z",
     "location": {
       "raw": "7 NE Albion",
       "name": "Albion",
@@ -3891,9 +3617,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:49:00Z",
-    "end_time": "2024-04-26T20:49:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:49:00Z",
     "location": {
       "raw": "3 N Elkhorn",
       "name": "Elkhorn",
@@ -3919,9 +3643,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:50:00Z",
-    "end_time": "2024-04-26T20:50:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:50:00Z",
     "location": {
       "raw": "4 W Newman Grove",
       "name": "Newman Grove",
@@ -3947,9 +3669,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:52:00Z",
-    "end_time": "2024-04-26T20:52:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:52:00Z",
     "location": {
       "raw": "4 SSW Yates Center",
       "name": "Yates Center",
@@ -3975,9 +3695,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:52:00Z",
-    "end_time": "2024-04-26T20:52:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:52:00Z",
     "location": {
       "raw": "3 N Elkhorn",
       "name": "Elkhorn",
@@ -4003,9 +3721,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:55:00Z",
-    "end_time": "2024-04-26T20:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:55:00Z",
     "location": {
       "raw": "2 WSW Bennington",
       "name": "Bennington",
@@ -4031,9 +3747,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T20:59:00Z",
-    "end_time": "2024-04-26T20:59:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T20:59:00Z",
     "location": {
       "raw": "2 NNW Bennington",
       "name": "Bennington",
@@ -4059,9 +3773,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:00:00Z",
-    "end_time": "2024-04-26T21:00:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:00:00Z",
     "location": {
       "raw": "2 WSW Bennington",
       "name": "Bennington",
@@ -4087,9 +3799,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:05:00Z",
-    "end_time": "2024-04-26T21:05:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:05:00Z",
     "location": {
       "raw": "2 SE Kennard",
       "name": "Kennard",
@@ -4115,9 +3825,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:07:00Z",
-    "end_time": "2024-04-26T21:07:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:07:00Z",
     "location": {
       "raw": "7 S Creston",
       "name": "Creston",
@@ -4143,9 +3851,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:08:00Z",
-    "end_time": "2024-04-26T21:08:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:08:00Z",
     "location": {
       "raw": "4 E Kennard",
       "name": "Kennard",
@@ -4171,9 +3877,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:10:00Z",
-    "end_time": "2024-04-26T21:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:10:00Z",
     "location": {
       "raw": "4 SSE Blair",
       "name": "Blair",
@@ -4199,9 +3903,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:16:00Z",
-    "end_time": "2024-04-26T21:16:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:16:00Z",
     "location": {
       "raw": "1 SSE Creston",
       "name": "Creston",
@@ -4227,9 +3929,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:18:00Z",
-    "end_time": "2024-04-26T21:18:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:18:00Z",
     "location": {
       "raw": "4 SE Blair",
       "name": "Blair",
@@ -4255,9 +3955,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:18:00Z",
-    "end_time": "2024-04-26T21:18:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:18:00Z",
     "location": {
       "raw": "4 SE Creston",
       "name": "Creston",
@@ -4283,9 +3981,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:20:00Z",
-    "end_time": "2024-04-26T21:20:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:20:00Z",
     "location": {
       "raw": "5 SSW Modale",
       "name": "Modale",
@@ -4311,9 +4007,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:23:00Z",
-    "end_time": "2024-04-26T21:23:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:23:00Z",
     "location": {
       "raw": "2 SE Creston",
       "name": "Creston",
@@ -4339,9 +4033,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:35:00Z",
-    "end_time": "2024-04-26T21:35:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:35:00Z",
     "location": {
       "raw": "Modale",
       "name": "Modale",
@@ -4365,9 +4057,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:52:00Z",
-    "end_time": "2024-04-26T21:52:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:52:00Z",
     "location": {
       "raw": "1 N Pacific Junction",
       "name": "Pacific Junction",
@@ -4393,9 +4083,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:52:00Z",
-    "end_time": "2024-04-26T21:52:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:52:00Z",
     "location": {
       "raw": "5 NNW Magnolia",
       "name": "Magnolia",
@@ -4421,9 +4109,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:56:00Z",
-    "end_time": "2024-04-26T21:56:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:56:00Z",
     "location": {
       "raw": "4 E Omaha",
       "name": "Omaha",
@@ -4449,9 +4135,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:57:00Z",
-    "end_time": "2024-04-26T21:57:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:57:00Z",
     "location": {
       "raw": "2 NNW Pacific Junction",
       "name": "Pacific Junction",
@@ -4477,9 +4161,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:58:00Z",
-    "end_time": "2024-04-26T21:58:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:58:00Z",
     "location": {
       "raw": "7 ENE Omaha",
       "name": "Omaha",
@@ -4505,9 +4187,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T21:59:00Z",
-    "end_time": "2024-04-26T21:59:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:59:00Z",
     "location": {
       "raw": "3 SE Pisgah",
       "name": "Pisgah",
@@ -4533,9 +4213,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:01:00Z",
-    "end_time": "2024-04-26T22:01:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:01:00Z",
     "location": {
       "raw": "3 ENE Carter Lake",
       "name": "Carter Lake",
@@ -4561,9 +4239,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:02:00Z",
-    "end_time": "2024-04-26T22:02:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:02:00Z",
     "location": {
       "raw": "8 E Humboldt",
       "name": "Humboldt",
@@ -4589,9 +4265,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:05:00Z",
-    "end_time": "2024-04-26T22:05:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:05:00Z",
     "location": {
       "raw": "3 NNE Pisgah",
       "name": "Pisgah",
@@ -4617,9 +4291,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:07:00Z",
-    "end_time": "2024-04-26T22:07:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:07:00Z",
     "location": {
       "raw": "1 S Crescent",
       "name": "Crescent",
@@ -4645,9 +4317,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:08:00Z",
-    "end_time": "2024-04-26T22:08:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:08:00Z",
     "location": {
       "raw": "7 WSW Treynor",
       "name": "Treynor",
@@ -4673,9 +4343,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:09:00Z",
-    "end_time": "2024-04-26T22:09:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:09:00Z",
     "location": {
       "raw": "7 SE Council Bluffs",
       "name": "Council Bluffs",
@@ -4701,9 +4369,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:10:00Z",
-    "end_time": "2024-04-26T22:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:10:00Z",
     "location": {
       "raw": "2 N Salem",
       "name": "Salem",
@@ -4729,9 +4395,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:10:00Z",
-    "end_time": "2024-04-26T22:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:10:00Z",
     "location": {
       "raw": "2 SSW Verdon",
       "name": "Verdon",
@@ -4757,9 +4421,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:13:00Z",
-    "end_time": "2024-04-26T22:13:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:13:00Z",
     "location": {
       "raw": "6 W Treynor",
       "name": "Treynor",
@@ -4785,9 +4447,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:14:00Z",
-    "end_time": "2024-04-26T22:14:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:14:00Z",
     "location": {
       "raw": "6 WSW Treynor",
       "name": "Treynor",
@@ -4813,9 +4473,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:16:00Z",
-    "end_time": "2024-04-26T22:16:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:16:00Z",
     "location": {
       "raw": "4 SE Norfolk",
       "name": "Norfolk",
@@ -4841,9 +4499,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:17:00Z",
-    "end_time": "2024-04-26T22:17:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:17:00Z",
     "location": {
       "raw": "2 SW Soldier",
       "name": "Soldier",
@@ -4869,9 +4525,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:20:00Z",
-    "end_time": "2024-04-26T22:20:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:20:00Z",
     "location": {
       "raw": "7 WNW Neola",
       "name": "Neola",
@@ -4897,9 +4551,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:20:00Z",
-    "end_time": "2024-04-26T22:20:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:20:00Z",
     "location": {
       "raw": "3 SE Norfolk",
       "name": "Norfolk",
@@ -4925,9 +4577,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:23:00Z",
-    "end_time": "2024-04-26T22:23:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:23:00Z",
     "location": {
       "raw": "2 WSW Soldier",
       "name": "Soldier",
@@ -4953,9 +4603,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:25:00Z",
-    "end_time": "2024-04-26T22:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:25:00Z",
     "location": {
       "raw": "3 E Mcclelland",
       "name": "Mcclelland",
@@ -4981,9 +4629,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:28:00Z",
-    "end_time": "2024-04-26T22:28:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:28:00Z",
     "location": {
       "raw": "3 SE Underwood",
       "name": "Underwood",
@@ -5009,9 +4655,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:29:00Z",
-    "end_time": "2024-04-26T22:29:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:29:00Z",
     "location": {
       "raw": "3 NNE Uniontown",
       "name": "Uniontown",
@@ -5037,9 +4681,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:33:00Z",
-    "end_time": "2024-04-26T22:33:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:33:00Z",
     "location": {
       "raw": "2 SE Underwood",
       "name": "Underwood",
@@ -5065,9 +4707,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:40:00Z",
-    "end_time": "2024-04-26T22:40:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:40:00Z",
     "location": {
       "raw": "3 ESE Neola",
       "name": "Neola",
@@ -5093,9 +4733,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:41:00Z",
-    "end_time": "2024-04-26T22:41:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:41:00Z",
     "location": {
       "raw": "Minden",
       "name": "Minden",
@@ -5119,9 +4757,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:41:00Z",
-    "end_time": "2024-04-26T22:41:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:41:00Z",
     "location": {
       "raw": "4 ESE Logan",
       "name": "Logan",
@@ -5147,9 +4783,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:45:00Z",
-    "end_time": "2024-04-26T22:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:45:00Z",
     "location": {
       "raw": "3 S Devon",
       "name": "Devon",
@@ -5175,9 +4809,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:45:00Z",
-    "end_time": "2024-04-26T22:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:45:00Z",
     "location": {
       "raw": "1 SSW Rulo",
       "name": "Rulo",
@@ -5203,9 +4835,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:45:00Z",
-    "end_time": "2024-04-26T22:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:45:00Z",
     "location": {
       "raw": "1 NE Minden",
       "name": "Minden",
@@ -5231,9 +4861,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:47:00Z",
-    "end_time": "2024-04-26T22:47:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:47:00Z",
     "location": {
       "raw": "2 ENE Minden",
       "name": "Minden",
@@ -5259,9 +4887,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:49:00Z",
-    "end_time": "2024-04-26T22:49:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:49:00Z",
     "location": {
       "raw": "1 W Shelby",
       "name": "Shelby",
@@ -5287,9 +4913,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:50:00Z",
-    "end_time": "2024-04-26T22:50:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:50:00Z",
     "location": {
       "raw": "1 WSW Shelby",
       "name": "Shelby",
@@ -5315,9 +4939,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:57:00Z",
-    "end_time": "2024-04-26T22:57:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:57:00Z",
     "location": {
       "raw": "3 S Tennant",
       "name": "Tennant",
@@ -5343,9 +4965,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T22:59:00Z",
-    "end_time": "2024-04-26T22:59:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:59:00Z",
     "location": {
       "raw": "Tennant",
       "name": "Tennant",
@@ -5369,9 +4989,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:05:00Z",
-    "end_time": "2024-04-26T23:05:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:05:00Z",
     "location": {
       "raw": "2 W Harlan",
       "name": "Harlan",
@@ -5397,9 +5015,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:05:00Z",
-    "end_time": "2024-04-26T23:05:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:05:00Z",
     "location": {
       "raw": "3 W Harlan",
       "name": "Harlan",
@@ -5425,9 +5041,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:06:00Z",
-    "end_time": "2024-04-26T23:06:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:06:00Z",
     "location": {
       "raw": "2 W Harlan",
       "name": "Harlan",
@@ -5453,9 +5067,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:07:00Z",
-    "end_time": "2024-04-26T23:07:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:07:00Z",
     "location": {
       "raw": "3 ENE Stotesbury",
       "name": "Stotesbury",
@@ -5481,9 +5093,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:14:00Z",
-    "end_time": "2024-04-26T23:14:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:14:00Z",
     "location": {
       "raw": "2 SW Skidmore",
       "name": "Skidmore",
@@ -5509,9 +5119,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:17:00Z",
-    "end_time": "2024-04-26T23:17:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:17:00Z",
     "location": {
       "raw": "2 E Westphalia",
       "name": "Westphalia",
@@ -5537,9 +5145,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:28:00Z",
-    "end_time": "2024-04-26T23:28:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:28:00Z",
     "location": {
       "raw": "5 ENE Defiance",
       "name": "Defiance",
@@ -5565,9 +5171,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:36:00Z",
-    "end_time": "2024-04-26T23:36:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:36:00Z",
     "location": {
       "raw": "8 ENE Rich Hill",
       "name": "Rich Hill",
@@ -5593,9 +5197,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:42:00Z",
-    "end_time": "2024-04-26T23:42:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:42:00Z",
     "location": {
       "raw": "7 N Rockville",
       "name": "Rockville",
@@ -5621,9 +5223,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:51:00Z",
-    "end_time": "2024-04-26T23:51:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:51:00Z",
     "location": {
       "raw": "1 S Defiance",
       "name": "Defiance",
@@ -5649,9 +5249,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:51:00Z",
-    "end_time": "2024-04-26T23:51:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:51:00Z",
     "location": {
       "raw": "1 NNE Defiance",
       "name": "Defiance",
@@ -5677,9 +5275,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:53:00Z",
-    "end_time": "2024-04-26T23:53:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:53:00Z",
     "location": {
       "raw": "7 SW Montrose",
       "name": "Montrose",
@@ -5705,9 +5301,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:53:00Z",
-    "end_time": "2024-04-26T23:53:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:53:00Z",
     "location": {
       "raw": "6 SW Montrose",
       "name": "Montrose",
@@ -5733,9 +5327,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:55:00Z",
-    "end_time": "2024-04-26T23:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:55:00Z",
     "location": {
       "raw": "1 NE Defiance",
       "name": "Defiance",
@@ -5761,9 +5353,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:56:00Z",
-    "end_time": "2024-04-26T23:56:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:56:00Z",
     "location": {
       "raw": "1 W Appleton City",
       "name": "Appleton City",
@@ -5789,9 +5379,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T23:58:00Z",
-    "end_time": "2024-04-26T23:58:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:58:00Z",
     "location": {
       "raw": "2 W Manilla",
       "name": "Manilla",
@@ -5817,9 +5405,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:04:00Z",
-    "end_time": "2024-04-26T00:04:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:04:00Z",
     "location": {
       "raw": "2 WSW Creston",
       "name": "Creston",
@@ -5845,9 +5431,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:09:00Z",
-    "end_time": "2024-04-26T00:09:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:09:00Z",
     "location": {
       "raw": "Creston",
       "name": "Creston",
@@ -5871,9 +5455,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:10:00Z",
-    "end_time": "2024-04-26T00:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:10:00Z",
     "location": {
       "raw": "3 NE Lenox",
       "name": "Lenox",
@@ -5899,9 +5481,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:15:00Z",
-    "end_time": "2024-04-26T00:15:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:15:00Z",
     "location": {
       "raw": "6 NE Creston",
       "name": "Creston",
@@ -5927,9 +5507,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:23:00Z",
-    "end_time": "2024-04-26T00:23:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:23:00Z",
     "location": {
       "raw": "5 N Grant City",
       "name": "Grant City",
@@ -5955,9 +5533,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:25:00Z",
-    "end_time": "2024-04-26T00:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:25:00Z",
     "location": {
       "raw": "4 WNW Afton",
       "name": "Afton",
@@ -5983,9 +5559,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:28:00Z",
-    "end_time": "2024-04-26T00:28:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:28:00Z",
     "location": {
       "raw": "4 WNW Afton",
       "name": "Afton",
@@ -6011,9 +5585,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:31:00Z",
-    "end_time": "2024-04-26T00:31:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:31:00Z",
     "location": {
       "raw": "2 NW Afton",
       "name": "Afton",
@@ -6039,9 +5611,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:34:00Z",
-    "end_time": "2024-04-26T00:34:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:34:00Z",
     "location": {
       "raw": "4 ESE Clinton",
       "name": "Clinton",
@@ -6067,9 +5637,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:47:00Z",
-    "end_time": "2024-04-26T00:47:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:47:00Z",
     "location": {
       "raw": "1 E Mount Ayr",
       "name": "Mount Ayr",
@@ -6095,9 +5663,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:54:00Z",
-    "end_time": "2024-04-26T00:54:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:54:00Z",
     "location": {
       "raw": "2 W Afton",
       "name": "Afton",
@@ -6123,9 +5689,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T00:58:00Z",
-    "end_time": "2024-04-26T00:58:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:58:00Z",
     "location": {
       "raw": "5 W East Peru",
       "name": "East Peru",
@@ -6151,9 +5715,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T01:15:00Z",
-    "end_time": "2024-04-26T01:15:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:15:00Z",
     "location": {
       "raw": "2 NE Patterson",
       "name": "Patterson",
@@ -6179,9 +5741,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T01:18:00Z",
-    "end_time": "2024-04-26T01:18:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:18:00Z",
     "location": {
       "raw": "2 S Patterson",
       "name": "Patterson",
@@ -6207,9 +5767,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T01:19:00Z",
-    "end_time": "2024-04-26T01:19:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:19:00Z",
     "location": {
       "raw": "4 W Cumming",
       "name": "Cumming",
@@ -6235,9 +5793,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T01:29:00Z",
-    "end_time": "2024-04-26T01:29:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:29:00Z",
     "location": {
       "raw": "4 S Osceola",
       "name": "Osceola",
@@ -6263,9 +5819,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T01:36:00Z",
-    "end_time": "2024-04-26T01:36:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:36:00Z",
     "location": {
       "raw": "Osceola",
       "name": "Osceola",
@@ -6289,9 +5843,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T01:54:00Z",
-    "end_time": "2024-04-26T01:54:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:54:00Z",
     "location": {
       "raw": "4 NW Pleasant Hill",
       "name": "Pleasant Hill",
@@ -6317,9 +5869,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T01:56:00Z",
-    "end_time": "2024-04-26T01:56:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:56:00Z",
     "location": {
       "raw": "3 SE Des Moines",
       "name": "Des Moines",
@@ -6345,9 +5895,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T01:59:00Z",
-    "end_time": "2024-04-26T01:59:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:59:00Z",
     "location": {
       "raw": "Pleasant Hill",
       "name": "Pleasant Hill",
@@ -6371,9 +5919,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T02:41:00Z",
-    "end_time": "2024-04-26T02:41:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T02:41:00Z",
     "location": {
       "raw": "Monroe",
       "name": "Monroe",
@@ -6397,9 +5943,7 @@
       "magnitude": 0,
       "unit": "f_scale"
     },
-    "begin_time": "2024-04-26T04:03:00Z",
-    "end_time": "2024-04-26T04:03:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T04:03:00Z",
     "location": {
       "raw": "4 S Osceola",
       "name": "Osceola",
@@ -6425,9 +5969,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T12:45:00Z",
-    "end_time": "2024-04-26T12:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T12:45:00Z",
     "location": {
       "raw": "Mcalester",
       "name": "Mcalester",
@@ -6452,9 +5994,7 @@
       "unit": "mph",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T12:51:00Z",
-    "end_time": "2024-04-26T12:51:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T12:51:00Z",
     "location": {
       "raw": "4 N Dow",
       "name": "Dow",
@@ -6480,9 +6020,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T19:35:00Z",
-    "end_time": "2024-04-26T19:35:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:35:00Z",
     "location": {
       "raw": "2 NE Green Valley",
       "name": "Green Valley",
@@ -6508,9 +6046,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T19:55:00Z",
-    "end_time": "2024-04-26T19:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:55:00Z",
     "location": {
       "raw": "4 SW Waverly",
       "name": "Waverly",
@@ -6536,9 +6072,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T19:55:00Z",
-    "end_time": "2024-04-26T19:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T19:55:00Z",
     "location": {
       "raw": "1 NE Waverly",
       "name": "Waverly",
@@ -6565,9 +6099,7 @@
       "unit": "mph",
       "severity": "severe"
     },
-    "begin_time": "2024-04-26T21:20:00Z",
-    "end_time": "2024-04-26T21:20:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:20:00Z",
     "location": {
       "raw": "4 NNW Kemp",
       "name": "Kemp",
@@ -6593,9 +6125,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T21:25:00Z",
-    "end_time": "2024-04-26T21:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:25:00Z",
     "location": {
       "raw": "4 NNE Kemp",
       "name": "Kemp",
@@ -6621,9 +6151,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T21:45:00Z",
-    "end_time": "2024-04-26T21:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:45:00Z",
     "location": {
       "raw": "Yantis",
       "name": "Yantis",
@@ -6647,9 +6175,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T21:51:00Z",
-    "end_time": "2024-04-26T21:51:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T21:51:00Z",
     "location": {
       "raw": "1 NNW Canton",
       "name": "Canton",
@@ -6676,9 +6202,7 @@
       "unit": "mph",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T22:04:00Z",
-    "end_time": "2024-04-26T22:04:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:04:00Z",
     "location": {
       "raw": "7 ENE Omaha",
       "name": "Omaha",
@@ -6704,9 +6228,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:05:00Z",
-    "end_time": "2024-04-26T22:05:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:05:00Z",
     "location": {
       "raw": "3 NNE Winnsboro",
       "name": "Winnsboro",
@@ -6732,9 +6254,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:05:00Z",
-    "end_time": "2024-04-26T22:05:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:05:00Z",
     "location": {
       "raw": "5 NNE Winnsboro",
       "name": "Winnsboro",
@@ -6761,9 +6281,7 @@
       "unit": "mph",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T22:18:00Z",
-    "end_time": "2024-04-26T22:18:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:18:00Z",
     "location": {
       "raw": "1 NNE Falls City",
       "name": "Falls City",
@@ -6789,9 +6307,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:20:00Z",
-    "end_time": "2024-04-26T22:20:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:20:00Z",
     "location": {
       "raw": "4 SE Norfolk",
       "name": "Norfolk",
@@ -6817,9 +6333,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:22:00Z",
-    "end_time": "2024-04-26T22:22:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:22:00Z",
     "location": {
       "raw": "Grays Prairie",
       "name": "Grays Prairie",
@@ -6843,9 +6357,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:25:00Z",
-    "end_time": "2024-04-26T22:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:25:00Z",
     "location": {
       "raw": "Pittsburg",
       "name": "Pittsburg",
@@ -6869,9 +6381,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:26:00Z",
-    "end_time": "2024-04-26T22:26:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:26:00Z",
     "location": {
       "raw": "Mount Pleasant",
       "name": "Mount Pleasant",
@@ -6896,9 +6406,7 @@
       "unit": "mph",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T22:30:00Z",
-    "end_time": "2024-04-26T22:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:30:00Z",
     "location": {
       "raw": "5 S Mount Pleasant",
       "name": "Mount Pleasant",
@@ -6924,9 +6432,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:30:00Z",
-    "end_time": "2024-04-26T22:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:30:00Z",
     "location": {
       "raw": "5 NW Pike City",
       "name": "Pike City",
@@ -6952,9 +6458,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:40:00Z",
-    "end_time": "2024-04-26T22:40:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:40:00Z",
     "location": {
       "raw": "5 SSE Omaha",
       "name": "Omaha",
@@ -6980,9 +6484,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T22:50:00Z",
-    "end_time": "2024-04-26T22:50:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T22:50:00Z",
     "location": {
       "raw": "Hope",
       "name": "Hope",
@@ -7006,9 +6508,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T23:01:00Z",
-    "end_time": "2024-04-26T23:01:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:01:00Z",
     "location": {
       "raw": "3 NE Hammond",
       "name": "Hammond",
@@ -7034,9 +6534,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T23:10:00Z",
-    "end_time": "2024-04-26T23:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:10:00Z",
     "location": {
       "raw": "Maud",
       "name": "Maud",
@@ -7060,9 +6558,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T23:20:00Z",
-    "end_time": "2024-04-26T23:20:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:20:00Z",
     "location": {
       "raw": "Hughes Springs",
       "name": "Hughes Springs",
@@ -7086,9 +6582,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T23:30:00Z",
-    "end_time": "2024-04-26T23:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:30:00Z",
     "location": {
       "raw": "Wake Village",
       "name": "Wake Village",
@@ -7112,9 +6606,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T23:49:00Z",
-    "end_time": "2024-04-26T23:49:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T23:49:00Z",
     "location": {
       "raw": "Malvern",
       "name": "Malvern",
@@ -7138,9 +6630,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:00:00Z",
-    "end_time": "2024-04-26T00:00:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:00:00Z",
     "location": {
       "raw": "Benton",
       "name": "Benton",
@@ -7164,9 +6654,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:00:00Z",
-    "end_time": "2024-04-26T00:00:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:00:00Z",
     "location": {
       "raw": "3 S Paulden",
       "name": "Paulden",
@@ -7192,9 +6680,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:18:00Z",
-    "end_time": "2024-04-26T00:18:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:18:00Z",
     "location": {
       "raw": "Allendale Manor",
       "name": "Allendale Manor",
@@ -7218,9 +6704,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:25:00Z",
-    "end_time": "2024-04-26T00:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:25:00Z",
     "location": {
       "raw": "1 SW The Heights",
       "name": "The Heights",
@@ -7246,9 +6730,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:25:00Z",
-    "end_time": "2024-04-26T00:25:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:25:00Z",
     "location": {
       "raw": "Gibson",
       "name": "Gibson",
@@ -7272,9 +6754,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:28:00Z",
-    "end_time": "2024-04-26T00:28:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:28:00Z",
     "location": {
       "raw": "Autumnbrook",
       "name": "Autumnbrook",
@@ -7298,9 +6778,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:30:00Z",
-    "end_time": "2024-04-26T00:30:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:30:00Z",
     "location": {
       "raw": "Vilonia",
       "name": "Vilonia",
@@ -7324,9 +6802,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:45:00Z",
-    "end_time": "2024-04-26T00:45:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:45:00Z",
     "location": {
       "raw": "Cabot",
       "name": "Cabot",
@@ -7350,9 +6826,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:48:00Z",
-    "end_time": "2024-04-26T00:48:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:48:00Z",
     "location": {
       "raw": "1 N Austin",
       "name": "Austin",
@@ -7378,9 +6852,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:49:00Z",
-    "end_time": "2024-04-26T00:49:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:49:00Z",
     "location": {
       "raw": "1 SSW Fairland",
       "name": "Fairland",
@@ -7406,9 +6878,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T00:55:00Z",
-    "end_time": "2024-04-26T00:55:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T00:55:00Z",
     "location": {
       "raw": "Beebe",
       "name": "Beebe",
@@ -7433,9 +6903,7 @@
       "unit": "mph",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T01:00:00Z",
-    "end_time": "2024-04-26T01:00:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:00:00Z",
     "location": {
       "raw": "1 N Black Canyon City",
       "name": "Black Canyon City",
@@ -7461,9 +6929,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T01:00:00Z",
-    "end_time": "2024-04-26T01:00:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:00:00Z",
     "location": {
       "raw": "1 NNW Black Canyon City",
       "name": "Black Canyon City",
@@ -7489,9 +6955,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T01:10:00Z",
-    "end_time": "2024-04-26T01:10:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:10:00Z",
     "location": {
       "raw": "Searcy",
       "name": "Searcy",
@@ -7516,9 +6980,7 @@
       "unit": "mph",
       "severity": "moderate"
     },
-    "begin_time": "2024-04-26T01:15:00Z",
-    "end_time": "2024-04-26T01:15:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:15:00Z",
     "location": {
       "raw": "2 N Lorimor",
       "name": "Lorimor",
@@ -7544,9 +7006,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T01:38:00Z",
-    "end_time": "2024-04-26T01:38:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:38:00Z",
     "location": {
       "raw": "Augusta",
       "name": "Augusta",
@@ -7570,9 +7030,7 @@
       "magnitude": 0,
       "unit": "mph"
     },
-    "begin_time": "2024-04-26T01:52:00Z",
-    "end_time": "2024-04-26T01:52:00Z",
-    "source": "spc",
+    "event_time": "2024-04-26T01:52:00Z",
     "location": {
       "raw": "Weldon",
       "name": "Weldon",

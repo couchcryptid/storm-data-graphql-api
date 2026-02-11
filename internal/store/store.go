@@ -15,8 +15,8 @@ import (
 )
 
 const (
-	columns = `id, type, geo_lat, geo_lon, measurement_magnitude, measurement_unit,
-	begin_time, end_time, source,
+	columns = `id, event_type, geo_lat, geo_lon, measurement_magnitude, measurement_unit,
+	event_time,
 	location_raw, location_name, location_distance, location_direction,
 	location_state, location_county,
 	comments, measurement_severity, source_office, time_bucket, processed_at,
@@ -46,18 +46,18 @@ func (s *Store) observeQuery(operation string, start time.Time) {
 }
 
 // InsertStormReport upserts a storm report into the database.
-// IDs are deterministic SHA-256 hashes (type+state+coords+time), so identical
+// IDs are deterministic SHA-256 hashes (event_type+state+coords+time+magnitude), so identical
 // events always produce the same ID. ON CONFLICT DO NOTHING makes inserts
 // idempotent, which is safe for Kafka's at-least-once delivery.
 func (s *Store) InsertStormReport(ctx context.Context, report *model.StormReport) error {
 	defer s.observeQuery("insert", time.Now())
 	_, err := s.pool.Exec(ctx, `
 		INSERT INTO storm_reports (`+columns+`)
-		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24)
+		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)
 		ON CONFLICT (id) DO NOTHING`,
 		report.ID, report.EventType, report.Geo.Lat, report.Geo.Lon,
 		report.Measurement.Magnitude, report.Measurement.Unit,
-		report.BeginTime, report.EndTime, report.Source,
+		report.EventTime,
 		report.Location.Raw, report.Location.Name,
 		report.Location.Distance, report.Location.Direction,
 		report.Location.State, report.Location.County,
@@ -70,7 +70,7 @@ func (s *Store) InsertStormReport(ctx context.Context, report *model.StormReport
 }
 
 const insertSQL = `INSERT INTO storm_reports (` + columns + `)
-	VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24)
+	VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)
 	ON CONFLICT (id) DO NOTHING`
 
 // InsertStormReports batch-inserts multiple storm reports using pgx.Batch.
@@ -85,7 +85,7 @@ func (s *Store) InsertStormReports(ctx context.Context, reports []*model.StormRe
 		batch.Queue(insertSQL,
 			r.ID, r.EventType, r.Geo.Lat, r.Geo.Lon,
 			r.Measurement.Magnitude, r.Measurement.Unit,
-			r.BeginTime, r.EndTime, r.Source,
+			r.EventTime,
 			r.Location.Raw, r.Location.Name,
 			r.Location.Distance, r.Location.Direction,
 			r.Location.State, r.Location.County,
@@ -125,11 +125,11 @@ func buildWhereClause(filter *model.StormReportFilter) ([]string, []any, int) {
 	idx := 1
 
 	// Time bounds (always present — required by schema)
-	where = append(where, fmt.Sprintf("begin_time >= $%d", idx))
+	where = append(where, fmt.Sprintf("event_time >= $%d", idx))
 	args = append(args, filter.TimeRange.From)
 	idx++
 
-	where = append(where, fmt.Sprintf("begin_time <= $%d", idx))
+	where = append(where, fmt.Sprintf("event_time <= $%d", idx))
 	args = append(args, filter.TimeRange.To)
 	idx++
 
@@ -154,7 +154,7 @@ func buildWhereClause(filter *model.StormReportFilter) ([]string, []any, int) {
 	} else {
 		// Simple AND filtering: global filters apply uniformly to all event types
 		if len(filter.EventTypes) > 0 {
-			where = append(where, fmt.Sprintf("type = ANY($%d)", idx))
+			where = append(where, fmt.Sprintf("event_type = ANY($%d)", idx))
 			args = append(args, eventTypeDBValues(filter.EventTypes))
 			idx++
 		}
@@ -233,6 +233,47 @@ func collectTypeConditions(filter *model.StormReportFilter) []typeCondition {
 	return conditions
 }
 
+// maxRadius returns the largest radius across all type conditions, or 0 if none.
+func maxRadius(conditions []typeCondition) float64 {
+	var largest float64
+	for _, tc := range conditions {
+		if tc.radiusMiles != nil && *tc.radiusMiles > largest {
+			largest = *tc.radiusMiles
+		}
+	}
+	return largest
+}
+
+// buildSingleTypeCondition builds the AND-joined predicate for one event type condition.
+// Returns the parenthesized clause, its args, and the next parameter index.
+func buildSingleTypeCondition(tc typeCondition, near *model.GeoRadiusFilter, idx int) (string, []any, int) {
+	var parts []string
+	var args []any
+
+	parts = append(parts, fmt.Sprintf("event_type = $%d", idx))
+	args = append(args, tc.eventType.DBValue())
+	idx++
+
+	if len(tc.severity) > 0 {
+		parts = append(parts, fmt.Sprintf("measurement_severity = ANY($%d)", idx))
+		args = append(args, severityDBValues(tc.severity))
+		idx++
+	}
+	if tc.minMag != nil {
+		parts = append(parts, fmt.Sprintf("measurement_magnitude >= $%d", idx))
+		args = append(args, *tc.minMag)
+		idx++
+	}
+	if near != nil && tc.radiusMiles != nil {
+		hav := buildHaversine(near.Lat, near.Lon, *tc.radiusMiles, idx)
+		parts = append(parts, hav.clause)
+		args = append(args, hav.args...)
+		idx = hav.nextIdx
+	}
+
+	return "(" + strings.Join(parts, " AND ") + ")", args, idx
+}
+
 // buildEventTypeConditions builds bounding-box and per-type OR clauses for eventTypeFilters.
 // Returns additional WHERE clauses, updated args, and the next parameter index.
 func buildEventTypeConditions(filter *model.StormReportFilter, args []any, idx int) ([]string, []any, int) {
@@ -241,14 +282,8 @@ func buildEventTypeConditions(filter *model.StormReportFilter, args []any, idx i
 
 	// Bounding box using the max radius across all conditions (for index usage)
 	if filter.Near != nil {
-		var maxRadius float64
-		for _, tc := range conditions {
-			if tc.radiusMiles != nil && *tc.radiusMiles > maxRadius {
-				maxRadius = *tc.radiusMiles
-			}
-		}
-		if maxRadius > 0 {
-			bbWhere, bbArgs, bbIdx := buildBoundingBox(filter.Near.Lat, filter.Near.Lon, maxRadius, idx)
+		if r := maxRadius(conditions); r > 0 {
+			bbWhere, bbArgs, bbIdx := buildBoundingBox(filter.Near.Lat, filter.Near.Lon, r, idx)
 			clauses = append(clauses, bbWhere...)
 			args = append(args, bbArgs...)
 			idx = bbIdx
@@ -258,28 +293,10 @@ func buildEventTypeConditions(filter *model.StormReportFilter, args []any, idx i
 	// Per-type OR clauses
 	orParts := make([]string, 0, len(conditions))
 	for _, tc := range conditions {
-		var parts []string
-		parts = append(parts, fmt.Sprintf("type = $%d", idx))
-		args = append(args, tc.eventType.DBValue())
-		idx++
-
-		if len(tc.severity) > 0 {
-			parts = append(parts, fmt.Sprintf("measurement_severity = ANY($%d)", idx))
-			args = append(args, severityDBValues(tc.severity))
-			idx++
-		}
-		if tc.minMag != nil {
-			parts = append(parts, fmt.Sprintf("measurement_magnitude >= $%d", idx))
-			args = append(args, *tc.minMag)
-			idx++
-		}
-		if filter.Near != nil && tc.radiusMiles != nil {
-			hav := buildHaversine(filter.Near.Lat, filter.Near.Lon, *tc.radiusMiles, idx)
-			parts = append(parts, hav.clause)
-			args = append(args, hav.args...)
-			idx = hav.nextIdx
-		}
-		orParts = append(orParts, "("+strings.Join(parts, " AND ")+")")
+		clause, tcArgs, nextIdx := buildSingleTypeCondition(tc, filter.Near, idx)
+		orParts = append(orParts, clause)
+		args = append(args, tcArgs...)
+		idx = nextIdx
 	}
 	clauses = append(clauses, "("+strings.Join(orParts, " OR ")+")")
 
@@ -364,16 +381,16 @@ func severityDBValues(sevs []model.Severity) []string {
 // sortColumn maps validated SortField enum values to SQL column names.
 func sortColumn(sf model.SortField) string {
 	switch sf {
-	case model.SortFieldBeginTime:
-		return "begin_time"
+	case model.SortFieldEventTime:
+		return "event_time"
 	case model.SortFieldMagnitude:
 		return "measurement_magnitude"
 	case model.SortFieldLocationState:
 		return "location_state"
 	case model.SortFieldEventType:
-		return "type"
+		return "event_type"
 	default:
-		return "begin_time"
+		return "event_time"
 	}
 }
 
@@ -392,7 +409,7 @@ func (s *Store) ListStormReports(ctx context.Context, filter *model.StormReportF
 	}
 
 	// Build data query with sorting and pagination
-	orderCol := "begin_time"
+	orderCol := "event_time"
 	orderDir := "DESC"
 	if filter.SortBy != nil && filter.SortBy.IsValid() {
 		orderCol = sortColumn(*filter.SortBy)
@@ -465,13 +482,13 @@ func (s *Store) Aggregations(ctx context.Context, filter *model.StormReportFilte
 	whereSQL := buildWhereSQL(where)
 
 	query := `WITH base AS (
-			SELECT type, location_state, location_county,
+			SELECT event_type, location_state, location_county,
 				   measurement_magnitude, measurement_severity, time_bucket
 			FROM storm_reports` + whereSQL + `
 		)
-		SELECT 'type' AS agg, type AS key1, NULL AS key2,
+		SELECT 'type' AS agg, event_type AS key1, NULL AS key2,
 			   COUNT(*) AS count, MAX(measurement_magnitude) AS max_mag, NULL AS max_sev, NULL::timestamptz AS bucket
-		FROM base GROUP BY type
+		FROM base GROUP BY event_type
 		UNION ALL
 		SELECT 'state', location_state, location_county,
 			   COUNT(*), NULL, NULL, NULL
@@ -577,7 +594,7 @@ func scanStormReport(row scannable) (*model.StormReport, error) {
 	err := row.Scan(
 		&r.ID, &r.EventType, &r.Geo.Lat, &r.Geo.Lon,
 		&r.Measurement.Magnitude, &r.Measurement.Unit,
-		&r.BeginTime, &r.EndTime, &r.Source,
+		&r.EventTime,
 		&r.Location.Raw, &r.Location.Name,
 		&r.Location.Distance, &r.Location.Direction,
 		&r.Location.State, &r.Location.County,

@@ -21,7 +21,7 @@ Thresholds vary by event type:
 enum Severity { MINOR MODERATE SEVERE EXTREME }
 
 """Available sort fields for storm report queries."""
-enum SortField { BEGIN_TIME MAGNITUDE LOCATION_STATE EVENT_TYPE }
+enum SortField { EVENT_TIME MAGNITUDE LOCATION_STATE EVENT_TYPE }
 
 """Sort direction."""
 enum SortOrder { ASC DESC }
@@ -98,7 +98,7 @@ input StormReportFilter {
   """Per-type filter overrides. Maximum 3. Activates per-type OR filtering mode."""
   eventTypeFilters: [EventTypeFilter!]
 
-  """Sort field. Defaults to BEGIN_TIME."""
+  """Sort field. Defaults to EVENT_TIME."""
   sortBy: SortField
   """Sort direction. Defaults to DESC."""
   sortOrder: SortOrder
@@ -156,12 +156,8 @@ type StormReport {
   geo: Geo!
   """Measurement data including magnitude, unit, and derived severity."""
   measurement: Measurement!
-  """When the event began (UTC)."""
-  beginTime: DateTime!
-  """When the event ended (UTC)."""
-  endTime: DateTime!
-  """Data source identifier."""
-  source: String!
+  """When the weather event occurred (UTC)."""
+  eventTime: DateTime!
   """NWS Weather Forecast Office code (e.g. OUN, FWD, SJT)."""
   sourceOffice: String!
   """Parsed location information."""

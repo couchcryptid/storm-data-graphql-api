@@ -13,7 +13,7 @@ import "github.com/couchcryptid/storm-data-api/internal/model"
 // Worst-case cost breakdown (budget = 600):
 //
 //	Query.stormReports:            1
-//	Reports (20 items x 11 fields): 220   — id, type, geo, measurement, beginTime, endTime, source, sourceOffice, location, comments, geocoding
+//	Reports (20 items x 9 fields):  180   — id, type, geo, measurement, eventTime, sourceOffice, location, comments, geocoding
 //	ByEventType (10 x 3 fields):    30
 //	ByState     (10 x (1 + 5*1)):   60    — state + up to 5 counties
 //	ByHour      (10 x 2 fields):    20

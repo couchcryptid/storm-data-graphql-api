@@ -80,9 +80,7 @@ CREATE TABLE storm_reports (
     geo_lon                     DOUBLE PRECISION NOT NULL,
     measurement_magnitude       DOUBLE PRECISION NOT NULL,
     measurement_unit            TEXT NOT NULL,
-    begin_time                  TIMESTAMPTZ NOT NULL,
-    end_time                    TIMESTAMPTZ NOT NULL,
-    source                      TEXT NOT NULL,
+    event_time                  TIMESTAMPTZ NOT NULL,
     location_raw                TEXT NOT NULL,
     location_name               TEXT NOT NULL,
     location_distance           DOUBLE PRECISION,
@@ -106,11 +104,11 @@ CREATE TABLE storm_reports (
 
 | Index | Columns | Purpose |
 |-------|---------|---------|
-| `idx_begin_time` | `begin_time` | Date range queries, ORDER BY |
+| `idx_event_time` | `event_time` | Date range queries, ORDER BY |
 | `idx_type` | `type` | Filter by event type (hail, tornado, wind) |
 | `idx_state` | `location_state` | Filter by state |
 | `idx_severity` | `measurement_severity` | Filter by severity level |
-| `idx_type_state_time` | `type, location_state, begin_time` | Composite for the typical "type + state + time" filter |
+| `idx_type_state_time` | `type, location_state, event_time` | Composite for the typical "type + state + time" filter |
 | `idx_geo` | `geo_lat, geo_lon` | Bounding box pre-filter for radius queries |
 
 ## Design Decisions

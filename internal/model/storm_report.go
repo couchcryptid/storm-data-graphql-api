@@ -19,16 +19,14 @@ import (
 //     types without field resolvers. The store layer flattens these to prefixed
 //     DB columns (geo_lat, measurement_magnitude, geocoding_formatted_address,
 //     etc.) for relational storage and indexing.
-//   - EventType exists only in the GraphQL schema and is served by a field
-//     resolver that maps the DB "type" column.
+//   - EventType maps to the "event_type" column in the database and the
+//     "eventType" field in the GraphQL schema.
 type StormReport struct {
 	ID           string      `json:"id"`
 	EventType    string      `json:"event_type"`
 	Geo          Geo         `json:"geo"`
 	Measurement  Measurement `json:"measurement"`
-	BeginTime    time.Time   `json:"begin_time"`
-	EndTime      time.Time   `json:"end_time"`
-	Source       string      `json:"source"`
+	EventTime    time.Time   `json:"event_time"`
 	Location     Location    `json:"location"`
 	Comments     string      `json:"comments"`
 	SourceOffice string      `json:"source_office"`
@@ -169,7 +167,7 @@ type SortField string
 
 // SortField enum values.
 const (
-	SortFieldBeginTime     SortField = "BEGIN_TIME"
+	SortFieldEventTime     SortField = "EVENT_TIME"
 	SortFieldMagnitude     SortField = "MAGNITUDE"
 	SortFieldLocationState SortField = "LOCATION_STATE"
 	SortFieldEventType     SortField = "EVENT_TYPE"
@@ -178,7 +176,7 @@ const (
 // IsValid returns true if the sort field is a known value.
 func (e SortField) IsValid() bool {
 	switch e {
-	case SortFieldBeginTime, SortFieldMagnitude, SortFieldLocationState, SortFieldEventType:
+	case SortFieldEventTime, SortFieldMagnitude, SortFieldLocationState, SortFieldEventType:
 		return true
 	}
 	return false

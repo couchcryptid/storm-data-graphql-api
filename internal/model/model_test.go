@@ -63,8 +63,8 @@ func TestMockDataFields(t *testing.T) {
 		if r.Location.State == "" {
 			t.Errorf("report %s has empty state", r.ID)
 		}
-		if r.BeginTime.IsZero() {
-			t.Errorf("report %s has zero begin_time", r.ID)
+		if r.EventTime.IsZero() {
+			t.Errorf("report %s has zero event_time", r.ID)
 		}
 		if r.SourceOffice == "" {
 			t.Errorf("report %s has empty source_office", r.ID)

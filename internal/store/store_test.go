@@ -37,7 +37,7 @@ func TestBuildWhereClause_WithEventTypes(t *testing.T) {
 	where, args, nextIdx := buildWhereClause(filter)
 
 	assert.Len(t, where, 3)
-	assert.Contains(t, where[2], "type = ANY($3)")
+	assert.Contains(t, where[2], "event_type = ANY($3)")
 	assert.Len(t, args, 3)
 	// Verify enum→DB conversion
 	assert.Equal(t, []string{"hail", "tornado"}, args[2])
@@ -115,7 +115,7 @@ func TestBuildWhereClause_EventTypeFilters(t *testing.T) {
 
 	// The OR clause should contain both types
 	orClause := where[3]
-	assert.Contains(t, orClause, "type =")
+	assert.Contains(t, orClause, "event_type =")
 	assert.Contains(t, orClause, "OR")
 
 	// Verify args count:
@@ -155,11 +155,11 @@ func TestSortColumn(t *testing.T) {
 		input model.SortField
 		want  string
 	}{
-		{model.SortFieldBeginTime, "begin_time"},
+		{model.SortFieldEventTime, "event_time"},
 		{model.SortFieldMagnitude, "measurement_magnitude"},
 		{model.SortFieldLocationState, "location_state"},
-		{model.SortFieldEventType, "type"},
-		{model.SortField("UNKNOWN"), "begin_time"},
+		{model.SortFieldEventType, "event_type"},
+		{model.SortField("UNKNOWN"), "event_time"},
 	}
 
 	for _, tt := range tests {
