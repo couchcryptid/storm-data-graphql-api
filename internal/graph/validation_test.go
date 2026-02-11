@@ -51,7 +51,7 @@ func TestValidateFilter_NearDefaultsRadius(t *testing.T) {
 
 	require.NoError(t, ValidateFilter(f))
 	require.NotNil(t, f.Near.RadiusMiles)
-	assert.Equal(t, DefaultRadiusMiles, *f.Near.RadiusMiles)
+	assert.InDelta(t, DefaultRadiusMiles, *f.Near.RadiusMiles, 0.0001)
 }
 
 func TestValidateFilter_NearRadiusExceedsMax(t *testing.T) {

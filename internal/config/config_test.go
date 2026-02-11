@@ -54,28 +54,28 @@ func TestLoad_CustomEnv(t *testing.T) {
 func TestLoad_InvalidShutdownTimeout(t *testing.T) {
 	t.Setenv("SHUTDOWN_TIMEOUT", "not-a-duration")
 	_, err := Load()
-	assert.Error(t, err)
+	require.Error(t, err)
 	assert.Contains(t, err.Error(), "SHUTDOWN_TIMEOUT")
 }
 
 func TestLoad_NegativeShutdownTimeout(t *testing.T) {
 	t.Setenv("SHUTDOWN_TIMEOUT", "-1s")
 	_, err := Load()
-	assert.Error(t, err)
+	require.Error(t, err)
 	assert.Contains(t, err.Error(), "SHUTDOWN_TIMEOUT")
 }
 
 func TestLoad_InvalidBatchSize(t *testing.T) {
 	t.Setenv("BATCH_SIZE", "0")
 	_, err := Load()
-	assert.Error(t, err)
+	require.Error(t, err)
 	assert.Contains(t, err.Error(), "BATCH_SIZE")
 }
 
 func TestLoad_InvalidBatchFlushInterval(t *testing.T) {
 	t.Setenv("BATCH_FLUSH_INTERVAL", "bad")
 	_, err := Load()
-	assert.Error(t, err)
+	require.Error(t, err)
 	assert.Contains(t, err.Error(), "BATCH_FLUSH_INTERVAL")
 }
 

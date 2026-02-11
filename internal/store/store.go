@@ -2,6 +2,7 @@ package store
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"math"
 	"strings"
@@ -573,7 +574,7 @@ func scanStormReport(row scannable) (*model.StormReport, error) {
 		&r.Geocoding.FormattedAddress, &r.Geocoding.PlaceName,
 		&r.Geocoding.Confidence, &r.Geocoding.Source,
 	)
-	if err == pgx.ErrNoRows {
+	if errors.Is(err, pgx.ErrNoRows) {
 		return nil, nil
 	}
 	if err != nil {

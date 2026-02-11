@@ -227,7 +227,7 @@ func TestRun_FetchError_Backoff(t *testing.T) {
 
 	err := c.Run(ctx)
 
-	assert.NoError(t, err, "Run should return nil when context is cancelled")
+	require.NoError(t, err, "Run should return nil when context is cancelled")
 	assert.Empty(t, store.inserted, "no messages should be inserted when fetch fails")
 }
 
@@ -260,7 +260,7 @@ func TestRun_ProcessesMessagesThenStops(t *testing.T) {
 
 	err := c.Run(ctx)
 
-	assert.NoError(t, err)
+	require.NoError(t, err)
 
 	// Both messages processed and committed.
 	assert.Len(t, store.inserted, 2)
@@ -276,6 +276,6 @@ func TestClose(t *testing.T) {
 
 	err := c.Close()
 
-	assert.NoError(t, err)
+	require.NoError(t, err)
 	assert.True(t, reader.closeCalled, "Close should delegate to the reader")
 }

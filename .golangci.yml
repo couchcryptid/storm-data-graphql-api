@@ -2,6 +2,7 @@ version: "2"
 linters:
   enable:
     - bodyclose
+    - errorlint
     - errname
     - exhaustive
     - gocritic
@@ -12,6 +13,7 @@ linters:
     - prealloc
     - revive
     - sqlclosecheck
+    - testifylint
     - unconvert
     - unparam
   settings:

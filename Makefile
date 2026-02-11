@@ -1,4 +1,4 @@
-.PHONY: generate build run test test-unit test-integration test-cover lint fmt clean docker-up docker-down
+.PHONY: generate build run test test-unit test-integration test-cover lint fmt vuln clean docker-up docker-down
 
 generate:
 	go generate ./...
@@ -27,6 +27,9 @@ lint:
 fmt:
 	gofmt -w .
 	goimports -w .
+
+vuln:
+	go run golang.org/x/vuln/cmd/govulncheck@latest ./...
 
 clean:
 	rm -rf bin/ coverage.out

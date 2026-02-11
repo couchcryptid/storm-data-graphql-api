@@ -48,7 +48,7 @@ func TestFetchBatch_FullBatch(t *testing.T) {
 	require.NoError(t, err)
 	assert.Len(t, items, 3)
 	for _, item := range items {
-		assert.NoError(t, item.err)
+		require.NoError(t, item.err)
 		assert.NotNil(t, item.report)
 	}
 }
@@ -83,7 +83,7 @@ func TestFetchBatch_PoisonPill(t *testing.T) {
 	items, err := bc.fetchBatch(context.Background())
 	require.NoError(t, err)
 	require.Len(t, items, 2)
-	assert.Error(t, items[0].err, "first item should have unmarshal error")
+	require.Error(t, items[0].err, "first item should have unmarshal error")
 	assert.NoError(t, items[1].err, "second item should be valid")
 }
 
@@ -93,7 +93,7 @@ func TestFetchBatch_FetchError(t *testing.T) {
 	bc := newTestBatchConsumer(reader, store)
 
 	items, err := bc.fetchBatch(context.Background())
-	assert.Error(t, err)
+	require.Error(t, err)
 	assert.Nil(t, items)
 }
 
@@ -203,7 +203,7 @@ func TestBatchRun_ProcessesAndStops(t *testing.T) {
 	defer cancel()
 
 	err := bc.Run(ctx)
-	assert.NoError(t, err)
+	require.NoError(t, err)
 
 	store.mu.Lock()
 	defer store.mu.Unlock()
@@ -218,7 +218,7 @@ func TestBatchClose(t *testing.T) {
 	bc := newTestBatchConsumer(reader, store)
 
 	err := bc.Close()
-	assert.NoError(t, err)
+	require.NoError(t, err)
 
 	reader.mu.Lock()
 	defer reader.mu.Unlock()

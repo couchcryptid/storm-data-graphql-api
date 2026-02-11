@@ -173,7 +173,7 @@ func TestUnitForEventType(t *testing.T) {
 	assert.Equal(t, "in", unitForEventType("hail"))
 	assert.Equal(t, "mph", unitForEventType("wind"))
 	assert.Equal(t, "f_scale", unitForEventType("tornado"))
-	assert.Equal(t, "", unitForEventType("unknown"))
+	assert.Empty(t, unitForEventType("unknown"))
 }
 
 func TestEventTypeDBValues(t *testing.T) {
