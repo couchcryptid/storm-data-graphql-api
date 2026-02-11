@@ -1,6 +1,6 @@
 # Storm Data GraphQL API
 
-A Go service that consumes transformed storm weather reports from a Kafka topic, persists them to PostgreSQL, and serves them through a GraphQL API. Part of the storm data pipeline.
+A Go service that consumes transformed storm weather reports from a Kafka topic, persists them to PostgreSQL, and serves them through a GraphQL API. Part of the storm data pipeline. Uses the [storm-data-shared](https://github.com/couchcryptid/storm-data-shared) library for common config and observability utilities.
 
 ## How It Works
 
@@ -120,14 +120,14 @@ Integration tests require Docker because they use Postgres and Kafka containers.
 ```
 cmd/server/                 Entry point
 internal/
-  config/                   Environment-based configuration
+  config/                   Environment-based configuration (uses storm-data-shared/config)
   database/                 PostgreSQL connection, migrations (embedded via go:embed)
   graph/                    gqlgen GraphQL schema, resolvers, and generated code
   integration/              Integration tests (require Docker)
   kafka/                    Kafka consumer
   model/                    Domain types
-  observability/            Structured logging and Prometheus metrics
-  store/                    PostgreSQL query layer
+  observability/            Logging and health (via storm-data-shared) + Prometheus metrics
+  store/                    PostgreSQL query layer (store, querybuilder, aggregations)
 data/mock/                  Sample storm report JSON for testing
 ```
 

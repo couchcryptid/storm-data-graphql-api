@@ -17,6 +17,20 @@ All configuration is via environment variables. Every variable has a default sui
 | `BATCH_SIZE` | `50` | Kafka messages per batch (1--1000) |
 | `BATCH_FLUSH_INTERVAL` | `500ms` | Max wait before flushing a partial batch (Go duration) |
 
+## Shared Parsers
+
+Several environment variables use parsers from the [storm-data-shared](https://github.com/couchcryptid/storm-data-shared/wiki/Configuration) library:
+
+| Variable | Shared Parser |
+|----------|--------------|
+| `KAFKA_BROKERS` | `config.ParseBrokers()` |
+| `BATCH_SIZE` | `config.ParseBatchSize()` |
+| `BATCH_FLUSH_INTERVAL` | `config.ParseBatchFlushInterval()` |
+| `SHUTDOWN_TIMEOUT` | `config.ParseShutdownTimeout()` |
+| `LOG_LEVEL`, `LOG_FORMAT` | `observability.NewLogger()` |
+
+API-specific variables (`PORT`, `DATABASE_URL`, `KAFKA_TOPIC`, `KAFKA_GROUP_ID`) are parsed in `internal/config/config.go`.
+
 ## Docker Compose Environment Files
 
 The Compose stack uses per-service env files to keep credentials out of `compose.yml`:

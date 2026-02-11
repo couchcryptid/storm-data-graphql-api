@@ -169,13 +169,6 @@ func TestSortColumn(t *testing.T) {
 	}
 }
 
-func TestUnitForEventType(t *testing.T) {
-	assert.Equal(t, "in", unitForEventType("hail"))
-	assert.Equal(t, "mph", unitForEventType("wind"))
-	assert.Equal(t, "f_scale", unitForEventType("tornado"))
-	assert.Empty(t, unitForEventType("unknown"))
-}
-
 func TestEventTypeDBValues(t *testing.T) {
 	vals := eventTypeDBValues([]model.EventType{model.EventTypeHail, model.EventTypeWind, model.EventTypeTornado})
 	assert.Equal(t, []string{"hail", "wind", "tornado"}, vals)

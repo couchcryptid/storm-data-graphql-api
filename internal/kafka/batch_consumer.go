@@ -8,6 +8,7 @@ import (
 
 	"github.com/couchcryptid/storm-data-api/internal/model"
 	"github.com/couchcryptid/storm-data-api/internal/observability"
+	"github.com/couchcryptid/storm-data-shared/retry"
 	kafkago "github.com/segmentio/kafka-go"
 )
 
@@ -78,12 +79,10 @@ func (bc *BatchConsumer) Run(ctx context.Context) error {
 			}
 			bc.metrics.KafkaConsumerErrors.WithLabelValues(bc.topic, "fetch_batch").Inc()
 			bc.logger.Error("fetch batch", "error", err, "retry_in", backoff)
-			select {
-			case <-ctx.Done():
+			if !retry.SleepWithContext(ctx, backoff) {
 				return nil
-			case <-time.After(backoff):
 			}
-			backoff = min(backoff*2, maxBackoff)
+			backoff = retry.NextBackoff(backoff, maxBackoff)
 			continue
 		}
 		backoff = 200 * time.Millisecond

@@ -7,13 +7,16 @@
 ```
 cmd/server/main.go              Entry point, wires all components
 internal/
-  config/config.go              Environment-based configuration
+  config/config.go              Environment-based configuration (uses storm-data-shared/config)
   model/storm_report.go         Domain types (StormReport, Geo, Location, Filter)
   database/
     db.go                       pgx connection pool + migration runner
-    readiness.go                Readiness checker wrapping pgxpool.Ping()
+    readiness.go                Readiness checker (implements storm-data-shared ReadinessChecker)
     migrations/                 Embedded SQL migration files
-  store/store.go                PostgreSQL data access (insert, filtered list, aggregations)
+  store/
+    store.go                    Store type, CRUD operations, row scanning
+    querybuilder.go             WHERE clause construction, geo/haversine, sorting
+    aggregations.go             CTE aggregation queries and result types
   graph/
     schema.graphqls             GraphQL schema definition (source of truth for API)
     resolver.go                 Resolver struct with store dependency
@@ -23,9 +26,10 @@ internal/
   kafka/consumer.go             Kafka consumer with manual offset commit
   integration/                  Integration tests using testcontainers-go
   observability/
-    metrics.go                  Prometheus metric definitions
+    logging.go                  Delegates to storm-data-shared for slog logger creation
+    health.go                   Delegates to storm-data-shared for health endpoints
+    metrics.go                  Prometheus metric definitions (service-specific)
     middleware.go               Chi HTTP metrics middleware
-    health.go                   Liveness and readiness HTTP handlers
 data/mock/
   storm_reports_240426_transformed.json   Mock data (source of truth for message shape)
 ```
@@ -38,9 +42,15 @@ Defines the domain types that all layers share. The struct shape is derived dire
 
 ### Store (`internal/store`)
 
-Handles all PostgreSQL interactions. The database schema flattens the nested JSON structure — `geo.lat`/`geo.lon` become `geo_lat`/`geo_lon` columns, `location.*` fields become `location_*` columns, `measurement.*` fields become `measurement_*` columns, and `geocoding.*` fields become `geocoding_*` columns.
+Handles all PostgreSQL interactions, split into three focused files:
 
-The `ListStormReports` method builds dynamic WHERE clauses from the filter struct, with support for array filters (using PostgreSQL `ANY()`), sorting, and pagination. Aggregation methods (`CountByType`, `CountByState`, `CountByHour`, `LastUpdated`) provide grouped summaries. Geographic radius filtering uses the Haversine formula in SQL with a bounding box pre-filter for index efficiency.
+- **`store.go`** -- Store type, `InsertStormReport(s)`, `ListStormReports`, `LastUpdated`, and row scanning
+- **`querybuilder.go`** -- Dynamic WHERE clause construction from filter structs, geo/haversine calculations, bounding box pre-filters, sorting helpers
+- **`aggregations.go`** -- CTE-based aggregation query (`Aggregations`), result types (`AggResult`, `EventTypeGroup`, `StateGroup`, `TimeGroup`)
+
+The database schema flattens the nested JSON structure — `geo.lat`/`geo.lon` become `geo_lat`/`geo_lon` columns, `location.*` fields become `location_*` columns, `measurement.*` fields become `measurement_*` columns, and `geocoding.*` fields become `geocoding_*` columns.
+
+`ListStormReports` builds dynamic WHERE clauses from the filter struct, with support for array filters (using PostgreSQL `ANY()`), sorting, and pagination. Geographic radius filtering uses the Haversine formula in SQL with a bounding box pre-filter for index efficiency.
 
 ### Graph (`internal/graph`)
 
@@ -58,12 +68,12 @@ Consumes from the `transformed-weather-data` topic using `segmentio/kafka-go`. U
 
 ### Observability (`internal/observability`)
 
-Prometheus metrics, HTTP middleware, and health endpoints. `NewMetrics()` registers all application metrics (HTTP, Kafka, database) with the default Prometheus registry. `NewTestMetrics()` uses a throwaway registry for test isolation. The Chi middleware records request duration and count using route patterns (not raw paths) to prevent label cardinality explosion.
+Prometheus metrics, HTTP middleware, and health endpoints. Logging and health endpoint handlers delegate to the [storm-data-shared](https://github.com/couchcryptid/storm-data-shared) `observability` package. `NewMetrics()` registers all application metrics (HTTP, Kafka, database) with the default Prometheus registry. `NewTestMetrics()` uses a throwaway registry for test isolation. The Chi middleware records request duration and count using route patterns (not raw paths) to prevent label cardinality explosion.
 
 Endpoints:
 
-- `GET /healthz` — liveness probe (always 200)
-- `GET /readyz` — readiness probe (pings the database pool)
+- `GET /healthz` — liveness probe (always 200, via shared `LivenessHandler`)
+- `GET /readyz` — readiness probe (pings the database pool, via shared `ReadinessHandler`)
 - `GET /metrics` — Prometheus scrape endpoint
 
 ### Database (`internal/database`)
