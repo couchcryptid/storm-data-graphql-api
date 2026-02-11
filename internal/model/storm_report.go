@@ -23,7 +23,7 @@ import (
 //     resolver that maps the DB "type" column.
 type StormReport struct {
 	ID           string      `json:"id"`
-	Type         string      `json:"type"`
+	EventType    string      `json:"event_type"`
 	Geo          Geo         `json:"geo"`
 	Measurement  Measurement `json:"measurement"`
 	BeginTime    time.Time   `json:"begin_time"`

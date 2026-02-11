@@ -33,7 +33,7 @@ func TestMockDataTypes(t *testing.T) {
 
 	counts := map[string]int{}
 	for _, r := range reports {
-		counts[r.Type]++
+		counts[r.EventType]++
 	}
 
 	if counts["hail"] != 79 {
@@ -102,7 +102,7 @@ func TestMockDataHailReport(t *testing.T) {
 	// Find the 1.25" San Saba hail report (8 ESE Chappel, TX).
 	var first model.StormReport
 	for _, r := range reports {
-		if r.Type == "hail" && r.Measurement.Magnitude == 1.25 && r.Location.County == "San Saba" {
+		if r.EventType == "hail" && r.Measurement.Magnitude == 1.25 && r.Location.County == "San Saba" {
 			first = r
 			break
 		}
@@ -111,8 +111,8 @@ func TestMockDataHailReport(t *testing.T) {
 	if first.ID == "" {
 		t.Fatal("San Saba 1.25in hail report not found")
 	}
-	if first.Type != "hail" {
-		t.Errorf("expected type hail, got %s", first.Type)
+	if first.EventType != "hail" {
+		t.Errorf("expected type hail, got %s", first.EventType)
 	}
 	if first.Measurement.Magnitude != 1.25 {
 		t.Errorf("expected magnitude 1.25, got %f", first.Measurement.Magnitude)

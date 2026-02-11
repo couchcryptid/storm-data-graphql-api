@@ -91,7 +91,7 @@ func newTestConsumer(reader *mockReader, store *mockStore) *Consumer {
 func validReport() model.StormReport {
 	return model.StormReport{
 		ID:          "abc123",
-		Type:        "hail",
+		EventType:   "hail",
 		Measurement: model.Measurement{Magnitude: 1.75, Unit: "in"},
 		Source:      "trained_spotter",
 		Location: model.Location{
@@ -139,7 +139,7 @@ func TestHandleMessage_HappyPath(t *testing.T) {
 	// Insert was called with the correct report.
 	require.Len(t, store.inserted, 1)
 	assert.Equal(t, "abc123", store.inserted[0].ID)
-	assert.Equal(t, "hail", store.inserted[0].Type)
+	assert.Equal(t, "hail", store.inserted[0].EventType)
 	assert.InDelta(t, 1.75, store.inserted[0].Measurement.Magnitude, 0.001)
 	assert.Equal(t, "IL", store.inserted[0].Location.State)
 

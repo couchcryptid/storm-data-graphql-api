@@ -55,7 +55,7 @@ func (s *Store) InsertStormReport(ctx context.Context, report *model.StormReport
 		INSERT INTO storm_reports (`+columns+`)
 		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24)
 		ON CONFLICT (id) DO NOTHING`,
-		report.ID, report.Type, report.Geo.Lat, report.Geo.Lon,
+		report.ID, report.EventType, report.Geo.Lat, report.Geo.Lon,
 		report.Measurement.Magnitude, report.Measurement.Unit,
 		report.BeginTime, report.EndTime, report.Source,
 		report.Location.Raw, report.Location.Name,
@@ -83,7 +83,7 @@ func (s *Store) InsertStormReports(ctx context.Context, reports []*model.StormRe
 	batch := &pgx.Batch{}
 	for _, r := range reports {
 		batch.Queue(insertSQL,
-			r.ID, r.Type, r.Geo.Lat, r.Geo.Lon,
+			r.ID, r.EventType, r.Geo.Lat, r.Geo.Lon,
 			r.Measurement.Magnitude, r.Measurement.Unit,
 			r.BeginTime, r.EndTime, r.Source,
 			r.Location.Raw, r.Location.Name,
@@ -575,7 +575,7 @@ type scannable interface {
 func scanStormReport(row scannable) (*model.StormReport, error) {
 	var r model.StormReport
 	err := row.Scan(
-		&r.ID, &r.Type, &r.Geo.Lat, &r.Geo.Lon,
+		&r.ID, &r.EventType, &r.Geo.Lat, &r.Geo.Lon,
 		&r.Measurement.Magnitude, &r.Measurement.Unit,
 		&r.BeginTime, &r.EndTime, &r.Source,
 		&r.Location.Raw, &r.Location.Name,

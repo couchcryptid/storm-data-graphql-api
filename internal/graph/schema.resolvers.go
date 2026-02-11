@@ -78,7 +78,7 @@ func (r *queryResolver) StormReports(ctx context.Context, filter model.StormRepo
 
 // EventType is the resolver for the eventType field.
 func (r *stormReportResolver) EventType(ctx context.Context, obj *model.StormReport) (string, error) {
-	return obj.Type, nil
+	return obj.EventType, nil
 }
 
 // Query returns QueryResolver implementation.

@@ -609,7 +609,7 @@ func (ec *executionContext) field_Query___type_args(ctx context.Context, rawArgs
 func (ec *executionContext) field_Query_stormReports_args(ctx context.Context, rawArgs map[string]any) (map[string]any, error) {
 	var err error
 	args := map[string]any{}
-	arg0, err := graphql.ProcessArgField(ctx, rawArgs, "filter", ec.unmarshalNStormReportFilter2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportFilter)
+	arg0, err := graphql.ProcessArgField(ctx, rawArgs, "filter", ec.unmarshalNStormReportFilter2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReportFilter)
 	if err != nil {
 		return nil, err
 	}
@@ -795,7 +795,7 @@ func (ec *executionContext) _EventTypeGroup_maxMeasurement(ctx context.Context, 
 			return obj.MaxMeasurement, nil
 		},
 		nil,
-		ec.marshalOMeasurement2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement,
+		ec.marshalOMeasurement2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐMeasurement,
 		true,
 		false,
 	)
@@ -1268,7 +1268,7 @@ func (ec *executionContext) _Query_stormReports(ctx context.Context, field graph
 			return ec.resolvers.Query().StormReports(ctx, fc.Args["filter"].(model.StormReportFilter))
 		},
 		nil,
-		ec.marshalNStormReportsResult2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportsResult,
+		ec.marshalNStormReportsResult2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReportsResult,
 		true,
 		true,
 	)
@@ -1544,7 +1544,7 @@ func (ec *executionContext) _StateGroup_counties(ctx context.Context, field grap
 			return obj.Counties, nil
 		},
 		nil,
-		ec.marshalNCountyGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐCountyGroupᚄ,
+		ec.marshalNCountyGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐCountyGroupᚄ,
 		true,
 		true,
 	)
@@ -1608,7 +1608,7 @@ func (ec *executionContext) _StormAggregations_byEventType(ctx context.Context, 
 			return obj.ByEventType, nil
 		},
 		nil,
-		ec.marshalNEventTypeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeGroupᚄ,
+		ec.marshalNEventTypeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeGroupᚄ,
 		true,
 		true,
 	)
@@ -1645,7 +1645,7 @@ func (ec *executionContext) _StormAggregations_byState(ctx context.Context, fiel
 			return obj.ByState, nil
 		},
 		nil,
-		ec.marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStateGroupᚄ,
+		ec.marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStateGroupᚄ,
 		true,
 		true,
 	)
@@ -1682,7 +1682,7 @@ func (ec *executionContext) _StormAggregations_byHour(ctx context.Context, field
 			return obj.ByHour, nil
 		},
 		nil,
-		ec.marshalNTimeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeGroupᚄ,
+		ec.marshalNTimeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐTimeGroupᚄ,
 		true,
 		true,
 	)
@@ -1775,7 +1775,7 @@ func (ec *executionContext) _StormReport_geo(ctx context.Context, field graphql.
 			return obj.Geo, nil
 		},
 		nil,
-		ec.marshalNGeo2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐGeo,
+		ec.marshalNGeo2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐGeo,
 		true,
 		true,
 	)
@@ -1810,7 +1810,7 @@ func (ec *executionContext) _StormReport_measurement(ctx context.Context, field 
 			return obj.Measurement, nil
 		},
 		nil,
-		ec.marshalNMeasurement2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement,
+		ec.marshalNMeasurement2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐMeasurement,
 		true,
 		true,
 	)
@@ -1963,7 +1963,7 @@ func (ec *executionContext) _StormReport_location(ctx context.Context, field gra
 			return obj.Location, nil
 		},
 		nil,
-		ec.marshalNLocation2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐLocation,
+		ec.marshalNLocation2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐLocation,
 		true,
 		true,
 	)
@@ -2093,7 +2093,7 @@ func (ec *executionContext) _StormReport_geocoding(ctx context.Context, field gr
 			return obj.Geocoding, nil
 		},
 		nil,
-		ec.marshalNGeocoding2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐGeocoding,
+		ec.marshalNGeocoding2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐGeocoding,
 		true,
 		true,
 	)
@@ -2190,7 +2190,7 @@ func (ec *executionContext) _StormReportsResult_reports(ctx context.Context, fie
 			return obj.Reports, nil
 		},
 		nil,
-		ec.marshalNStormReport2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportᚄ,
+		ec.marshalNStormReport2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReportᚄ,
 		true,
 		true,
 	)
@@ -2247,7 +2247,7 @@ func (ec *executionContext) _StormReportsResult_aggregations(ctx context.Context
 			return obj.Aggregations, nil
 		},
 		nil,
-		ec.marshalNStormAggregations2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormAggregations,
+		ec.marshalNStormAggregations2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormAggregations,
 		true,
 		true,
 	)
@@ -2286,7 +2286,7 @@ func (ec *executionContext) _StormReportsResult_meta(ctx context.Context, field 
 			return obj.Meta, nil
 		},
 		nil,
-		ec.marshalNQueryMeta2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐQueryMeta,
+		ec.marshalNQueryMeta2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐQueryMeta,
 		true,
 		true,
 	)
@@ -3831,14 +3831,14 @@ func (ec *executionContext) unmarshalInputEventTypeFilter(ctx context.Context, o
 		switch k {
 		case "eventType":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("eventType"))
-			data, err := ec.unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx, v)
+			data, err := ec.unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventType(ctx, v)
 			if err != nil {
 				return it, err
 			}
 			it.EventType = data
 		case "severity":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("severity"))
-			data, err := ec.unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx, v)
+			data, err := ec.unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3920,14 +3920,14 @@ func (ec *executionContext) unmarshalInputStormReportFilter(ctx context.Context,
 		switch k {
 		case "timeRange":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("timeRange"))
-			data, err := ec.unmarshalNTimeRange2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeRange(ctx, v)
+			data, err := ec.unmarshalNTimeRange2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐTimeRange(ctx, v)
 			if err != nil {
 				return it, err
 			}
 			it.TimeRange = data
 		case "near":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("near"))
-			data, err := ec.unmarshalOGeoRadiusFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐGeoRadiusFilter(ctx, v)
+			data, err := ec.unmarshalOGeoRadiusFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐGeoRadiusFilter(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3948,14 +3948,14 @@ func (ec *executionContext) unmarshalInputStormReportFilter(ctx context.Context,
 			it.Counties = data
 		case "eventTypes":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("eventTypes"))
-			data, err := ec.unmarshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx, v)
+			data, err := ec.unmarshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
 			it.EventTypes = data
 		case "severity":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("severity"))
-			data, err := ec.unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx, v)
+			data, err := ec.unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3969,21 +3969,21 @@ func (ec *executionContext) unmarshalInputStormReportFilter(ctx context.Context,
 			it.MinMagnitude = data
 		case "eventTypeFilters":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("eventTypeFilters"))
-			data, err := ec.unmarshalOEventTypeFilter2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeFilterᚄ(ctx, v)
+			data, err := ec.unmarshalOEventTypeFilter2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeFilterᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
 			it.EventTypeFilters = data
 		case "sortBy":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("sortBy"))
-			data, err := ec.unmarshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSortField(ctx, v)
+			data, err := ec.unmarshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSortField(ctx, v)
 			if err != nil {
 				return it, err
 			}
 			it.SortBy = data
 		case "sortOrder":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("sortOrder"))
-			data, err := ec.unmarshalOSortOrder2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSortOrder(ctx, v)
+			data, err := ec.unmarshalOSortOrder2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSortOrder(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -5139,7 +5139,7 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) marshalNCountyGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐCountyGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.CountyGroup) graphql.Marshaler {
+func (ec *executionContext) marshalNCountyGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐCountyGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.CountyGroup) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -5163,7 +5163,7 @@ func (ec *executionContext) marshalNCountyGroup2ᚕᚖgithubᚗcomᚋcouchcrypti
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNCountyGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐCountyGroup(ctx, sel, v[i])
+			ret[i] = ec.marshalNCountyGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐCountyGroup(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5183,7 +5183,7 @@ func (ec *executionContext) marshalNCountyGroup2ᚕᚖgithubᚗcomᚋcouchcrypti
 	return ret
 }
 
-func (ec *executionContext) marshalNCountyGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐCountyGroup(ctx context.Context, sel ast.SelectionSet, v *model.CountyGroup) graphql.Marshaler {
+func (ec *executionContext) marshalNCountyGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐCountyGroup(ctx context.Context, sel ast.SelectionSet, v *model.CountyGroup) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
@@ -5209,22 +5209,22 @@ func (ec *executionContext) marshalNDateTime2timeᚐTime(ctx context.Context, se
 	return res
 }
 
-func (ec *executionContext) unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx context.Context, v any) (model.EventType, error) {
+func (ec *executionContext) unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventType(ctx context.Context, v any) (model.EventType, error) {
 	var res model.EventType
 	err := res.UnmarshalGQL(v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx context.Context, sel ast.SelectionSet, v model.EventType) graphql.Marshaler {
+func (ec *executionContext) marshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventType(ctx context.Context, sel ast.SelectionSet, v model.EventType) graphql.Marshaler {
 	return v
 }
 
-func (ec *executionContext) unmarshalNEventTypeFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeFilter(ctx context.Context, v any) (*model.EventTypeFilter, error) {
+func (ec *executionContext) unmarshalNEventTypeFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeFilter(ctx context.Context, v any) (*model.EventTypeFilter, error) {
 	res, err := ec.unmarshalInputEventTypeFilter(ctx, v)
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNEventTypeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.EventTypeGroup) graphql.Marshaler {
+func (ec *executionContext) marshalNEventTypeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.EventTypeGroup) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -5248,7 +5248,7 @@ func (ec *executionContext) marshalNEventTypeGroup2ᚕᚖgithubᚗcomᚋcouchcry
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNEventTypeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeGroup(ctx, sel, v[i])
+			ret[i] = ec.marshalNEventTypeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeGroup(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5268,7 +5268,7 @@ func (ec *executionContext) marshalNEventTypeGroup2ᚕᚖgithubᚗcomᚋcouchcry
 	return ret
 }
 
-func (ec *executionContext) marshalNEventTypeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeGroup(ctx context.Context, sel ast.SelectionSet, v *model.EventTypeGroup) graphql.Marshaler {
+func (ec *executionContext) marshalNEventTypeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeGroup(ctx context.Context, sel ast.SelectionSet, v *model.EventTypeGroup) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
@@ -5294,11 +5294,11 @@ func (ec *executionContext) marshalNFloat2float64(ctx context.Context, sel ast.S
 	return graphql.WrapContextMarshaler(ctx, res)
 }
 
-func (ec *executionContext) marshalNGeo2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐGeo(ctx context.Context, sel ast.SelectionSet, v model.Geo) graphql.Marshaler {
+func (ec *executionContext) marshalNGeo2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐGeo(ctx context.Context, sel ast.SelectionSet, v model.Geo) graphql.Marshaler {
 	return ec._Geo(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNGeocoding2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐGeocoding(ctx context.Context, sel ast.SelectionSet, v model.Geocoding) graphql.Marshaler {
+func (ec *executionContext) marshalNGeocoding2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐGeocoding(ctx context.Context, sel ast.SelectionSet, v model.Geocoding) graphql.Marshaler {
 	return ec._Geocoding(ctx, sel, &v)
 }
 
@@ -5334,15 +5334,15 @@ func (ec *executionContext) marshalNInt2int(ctx context.Context, sel ast.Selecti
 	return res
 }
 
-func (ec *executionContext) marshalNLocation2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐLocation(ctx context.Context, sel ast.SelectionSet, v model.Location) graphql.Marshaler {
+func (ec *executionContext) marshalNLocation2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐLocation(ctx context.Context, sel ast.SelectionSet, v model.Location) graphql.Marshaler {
 	return ec._Location(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNMeasurement2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement(ctx context.Context, sel ast.SelectionSet, v model.Measurement) graphql.Marshaler {
+func (ec *executionContext) marshalNMeasurement2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐMeasurement(ctx context.Context, sel ast.SelectionSet, v model.Measurement) graphql.Marshaler {
 	return ec._Measurement(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNQueryMeta2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐQueryMeta(ctx context.Context, sel ast.SelectionSet, v *model.QueryMeta) graphql.Marshaler {
+func (ec *executionContext) marshalNQueryMeta2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐQueryMeta(ctx context.Context, sel ast.SelectionSet, v *model.QueryMeta) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
@@ -5352,17 +5352,17 @@ func (ec *executionContext) marshalNQueryMeta2ᚖgithubᚗcomᚋcouchcryptidᚋs
 	return ec._QueryMeta(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverity(ctx context.Context, v any) (model.Severity, error) {
+func (ec *executionContext) unmarshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSeverity(ctx context.Context, v any) (model.Severity, error) {
 	var res model.Severity
 	err := res.UnmarshalGQL(v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverity(ctx context.Context, sel ast.SelectionSet, v model.Severity) graphql.Marshaler {
+func (ec *executionContext) marshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSeverity(ctx context.Context, sel ast.SelectionSet, v model.Severity) graphql.Marshaler {
 	return v
 }
 
-func (ec *executionContext) marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStateGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.StateGroup) graphql.Marshaler {
+func (ec *executionContext) marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStateGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.StateGroup) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -5386,7 +5386,7 @@ func (ec *executionContext) marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptid
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNStateGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStateGroup(ctx, sel, v[i])
+			ret[i] = ec.marshalNStateGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStateGroup(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5406,7 +5406,7 @@ func (ec *executionContext) marshalNStateGroup2ᚕᚖgithubᚗcomᚋcouchcryptid
 	return ret
 }
 
-func (ec *executionContext) marshalNStateGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStateGroup(ctx context.Context, sel ast.SelectionSet, v *model.StateGroup) graphql.Marshaler {
+func (ec *executionContext) marshalNStateGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStateGroup(ctx context.Context, sel ast.SelectionSet, v *model.StateGroup) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
@@ -5416,7 +5416,7 @@ func (ec *executionContext) marshalNStateGroup2ᚖgithubᚗcomᚋcouchcryptidᚋ
 	return ec._StateGroup(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNStormAggregations2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormAggregations(ctx context.Context, sel ast.SelectionSet, v *model.StormAggregations) graphql.Marshaler {
+func (ec *executionContext) marshalNStormAggregations2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormAggregations(ctx context.Context, sel ast.SelectionSet, v *model.StormAggregations) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
@@ -5426,7 +5426,7 @@ func (ec *executionContext) marshalNStormAggregations2ᚖgithubᚗcomᚋcouchcry
 	return ec._StormAggregations(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNStormReport2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.StormReport) graphql.Marshaler {
+func (ec *executionContext) marshalNStormReport2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReportᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.StormReport) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -5450,7 +5450,7 @@ func (ec *executionContext) marshalNStormReport2ᚕᚖgithubᚗcomᚋcouchcrypti
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNStormReport2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReport(ctx, sel, v[i])
+			ret[i] = ec.marshalNStormReport2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReport(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5470,7 +5470,7 @@ func (ec *executionContext) marshalNStormReport2ᚕᚖgithubᚗcomᚋcouchcrypti
 	return ret
 }
 
-func (ec *executionContext) marshalNStormReport2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReport(ctx context.Context, sel ast.SelectionSet, v *model.StormReport) graphql.Marshaler {
+func (ec *executionContext) marshalNStormReport2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReport(ctx context.Context, sel ast.SelectionSet, v *model.StormReport) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
@@ -5480,16 +5480,16 @@ func (ec *executionContext) marshalNStormReport2ᚖgithubᚗcomᚋcouchcryptid�
 	return ec._StormReport(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNStormReportFilter2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportFilter(ctx context.Context, v any) (model.StormReportFilter, error) {
+func (ec *executionContext) unmarshalNStormReportFilter2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReportFilter(ctx context.Context, v any) (model.StormReportFilter, error) {
 	res, err := ec.unmarshalInputStormReportFilter(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNStormReportsResult2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportsResult(ctx context.Context, sel ast.SelectionSet, v model.StormReportsResult) graphql.Marshaler {
+func (ec *executionContext) marshalNStormReportsResult2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReportsResult(ctx context.Context, sel ast.SelectionSet, v model.StormReportsResult) graphql.Marshaler {
 	return ec._StormReportsResult(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNStormReportsResult2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐStormReportsResult(ctx context.Context, sel ast.SelectionSet, v *model.StormReportsResult) graphql.Marshaler {
+func (ec *executionContext) marshalNStormReportsResult2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐStormReportsResult(ctx context.Context, sel ast.SelectionSet, v *model.StormReportsResult) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
@@ -5515,7 +5515,7 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNTimeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.TimeGroup) graphql.Marshaler {
+func (ec *executionContext) marshalNTimeGroup2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐTimeGroupᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.TimeGroup) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -5539,7 +5539,7 @@ func (ec *executionContext) marshalNTimeGroup2ᚕᚖgithubᚗcomᚋcouchcryptid�
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNTimeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeGroup(ctx, sel, v[i])
+			ret[i] = ec.marshalNTimeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐTimeGroup(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5559,7 +5559,7 @@ func (ec *executionContext) marshalNTimeGroup2ᚕᚖgithubᚗcomᚋcouchcryptid�
 	return ret
 }
 
-func (ec *executionContext) marshalNTimeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeGroup(ctx context.Context, sel ast.SelectionSet, v *model.TimeGroup) graphql.Marshaler {
+func (ec *executionContext) marshalNTimeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐTimeGroup(ctx context.Context, sel ast.SelectionSet, v *model.TimeGroup) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")
@@ -5569,7 +5569,7 @@ func (ec *executionContext) marshalNTimeGroup2ᚖgithubᚗcomᚋcouchcryptidᚋs
 	return ec._TimeGroup(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNTimeRange2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐTimeRange(ctx context.Context, v any) (model.TimeRange, error) {
+func (ec *executionContext) unmarshalNTimeRange2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐTimeRange(ctx context.Context, v any) (model.TimeRange, error) {
 	res, err := ec.unmarshalInputTimeRange(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
@@ -5875,7 +5875,7 @@ func (ec *executionContext) marshalODateTime2ᚖtimeᚐTime(ctx context.Context,
 	return res
 }
 
-func (ec *executionContext) unmarshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx context.Context, v any) ([]model.EventType, error) {
+func (ec *executionContext) unmarshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx context.Context, v any) ([]model.EventType, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5885,7 +5885,7 @@ func (ec *executionContext) unmarshalOEventType2ᚕgithubᚗcomᚋcouchcryptid�
 	res := make([]model.EventType, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventType(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -5893,7 +5893,7 @@ func (ec *executionContext) unmarshalOEventType2ᚕgithubᚗcomᚋcouchcryptid�
 	return res, nil
 }
 
-func (ec *executionContext) marshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx context.Context, sel ast.SelectionSet, v []model.EventType) graphql.Marshaler {
+func (ec *executionContext) marshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeᚄ(ctx context.Context, sel ast.SelectionSet, v []model.EventType) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -5920,7 +5920,7 @@ func (ec *executionContext) marshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋs
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventType(ctx, sel, v[i])
+			ret[i] = ec.marshalNEventType2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventType(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5940,7 +5940,7 @@ func (ec *executionContext) marshalOEventType2ᚕgithubᚗcomᚋcouchcryptidᚋs
 	return ret
 }
 
-func (ec *executionContext) unmarshalOEventTypeFilter2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeFilterᚄ(ctx context.Context, v any) ([]*model.EventTypeFilter, error) {
+func (ec *executionContext) unmarshalOEventTypeFilter2ᚕᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeFilterᚄ(ctx context.Context, v any) ([]*model.EventTypeFilter, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5950,7 +5950,7 @@ func (ec *executionContext) unmarshalOEventTypeFilter2ᚕᚖgithubᚗcomᚋcouch
 	res := make([]*model.EventTypeFilter, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNEventTypeFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐEventTypeFilter(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNEventTypeFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐEventTypeFilter(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -5975,7 +5975,7 @@ func (ec *executionContext) marshalOFloat2ᚖfloat64(ctx context.Context, sel as
 	return graphql.WrapContextMarshaler(ctx, res)
 }
 
-func (ec *executionContext) unmarshalOGeoRadiusFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐGeoRadiusFilter(ctx context.Context, v any) (*model.GeoRadiusFilter, error) {
+func (ec *executionContext) unmarshalOGeoRadiusFilter2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐGeoRadiusFilter(ctx context.Context, v any) (*model.GeoRadiusFilter, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -6001,14 +6001,14 @@ func (ec *executionContext) marshalOInt2ᚖint(ctx context.Context, sel ast.Sele
 	return res
 }
 
-func (ec *executionContext) marshalOMeasurement2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐMeasurement(ctx context.Context, sel ast.SelectionSet, v *model.Measurement) graphql.Marshaler {
+func (ec *executionContext) marshalOMeasurement2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐMeasurement(ctx context.Context, sel ast.SelectionSet, v *model.Measurement) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._Measurement(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx context.Context, v any) ([]model.Severity, error) {
+func (ec *executionContext) unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx context.Context, v any) ([]model.Severity, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -6018,7 +6018,7 @@ func (ec *executionContext) unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋ
 	res := make([]model.Severity, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverity(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSeverity(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -6026,7 +6026,7 @@ func (ec *executionContext) unmarshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋ
 	return res, nil
 }
 
-func (ec *executionContext) marshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx context.Context, sel ast.SelectionSet, v []model.Severity) graphql.Marshaler {
+func (ec *executionContext) marshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSeverityᚄ(ctx context.Context, sel ast.SelectionSet, v []model.Severity) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -6053,7 +6053,7 @@ func (ec *executionContext) marshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋst
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSeverity(ctx, sel, v[i])
+			ret[i] = ec.marshalNSeverity2githubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSeverity(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -6073,7 +6073,7 @@ func (ec *executionContext) marshalOSeverity2ᚕgithubᚗcomᚋcouchcryptidᚋst
 	return ret
 }
 
-func (ec *executionContext) unmarshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSortField(ctx context.Context, v any) (*model.SortField, error) {
+func (ec *executionContext) unmarshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSortField(ctx context.Context, v any) (*model.SortField, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -6082,7 +6082,7 @@ func (ec *executionContext) unmarshalOSortField2ᚖgithubᚗcomᚋcouchcryptid�
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSortField(ctx context.Context, sel ast.SelectionSet, v *model.SortField) graphql.Marshaler {
+func (ec *executionContext) marshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSortField(ctx context.Context, sel ast.SelectionSet, v *model.SortField) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -6092,7 +6092,7 @@ func (ec *executionContext) marshalOSortField2ᚖgithubᚗcomᚋcouchcryptidᚋs
 	return res
 }
 
-func (ec *executionContext) unmarshalOSortOrder2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSortOrder(ctx context.Context, v any) (*model.SortOrder, error) {
+func (ec *executionContext) unmarshalOSortOrder2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSortOrder(ctx context.Context, v any) (*model.SortOrder, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -6101,7 +6101,7 @@ func (ec *executionContext) unmarshalOSortOrder2ᚖgithubᚗcomᚋcouchcryptid�
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOSortOrder2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑgraphqlᚑapiᚋinternalᚋmodelᚐSortOrder(ctx context.Context, sel ast.SelectionSet, v *model.SortOrder) graphql.Marshaler {
+func (ec *executionContext) marshalOSortOrder2ᚖgithubᚗcomᚋcouchcryptidᚋstormᚑdataᚑapiᚋinternalᚋmodelᚐSortOrder(ctx context.Context, sel ast.SelectionSet, v *model.SortOrder) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}

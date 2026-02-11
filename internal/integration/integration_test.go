@@ -268,7 +268,7 @@ func TestStoreFilters(t *testing.T) {
 		require.NoError(t, err)
 		assert.Equal(t, 3, count)
 		for _, r := range reports {
-			assert.Equal(t, "hail", r.Type, testReportMsg, r.ID)
+			assert.Equal(t, "hail", r.EventType, testReportMsg, r.ID)
 			assert.Equal(t, "TX", r.Location.State, testReportMsg, r.ID)
 			require.NotNil(t, r.Measurement.Severity, testReportMsg, r.ID)
 			assert.Equal(t, "severe", *r.Measurement.Severity, testReportMsg, r.ID)

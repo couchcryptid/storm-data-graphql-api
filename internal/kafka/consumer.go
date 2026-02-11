@@ -114,7 +114,7 @@ func (c *Consumer) handleMessage(ctx context.Context, msg kafkago.Message) bool 
 	}
 
 	c.metrics.KafkaMessagesConsumed.WithLabelValues(c.topic).Inc()
-	c.logger.Debug("consumed storm report", "id", report.ID, "type", report.Type)
+	c.logger.Debug("consumed storm report", "id", report.ID, "type", report.EventType)
 	return false
 }
 

@@ -1,7 +1,7 @@
 [
   {
-    "id": "hail-3ea3338515bae6ff",
-    "type": "hail",
+    "id": "hail-5d91dda0f56ba124",
+    "event_type": "hail",
     "geo": {
       "lat": 31.02,
       "lon": -98.44
@@ -29,8 +29,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-521c22d1d07107cd",
-    "type": "hail",
+    "id": "hail-eb9f17d0bc71906f",
+    "event_type": "hail",
     "geo": {
       "lat": 32.5,
       "lon": -97.29
@@ -58,8 +58,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-3ccb1dacfc3b36be",
-    "type": "hail",
+    "id": "hail-ca286b911b6c874a",
+    "event_type": "hail",
     "geo": {
       "lat": 42.39,
       "lon": -95.87
@@ -85,8 +85,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-3d0d3d67ca899413",
-    "type": "hail",
+    "id": "hail-870e6ee431151f68",
+    "event_type": "hail",
     "geo": {
       "lat": 32.63,
       "lon": -97.21
@@ -114,8 +114,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-e4dbf0223cbb70e4",
-    "type": "hail",
+    "id": "hail-39de67d0784efb52",
+    "event_type": "hail",
     "geo": {
       "lat": 32.77,
       "lon": -97.31
@@ -143,8 +143,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-1224cb584f833e3a",
-    "type": "hail",
+    "id": "hail-58d2e7eb3839c782",
+    "event_type": "hail",
     "geo": {
       "lat": 41.02,
       "lon": -98.91
@@ -170,8 +170,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-713bd6e470b500f1",
-    "type": "hail",
+    "id": "hail-e083e4653f7187dd",
+    "event_type": "hail",
     "geo": {
       "lat": 32.69,
       "lon": -97.13
@@ -197,8 +197,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-4f6a9986f06c2822",
-    "type": "hail",
+    "id": "hail-6f84cfdd52a12d58",
+    "event_type": "hail",
     "geo": {
       "lat": 32.71,
       "lon": -97.11
@@ -226,8 +226,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-6b4681cefe849d87",
-    "type": "hail",
+    "id": "hail-7a3f9592b08b105b",
+    "event_type": "hail",
     "geo": {
       "lat": 41.06,
       "lon": -98.91
@@ -255,8 +255,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-9c4fed0990781dce",
-    "type": "hail",
+    "id": "hail-8b547cb068d57c4d",
+    "event_type": "hail",
     "geo": {
       "lat": 42.63,
       "lon": -95.75
@@ -284,8 +284,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-9e0e79aa763e4bdf",
-    "type": "hail",
+    "id": "hail-50b7c796b35154ea",
+    "event_type": "hail",
     "geo": {
       "lat": 42.81,
       "lon": -95.71
@@ -311,8 +311,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-4eb88e309e22d583",
-    "type": "hail",
+    "id": "hail-ee6377cbee6f3c3a",
+    "event_type": "hail",
     "geo": {
       "lat": 33.18,
       "lon": -95.23
@@ -340,8 +340,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-5fd3706bd4c6e419",
-    "type": "hail",
+    "id": "hail-cd5191dac136d5cd",
+    "event_type": "hail",
     "geo": {
       "lat": 42.91,
       "lon": -95.73
@@ -369,8 +369,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-d63f0c8199f7ef25",
-    "type": "hail",
+    "id": "hail-47188bd1f2ff94b5",
+    "event_type": "hail",
     "geo": {
       "lat": 40.31,
       "lon": -97.18
@@ -398,8 +398,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-dd0c2b09fec1a0ec",
-    "type": "hail",
+    "id": "hail-2676df9a1855ccb2",
+    "event_type": "hail",
     "geo": {
       "lat": 41.54,
       "lon": -98.26
@@ -427,8 +427,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-86ff9524884a5262",
-    "type": "hail",
+    "id": "hail-b31387bce34c9321",
+    "event_type": "hail",
     "geo": {
       "lat": 40.74,
       "lon": -96.85
@@ -454,8 +454,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-fafc58319c66a97f",
-    "type": "hail",
+    "id": "hail-622b712d3967fda4",
+    "event_type": "hail",
     "geo": {
       "lat": 40.73,
       "lon": -96.84
@@ -483,8 +483,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-765310f1f3d15838",
-    "type": "hail",
+    "id": "hail-822272ca1b8d186b",
+    "event_type": "hail",
     "geo": {
       "lat": 41.08,
       "lon": -97.2
@@ -510,8 +510,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-c1e3c33a3842c96c",
-    "type": "hail",
+    "id": "hail-155cddd41b044a29",
+    "event_type": "hail",
     "geo": {
       "lat": 40.86,
       "lon": -96.74
@@ -539,8 +539,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-3221e2a552cebe89",
-    "type": "hail",
+    "id": "hail-f37ffabdc08bf636",
+    "event_type": "hail",
     "geo": {
       "lat": 40.87,
       "lon": -96.73
@@ -568,8 +568,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-a2ff6defd8189ac2",
-    "type": "hail",
+    "id": "hail-a8d7860372840bd8",
+    "event_type": "hail",
     "geo": {
       "lat": 40.87,
       "lon": -96.74
@@ -597,8 +597,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-ae8eb745bd30c0af",
-    "type": "hail",
+    "id": "hail-af83d2d25c04648a",
+    "event_type": "hail",
     "geo": {
       "lat": 40.85,
       "lon": -96.79
@@ -626,8 +626,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-d7ac98385006d6f7",
-    "type": "hail",
+    "id": "hail-bc30002d09b64c91",
+    "event_type": "hail",
     "geo": {
       "lat": 37.5,
       "lon": -96.26
@@ -655,8 +655,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-2a536e75bc3144e2",
-    "type": "hail",
+    "id": "hail-bd11b8d65252aae6",
+    "event_type": "hail",
     "geo": {
       "lat": 40.99,
       "lon": -96.6
@@ -684,8 +684,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-79352929b3f21633",
-    "type": "hail",
+    "id": "hail-668d42203e162ecd",
+    "event_type": "hail",
     "geo": {
       "lat": 37.64,
       "lon": -96.25
@@ -713,8 +713,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-6d5e84843e32222b",
-    "type": "hail",
+    "id": "hail-6bd859b6c1a5d9d6",
+    "event_type": "hail",
     "geo": {
       "lat": 41.05,
       "lon": -96.59
@@ -742,8 +742,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-bbe24e5db613db9d",
-    "type": "hail",
+    "id": "hail-a117771d3f92270f",
+    "event_type": "hail",
     "geo": {
       "lat": 37.36,
       "lon": -96.38
@@ -771,8 +771,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-1d6360b090ba816b",
-    "type": "hail",
+    "id": "hail-df26d33dfab10b94",
+    "event_type": "hail",
     "geo": {
       "lat": 41.5,
       "lon": -97.73
@@ -800,8 +800,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-b373d8bee6c1217a",
-    "type": "hail",
+    "id": "hail-0d8c13804ca6ee69",
+    "event_type": "hail",
     "geo": {
       "lat": 37.64,
       "lon": -96.07
@@ -829,8 +829,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-13fa6467a7977851",
-    "type": "hail",
+    "id": "hail-6ff93c2b7f9352f5",
+    "event_type": "hail",
     "geo": {
       "lat": 44.07,
       "lon": -97.29
@@ -858,8 +858,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-4a7f6ede4613dc32",
-    "type": "hail",
+    "id": "hail-f68ae8ae113af291",
+    "event_type": "hail",
     "geo": {
       "lat": 41.32,
       "lon": -96.37
@@ -887,8 +887,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-44890902f9c6e2b5",
-    "type": "hail",
+    "id": "hail-df4fbfb0ea756442",
+    "event_type": "hail",
     "geo": {
       "lat": 37.57,
       "lon": -95.96
@@ -916,8 +916,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-9a2b340da4cf25c1",
-    "type": "hail",
+    "id": "hail-d776ecb3b521385f",
+    "event_type": "hail",
     "geo": {
       "lat": 37.57,
       "lon": -95.95
@@ -945,8 +945,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-78c3b9fa6f82e39e",
-    "type": "hail",
+    "id": "hail-063074687bb6393f",
+    "event_type": "hail",
     "geo": {
       "lat": 41.55,
       "lon": -96.14
@@ -972,8 +972,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-2f5ec143c61a2c2f",
-    "type": "hail",
+    "id": "hail-0fdb9a6303e7f720",
+    "event_type": "hail",
     "geo": {
       "lat": 39.84,
       "lon": -96.18
@@ -999,8 +999,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-549903b31c0b1b87",
-    "type": "hail",
+    "id": "hail-97bf0b3edc3b6be4",
+    "event_type": "hail",
     "geo": {
       "lat": 39.84,
       "lon": -96.13
@@ -1028,8 +1028,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-035eb897b9e0343c",
-    "type": "hail",
+    "id": "hail-1fe3de702d57d2ab",
+    "event_type": "hail",
     "geo": {
       "lat": 36.14,
       "lon": -96.3
@@ -1057,8 +1057,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-fed4031ab00b430b",
-    "type": "hail",
+    "id": "hail-47916634fe73983d",
+    "event_type": "hail",
     "geo": {
       "lat": 41.55,
       "lon": -96.14
@@ -1084,8 +1084,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-a2ee7d29f178c175",
-    "type": "hail",
+    "id": "hail-f24213900f3abc2a",
+    "event_type": "hail",
     "geo": {
       "lat": 41.32,
       "lon": -96.37
@@ -1113,8 +1113,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-ca73ee5f54086492",
-    "type": "hail",
+    "id": "hail-b1da87f89232706c",
+    "event_type": "hail",
     "geo": {
       "lat": 41.4,
       "lon": -96.3
@@ -1142,8 +1142,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-3bb8a45b184cf29f",
-    "type": "hail",
+    "id": "hail-1e30ed85b7ff9799",
+    "event_type": "hail",
     "geo": {
       "lat": 36.36,
       "lon": -96
@@ -1171,8 +1171,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-5ec1a433f3317451",
-    "type": "hail",
+    "id": "hail-1c9012f92f6167da",
+    "event_type": "hail",
     "geo": {
       "lat": 36.37,
       "lon": -95.99
@@ -1200,8 +1200,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-07ba880559b46f5e",
-    "type": "hail",
+    "id": "hail-5847f1794f99a900",
+    "event_type": "hail",
     "geo": {
       "lat": 41.18,
       "lon": -96.07
@@ -1229,8 +1229,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-8c5ddee2243b70e0",
-    "type": "hail",
+    "id": "hail-55193415c7f56ea8",
+    "event_type": "hail",
     "geo": {
       "lat": 36.41,
       "lon": -95.93
@@ -1258,8 +1258,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-04b8732c9579d289",
-    "type": "hail",
+    "id": "hail-ad1c73649e485bb8",
+    "event_type": "hail",
     "geo": {
       "lat": 41.13,
       "lon": -96.06
@@ -1287,8 +1287,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-80dbc5364d6d4f3b",
-    "type": "hail",
+    "id": "hail-40b181bba6f5aecf",
+    "event_type": "hail",
     "geo": {
       "lat": 41.21,
       "lon": -96.05
@@ -1316,8 +1316,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-15aafda154d9fdcd",
-    "type": "hail",
+    "id": "hail-09be18d8bd775af9",
+    "event_type": "hail",
     "geo": {
       "lat": 41.09,
       "lon": -96.07
@@ -1345,8 +1345,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-821e9f0d869ce233",
-    "type": "hail",
+    "id": "hail-a843bb81805a48e2",
+    "event_type": "hail",
     "geo": {
       "lat": 41.15,
       "lon": -96.08
@@ -1374,8 +1374,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-7fb3dced0ad106ab",
-    "type": "hail",
+    "id": "hail-e15a7c5158525708",
+    "event_type": "hail",
     "geo": {
       "lat": 41.15,
       "lon": -96.04
@@ -1401,8 +1401,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-31c17689ff6028ee",
-    "type": "hail",
+    "id": "hail-d2a7d169716cd226",
+    "event_type": "hail",
     "geo": {
       "lat": 41.55,
       "lon": -96.19
@@ -1430,8 +1430,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-eeda6f836a0a600a",
-    "type": "hail",
+    "id": "hail-923a18e3c20712da",
+    "event_type": "hail",
     "geo": {
       "lat": 41.14,
       "lon": -96.06
@@ -1459,8 +1459,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-4f0b8d88c1af4df1",
-    "type": "hail",
+    "id": "hail-231691214afc3618",
+    "event_type": "hail",
     "geo": {
       "lat": 31.1,
       "lon": -98.51
@@ -1488,8 +1488,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-b8ee2cf6ac3b4c28",
-    "type": "hail",
+    "id": "hail-e1aa8d0873c1dc29",
+    "event_type": "hail",
     "geo": {
       "lat": 32.56,
       "lon": -95.87
@@ -1517,8 +1517,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-892f953e9f85d468",
-    "type": "hail",
+    "id": "hail-3f45b3b8ecc6854b",
+    "event_type": "hail",
     "geo": {
       "lat": 41.28,
       "lon": -96
@@ -1546,8 +1546,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-94c6086b968c4126",
-    "type": "hail",
+    "id": "hail-ffda57782e499f65",
+    "event_type": "hail",
     "geo": {
       "lat": 41.29,
       "lon": -95.91
@@ -1573,8 +1573,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-50a3b7c4179262cc",
-    "type": "hail",
+    "id": "hail-92307f911546b5f3",
+    "event_type": "hail",
     "geo": {
       "lat": 41.3,
       "lon": -95.93
@@ -1602,8 +1602,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-1afaa0bcddb4f177",
-    "type": "hail",
+    "id": "hail-bc0321c6d15929e0",
+    "event_type": "hail",
     "geo": {
       "lat": 41.3,
       "lon": -95.94
@@ -1631,8 +1631,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-710976d5b019cf54",
-    "type": "hail",
+    "id": "hail-0b1fae82048a22c9",
+    "event_type": "hail",
     "geo": {
       "lat": 41.16,
       "lon": -96.02
@@ -1660,8 +1660,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-a1270c212b44c281",
-    "type": "hail",
+    "id": "hail-410acca6298a2018",
+    "event_type": "hail",
     "geo": {
       "lat": 40.34,
       "lon": -95.67
@@ -1687,8 +1687,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-b3b480f71a861910",
-    "type": "hail",
+    "id": "hail-b2c002e6f8601015",
+    "event_type": "hail",
     "geo": {
       "lat": 37.85,
       "lon": -95.15
@@ -1716,8 +1716,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-0c471c5e0b466eb5",
-    "type": "hail",
+    "id": "hail-c55cb9b1257fd26c",
+    "event_type": "hail",
     "geo": {
       "lat": 36.46,
       "lon": -95.62
@@ -1745,8 +1745,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-e40de425e05b2e36",
-    "type": "hail",
+    "id": "hail-f99ca624a8959314",
+    "event_type": "hail",
     "geo": {
       "lat": 37.9,
       "lon": -94.98
@@ -1774,8 +1774,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-24f6cd1801499ae4",
-    "type": "hail",
+    "id": "hail-47ab09290bc76c25",
+    "event_type": "hail",
     "geo": {
       "lat": 40.29,
       "lon": -95.48
@@ -1803,8 +1803,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-2951a776a5c6872a",
-    "type": "hail",
+    "id": "hail-2fb97a1e42c19ca5",
+    "event_type": "hail",
     "geo": {
       "lat": 40.26,
       "lon": -95.37
@@ -1832,8 +1832,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-c15a6114e66f0f3c",
-    "type": "hail",
+    "id": "hail-9f7330e8a5874b54",
+    "event_type": "hail",
     "geo": {
       "lat": 36.55,
       "lon": -95.43
@@ -1861,8 +1861,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-19141136d186a1e6",
-    "type": "hail",
+    "id": "hail-5c3a960f54fbdcbc",
+    "event_type": "hail",
     "geo": {
       "lat": 38.09,
       "lon": -94.58
@@ -1888,8 +1888,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-39a9619026728ec7",
-    "type": "hail",
+    "id": "hail-e9fa2d5ad0ce1f96",
+    "event_type": "hail",
     "geo": {
       "lat": 40.72,
       "lon": -95.02
@@ -1917,8 +1917,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-524749769a30279f",
-    "type": "hail",
+    "id": "hail-2fd4ba7663fd0dce",
+    "event_type": "hail",
     "geo": {
       "lat": 38.01,
       "lon": -94.72
@@ -1944,8 +1944,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-de2303e018f8c962",
-    "type": "hail",
+    "id": "hail-9f22e1ed1e801904",
+    "event_type": "hail",
     "geo": {
       "lat": 40.8,
       "lon": -94.91
@@ -1973,8 +1973,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-14906225e9ba0a60",
-    "type": "hail",
+    "id": "hail-c4856f116c4ac9e3",
+    "event_type": "hail",
     "geo": {
       "lat": 40.53,
       "lon": -94.54
@@ -2002,8 +2002,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-3f9b61dfe5c515ed",
-    "type": "hail",
+    "id": "hail-6c886d6722047057",
+    "event_type": "hail",
     "geo": {
       "lat": 40.64,
       "lon": -94.36
@@ -2031,8 +2031,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-7301cf8bafea3297",
-    "type": "hail",
+    "id": "hail-0f569982cd044aa3",
+    "event_type": "hail",
     "geo": {
       "lat": 39.52,
       "lon": -105.04
@@ -2060,8 +2060,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-252f950336ee9ab0",
-    "type": "hail",
+    "id": "hail-21b45776b6ce72b5",
+    "event_type": "hail",
     "geo": {
       "lat": 40.71,
       "lon": -94.24
@@ -2087,8 +2087,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-018221db3b582454",
-    "type": "hail",
+    "id": "hail-dd79e92cc81c43e3",
+    "event_type": "hail",
     "geo": {
       "lat": 39.56,
       "lon": -104.98
@@ -2116,8 +2116,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-e75ec26974e1e5c2",
-    "type": "hail",
+    "id": "hail-06d868a37449dc06",
+    "event_type": "hail",
     "geo": {
       "lat": 40.71,
       "lon": -94.24
@@ -2143,8 +2143,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-99477d07b8b94082",
-    "type": "hail",
+    "id": "hail-b3796db0d16a8769",
+    "event_type": "hail",
     "geo": {
       "lat": 33.06,
       "lon": -95.01
@@ -2172,8 +2172,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-59542c7ab5b4d023",
-    "type": "hail",
+    "id": "hail-e3b81b3f8289c00b",
+    "event_type": "hail",
     "geo": {
       "lat": 33.15,
       "lon": -94.97
@@ -2201,8 +2201,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-8d7d464c2240aecf",
-    "type": "hail",
+    "id": "hail-dc87072f87a4367b",
+    "event_type": "hail",
     "geo": {
       "lat": 41.5,
       "lon": -93.78
@@ -2230,8 +2230,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "hail-f66f4099efde8e42",
-    "type": "hail",
+    "id": "hail-019880fdb25b1e42",
+    "event_type": "hail",
     "geo": {
       "lat": 33.49,
       "lon": -94.52
@@ -2259,8 +2259,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-f9660be21acb20e2",
-    "type": "tornado",
+    "id": "tornado-e42babad56fa20a7",
+    "event_type": "tornado",
     "geo": {
       "lat": 34.96,
       "lon": -95.77
@@ -2287,8 +2287,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-673dd46b47a373c2",
-    "type": "tornado",
+    "id": "tornado-85460f71520e93d5",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.02,
       "lon": -98.87
@@ -2315,8 +2315,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-1599952fbe8f847d",
-    "type": "tornado",
+    "id": "tornado-a17fcbe60a0247ad",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.63,
       "lon": -97.26
@@ -2343,8 +2343,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-37f0442bd70b4bad",
-    "type": "tornado",
+    "id": "tornado-6874186d63eb8a41",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.63,
       "lon": -97.25
@@ -2371,8 +2371,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-42cfbdf37032c48f",
-    "type": "tornado",
+    "id": "tornado-68cdb1681547c5cb",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.64,
       "lon": -97.25
@@ -2399,8 +2399,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-fd862a32b1b92811",
-    "type": "tornado",
+    "id": "tornado-033147bb8930e633",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.06,
       "lon": -98.9
@@ -2427,8 +2427,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-93f77c5347441612",
-    "type": "tornado",
+    "id": "tornado-0a26a3d56b601366",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.1,
       "lon": -98.83
@@ -2455,8 +2455,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-6a7645a81498aad5",
-    "type": "tornado",
+    "id": "tornado-735fea72fa509a15",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.11,
       "lon": -98.82
@@ -2481,8 +2481,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-ba49d48dd9ffb87d",
-    "type": "tornado",
+    "id": "tornado-beb92ef31cfc94ef",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.76,
       "lon": -97.07
@@ -2509,8 +2509,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-faf592a96e0738fe",
-    "type": "tornado",
+    "id": "tornado-4f163bce79ccb3ec",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.78,
       "lon": -97.05
@@ -2537,8 +2537,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-575bb29be3a3606a",
-    "type": "tornado",
+    "id": "tornado-0933778159311947",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.18,
       "lon": -98.65
@@ -2565,8 +2565,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-c51ef44ed76cb7c6",
-    "type": "tornado",
+    "id": "tornado-aff30a160b476fbf",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.8,
       "lon": -97.02
@@ -2593,8 +2593,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-fee2166467134da0",
-    "type": "tornado",
+    "id": "tornado-7de51bfbffab6c0a",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.2,
       "lon": -98.62
@@ -2621,8 +2621,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-5303559b4d3180f5",
-    "type": "tornado",
+    "id": "tornado-3489c9cac8626b3c",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.21,
       "lon": -98.63
@@ -2649,8 +2649,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-e410d116898f29e1",
-    "type": "tornado",
+    "id": "tornado-8ce6a127347ec69d",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.83,
       "lon": -96.97
@@ -2677,8 +2677,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-3116a52fa479d325",
-    "type": "tornado",
+    "id": "tornado-0243301d86ce46b7",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.3,
       "lon": -98.58
@@ -2705,8 +2705,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-18702e3d2a92479a",
-    "type": "tornado",
+    "id": "tornado-5e0b32c73cc9abac",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.31,
       "lon": -98.58
@@ -2733,8 +2733,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-47b70b4d7038c015",
-    "type": "tornado",
+    "id": "tornado-f49b7d114a0dd721",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.95,
       "lon": -96.8
@@ -2761,8 +2761,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a70c4e26d72ec303",
-    "type": "tornado",
+    "id": "tornado-a2514e0edb29d97a",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.34,
       "lon": -98.51
@@ -2789,8 +2789,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-7e382d89836cf060",
-    "type": "tornado",
+    "id": "tornado-03d4ad9eb9fd50e2",
+    "event_type": "tornado",
     "geo": {
       "lat": 32,
       "lon": -96.75
@@ -2817,8 +2817,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-383351e7ace45312",
-    "type": "tornado",
+    "id": "tornado-f385afc591efedff",
+    "event_type": "tornado",
     "geo": {
       "lat": 32.08,
       "lon": -96.67
@@ -2845,8 +2845,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-b86b42981a8dc223",
-    "type": "tornado",
+    "id": "tornado-c17b69bd5e5cfccf",
+    "event_type": "tornado",
     "geo": {
       "lat": 31.88,
       "lon": -97.09
@@ -2873,8 +2873,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-3266d2ddfc636955",
-    "type": "tornado",
+    "id": "tornado-47caea31f430eb1c",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.1,
       "lon": -97.1
@@ -2901,8 +2901,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-21de48cfc47a7eaa",
-    "type": "tornado",
+    "id": "tornado-42ef96c81dad570e",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.54,
       "lon": -98.29
@@ -2929,8 +2929,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-fc1aab4af2a05ba9",
-    "type": "tornado",
+    "id": "tornado-454904af88e54ee7",
+    "event_type": "tornado",
     "geo": {
       "lat": 32.23,
       "lon": -96.55
@@ -2957,8 +2957,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-802f4d8aa2c66a65",
-    "type": "tornado",
+    "id": "tornado-1017c9e686e2c365",
+    "event_type": "tornado",
     "geo": {
       "lat": 32.07,
       "lon": -96.83
@@ -2985,8 +2985,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-cc8f39d528988186",
-    "type": "tornado",
+    "id": "tornado-3e59666553c45c69",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.88,
       "lon": -96.75
@@ -3013,8 +3013,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-e9034f5858d939f1",
-    "type": "tornado",
+    "id": "tornado-c8027aec2b0610cf",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.87,
       "lon": -96.64
@@ -3041,8 +3041,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-7a2e15025d400007",
-    "type": "tornado",
+    "id": "tornado-b9e97c94caaf7ddf",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.88,
       "lon": -96.59
@@ -3069,8 +3069,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-69ba3a3fc14fceb8",
-    "type": "tornado",
+    "id": "tornado-857b97b5bd9a3542",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.05,
       "lon": -97.11
@@ -3097,8 +3097,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-f0d30fb5d118bf5b",
-    "type": "tornado",
+    "id": "tornado-64db0f9162a0443d",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.85,
       "lon": -96.61
@@ -3125,8 +3125,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-ecf6922ac744fb1d",
-    "type": "tornado",
+    "id": "tornado-208bac47d6a1faef",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.93,
       "lon": -96.55
@@ -3153,8 +3153,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-f14058cd56a5b840",
-    "type": "tornado",
+    "id": "tornado-bce501da215a8b9c",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.08,
       "lon": -97.11
@@ -3181,8 +3181,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-84d6bb1ce199c938",
-    "type": "tornado",
+    "id": "tornado-5a7be57445ca0b2b",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.72,
       "lon": -98.2
@@ -3209,8 +3209,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-9a73fd2febe2de27",
-    "type": "tornado",
+    "id": "tornado-376e6f1e11bd0506",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.89,
       "lon": -96.59
@@ -3237,8 +3237,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-687e3cfb900406fc",
-    "type": "tornado",
+    "id": "tornado-acee9fce28571a37",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.93,
       "lon": -96.57
@@ -3265,8 +3265,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-01ad262afb27f045",
-    "type": "tornado",
+    "id": "tornado-65a1185756813dd3",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.13,
       "lon": -97.13
@@ -3293,8 +3293,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-682da9b50af00ca1",
-    "type": "tornado",
+    "id": "tornado-830469fd886b7854",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.96,
       "lon": -96.56
@@ -3321,8 +3321,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a59ccf0dc0a40023",
-    "type": "tornado",
+    "id": "tornado-0fad55f611d3b354",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.21,
       "lon": -97.06
@@ -3349,8 +3349,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-50253bf13baf8cb3",
-    "type": "tornado",
+    "id": "tornado-9e81043905652ea2",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.16,
       "lon": -97.07
@@ -3377,8 +3377,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-31c9877e69f91621",
-    "type": "tornado",
+    "id": "tornado-3e990cf292e81c86",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.58,
       "lon": -97.89
@@ -3405,8 +3405,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-fca4078c14fed2be",
-    "type": "tornado",
+    "id": "tornado-f9644f91c4400695",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.17,
       "lon": -97.06
@@ -3433,8 +3433,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-66e9306c03b493e6",
-    "type": "tornado",
+    "id": "tornado-7f7a4eb87eb849f3",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.03,
       "lon": -96.48
@@ -3461,8 +3461,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-41b6dde63afa81f4",
-    "type": "tornado",
+    "id": "tornado-f16cf932936e3a16",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.01,
       "lon": -96.48
@@ -3489,8 +3489,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-2ffa63a7f3422202",
-    "type": "tornado",
+    "id": "tornado-17674b5a59d9cd75",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.19,
       "lon": -96.34
@@ -3517,8 +3517,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-b90cf3555af7da96",
-    "type": "tornado",
+    "id": "tornado-566daf1f7faa1d35",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.63,
       "lon": -97.69
@@ -3545,8 +3545,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-4bf5a80fd26612d1",
-    "type": "tornado",
+    "id": "tornado-5ed2c4fff3bd012c",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.19,
       "lon": -96.32
@@ -3573,8 +3573,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-3e5f7ce2f5b37914",
-    "type": "tornado",
+    "id": "tornado-441add695c15e422",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.2,
       "lon": -96.31
@@ -3601,8 +3601,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-66f3b81df21fdff6",
-    "type": "tornado",
+    "id": "tornado-b92db707d9244fb2",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.22,
       "lon": -96.31
@@ -3629,8 +3629,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-ee946d929b7dd851",
-    "type": "tornado",
+    "id": "tornado-2df3496e9b4050e1",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.26,
       "lon": -96.28
@@ -3657,8 +3657,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-c043e4ccbf2ce50c",
-    "type": "tornado",
+    "id": "tornado-8893f62013771fba",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.29,
       "lon": -96.23
@@ -3685,8 +3685,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-d6392fcdf8f28e1e",
-    "type": "tornado",
+    "id": "tornado-86118d48d265ff68",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.23,
       "lon": -96.3
@@ -3713,8 +3713,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-cca8d88275f5b57d",
-    "type": "tornado",
+    "id": "tornado-d5330901c2a42990",
+    "event_type": "tornado",
     "geo": {
       "lat": 37.74,
       "lon": -95.89
@@ -3741,8 +3741,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a88b907e50796c62",
-    "type": "tornado",
+    "id": "tornado-66d34a858189d829",
+    "event_type": "tornado",
     "geo": {
       "lat": 37.53,
       "lon": -95.94
@@ -3769,8 +3769,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-2c202ac4169070ce",
-    "type": "tornado",
+    "id": "tornado-9dc0a1c0f739a682",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.29,
       "lon": -96.26
@@ -3797,8 +3797,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-7af324cb792c3950",
-    "type": "tornado",
+    "id": "tornado-a1dfca26716f4137",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.29,
       "lon": -96.24
@@ -3825,8 +3825,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-4ac4dfaab66addc1",
-    "type": "tornado",
+    "id": "tornado-7e75e210a165b35e",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.75,
       "lon": -97.87
@@ -3853,8 +3853,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-f97effe0bdccc729",
-    "type": "tornado",
+    "id": "tornado-b81bef8d85ab0d96",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.75,
       "lon": -97.91
@@ -3881,8 +3881,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-44b94c09c6023678",
-    "type": "tornado",
+    "id": "tornado-9c8db5986afca73c",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.32,
       "lon": -96.23
@@ -3909,8 +3909,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-8aaaf956f2437ad9",
-    "type": "tornado",
+    "id": "tornado-63c29d835545719b",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.75,
       "lon": -97.86
@@ -3937,8 +3937,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-ac85dfa0ebedb823",
-    "type": "tornado",
+    "id": "tornado-ae82e0752398d021",
+    "event_type": "tornado",
     "geo": {
       "lat": 37.82,
       "lon": -95.77
@@ -3965,8 +3965,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-45d1ee49869cc9a0",
-    "type": "tornado",
+    "id": "tornado-e2bdba566c111afc",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.32,
       "lon": -96.23
@@ -3993,8 +3993,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-dc1625857ee5905f",
-    "type": "tornado",
+    "id": "tornado-9f9334cf069c0436",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.35,
       "lon": -96.2
@@ -4021,8 +4021,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a65581e02314b7da",
-    "type": "tornado",
+    "id": "tornado-195b99e5c6fe1d0e",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.39,
       "lon": -96.17
@@ -4049,8 +4049,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-e39ecd3acc3f1661",
-    "type": "tornado",
+    "id": "tornado-d4b6323b439e1f9e",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.36,
       "lon": -96.18
@@ -4077,8 +4077,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-3afff23c658d268f",
-    "type": "tornado",
+    "id": "tornado-608a4233b6b0d7a6",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.46,
       "lon": -96.18
@@ -4105,8 +4105,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-883544b972cea3d1",
-    "type": "tornado",
+    "id": "tornado-91cb9ff3b4dbd350",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.6,
       "lon": -97.36
@@ -4133,8 +4133,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-82bc87fd6bd82eb9",
-    "type": "tornado",
+    "id": "tornado-b59be1041fac5c29",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.47,
       "lon": -96.13
@@ -4161,8 +4161,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-54f6703584e99afa",
-    "type": "tornado",
+    "id": "tornado-904c229306bcde50",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.49,
       "lon": -96.11
@@ -4189,8 +4189,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a4259f7bc845a9e9",
-    "type": "tornado",
+    "id": "tornado-dc103eb79112aa8e",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.7,
       "lon": -97.36
@@ -4217,8 +4217,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-f1abac99060e2f41",
-    "type": "tornado",
+    "id": "tornado-a1e9a2c98b0d2aab",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.51,
       "lon": -96.07
@@ -4245,8 +4245,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-734cafb02b35fd08",
-    "type": "tornado",
+    "id": "tornado-30747e526a90a97c",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.67,
       "lon": -97.31
@@ -4273,8 +4273,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-27f126fcb4b00e67",
-    "type": "tornado",
+    "id": "tornado-12ac1287af6b7910",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.55,
       "lon": -96.04
@@ -4301,8 +4301,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-30b204dbc50db929",
-    "type": "tornado",
+    "id": "tornado-d18f03224f2505f2",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.69,
       "lon": -97.33
@@ -4329,8 +4329,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-47030a114ff9efc7",
-    "type": "tornado",
+    "id": "tornado-45e4d2533ea68e05",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.62,
       "lon": -96.01
@@ -4355,8 +4355,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-1c22baac5721d419",
-    "type": "tornado",
+    "id": "tornado-00eee2fe07c14ee5",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.04,
       "lon": -95.8
@@ -4383,8 +4383,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-64749efd923c8f6c",
-    "type": "tornado",
+    "id": "tornado-aae107d319ffead0",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.75,
       "lon": -95.91
@@ -4411,8 +4411,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-12eb677e37431aad",
-    "type": "tornado",
+    "id": "tornado-de89d93180e1b47b",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.27,
       "lon": -95.93
@@ -4439,8 +4439,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-bba74c40e1a074f6",
-    "type": "tornado",
+    "id": "tornado-57830839dd869742",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.04,
       "lon": -95.82
@@ -4467,8 +4467,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-0ff62e2716750bed",
-    "type": "tornado",
+    "id": "tornado-e1a9c2433363b048",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.3,
       "lon": -95.88
@@ -4495,8 +4495,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-da0218223915e1e6",
-    "type": "tornado",
+    "id": "tornado-76abdc3b6fb2d10a",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.8,
       "lon": -95.89
@@ -4523,8 +4523,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-b8f7f951d48c5d69",
-    "type": "tornado",
+    "id": "tornado-457717d031c51b41",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.3,
       "lon": -95.87
@@ -4551,8 +4551,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-afbf47cde6269362",
-    "type": "tornado",
+    "id": "tornado-73a8a4b0d30d7343",
+    "event_type": "tornado",
     "geo": {
       "lat": 37.79,
       "lon": -95.3
@@ -4579,8 +4579,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-0e4278308f64625d",
-    "type": "tornado",
+    "id": "tornado-b580f337f4f629bf",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.87,
       "lon": -95.91
@@ -4607,8 +4607,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-cdb370fac8b9efcd",
-    "type": "tornado",
+    "id": "tornado-49055dd1b11ed81d",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.36,
       "lon": -95.86
@@ -4635,8 +4635,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-0e96254e2c52d3e3",
-    "type": "tornado",
+    "id": "tornado-0d4957d4aeda1034",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.19,
       "lon": -95.73
@@ -4663,8 +4663,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-03535b9a8338b20f",
-    "type": "tornado",
+    "id": "tornado-371c4ac4ee75793e",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.17,
       "lon": -95.75
@@ -4691,8 +4691,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-4e5f58b7e0b1470f",
-    "type": "tornado",
+    "id": "tornado-daf4c4fc921e97ee",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.11,
       "lon": -95.73
@@ -4719,8 +4719,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-6ad168f5b901dae0",
-    "type": "tornado",
+    "id": "tornado-f611b6ff9604c4f3",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.12,
       "lon": -95.72
@@ -4747,8 +4747,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-0030d2b6007ac713",
-    "type": "tornado",
+    "id": "tornado-f159a32028ce85ea",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.23,
       "lon": -95.73
@@ -4775,8 +4775,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-be6f116d8267ba96",
-    "type": "tornado",
+    "id": "tornado-6550f8e8a46333ba",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.19,
       "lon": -95.7
@@ -4803,8 +4803,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-dec45a7e581681c5",
-    "type": "tornado",
+    "id": "tornado-f6ca3a050bb719fa",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.99,
       "lon": -97.37
@@ -4831,8 +4831,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-d63e70c4ac4e4877",
-    "type": "tornado",
+    "id": "tornado-900d0fd173fc4857",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.96,
       "lon": -95.81
@@ -4859,8 +4859,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-c9ce7b727d2e3bc5",
-    "type": "tornado",
+    "id": "tornado-1859ad5f33dd1445",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.48,
       "lon": -95.75
@@ -4887,8 +4887,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-ffcfa875678f67ca",
-    "type": "tornado",
+    "id": "tornado-e7e0c93676ba261c",
+    "event_type": "tornado",
     "geo": {
       "lat": 42,
       "lon": -97.37
@@ -4915,8 +4915,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-52b53613ec79f1d1",
-    "type": "tornado",
+    "id": "tornado-6917a021bd3d9427",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.97,
       "lon": -95.81
@@ -4943,8 +4943,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-cadf7358ef6bc9c5",
-    "type": "tornado",
+    "id": "tornado-6fde2865c4adea77",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.33,
       "lon": -95.62
@@ -4971,8 +4971,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a2f49d05b70381f0",
-    "type": "tornado",
+    "id": "tornado-730e3d72a069af7b",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.36,
       "lon": -95.65
@@ -4999,8 +4999,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-e56a046bc751b81e",
-    "type": "tornado",
+    "id": "tornado-efc3feb91a46ea89",
+    "event_type": "tornado",
     "geo": {
       "lat": 37.89,
       "lon": -94.96
@@ -5027,8 +5027,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-72fb5b942c181448",
-    "type": "tornado",
+    "id": "tornado-e6197a2e5a3d9162",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.37,
       "lon": -95.65
@@ -5055,8 +5055,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-e2498dbde5a84d69",
-    "type": "tornado",
+    "id": "tornado-43834500894101c5",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.43,
       "lon": -95.57
@@ -5083,8 +5083,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-0e3697e13cb7473d",
-    "type": "tornado",
+    "id": "tornado-9db524888b5f34f7",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.47,
       "lon": -95.54
@@ -5109,8 +5109,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-5d77831781b2d2eb",
-    "type": "tornado",
+    "id": "tornado-9b929516b9f07415",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.62,
       "lon": -95.73
@@ -5137,8 +5137,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-75c43d1160d6a9b9",
-    "type": "tornado",
+    "id": "tornado-e06620d139f7f9c0",
+    "event_type": "tornado",
     "geo": {
       "lat": 37.88,
       "lon": -94.82
@@ -5165,8 +5165,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-f393e0893b892b9b",
-    "type": "tornado",
+    "id": "tornado-415c53129044b1e7",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.03,
       "lon": -95.44
@@ -5193,8 +5193,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-b296f2c8711e96dc",
-    "type": "tornado",
+    "id": "tornado-ed59b62ff76ffc47",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.48,
       "lon": -95.52
@@ -5221,8 +5221,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-350839dc74ce0b1b",
-    "type": "tornado",
+    "id": "tornado-6003989cad272a65",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.48,
       "lon": -95.5
@@ -5249,8 +5249,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-095a8beb541695e6",
-    "type": "tornado",
+    "id": "tornado-2cb8ed10e5af7cc3",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.51,
       "lon": -95.48
@@ -5277,8 +5277,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-3cf874e58997b79c",
-    "type": "tornado",
+    "id": "tornado-9e0da181bacbc555",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.5,
       "lon": -95.48
@@ -5305,8 +5305,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-914eba55a6650fc1",
-    "type": "tornado",
+    "id": "tornado-e7b45d055bb361b0",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.56,
       "lon": -95.45
@@ -5333,8 +5333,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-3866db17767ee67d",
-    "type": "tornado",
+    "id": "tornado-a9a847d788b5cd0c",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.59,
       "lon": -95.44
@@ -5359,8 +5359,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-4288c1700b3b150d",
-    "type": "tornado",
+    "id": "tornado-46d82dc1c5a96af4",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.65,
       "lon": -95.37
@@ -5387,8 +5387,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-9fbf0d1e6d53c0f4",
-    "type": "tornado",
+    "id": "tornado-06160ece9b799d40",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.65,
       "lon": -95.38
@@ -5415,8 +5415,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a51a2359487ec0f1",
-    "type": "tornado",
+    "id": "tornado-bf4e694ddbd0c437",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.65,
       "lon": -95.37
@@ -5443,8 +5443,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-50445c68318a26aa",
-    "type": "tornado",
+    "id": "tornado-8aaec55afcf38199",
+    "event_type": "tornado",
     "geo": {
       "lat": 37.99,
       "lon": -94.51
@@ -5471,8 +5471,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-c73d38ee0270eb27",
-    "type": "tornado",
+    "id": "tornado-b935bc4e523a68c4",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.25,
       "lon": -95.08
@@ -5499,8 +5499,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-0294dafdb66afb8e",
-    "type": "tornado",
+    "id": "tornado-cba9a622a70259eb",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.72,
       "lon": -95.35
@@ -5527,8 +5527,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-f038136ffdcffad1",
-    "type": "tornado",
+    "id": "tornado-d5bbbf1c66b31a0d",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.86,
       "lon": -95.26
@@ -5555,8 +5555,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-0c28ab6dadfbf8aa",
-    "type": "tornado",
+    "id": "tornado-9c9f22779227f647",
+    "event_type": "tornado",
     "geo": {
       "lat": 38.12,
       "lon": -94.22
@@ -5583,8 +5583,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-7bca0ff030b94159",
-    "type": "tornado",
+    "id": "tornado-aa19bd0aac97b124",
+    "event_type": "tornado",
     "geo": {
       "lat": 38.17,
       "lon": -94.09
@@ -5611,8 +5611,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-5d282e2bdbd7ed9f",
-    "type": "tornado",
+    "id": "tornado-efe48dce66c06c6f",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.82,
       "lon": -95.34
@@ -5639,8 +5639,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-778b033a98b2a588",
-    "type": "tornado",
+    "id": "tornado-e02b965298f94dfb",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.83,
       "lon": -95.33
@@ -5667,8 +5667,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-1455b3c39119cffb",
-    "type": "tornado",
+    "id": "tornado-1aa1c4963a255cdc",
+    "event_type": "tornado",
     "geo": {
       "lat": 38.18,
       "lon": -94.06
@@ -5695,8 +5695,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-5d58ee763773f9cc",
-    "type": "tornado",
+    "id": "tornado-f16667eaaa7f1d32",
+    "event_type": "tornado",
     "geo": {
       "lat": 38.19,
       "lon": -94.06
@@ -5723,8 +5723,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-5fe86b27f238eb5e",
-    "type": "tornado",
+    "id": "tornado-b78be0d3cea0bb26",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.84,
       "lon": -95.33
@@ -5751,8 +5751,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-5c13ca0434261055",
-    "type": "tornado",
+    "id": "tornado-790e0d59f56c980b",
+    "event_type": "tornado",
     "geo": {
       "lat": 38.19,
       "lon": -94.05
@@ -5779,8 +5779,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-ec8d8217221d39f0",
-    "type": "tornado",
+    "id": "tornado-56cff2de2194949a",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.89,
       "lon": -95.27
@@ -5807,8 +5807,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-0ae2a3e66aa6c63d",
-    "type": "tornado",
+    "id": "tornado-b4db4ea3e8f87248",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.05,
       "lon": -94.4
@@ -5835,8 +5835,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-7c42682052515219",
-    "type": "tornado",
+    "id": "tornado-2401590dd785fa55",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.06,
       "lon": -94.36
@@ -5861,8 +5861,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-ef0827f30652a7c3",
-    "type": "tornado",
+    "id": "tornado-1ef1e3911b69e380",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.91,
       "lon": -94.52
@@ -5889,8 +5889,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-7c2840d7c98b254f",
-    "type": "tornado",
+    "id": "tornado-bba51bbc2f544413",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.13,
       "lon": -94.29
@@ -5917,8 +5917,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a4cd398725e88ac9",
-    "type": "tornado",
+    "id": "tornado-3d49075be7cd5757",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.56,
       "lon": -94.43
@@ -5945,8 +5945,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-a47239d2d857ac5f",
-    "type": "tornado",
+    "id": "tornado-cda103b8ec5ddb57",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.05,
       "lon": -94.27
@@ -5973,8 +5973,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-517493aaf5267002",
-    "type": "tornado",
+    "id": "tornado-41e93a1f77eeeecf",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.06,
       "lon": -94.27
@@ -6001,8 +6001,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-73a5263831cc4888",
-    "type": "tornado",
+    "id": "tornado-e1df6e7a220bf372",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.05,
       "lon": -94.22
@@ -6029,8 +6029,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-6d71b3095d57dcf8",
-    "type": "tornado",
+    "id": "tornado-38620fd8757656f5",
+    "event_type": "tornado",
     "geo": {
       "lat": 38.35,
       "lon": -93.72
@@ -6057,8 +6057,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-1fd0e32bb1c46885",
-    "type": "tornado",
+    "id": "tornado-ee182503c0f6f935",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.71,
       "lon": -94.21
@@ -6085,8 +6085,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-242f824b5226ab70",
-    "type": "tornado",
+    "id": "tornado-e57d82a75caaeb60",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.03,
       "lon": -94.23
@@ -6113,8 +6113,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-d000bd9f3845553c",
-    "type": "tornado",
+    "id": "tornado-499b51caa7fd9f84",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.24,
       "lon": -94.02
@@ -6141,8 +6141,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-03e042958671d0b3",
-    "type": "tornado",
+    "id": "tornado-420dfea338e05e68",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.37,
       "lon": -93.85
@@ -6169,8 +6169,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-80abe929326d6215",
-    "type": "tornado",
+    "id": "tornado-a509fba5bd290732",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.32,
       "lon": -93.88
@@ -6197,8 +6197,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-8e5b5189698879bc",
-    "type": "tornado",
+    "id": "tornado-1a4610627921e9bd",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.48,
       "lon": -93.84
@@ -6225,8 +6225,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-12fe021daaedfe6a",
-    "type": "tornado",
+    "id": "tornado-6bbca38073726762",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.97,
       "lon": -93.8
@@ -6253,8 +6253,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-93b7efb55216f8ad",
-    "type": "tornado",
+    "id": "tornado-b2da573774ab243a",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.03,
       "lon": -93.77
@@ -6279,8 +6279,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-8a82eb8e5cf063d4",
-    "type": "tornado",
+    "id": "tornado-e07d7051f5e2e9f5",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.63,
       "lon": -93.56
@@ -6307,8 +6307,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-e697a92157e3977e",
-    "type": "tornado",
+    "id": "tornado-ae4321948626fbb2",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.55,
       "lon": -93.57
@@ -6335,8 +6335,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-01cc8355392c2dfb",
-    "type": "tornado",
+    "id": "tornado-e3c402c69f5f873f",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.59,
       "lon": -93.51
@@ -6361,8 +6361,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-40c7512ee39cebb5",
-    "type": "tornado",
+    "id": "tornado-e83b7d9add2731d7",
+    "event_type": "tornado",
     "geo": {
       "lat": 41.52,
       "lon": -93.1
@@ -6387,8 +6387,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "tornado-75bf5adb3071a91b",
-    "type": "tornado",
+    "id": "tornado-bc15e96b98d4917c",
+    "event_type": "tornado",
     "geo": {
       "lat": 40.97,
       "lon": -93.8
@@ -6415,8 +6415,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-3164ea813de8381f",
-    "type": "wind",
+    "id": "wind-dc020173327019cd",
+    "event_type": "wind",
     "geo": {
       "lat": 34.94,
       "lon": -95.77
@@ -6441,8 +6441,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-7f1a5e156b120a96",
-    "type": "wind",
+    "id": "wind-90a75fd0547eda54",
+    "event_type": "wind",
     "geo": {
       "lat": 34.94,
       "lon": -95.59
@@ -6470,8 +6470,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-317834feea887400",
-    "type": "wind",
+    "id": "wind-8b6416cd752f71d0",
+    "event_type": "wind",
     "geo": {
       "lat": 36.06,
       "lon": -115.06
@@ -6498,8 +6498,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-f46b0b554d27ef96",
-    "type": "wind",
+    "id": "wind-81220f1e4a21c22f",
+    "event_type": "wind",
     "geo": {
       "lat": 40.88,
       "lon": -96.59
@@ -6526,8 +6526,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-df38fbc531070872",
-    "type": "wind",
+    "id": "wind-528c088e79b947db",
+    "event_type": "wind",
     "geo": {
       "lat": 40.92,
       "lon": -96.52
@@ -6554,8 +6554,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-4bca6668c1057d20",
-    "type": "wind",
+    "id": "wind-c5f04558897ccbf9",
+    "event_type": "wind",
     "geo": {
       "lat": 32.49,
       "lon": -96.25
@@ -6583,8 +6583,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-d52cdac5d12824a4",
-    "type": "wind",
+    "id": "wind-b017c61359950f6b",
+    "event_type": "wind",
     "geo": {
       "lat": 32.49,
       "lon": -96.21
@@ -6611,8 +6611,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-f9e9b9593ab135b8",
-    "type": "wind",
+    "id": "wind-59a0010e063003c1",
+    "event_type": "wind",
     "geo": {
       "lat": 32.93,
       "lon": -95.58
@@ -6637,8 +6637,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-a9401be0f9cade02",
-    "type": "wind",
+    "id": "wind-301df7b0df40edaf",
+    "event_type": "wind",
     "geo": {
       "lat": 32.56,
       "lon": -95.87
@@ -6665,8 +6665,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-429d320706403468",
-    "type": "wind",
+    "id": "wind-edbca5842bdaf9e0",
+    "event_type": "wind",
     "geo": {
       "lat": 41.3,
       "lon": -95.89
@@ -6694,8 +6694,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-24bdb1d2cb0c24c5",
-    "type": "wind",
+    "id": "wind-8edda0611e38b8d3",
+    "event_type": "wind",
     "geo": {
       "lat": 33,
       "lon": -95.27
@@ -6722,8 +6722,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-3af1441af0da7ceb",
-    "type": "wind",
+    "id": "wind-992e8ab6fb55d28e",
+    "event_type": "wind",
     "geo": {
       "lat": 33.02,
       "lon": -95.27
@@ -6750,8 +6750,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-20684d6690f53e89",
-    "type": "wind",
+    "id": "wind-2b9db3aa2022868e",
+    "event_type": "wind",
     "geo": {
       "lat": 40.08,
       "lon": -95.59
@@ -6779,8 +6779,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-88f3732c8e9c0166",
-    "type": "wind",
+    "id": "wind-c539a8a448b0cd33",
+    "event_type": "wind",
     "geo": {
       "lat": 42,
       "lon": -97.36
@@ -6807,8 +6807,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-6d47b11306f263bd",
-    "type": "wind",
+    "id": "wind-00c6c7768e05e04f",
+    "event_type": "wind",
     "geo": {
       "lat": 32.48,
       "lon": -96.35
@@ -6833,8 +6833,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-443400b21be63293",
-    "type": "wind",
+    "id": "wind-eb85138860ab31ab",
+    "event_type": "wind",
     "geo": {
       "lat": 33,
       "lon": -94.96
@@ -6859,8 +6859,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-8aa498270ba14108",
-    "type": "wind",
+    "id": "wind-9635355f7e60e94a",
+    "event_type": "wind",
     "geo": {
       "lat": 33.16,
       "lon": -94.98
@@ -6885,8 +6885,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-5fb86038fa899821",
-    "type": "wind",
+    "id": "wind-1494fd298e768bf9",
+    "event_type": "wind",
     "geo": {
       "lat": 33.1,
       "lon": -94.97
@@ -6914,8 +6914,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-fb34e557bcf3261a",
-    "type": "wind",
+    "id": "wind-8f629468430310a9",
+    "event_type": "wind",
     "geo": {
       "lat": 34.17,
       "lon": -93.63
@@ -6942,8 +6942,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-19eb7d9f991649f2",
-    "type": "wind",
+    "id": "wind-bb2da43947a4f451",
+    "event_type": "wind",
     "geo": {
       "lat": 33.12,
       "lon": -94.7
@@ -6970,8 +6970,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-a794570a92d80587",
-    "type": "wind",
+    "id": "wind-cfb20330d06818d6",
+    "event_type": "wind",
     "geo": {
       "lat": 33.67,
       "lon": -93.59
@@ -6996,8 +6996,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-3bc40d79e528ad41",
-    "type": "wind",
+    "id": "wind-08dfcd13e655eda0",
+    "event_type": "wind",
     "geo": {
       "lat": 37.96,
       "lon": -94.66
@@ -7024,8 +7024,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-cea349f1354e6979",
-    "type": "wind",
+    "id": "wind-10404b0073282fb0",
+    "event_type": "wind",
     "geo": {
       "lat": 33.33,
       "lon": -94.35
@@ -7050,8 +7050,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-ddf657ab870bd336",
-    "type": "wind",
+    "id": "wind-710a27e282bd1a1f",
+    "event_type": "wind",
     "geo": {
       "lat": 33,
       "lon": -94.63
@@ -7076,8 +7076,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-ed040cccb2875752",
-    "type": "wind",
+    "id": "wind-db1dbff6be159472",
+    "event_type": "wind",
     "geo": {
       "lat": 33.42,
       "lon": -94.11
@@ -7102,8 +7102,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-8686c2221c7200b9",
-    "type": "wind",
+    "id": "wind-42f62016071bbfc7",
+    "event_type": "wind",
     "geo": {
       "lat": 34.38,
       "lon": -92.82
@@ -7128,8 +7128,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-492885b75fe2412f",
-    "type": "wind",
+    "id": "wind-74def0728323867e",
+    "event_type": "wind",
     "geo": {
       "lat": 34.57,
       "lon": -92.58
@@ -7154,8 +7154,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-5260091a579e6097",
-    "type": "wind",
+    "id": "wind-e4a00ec241084bb2",
+    "event_type": "wind",
     "geo": {
       "lat": 34.84,
       "lon": -112.48
@@ -7182,8 +7182,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-0db5af65dec07651",
-    "type": "wind",
+    "id": "wind-da9e1aca10e3b1a5",
+    "event_type": "wind",
     "geo": {
       "lat": 34.67,
       "lon": -92.36
@@ -7208,8 +7208,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-222312e93d202409",
-    "type": "wind",
+    "id": "wind-77c1a146c7c0f291",
+    "event_type": "wind",
     "geo": {
       "lat": 34.77,
       "lon": -92.34
@@ -7236,8 +7236,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-7c782eda2273b91d",
-    "type": "wind",
+    "id": "wind-14a1bef240d3a9fd",
+    "event_type": "wind",
     "geo": {
       "lat": 34.9,
       "lon": -92.23
@@ -7262,8 +7262,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-bf171341b736b18b",
-    "type": "wind",
+    "id": "wind-6bf14aa6691adceb",
+    "event_type": "wind",
     "geo": {
       "lat": 34.84,
       "lon": -92.21
@@ -7288,8 +7288,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-093a9192fa88f7ad",
-    "type": "wind",
+    "id": "wind-78d7fee4f1567ff4",
+    "event_type": "wind",
     "geo": {
       "lat": 35.09,
       "lon": -92.21
@@ -7314,8 +7314,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-2f1a47d299ad8dce",
-    "type": "wind",
+    "id": "wind-c8a4629372898d7a",
+    "event_type": "wind",
     "geo": {
       "lat": 34.97,
       "lon": -92.02
@@ -7340,8 +7340,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-8656400b6c439b9e",
-    "type": "wind",
+    "id": "wind-8f3748a84e8c9b59",
+    "event_type": "wind",
     "geo": {
       "lat": 35.01,
       "lon": -91.98
@@ -7368,8 +7368,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-308d1b2eb26f8606",
-    "type": "wind",
+    "id": "wind-2414a83a94e3f095",
+    "event_type": "wind",
     "geo": {
       "lat": 36.74,
       "lon": -94.85
@@ -7396,8 +7396,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-62125625b81c1ca2",
-    "type": "wind",
+    "id": "wind-a848b7ee86aaa8eb",
+    "event_type": "wind",
     "geo": {
       "lat": 35.08,
       "lon": -91.89
@@ -7422,8 +7422,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-6a569a7d36367cb8",
-    "type": "wind",
+    "id": "wind-527434cb7b7e671e",
+    "event_type": "wind",
     "geo": {
       "lat": 34.08,
       "lon": -112.14
@@ -7451,8 +7451,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-6a569a7d36367cb8",
-    "type": "wind",
+    "id": "wind-049d9b07b0627d5e",
+    "event_type": "wind",
     "geo": {
       "lat": 34.08,
       "lon": -112.14
@@ -7479,8 +7479,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-16b0fc800e83e370",
-    "type": "wind",
+    "id": "wind-0fdfb7989e766347",
+    "event_type": "wind",
     "geo": {
       "lat": 35.25,
       "lon": -91.73
@@ -7505,8 +7505,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-9bd3914c1fd82274",
-    "type": "wind",
+    "id": "wind-6c26c89d27ccf1fb",
+    "event_type": "wind",
     "geo": {
       "lat": 41.16,
       "lon": -94.06
@@ -7534,8 +7534,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-9cf319a392c83116",
-    "type": "wind",
+    "id": "wind-209e24761af3249a",
+    "event_type": "wind",
     "geo": {
       "lat": 35.29,
       "lon": -91.36
@@ -7560,8 +7560,8 @@
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
-    "id": "wind-9d8d5d683be8faf0",
-    "type": "wind",
+    "id": "wind-f8b942d9d1fffae9",
+    "event_type": "wind",
     "geo": {
       "lat": 35.45,
       "lon": -91.23
