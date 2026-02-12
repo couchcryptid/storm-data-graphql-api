@@ -49,7 +49,7 @@ make run          # Start server (runs migrations automatically)
       geo { lat lon }
       location { name county state }
       comments
-      beginTime
+      eventTime
     }
     aggregations {
       byEventType { eventType count maxMeasurement { magnitude unit } }
