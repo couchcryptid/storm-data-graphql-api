@@ -212,6 +212,100 @@ Per-type override that takes precedence over global filter fields for a specific
 | `minMagnitude` | `Float` | Override minimum magnitude for this type |
 | `radiusMiles` | `Float` | Override search radius for this type (max: 200) |
 
+## Calling with curl
+
+GraphQL queries are sent as `POST /query` with a JSON body containing a `query` field:
+
+```sh
+curl -s http://localhost:8080/query \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "query": "{ stormReports(filter: { timeRange: { from: \"2024-04-26T00:00:00Z\", to: \"2024-04-27T00:00:00Z\" } }) { totalCount reports { id eventType location { name state } } } }"
+  }' | jq .
+```
+
+For more complex queries, use a heredoc to avoid escaping:
+
+```sh
+curl -s http://localhost:8080/query \
+  -H 'Content-Type: application/json' \
+  -d "$(cat <<'EOF'
+{
+  "query": "{ stormReports(filter: { timeRange: { from: \"2024-04-26T00:00:00Z\", to: \"2024-04-27T00:00:00Z\" }, eventTypes: [HAIL], sortBy: MAGNITUDE, sortOrder: DESC, limit: 5 }) { totalCount reports { id measurement { magnitude unit severity } location { name county state } } } }"
+}
+EOF
+)" | jq .
+```
+
+## Calling with Python
+
+Basic query using `requests`:
+
+```python
+import requests
+
+url = "http://localhost:8080/query"
+query = """
+{
+  stormReports(filter: {
+    timeRange: { from: "2024-04-26T00:00:00Z", to: "2024-04-27T00:00:00Z" }
+    eventTypes: [HAIL]
+    states: ["TX"]
+  }) {
+    totalCount
+    reports {
+      id
+      eventType
+      measurement { magnitude unit severity }
+      geo { lat lon }
+      location { name county state }
+    }
+  }
+}
+"""
+
+resp = requests.post(url, json={"query": query})
+data = resp.json()["data"]["stormReports"]
+print(f"{data['totalCount']} reports")
+for r in data["reports"]:
+    m = r["measurement"]
+    loc = r["location"]
+    print(f"  {m['magnitude']} {m['unit']} - {loc['name']}, {loc['county']}, {loc['state']}")
+```
+
+Paginated fetch to collect all results:
+
+```python
+import requests
+
+url = "http://localhost:8080/query"
+query = """
+query($offset: Int!) {
+  stormReports(filter: {
+    timeRange: { from: "2024-04-26T00:00:00Z", to: "2024-04-27T00:00:00Z" }
+    limit: 20
+    offset: $offset
+  }) {
+    totalCount
+    hasMore
+    reports { id eventType measurement { magnitude unit } location { state county } }
+  }
+}
+"""
+
+all_reports = []
+offset = 0
+while True:
+    resp = requests.post(url, json={"query": query, "variables": {"offset": offset}})
+    result = resp.json()["data"]["stormReports"]
+    all_reports.extend(result["reports"])
+    if not result["hasMore"]:
+        break
+    offset += len(result["reports"])
+
+print(f"Fetched {len(all_reports)} of {result['totalCount']} reports")
+```
+
 ## Example Queries
 
 ### Geographic Radius Search
@@ -284,3 +378,10 @@ query {
   }
 }
 ```
+
+## Related
+
+- [System API Reference](https://github.com/couchcryptid/storm-data-system/wiki/API-Reference) -- pipeline-level API overview and system context
+- [ETL Enrichment](https://github.com/couchcryptid/storm-data-etl/wiki/Enrichment) -- upstream enrichment rules that produce the fields exposed here
+- [[Data Model]] -- database schema and field mapping behind the GraphQL API
+- [[Architecture]] -- query protection layers, resolver design, and Haversine radius search

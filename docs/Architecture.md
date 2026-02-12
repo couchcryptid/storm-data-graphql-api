@@ -192,3 +192,13 @@ For horizontal scaling on the write path, deploy multiple instances with Kafka c
 ## Kafka Consumer Offset Strategy
 
 ![Kafka Offset Strategy](kafka-offset-strategy.excalidraw.svg)
+
+## Related
+
+- [System Architecture](https://github.com/couchcryptid/storm-data-system/wiki/Architecture) -- full pipeline design, deployment topology, and improvement roadmap
+- [ETL Architecture](https://github.com/couchcryptid/storm-data-etl/wiki/Architecture) -- upstream service that publishes enriched events to Kafka
+- [Shared Architecture](https://github.com/couchcryptid/storm-data-shared/wiki/Architecture) -- shared library packages used by the API
+- [[Data Model]] -- database schema, field mapping, and mock data
+- [[API Reference]] -- GraphQL schema, types, filters, and example queries
+- [[Configuration]] -- environment variables and operational endpoints
+- [[Deployment]] -- Docker Compose setup and production notes

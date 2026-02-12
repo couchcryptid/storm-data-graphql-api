@@ -100,3 +100,11 @@ The mock file contains 271 storm reports from April 26, 2024:
 - **79 hail** reports
 - **149 tornado** reports
 - **43 wind** reports
+
+## Related
+
+- [ETL Enrichment](https://github.com/couchcryptid/storm-data-etl/wiki/Enrichment) -- upstream enrichment rules that produce the fields stored here
+- [System Data Model](https://github.com/couchcryptid/storm-data-system/wiki/Data-Model) -- message shapes and event types across all services
+- [System Data Flow](https://github.com/couchcryptid/storm-data-system/wiki/Data-Flow) -- end-to-end data journey from NOAA CSV to GraphQL
+- [[Architecture]] -- database design decisions, indexes, and idempotent writes
+- [[API Reference]] -- GraphQL types that expose these fields

@@ -84,3 +84,10 @@ docker run -p 8080:8080 \
 ## Production
 
 For cloud deployment options and cost analysis, see the [system Architecture wiki](https://github.com/couchcryptid/storm-data-system/wiki/Architecture#gcp-cloud-cost-analysis). Database migrations run automatically on startup -- ensure the database user has DDL permissions.
+
+## Related
+
+- [System Deployment](https://github.com/couchcryptid/storm-data-system/wiki/Deployment) -- full-stack Docker Compose with all services
+- [System Architecture](https://github.com/couchcryptid/storm-data-system/wiki/Architecture) -- cloud cost analysis and deployment topology
+- [[Configuration]] -- environment variables and operational endpoints
+- [[Development]] -- local development setup and testing

@@ -79,3 +79,11 @@ docker run -e DATABASE_URL=postgres://user:pass@host:5432/db \
            -p 8080:8080 \
            storm-data-api
 ```
+
+## Related
+
+- [System Configuration](https://github.com/couchcryptid/storm-data-system/wiki/Configuration) -- environment variables across all services
+- [Shared Configuration](https://github.com/couchcryptid/storm-data-shared/wiki/Configuration) -- shared parsers for Kafka, batch, and shutdown settings
+- [ETL Configuration](https://github.com/couchcryptid/storm-data-etl/wiki/Configuration) -- upstream Kafka topic and enrichment settings
+- [[Architecture]] -- design decisions and query protection layers
+- [[Deployment]] -- Docker Compose environment files and production notes

@@ -141,3 +141,4 @@ See the [project wiki](../../wiki) for detailed documentation:
 - [Development](../../wiki/Development) -- Build, test, lint, CI, and project conventions
 - [Data Model](../../wiki/Data-Model) -- Kafka message shape, event types, field mapping
 - [API Reference](../../wiki/API-Reference) -- GraphQL types, queries, filter options
+- [Code Quality](../../wiki/Code-Quality) -- Linting, static analysis, and quality gates
