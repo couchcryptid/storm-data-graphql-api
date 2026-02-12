@@ -137,8 +137,5 @@ See the [project wiki](../../wiki) for detailed documentation:
 
 - [Architecture](../../wiki/Architecture) -- Project structure, layer responsibilities, database schema, and capacity
 - [Configuration](../../wiki/Configuration) -- Environment variables
-- [Deployment](../../wiki/Deployment) -- Docker Compose setup and Docker image
 - [Development](../../wiki/Development) -- Build, test, lint, CI, and project conventions
-- [Data Model](../../wiki/Data-Model) -- Kafka message shape, event types, field mapping
 - [API Reference](../../wiki/API-Reference) -- GraphQL types, queries, filter options
-- [Code Quality](../../wiki/Code-Quality) -- Linting, static analysis, and quality gates

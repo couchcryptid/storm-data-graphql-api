@@ -154,9 +154,7 @@ A separate `release.yml` workflow (triggered by CI success on `main`) handles ve
 ## Related
 
 - [System Development](https://github.com/couchcryptid/storm-data-system/wiki/Development) -- multi-repo workflow, CI conventions, and cross-service patterns
-- [System Testing](https://github.com/couchcryptid/storm-data-system/wiki/Testing) -- E2E and UAT tests that validate the full pipeline
 - [Shared Development](https://github.com/couchcryptid/storm-data-shared/wiki/Development) -- shared library development and versioning
 - [[Configuration]] -- environment variables and operational endpoints
 - [[Architecture]] -- schema-first GraphQL, query protection, and embedded migrations
-- [[Data Model]] -- database schema and field mapping
-- [[Code Quality]] -- linting, static analysis, and quality gates
+- [[API Reference]] -- GraphQL types, queries, filter options

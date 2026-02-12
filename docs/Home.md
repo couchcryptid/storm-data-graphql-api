@@ -16,8 +16,5 @@ Uses the [storm-data-shared](https://github.com/couchcryptid/storm-data-shared/w
 
 - [[Architecture]] -- Project structure, layer responsibilities, database schema, and capacity
 - [[Configuration]] -- Environment variables
-- [[Deployment]] -- Docker Compose setup and Docker image
 - [[Development]] -- Build, test, lint, CI, and project conventions
-- [[Code Quality]] -- Linting, static analysis, and quality gates
-- [[Data Model]] -- Kafka message shape, event types, field mapping
 - [[API Reference]] -- GraphQL types, queries, filter options

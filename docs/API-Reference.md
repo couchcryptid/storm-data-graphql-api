@@ -381,7 +381,7 @@ query {
 
 ## Related
 
-- [System API Reference](https://github.com/couchcryptid/storm-data-system/wiki/API-Reference) -- pipeline-level API overview and system context
 - [ETL Enrichment](https://github.com/couchcryptid/storm-data-etl/wiki/Enrichment) -- upstream enrichment rules that produce the fields exposed here
-- [[Data Model]] -- database schema and field mapping behind the GraphQL API
 - [[Architecture]] -- query protection layers, resolver design, and Haversine radius search
+- [[Configuration]] -- environment variables and operational endpoints
+- [[Development]] -- build, test, lint, CI, and project conventions
