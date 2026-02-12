@@ -24,7 +24,6 @@ query {
       geo { lat lon }
       location { name state county }
       eventTime
-      geocoding { formattedAddress placeName confidence source }
     }
     aggregations {
       byEventType { eventType count maxMeasurement { magnitude unit } }
@@ -80,7 +79,6 @@ The top-level result returned by `stormReports`.
 | `comments` | `String!` | Free-text description of the event |
 | `timeBucket` | `DateTime!` | Hourly time bucket for aggregation |
 | `processedAt` | `DateTime!` | When the record was processed |
-| `geocoding` | `Geocoding!` | Geocoding enrichment results (empty when geocoding disabled) |
 
 ### Measurement
 
@@ -107,15 +105,6 @@ The top-level result returned by `stormReports`.
 | `direction` | `String` | Cardinal direction from named location (nullable) |
 | `state` | `String!` | Two-letter state code |
 | `county` | `String!` | County name |
-
-### Geocoding
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `formattedAddress` | `String!` | Full address from geocoding (empty if geocoding disabled) |
-| `placeName` | `String!` | Short place name from geocoding (empty if geocoding disabled) |
-| `confidence` | `Float!` | Geocoding confidence score 0-1 (0 if geocoding disabled) |
-| `source` | `String!` | Geocoding method: `forward`, `reverse`, `original`, `failed`, or empty |
 
 ### Aggregation Types
 

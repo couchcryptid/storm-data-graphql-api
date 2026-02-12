@@ -23,7 +23,6 @@
     "comments": "1.25 inch hail reported at Colorado Bend State Park. (SJT)",
     "source_office": "SJT",
     "time_bucket": "2024-04-26T15:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -50,7 +49,6 @@
     "comments": "Quarter hail reported. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -75,7 +73,6 @@
     "comments": "Report via social media. (FSD)",
     "source_office": "FSD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -102,7 +99,6 @@
     "comments": "Report from mPING: Quarter (1.00 in.). (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -129,7 +125,6 @@
     "comments": "Golf ball hail reported at Little Rd and I20 in SE Fort Worth. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -154,7 +149,6 @@
     "comments": "Also reports of dime to half-dollar size hail in Ravenna. (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -179,7 +173,6 @@
     "comments": "Quarter hail reported in Arlington. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -206,7 +199,6 @@
     "comments": "Report from mPING: Golf Ball (1.75 in.). (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -233,7 +225,6 @@
     "comments": "Started to cover the ground with quarter to half-dollar size hail. (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -260,7 +251,6 @@
     "comments": "Quarter to Half Dollar sized hail reported by the Cherokee County EM. Time matched up to Radar. (FSD)",
     "source_office": "FSD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -285,7 +275,6 @@
     "comments": "Report and photo via social media. (FSD)",
     "source_office": "FSD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -312,7 +301,6 @@
     "comments": "Corrects previous hail report from 1 NW Mount Vernon. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -339,7 +327,6 @@
     "comments": "Quarter sized hail and heavy rain. (FSD)",
     "source_office": "FSD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -366,7 +353,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -393,7 +379,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -418,7 +403,6 @@
     "comments": "Report of hail ranging from half an inch to an inch in Denton... NE. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -445,7 +429,6 @@
     "comments": "ground covered with hail. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -470,7 +453,6 @@
     "comments": "Butler County Emergency Manager reported golf ball sized hail in downtown Ulysses. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -497,7 +479,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -524,7 +505,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -551,7 +531,6 @@
     "comments": "Report from mPING: Golf Ball (1.75 in.). (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -578,7 +557,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -605,7 +583,6 @@
     "comments": "(ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -632,7 +609,6 @@
     "comments": "delayed report time estimated by radar. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -659,7 +635,6 @@
     "comments": "(ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -686,7 +661,6 @@
     "comments": "Corrects previous hail report from 3 ESE Ceresco. Corrects previous hail report from 3 ESE Ceresco for wrong date. Delayed report from 4/26. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -713,7 +687,6 @@
     "comments": "(ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -740,7 +713,6 @@
     "comments": "Report on Facebook of Quarter sized hail north of Genoa. (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -767,7 +739,6 @@
     "comments": "(ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -794,7 +765,6 @@
     "comments": "Mostly pea to dime sized hail... but a few as big as a quarter. No damage to anything... since crops are not up yet. (FSD)",
     "source_office": "FSD",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -821,7 +791,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -848,7 +817,6 @@
     "comments": "May have had a wall cloud initially. (ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -875,7 +843,6 @@
     "comments": "(ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -900,7 +867,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -925,7 +891,6 @@
     "comments": "(TOP)",
     "source_office": "TOP",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -952,7 +917,6 @@
     "comments": "Emergency Manager reported golf ball size hail. (TOP)",
     "source_office": "TOP",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -979,7 +943,6 @@
     "comments": "pic from news media... time estimated via radar. (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1004,7 +967,6 @@
     "comments": "Report from mPING: Golf Ball (1.75 in.). (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1031,7 +993,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1058,7 +1019,6 @@
     "comments": "Report from mPING: Quarter (1.00 in.). (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1085,7 +1045,6 @@
     "comments": "pic larger than quarter shown on air...time estimated from radar. (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1112,7 +1071,6 @@
     "comments": "Hail slightly larger than a quarter shown on air. (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1139,7 +1097,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1166,7 +1123,6 @@
     "comments": "Report from mPING: Quarter (1.00 in.). (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1193,7 +1149,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1220,7 +1175,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1247,7 +1201,6 @@
     "comments": "Report from mPING: Golf Ball (1.75 in.). (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1274,7 +1227,6 @@
     "comments": "Report from mPING: Golf Ball (1.75 in.). (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1299,7 +1251,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1326,7 +1277,6 @@
     "comments": "Report from mPING: Quarter (1.00 in.). (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1353,7 +1303,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1380,7 +1329,6 @@
     "comments": "Quarter size hail in Bend. Time estimated by radar. (SJT)",
     "source_office": "SJT",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1407,7 +1355,6 @@
     "comments": "Quarter sized hail near SH 64 at FM 859. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1434,7 +1381,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1459,7 +1405,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1486,7 +1431,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1513,7 +1457,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1540,7 +1483,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1565,7 +1507,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1592,7 +1533,6 @@
     "comments": "(ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1619,7 +1559,6 @@
     "comments": "pic from social media... time estimated from radar. (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1646,7 +1585,6 @@
     "comments": "(SGF)",
     "source_office": "SGF",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1673,7 +1611,6 @@
     "comments": "Social media report of quarter size hail. Time estimated from radar. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1700,7 +1637,6 @@
     "comments": "EM reported quarter-sized hail at Hwy 59 and Holt County line. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1727,7 +1663,6 @@
     "comments": "relayed via media...time estimated from radar. (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1752,7 +1687,6 @@
     "comments": "Photo of approximately ping pong ball size hail in Hume relayed to NWS employee. Time estimated from radar. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1779,7 +1713,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1804,7 +1737,6 @@
     "comments": "(SGF)",
     "source_office": "SGF",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1831,7 +1763,6 @@
     "comments": "Delayed report. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1858,7 +1789,6 @@
     "comments": "Photo relayed of golf ball size hail in Worth County. Time and location estimated from radar. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1885,7 +1815,6 @@
     "comments": "(DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1912,7 +1841,6 @@
     "comments": "(BOU)",
     "source_office": "BOU",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1937,7 +1865,6 @@
     "comments": "Corrects previous hail report from Mount Ayr. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1964,7 +1891,6 @@
     "comments": "(BOU)",
     "source_office": "BOU",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -1989,7 +1915,6 @@
     "comments": "(DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2016,7 +1941,6 @@
     "comments": "Golfball sized hail reported near the dam of Lake Bob Sandlin. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2043,7 +1967,6 @@
     "comments": "(SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2070,7 +1993,6 @@
     "comments": "Report from mPING: Quarter (1.00 in.). (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2097,7 +2019,6 @@
     "comments": "One inch hail was reported in the Malta community. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T02:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2123,7 +2044,6 @@
     "comments": "This tornado moved across the northwest side of McAlester... damaging the roofs of homes... uprooting trees... and snapping power poles. The damage survey was conducted (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T12:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2149,7 +2069,6 @@
     "comments": "This tornado touched down at 1216 PM CDT 2 miles east southeast of Ravenna... and lifted at 1231 PM CDT 3 miles north of Ravenna. The rating was EF1... with an estimate (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2175,7 +2094,6 @@
     "comments": "A brief EF-0 tornado occurred along Wisdom Ct west of Waco. Fences were damaged and large tree limbs were broken. Maximum estimated winds were 80 mph. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2201,7 +2119,6 @@
     "comments": "A second tornado from the same supercell occurred west of Waco damaging neighborhoods on either side of Wortham Bend Road near China Spring Rd. Damage in these neighbor (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2227,7 +2144,6 @@
     "comments": "Tornado pictures and damage reports from the China Springs area. Time estimated. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2253,7 +2169,6 @@
     "comments": "Location approximate. May be adjusted. Estimated on the ground for 4 to 5 minutes. Video confirmed. (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2279,7 +2194,6 @@
     "comments": "This tornado touched down at 1232 PM CDT 2 miles south of Rockville... and lifted at 1248 PM CDT 4 miles north northeast of Rockville. The rating was EF1... with an est (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2303,7 +2217,6 @@
     "comments": "Tornado confirmed with some damage report. Will update pending damage survey. (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2329,7 +2242,6 @@
     "comments": "A brief... EF-0 tornado damaged trees west of Heritage Pkwy and south of Easy Rd northwest of Tours. Maximum estimated winds were 75 mph. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2355,7 +2267,6 @@
     "comments": "Another tornado developed north of Tours... just west of Berger Road. This tornado initially damaged trees and a shed... but strengthened as it crossed Czech Hall Road. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2381,7 +2292,6 @@
     "comments": "This tornado touched down at 1252 PM CDT 3 miles SSW of Farwell... and lifted at 1258 PM CDT just outside the south side of Farwell. The rating was EF0... with an estim (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2407,7 +2317,6 @@
     "comments": "Tornado pictures and reports from north of Tours to Penelope. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2433,7 +2342,6 @@
     "comments": "This tornado touched down at 1258 PM CDT 1 mile south southeast of Farwell... and lifted at 121 PM CDT 3 miles north of Elba. This was the strongest tornado of the day (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2459,7 +2367,6 @@
     "comments": "Reported by fireman. Moving north/northeast at the time. (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T17:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2485,7 +2392,6 @@
     "comments": "The same supercell produced another brief... EF-1 tornado... based on eye witness accounts... on either side of FM 339 southwest of Penelope. The tornado formed in the (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2511,7 +2417,6 @@
     "comments": "Emergency management reported power poles down near Highway 11 and Odell Road. (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2537,7 +2442,6 @@
     "comments": "Several reports of confirmed tornado west and north of Elba. Time and location approximate pending damage survey. (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2563,7 +2467,6 @@
     "comments": "A tornado formed just northwest of Navarro Mills Lake... just east of the Navarro/Hill County line. Damage near this initiation point was confined to split tree trunks (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2589,7 +2492,6 @@
     "comments": "This tornado touched down at 132 PM CDT 5 miles northeast of Elba... and lifted at 154 PM CDT 3 miles north of Wolbach. The rating was EF2... with an estimated peak win (GID)",
     "source_office": "GID",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2615,7 +2517,6 @@
     "comments": "Tornado reported near FM 477 near Brushie Prairie in western Navarro Co. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2641,7 +2542,6 @@
     "comments": "A tornado formed approximately 2 miles southwest of Barry in open country... based on storm spotter video and eyewitness reports. This tornado moved north and northeast (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2667,7 +2567,6 @@
     "comments": "An EF-1 tornado occurred near Abbott... first developing on the west side of I-35W and CR 2341 where trees were damaged and uprooted. A semi-tractor trailer was rolled (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T18:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2693,7 +2592,6 @@
     "comments": "Center pivot overturned... tree and outbuilding damage... road signs torn down. Delayed report. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2719,7 +2617,6 @@
     "comments": "A EF-2 tornado started in Greeley County and crossed into Boone County south of Primrose along Highway 56. It travelled north-northeast over 27.5 miles... doing its mos (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2745,7 +2642,6 @@
     "comments": "A citizen captured a video of a brief tornado which formed west of Rice... Texas. The tornado transited mainly bottomland/wetland areas of Cummins Creek... resulting in (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2771,7 +2667,6 @@
     "comments": "A brief EF-0 tornado occurred west of Frost in far northwestern Navarro County. A grain elevator was impacted and partially collapsed along State Highway 22 west of Fro (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2797,7 +2692,6 @@
     "comments": "Brief tornado touchdown near the Kawasaki Plant. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2823,7 +2717,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2849,7 +2742,6 @@
     "comments": "Building collapse. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2875,7 +2767,6 @@
     "comments": "An EF-1 tornado began near the intersection of Highway 15 and Ashland Road moving north-northeast as a broad multiple-vortex tornado. It snapped trees and a road sign a (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2901,7 +2792,6 @@
     "comments": "*** 3 INJ *** This EF3 tornado touched down on the northeast side of Lincoln near the intersection of Havelock Ave and 84th street causing damage to a business and a la (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2927,7 +2817,6 @@
     "comments": "House damaged. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2953,7 +2842,6 @@
     "comments": "Relayed from emergency management. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -2979,7 +2867,6 @@
     "comments": "4 pivots overturned. 2 hog confinements destroyed. Delay report. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3005,7 +2892,6 @@
     "comments": "Train derailment Hwy 6. Additional train derailment Hwy 6 and I-480. Semi-rolled over. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3031,7 +2917,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3057,7 +2942,6 @@
     "comments": "Social media photo of confirmed tornado 9 miles south of David City... Nebraska. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3083,7 +2967,6 @@
     "comments": "An EF-0 tornado tracked mainly through open fields... with time and location identified by a storm chaser video. The damage survey team did find evidence of some minor (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3109,7 +2992,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3135,7 +3017,6 @@
     "comments": "Trained spotters confirmed an EF-Unknown tornado with video and photos lasting approximately 1 minute over open fields. Due to no damage indicators hit... we have to ra (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3161,7 +3042,6 @@
     "comments": "Small rope tornado. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3187,7 +3067,6 @@
     "comments": "Trained spotter reported a tornado just southwest of Brainard... Nebraska. Tornado has since lifted but there are two additional funnel clouds currently. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3213,7 +3092,6 @@
     "comments": "An EF-1 tornado tracked through mainly open fields... snapping tree trucks. There was one farmstead that had a barn that was badly damaged and minor damage to a home. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3239,7 +3117,6 @@
     "comments": "EM relayed report from 911 call center of confirmed tornado to the west of Ashland... Nebraska. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3265,7 +3142,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3291,7 +3167,6 @@
     "comments": "Emergency manager reported a tornado on the ground 4 to 5 miles south of Lindsay. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3317,7 +3192,6 @@
     "comments": "The EF3 tornado developed about one quarter mile west of the West Q Road and 255th St intersection in Western Douglas county where trees were knocked down and a farmste (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3343,7 +3217,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3369,7 +3242,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3395,7 +3267,6 @@
     "comments": "Vehicle and building damage. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3421,7 +3292,6 @@
     "comments": "House with severe roof damage. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3447,7 +3317,6 @@
     "comments": "240th and Dodge. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3473,7 +3342,6 @@
     "comments": "storm chaser report. (ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3499,7 +3367,6 @@
     "comments": "Video confirmation of a tornado. (ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3525,7 +3392,6 @@
     "comments": "Very large tornado moving into western Elkhorn. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3551,7 +3417,6 @@
     "comments": "Very large tornado moving through western Elkhorn. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3577,7 +3442,6 @@
     "comments": "Emergency Manager reported confirmed large tornado 4 to 5 miles west of Newman Grove. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3603,7 +3467,6 @@
     "comments": "EM reported the tornado and there is video evidence from a storm chaser. No damage was found and so this tornado was rated an EF Unknown. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3629,7 +3492,6 @@
     "comments": "Very large tornado near 204th and Ida. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3655,7 +3517,6 @@
     "comments": "Tornado moving east. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3681,7 +3542,6 @@
     "comments": "(ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3707,7 +3567,6 @@
     "comments": "Very large tornado near Flanagan Lake. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3733,7 +3592,6 @@
     "comments": "Major structural damage to at least 10 homes. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3759,7 +3617,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T20:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3785,7 +3642,6 @@
     "comments": "Multiple homes destroyed. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3811,7 +3667,6 @@
     "comments": "Homes damaged. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3837,7 +3692,6 @@
     "comments": "An EF1 tornado touched down northwest of 370th St and 175th Ave. It tracked north-northeast... flipping a center-pivot irrigation system... snapping trees... blowing wi (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3863,7 +3717,6 @@
     "comments": "Destroyed homes. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3889,7 +3742,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3915,7 +3767,6 @@
     "comments": "Tornado on the ground south on 18th ave. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3941,7 +3792,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3967,7 +3817,6 @@
     "comments": "Building and tree damage to an abandoned farmstead. Delayed report. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -3993,7 +3842,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4019,7 +3867,6 @@
     "comments": "Multiple vortex tornado. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4043,7 +3890,6 @@
     "comments": "Tornado near Modale looks like it roped out. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4069,7 +3915,6 @@
     "comments": "An EF1 tornado damage path began approximately 1 mile north of Pacific Junction... where the tornado was also reported by a trained spotter. The tornado crossed Highway (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4095,7 +3940,6 @@
     "comments": "An EF-1 tornado touched down south of 174th Trl tracking north-northeast snapping power poles... trees... and doing damage to several agricultural out-buildings. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4121,7 +3965,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4147,7 +3990,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4173,7 +4015,6 @@
     "comments": "This EF3 tornado developed just east of the Eppley Airfield runway system... about one-quarter mile west of the Amelia Earhart Plaza and Lindbergh Plaza intersection. T (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4199,7 +4040,6 @@
     "comments": "Based on eyewitness observation of two simultaneous tornadoes passing east and west of a farmstead... with 5NNW Magnolia being the western tornado observed. Little dama (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4225,7 +4065,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4251,7 +4090,6 @@
     "comments": "Storm chaser video showed brief tornado. (ICT)",
     "source_office": "ICT",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4277,7 +4115,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4303,7 +4140,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4329,7 +4165,6 @@
     "comments": "This EF3 tornado damage path began near Aspen Road... just west of 240th Street. The tornado tracked toward the north northeast... snapping trees and electrical poles a (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4355,7 +4190,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4381,7 +4215,6 @@
     "comments": "DELAYED REPORT. Emergency Management reported a tornado on the ground 2 miles north of Salem... Nebraska. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4407,7 +4240,6 @@
     "comments": "Emergency Manager reported a tornado and no damage was found. This tornado is rated an EF Unknown. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4433,7 +4265,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4459,7 +4290,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4485,7 +4315,6 @@
     "comments": "This brief EF1 tornado touched down near Grandview Road and East Sherwood Rood... causing tree damage at a farmstead. The tornado moved northeast... damaging large tree (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4511,7 +4340,6 @@
     "comments": "A short-lived tornado developed in an agricultural field and moved generally northeast across fields and pastureland... damaging outbuildings of farmsteads near the int (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4537,7 +4365,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4563,7 +4390,6 @@
     "comments": "Possible tornado. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4589,7 +4415,6 @@
     "comments": "An EF1 tornado developed near the intersection of 260th and 270th Streets. It produced damage to outbuildings at a farmstead near the intersection... and tossed some fi (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4615,7 +4440,6 @@
     "comments": "*** 1 FATAL... 3 INJ *** An EF3 tornado developed approximately 3 miles east of McClelland... and developed prior to the dissipation of the tornado that tracked near Tr (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4641,7 +4465,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4667,7 +4490,6 @@
     "comments": "A weak EF-0 tornado occurred... with a path length of 3.12 miles and a width of 75 yards. Maximum wind speeds of 85 mph led to siding damage on a home... five outbuildi (SGF)",
     "source_office": "SGF",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4693,7 +4515,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4719,7 +4540,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4743,7 +4563,6 @@
     "comments": "Very large tornado. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4769,7 +4588,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4795,7 +4613,6 @@
     "comments": "Spotter indicated brief touchdown. (SGF)",
     "source_office": "SGF",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4821,7 +4638,6 @@
     "comments": "DELAYED REPORT. Emergency Manager relayed report of a tornado near Rulo over NAWAS. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4847,7 +4663,6 @@
     "comments": "Large tornado destroying homes. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4873,7 +4688,6 @@
     "comments": "Very large multi vortex tornado. At least 1/3 mile wide. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4899,7 +4713,6 @@
     "comments": "Multiple houses damaged. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4925,7 +4738,6 @@
     "comments": "Very large tornado crossing Interstate 80. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4951,7 +4763,6 @@
     "comments": "Multiple destroyed outbuildings and a home that lost a roof. Time estimated from radar. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -4975,7 +4786,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5001,7 +4811,6 @@
     "comments": "Significant damage between Portsmith and Harlan. Destroyed home... cars flipped. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5027,7 +4836,6 @@
     "comments": "Multi vortex tornado. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5053,7 +4861,6 @@
     "comments": "Home destroyed. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5079,7 +4886,6 @@
     "comments": "An EF-1 tornado occurred... with a path length of 3.4 miles and a width of 95 yards. Maximum wind speeds of 95 mph destroyed two outbuildings... and caused a number of (SGF)",
     "source_office": "SGF",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5105,7 +4911,6 @@
     "comments": "Fire dept. reported weak tornado. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5131,7 +4936,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5154,10 +4958,9 @@
       "state": "IA",
       "county": "Shelby"
     },
-    "comments": "An EF2 tornado damage track begins near the V\u0026W Petersen Wildlife Management Area... and moved almost due north from that point... tracking just to the west of Manilla. (OAX)",
+    "comments": "An EF2 tornado damage track begins near the V&W Petersen Wildlife Management Area... and moved almost due north from that point... tracking just to the west of Manilla. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5183,7 +4986,6 @@
     "comments": "Fire department reported a tornado east of Rich Hill. Time and location estimated from radar. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5209,7 +5011,6 @@
     "comments": "NWS Damage Survey confirmed a brief EF-0 tornado southwest of Appleton City... MO the evening of the 26th of April... 2024. Minor damage to trees along the path. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5235,7 +5036,6 @@
     "comments": "Delayed report. Video of tornado producing damage. One outbuilding destroyed. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5261,7 +5061,6 @@
     "comments": "A second round of storms moved across Shelby and Crawford counties. An EF1 tornado developed just a few blocks outside of Defiance... near the track that the first torn (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5287,7 +5086,6 @@
     "comments": "Damage to a structure near Appleton City Lake. Time estimated from radar. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5313,7 +5111,6 @@
     "comments": "Downed trees blocking Highway 52 west of Appleton City near the St. Clair County line. Time estimated from radar. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5339,7 +5136,6 @@
     "comments": "DELAYED REPORT. Media relayed photo of tornado approximately 1 mile northeast of Defiance... Iowa. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5365,7 +5161,6 @@
     "comments": "An NWS storm survey determined that a tornado briefly touched down Friday evening on Highway 52 at the Bates and St Clair county line... downing trees and power lines. (SGF)",
     "source_office": "SGF",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5391,7 +5186,6 @@
     "comments": "Storm chaser shared a picture of a tornado just west of Manilla. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5417,7 +5211,6 @@
     "comments": "Tornado on the ground... heading northeast. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5441,7 +5234,6 @@
     "comments": "Tornado with debris near the hospital in Creston. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5467,7 +5259,6 @@
     "comments": "near 205th and Highway 25. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5493,7 +5284,6 @@
     "comments": "Tornado reported to the southwest of Macksburg. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5519,7 +5309,6 @@
     "comments": "Tornado developed near Highway E west of U.S. Highway 169... causing minor damage to a residence. Tornado tracked northeastward into Iowa. Time estimated from radar. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5545,7 +5334,6 @@
     "comments": "Power poles with debris on US Highway 34 between Creston and Afton. Highway is closed. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5571,7 +5359,6 @@
     "comments": "Trained spotter reported tornado on the ground east of Creston. Time and location estimated from radar. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5597,7 +5384,6 @@
     "comments": "(DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5623,7 +5409,6 @@
     "comments": "NWS Damage Survey confirms a very brief EF-0 tornado southeast of Clinton... MO. Damage to two outbuildings. (EAX)",
     "source_office": "EAX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5649,7 +5434,6 @@
     "comments": "Delayed report. Report of tornado between Mt Ayr and Kellerton. Exact location estimated from radar. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5675,7 +5459,6 @@
     "comments": "Large tornado near Afton moving northeast. Debris field reported with damage. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5701,7 +5484,6 @@
     "comments": "Tornado near Word of Life Church. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5727,7 +5509,6 @@
     "comments": "Delayed report. Video submitted via social media. Briefly touched down and lifted west of Martensdale. Location estimated from radar. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5753,7 +5534,6 @@
     "comments": "Reported to the south of Patterson. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5779,7 +5559,6 @@
     "comments": "Tornadic debris signature noted on radar. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5805,7 +5584,6 @@
     "comments": "Corrects previous tornado report from 4 S Osceola. Time estimated. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5829,7 +5607,6 @@
     "comments": "Damage reported near Osceola. Trees and power lines down. Time estimated from radar. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5855,7 +5632,6 @@
     "comments": "Structure damage to a home with possible injury. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5881,7 +5657,6 @@
     "comments": "Reported by General Public. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5905,7 +5680,6 @@
     "comments": "Power flashes reported near Pleasant Hill. TDS also noted on radar. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5929,7 +5703,6 @@
     "comments": "*** 1 INJ *** Reports of damage in Monroe. Time estimated from radar. Update for injury. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T02:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5955,7 +5728,6 @@
     "comments": "(DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T04:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -5979,7 +5751,6 @@
     "comments": "Large trees and power lines down. (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T12:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6006,7 +5777,6 @@
     "comments": "(TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T12:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6032,7 +5802,6 @@
     "comments": "Powerline knocked down due to high winds as showers and thunderstorms moved through the Las Vegas Valley. (VEF)",
     "source_office": "VEF",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6058,7 +5827,6 @@
     "comments": "Building collapsed with people inside. Potential gas leak. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6084,7 +5852,6 @@
     "comments": "Numerous reports of damage near Waverly... including trains blown off tracks... semis overturned. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T19:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6111,7 +5878,6 @@
     "comments": "Gust measured by home weather station. Damage to trees on property. Chicken coop blown away. Time estimated from radar. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6137,7 +5903,6 @@
     "comments": "Reports of several trees down near Becker... including one that fell on a house. A construction light was also blown over. Time estimated from radar. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6161,7 +5926,6 @@
     "comments": "Trees down on multiple county roads in and around the Yantis community. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6187,7 +5951,6 @@
     "comments": "Tree down with approximately a 12 inch trunk near SH 64 and FM 859. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T21:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6214,7 +5977,6 @@
     "comments": "Delayed report. ASOS at Eppley Airfield. Measured wind gust as tornado moved very nearby. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6240,7 +6002,6 @@
     "comments": "Power poles downed across the southern part of Franklin County... Texas. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6266,7 +6027,6 @@
     "comments": "Trees downed on two structures between Mount Vernon and Winnsboro. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6293,7 +6053,6 @@
     "comments": "(OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6319,7 +6078,6 @@
     "comments": "delayed report Roof taken off athletic training center. (OAX)",
     "source_office": "OAX",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6343,7 +6101,6 @@
     "comments": "Trees down on CR 4079. (FWD)",
     "source_office": "FWD",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6367,7 +6124,6 @@
     "comments": "Extensive trees and powerlines downed across the entire county. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6391,7 +6147,6 @@
     "comments": "Numerous trees and powerlines downed in and around the Mount Pleasant area. Three vehicles were impacted by falling trees with rescues ongoing attm. Worst damage was re (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6418,7 +6173,6 @@
     "comments": "Measured AWOS wind gust at the Mount Pleasant Airport. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6444,7 +6198,6 @@
     "comments": "A few trees were blown down in this area. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6470,7 +6223,6 @@
     "comments": "Numerous trees down in and around the Rocky Branch community. Traffic stuck on highways because of all the downed trees across roadways. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6494,7 +6246,6 @@
     "comments": "Trees and power lines down. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T22:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6520,7 +6271,6 @@
     "comments": "Large trees down. (SGF)",
     "source_office": "SGF",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6544,7 +6294,6 @@
     "comments": "Several trees downed in and around the city of Maud... Texas. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6568,7 +6317,6 @@
     "comments": "Trees and power lines down. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6592,7 +6340,6 @@
     "comments": "Trees and powerlines reported down on the Bowie County side of Texarkana. (SHV)",
     "source_office": "SHV",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6616,7 +6363,6 @@
     "comments": "Large tree blown on top of a car causing considerable damage to the vehicle. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T23:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6640,7 +6386,6 @@
     "comments": "Large tree and numerous powerlines are down on Highway 35 South. A tree was also on fire. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6666,7 +6411,6 @@
     "comments": "Wind from 315 degrees measured at 57 mph. Damage estimate $75...000+ Some rain. (FGZ)",
     "source_office": "FGZ",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6690,7 +6434,6 @@
     "comments": "1-inch tree limbs broken; Shingles blown off. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6716,7 +6459,6 @@
     "comments": "A tree was blown over at this location. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6740,7 +6482,6 @@
     "comments": "Large tree limbs down in Gibson. Winds estimated to be 60 mph. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6764,7 +6505,6 @@
     "comments": "Large tree blown over and resting on a powerline. Numerous people without power. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6788,7 +6528,6 @@
     "comments": "Trees reported blown down in Vilonia. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6812,7 +6551,6 @@
     "comments": "Trees reported down in the Magness Creek area of Cabot. Numerous power outages reported as well. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6838,7 +6576,6 @@
     "comments": "Hardwood fence blown over. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6864,7 +6601,6 @@
     "comments": "Numerous large tree limbs down. Time estimated by radar. (TSA)",
     "source_office": "TSA",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6888,7 +6624,6 @@
     "comments": "Trees down on houses... powerlines blown over and billboards damaged in town. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T00:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6915,7 +6650,6 @@
     "comments": "Trained spotted estimated a 60 mph wind gust in Black Canyon City. Damage reported to digital weather station. Time estimated from radar. (FGZ)",
     "source_office": "FGZ",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6941,7 +6675,6 @@
     "comments": "Large tree limbs and branches broken in Black Canyon City. Time estimated from radar. (FGZ)",
     "source_office": "FGZ",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6965,7 +6698,6 @@
     "comments": "Numerous large trees down in Searcy... powerlines also reported down along with fence damage. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -6992,7 +6724,6 @@
     "comments": "Time estimated from radar. Measured by personal weather station. (DMX)",
     "source_office": "DMX",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -7016,7 +6747,6 @@
     "comments": "Multiple large tree branches were blown across Highway 64. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   },
   {
@@ -7040,7 +6770,6 @@
     "comments": "Numerous trees and powerlines down in Weldon. Power is also out. (LZK)",
     "source_office": "LZK",
     "time_bucket": "2024-04-26T01:00:00Z",
-    "geocoding": {},
     "processed_at": "2024-04-27T06:00:00Z"
   }
 ]

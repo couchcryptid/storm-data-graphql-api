@@ -16,8 +16,7 @@ const columns = `id, event_type, geo_lat, geo_lon, measurement_magnitude, measur
 	event_time,
 	location_raw, location_name, location_distance, location_direction,
 	location_state, location_county,
-	comments, measurement_severity, source_office, time_bucket, processed_at,
-	geocoding_formatted_address, geocoding_place_name, geocoding_confidence, geocoding_source`
+	comments, measurement_severity, source_office, time_bucket, processed_at`
 
 // Store provides persistence operations for storm reports backed by PostgreSQL.
 type Store struct {
@@ -42,7 +41,7 @@ func (s *Store) InsertStormReport(ctx context.Context, report *model.StormReport
 	defer s.observeQuery("insert", time.Now())
 	_, err := s.pool.Exec(ctx, `
 		INSERT INTO storm_reports (`+columns+`)
-		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)
+		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18)
 		ON CONFLICT (id) DO NOTHING`,
 		report.ID, report.EventType, report.Geo.Lat, report.Geo.Lon,
 		report.Measurement.Magnitude, report.Measurement.Unit,
@@ -52,14 +51,12 @@ func (s *Store) InsertStormReport(ctx context.Context, report *model.StormReport
 		report.Location.State, report.Location.County,
 		report.Comments, report.Measurement.Severity, report.SourceOffice,
 		report.TimeBucket, report.ProcessedAt,
-		report.Geocoding.FormattedAddress, report.Geocoding.PlaceName,
-		report.Geocoding.Confidence, report.Geocoding.Source,
 	)
 	return err
 }
 
 const insertSQL = `INSERT INTO storm_reports (` + columns + `)
-	VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)
+	VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18)
 	ON CONFLICT (id) DO NOTHING`
 
 // InsertStormReports batch-inserts multiple storm reports using pgx.Batch.
@@ -80,8 +77,6 @@ func (s *Store) InsertStormReports(ctx context.Context, reports []*model.StormRe
 			r.Location.State, r.Location.County,
 			r.Comments, r.Measurement.Severity, r.SourceOffice,
 			r.TimeBucket, r.ProcessedAt,
-			r.Geocoding.FormattedAddress, r.Geocoding.PlaceName,
-			r.Geocoding.Confidence, r.Geocoding.Source,
 		)
 	}
 
@@ -180,8 +175,6 @@ func scanStormReport(row scannable) (*model.StormReport, error) {
 		&r.Location.State, &r.Location.County,
 		&r.Comments, &r.Measurement.Severity, &r.SourceOffice,
 		&r.TimeBucket, &r.ProcessedAt,
-		&r.Geocoding.FormattedAddress, &r.Geocoding.PlaceName,
-		&r.Geocoding.Confidence, &r.Geocoding.Source,
 	)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return nil, nil

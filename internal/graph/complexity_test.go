@@ -54,22 +54,22 @@ func TestNewComplexityRoot_WorstCase(t *testing.T) {
 	//
 	//   reportChild = id(1) + eventType(1) + geo(1+2=3) + measurement(1+3=4) +
 	//     eventTime(1) + sourceOffice(1) + location(1+6=7) + comments(1) +
-	//     timeBucket(1) + processedAt(1) + geocoding(1+4=5) = 26
-	//   reports = MaxPageSize(20) × 26 = 520
+	//     timeBucket(1) + processedAt(1) = 21
+	//   reports = MaxPageSize(20) × 21 = 420
 	//   byEventType = 10 × (eventType(1) + count(1) + maxMeasurement(1+3=4)) = 60
 	//   byState = 10 × (state(1) + count(1) + counties(5×2=10)) = 120
 	//   byHour = 10 × (bucket(1) + count(1)) = 20
 	//   aggregations = 1 + totalCount(1) + byEventType(60) + byState(120) + byHour(20) = 202
 	//   meta = 1 + lastUpdated(1) + dataLagMinutes(1) = 3
-	//   total = 1 + totalCount(1) + hasMore(1) + reports(520) + aggregations(202) + meta(3) = 728
+	//   total = 1 + totalCount(1) + hasMore(1) + reports(420) + aggregations(202) + meta(3) = 628
 	// Note: This exceeds 600, so a client requesting ALL fields at max depth would be
 	// rejected. This is by design — typical queries request a subset.
 
 	c := NewComplexityRoot()
 
-	reportChildComplexity := 26
-	reports := c.StormReportsResult.Reports(reportChildComplexity) // 20 × 26 = 520
-	assert.Equal(t, 520, reports)
+	reportChildComplexity := 21
+	reports := c.StormReportsResult.Reports(reportChildComplexity) // 20 × 21 = 420
+	assert.Equal(t, 420, reports)
 
 	byEventType := c.StormAggregations.ByEventType(6) // 10 × 6 = 60
 	assert.Equal(t, 60, byEventType)
@@ -82,9 +82,9 @@ func TestNewComplexityRoot_WorstCase(t *testing.T) {
 	assert.Equal(t, 20, byHour)
 
 	// A realistic worst-case: reports (all fields) + one aggregation type + meta
-	//   totalCount(1) + hasMore(1) + reports(520) + aggregations(1+1+60) + meta(1+2) = 587
+	//   totalCount(1) + hasMore(1) + reports(420) + aggregations(1+1+60) + meta(1+2) = 487
 	realisticChild := 2 + reports + (1 + 1 + byEventType) + (1 + 2)
 	total := c.Query.StormReports(realisticChild, model.StormReportFilter{})
-	assert.Equal(t, 588, total)
+	assert.Equal(t, 488, total)
 	assert.LessOrEqual(t, total, 600, "realistic worst-case should fit within 600 budget")
 }

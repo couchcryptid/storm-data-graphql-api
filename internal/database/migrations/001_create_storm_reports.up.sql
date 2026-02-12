@@ -17,10 +17,6 @@ CREATE TABLE IF NOT EXISTS storm_reports (
     source_office               TEXT NOT NULL,
     time_bucket                 TIMESTAMPTZ NOT NULL,
     processed_at                TIMESTAMPTZ NOT NULL,
-    geocoding_formatted_address TEXT NOT NULL DEFAULT '',
-    geocoding_place_name        TEXT NOT NULL DEFAULT '',
-    geocoding_confidence        DOUBLE PRECISION NOT NULL DEFAULT 0,
-    geocoding_source            TEXT NOT NULL DEFAULT '',
     created_at                  TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 

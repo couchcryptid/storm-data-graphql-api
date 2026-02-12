@@ -13,12 +13,12 @@ import (
 // persisted in the database.
 //
 // Nesting strategy (mirrors the ETL domain model):
-//   - Geo, Location, Measurement, and Geocoding are nested structs matching
-//     the Kafka wire format. This allows json.Unmarshal to deserialize enriched
-//     events automatically, and gqlgen auto-resolves the corresponding GraphQL
-//     types without field resolvers. The store layer flattens these to prefixed
-//     DB columns (geo_lat, measurement_magnitude, geocoding_formatted_address,
-//     etc.) for relational storage and indexing.
+//   - Geo, Location, and Measurement are nested structs matching the Kafka wire
+//     format. This allows json.Unmarshal to deserialize enriched events
+//     automatically, and gqlgen auto-resolves the corresponding GraphQL types
+//     without field resolvers. The store layer flattens these to prefixed DB
+//     columns (geo_lat, measurement_magnitude, etc.) for relational storage
+//     and indexing.
 //   - EventType maps to the "event_type" column in the database and the
 //     "eventType" field in the GraphQL schema.
 type StormReport struct {
@@ -32,7 +32,6 @@ type StormReport struct {
 	SourceOffice string      `json:"source_office"`
 	TimeBucket   time.Time   `json:"time_bucket"`
 	ProcessedAt  time.Time   `json:"processed_at"`
-	Geocoding    Geocoding   `json:"geocoding,omitempty"`
 }
 
 // Geo holds latitude and longitude coordinates. Nested as a struct because
@@ -63,16 +62,6 @@ type Measurement struct {
 	Magnitude float64 `json:"magnitude"`
 	Unit      string  `json:"unit"`
 	Severity  *string `json:"severity,omitempty"`
-}
-
-// Geocoding holds enrichment metadata from the geocoding process.
-// Nested on StormReport to match the Kafka wire format; gqlgen auto-resolves
-// the GraphQL Geocoding type. Flattened to geocoding_* DB columns.
-type Geocoding struct {
-	FormattedAddress string  `json:"formatted_address"`
-	PlaceName        string  `json:"place_name"`
-	Confidence       float64 `json:"confidence"`
-	Source           string  `json:"source"`
 }
 
 // ─── Enums ──────────────────────────────────────────────────

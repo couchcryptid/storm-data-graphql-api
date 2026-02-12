@@ -237,6 +237,12 @@ func buildGeoClause(lat, lon float64, radiusMiles *float64, idx int) ([]string, 
 // ~69*cos(lat) miles/degree longitude (varies by latitude). The coarse bounding
 // box leverages the (geo_lat, geo_lon) B-tree index to quickly eliminate rows
 // outside the search area before the expensive haversine runs on the remainder.
+//
+// Scaling note: For higher data volumes or spatial operations beyond radius
+// search (polygon intersection, vector tiles), PostGIS with GiST spatial
+// indexes would replace this bounding-box + haversine approach. At the current
+// scale (~300 reports/day, single radius query), B-tree pre-filtering is
+// sufficient and avoids the PostGIS extension dependency.
 func buildBoundingBox(lat, lon, radiusMiles float64, idx int) ([]string, []any, int) {
 	latDelta := radiusMiles / milesPerDegreeLat
 	lonDelta := radiusMiles / (milesPerDegreeLat * math.Cos(lat*math.Pi/180.0))

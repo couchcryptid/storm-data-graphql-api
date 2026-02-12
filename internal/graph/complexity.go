@@ -13,8 +13,8 @@ import "github.com/couchcryptid/storm-data-api/internal/model"
 // Cost examples (budget = 600):
 //
 //	Dashboard query (reports + partial aggregations):  ~458  ✓
-//	Reports (all fields) + one aggregation + meta:     ~588  ✓
-//	All fields on all types (intentionally rejected):  ~728  ✗
+//	Reports (all fields) + one aggregation + meta:     ~488  ✓
+//	All fields on all types (intentionally rejected):  ~628  ✗
 //
 // See TestNewComplexityRoot_WorstCase for the exact field-by-field calculation.
 func NewComplexityRoot() ComplexityRoot {

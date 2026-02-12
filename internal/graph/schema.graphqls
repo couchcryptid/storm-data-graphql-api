@@ -168,8 +168,6 @@ type StormReport {
   timeBucket: DateTime!
   """When the ETL pipeline processed this event (UTC)."""
   processedAt: DateTime!
-  """Geocoding enrichment results. Fields are empty when geocoding is disabled."""
-  geocoding: Geocoding!
 }
 
 """Measurement data for a storm event. Units vary by event type."""
@@ -188,18 +186,6 @@ type Geo {
   lat: Float!
   """Longitude in decimal degrees."""
   lon: Float!
-}
-
-"""Geocoding enrichment results from the optional Mapbox integration."""
-type Geocoding {
-  """Full address from geocoding (e.g. "Chappel, San Saba County, Texas")."""
-  formattedAddress: String!
-  """Short place name from geocoding."""
-  placeName: String!
-  """Geocoding confidence score (0-1). Higher is more confident."""
-  confidence: Float!
-  """Geocoding method: "forward", "reverse", "original", "failed", or empty."""
-  source: String!
 }
 
 """

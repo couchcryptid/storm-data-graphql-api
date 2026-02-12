@@ -52,7 +52,7 @@ Handles all PostgreSQL interactions, split into three focused files:
 - **`querybuilder.go`** -- Dynamic WHERE clause construction from filter structs, geo/haversine calculations, bounding box pre-filters, sorting helpers
 - **`aggregations.go`** -- CTE-based aggregation query (`Aggregations`), result types (`AggResult`, `EventTypeGroup`, `StateGroup`, `TimeGroup`)
 
-The database schema flattens the nested JSON structure — `geo.lat`/`geo.lon` become `geo_lat`/`geo_lon` columns, `location.*` fields become `location_*` columns, `measurement.*` fields become `measurement_*` columns, and `geocoding.*` fields become `geocoding_*` columns.
+The database schema flattens the nested JSON structure — `geo.lat`/`geo.lon` become `geo_lat`/`geo_lon` columns, `location.*` fields become `location_*` columns, and `measurement.*` fields become `measurement_*` columns.
 
 `ListStormReports` builds dynamic WHERE clauses from the filter struct, with support for array filters (using PostgreSQL `ANY()`), sorting, and pagination. Geographic radius filtering uses the Haversine formula in SQL with a bounding box pre-filter for index efficiency.
 
@@ -106,10 +106,6 @@ CREATE TABLE storm_reports (
     source_office               TEXT NOT NULL,
     time_bucket                 TIMESTAMPTZ NOT NULL,
     processed_at                TIMESTAMPTZ NOT NULL,
-    geocoding_formatted_address TEXT NOT NULL DEFAULT '',
-    geocoding_place_name        TEXT NOT NULL DEFAULT '',
-    geocoding_confidence        DOUBLE PRECISION NOT NULL DEFAULT 0,
-    geocoding_source            TEXT NOT NULL DEFAULT '',
     created_at                  TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 ```

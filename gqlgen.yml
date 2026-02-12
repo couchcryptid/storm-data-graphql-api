@@ -26,8 +26,6 @@ models:
     model: github.com/couchcryptid/storm-data-api/internal/model.Location
   Measurement:
     model: github.com/couchcryptid/storm-data-api/internal/model.Measurement
-  Geocoding:
-    model: github.com/couchcryptid/storm-data-api/internal/model.Geocoding
   StormReportFilter:
     model: github.com/couchcryptid/storm-data-api/internal/model.StormReportFilter
   TimeRange:
